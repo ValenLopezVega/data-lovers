@@ -1,3 +1,4 @@
+
 #menu {
     box-shadow: 0px 10px 14px -7px #276873;
 	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
@@ -45,7 +46,8 @@
 	top:5px;
 }
 
-html {
+body {
 	background-image: url("Extras/IMG/FodoPoke.jpg");
-	opacity: 0.5;
+	
 }
+
