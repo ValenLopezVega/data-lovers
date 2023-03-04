@@ -1,6 +1,96 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import {
+  filterByDirector,
+  orderAzByTitle,
+  orderZaByTitle,
+  searchByTitle,
+} from "./data.js";
 
-console.log(example, data);
+import data from "./data/ghibli/ghibli.js";
+const listFilms = document.querySelector("#cards-model");
+const buttonDirectors = document.querySelector("#buttons-directors");
+const buttonOrder = document.querySelector("#buttons-order");
+const buttonSearch = document.querySelector("#buttons-search");
+let dataFilms = data.films;
+
+const renderizarFilms = () => {
+  listFilms.innerHTML = "";
+  dataFilms.forEach((film) => {
+    const { poster, title } = film;
+    const createCard = document.createElement("article");
+    createCard.classList.add("cards-data");
+
+    createCard.innerHTML = ` 
+    <figure class="fig-cards">
+      <div>
+        <img
+          class="img-cards"
+          src="${poster}"
+          alt="imagen"
+        />
+        <p class="films-name">"${title}"</p>
+
+      </div>
+    </figure>`;
+    listFilms.appendChild(createCard);
+  });
+};
+
+renderizarFilms();
+
+buttonDirectors.addEventListener("change", (e) => {
+  const directorSelected = e.target.value;
+  if (directorSelected === "") {
+    dataFilms = data.films;
+    renderizarFilms();
+  } else {
+    const dataFilter = filterByDirector(data.films, directorSelected);
+    dataFilms = [...dataFilter];
+    renderizarFilms();
+  }
+});
+
+const directorsHTML = () => {
+  const dataFilms = data.films.map((film) => {
+    return film.director;
+  });
+
+  const filmsDirectorsUnique = dataFilms.filter((film, posicion) => {
+    return dataFilms.indexOf(film) === posicion;
+  });
+
+  filmsDirectorsUnique.forEach((director) => {
+    const createButton = document.createElement("option");
+    createButton.classList.add("button-data");
+    createButton.value = director;
+    createButton.innerHTML = director;
+
+    buttonDirectors.appendChild(createButton);
+  });
+};
+
+directorsHTML();
+
+buttonOrder.addEventListener("change", (e) => {
+  const orderSelection = e.target.value;
+  if (orderSelection === "a-z") {
+    const dataFilter = orderAzByTitle(dataFilms);
+    dataFilms = [...dataFilter];
+  } else {
+    const dataFilter = orderZaByTitle(dataFilms);
+    dataFilms = [...dataFilter];
+  }
+  renderizarFilms();
+});
+
+buttonSearch.addEventListener("search", (e) => {
+  const keyValue = e.target.value.toLowerCase();
+  if (keyValue === "") {
+    dataFilms = data.films;
+
+    renderizarFilms();
+  } else {
+    const dataFilter = searchByTitle(data.films, keyValue);
+    dataFilms = [...dataFilter];
+    renderizarFilms();
+  }
+});
