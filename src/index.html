@@ -7,14 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Chewy&family=Pacifico&family=Six+Caps&family=Source+Code+Pro:ital@1&family=Titan+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header class="banner-one" id="banner-one">
-      <!-- <h1>Studio Ghibli</h1> -->
-      <!-- <h2>Conozca sus principales animaciones</h2> -->
       <nav class="banner-one-content container">
         <figure>
           <img src="./img/logo.png" alt="logo1" class="img-logo1" />
@@ -23,88 +21,31 @@
     </header>
     <main class="banner-two" id="banner-two">
       <section class="banner-two-content container">
-        <h3 class="subtitle">Lista de peliculas</h3>
         <article class="buttons-model">
           <select class="select-buttons" id="buttons-directors">
             <option value="">Seleccione</option>
           </select>
           <select class="select-buttons" id="buttons-order">
             <option value="">Seleccione</option>
-            <option value="">A - Z</option>
-            <option value="">Z - A</option>
+            <option value="a-z">A - Z</option>
+            <option value="z-a">Z - A</option>
           </select>
           <input
-            type="text"
+            type="search"
             placeholder="Buscar"
-            class="select-buttons"
+            class="select-buttons plus"
             id="buttons-search"
           />
         </article>
-        <section class="cards-model" id="cards-model">
-          <!-- <article class="cards-date">
-            <figure class="fig-cards">
-              <a href="ghibli.js"
-                ><img
-                  class="img-cards"
-                  src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg"
-                  alt="Poster de pelicula"
-                />
-                <p class="films-name">Castle in the sky</p>
-              </a>
-            </figure>
-          </article>  -->
-          <!-- <article class="cards-date">
-            <figure class="fig-cards">
-              <a href="ghibli.js"
-                ><img
-                  class="img-cards"
-                  src="https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbor_Totoro.jpg"
-                  alt="poster de pelicula"
-                />
-                <p class="films-name">My neighbor Totoro</p>
-                />
-              </a>
-            </figure> 
-          </article>
-          <article class="cards-date">
-            <div class="card-date">
-              <figure class="fig-cards">
-                <a href="ghibli.js"
-                  ><img
-                    class="img-cards"
-                    src="https://static.wikia.nocookie.net/studio-ghibli/images/a/a9/Only_Yesterday.jpg"
-                    alt="Poster de pelicula"
-                  />
-                  <p class="films-name">Only yesterday</p>
-                </a>
-              </figure>
-            </div>
-          </article> -->
-        </section>
+        <section class="cards-model" id="cards-model"></section>
       </section>
     </main>
     <footer class="information">
-      <button class="icon-wsp">
-        <a href="https://wa.me/936016053">
-          <img src="./img/Whatsapp.svg" alt="" />
-        </a>
-        <p>Dejanos tu sugerencia</p>
-      </button>
       <article class="disclaimer">
-        <p class="text-disclaimer">
-          <!-- De acuerdo a los principios de convivencia armónica y diversidad como
-          valor intrínseco que orientan nuestra política de diversidad e
-          inclusión, Laboratoria no condona ni avala los comentarios de la data
-          utilizada en este dataset del proyecto, identidad de género y personas
-          neurodivergentes. -->
-          <span class="by"> © 2023 By Mayara & Jhoana</span>
-        </p>
+        <p class="text-disclaimer">© 2023 By Mayara - Jhoana</p>
       </article>
     </footer>
-
-    <!-- <script src="ghibli.js" type="module"></script> -->
-    <!-- <div id="root"> -->
+    <div id="root"></div>
     <script src="main.js" type="module"></script>
-     
   </body>
 </html>
