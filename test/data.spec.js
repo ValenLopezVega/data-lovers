@@ -1,5 +1,6 @@
 import {
   filterByDirector,
+  filterByProducer,
   orderAzByTitle,
   orderZaByTitle,
   searchByTitle,
@@ -39,6 +40,45 @@ describe("filterByDirector", () => {
       {
         title: "The Secret World of Arrietty",
         director: "Hiromasa Yonebayashi",
+      },
+    ]);
+  });
+});
+
+describe("filterByProducer", () => {
+  it("is a function", () => {
+    expect(typeof filterByProducer).toBe("function");
+  });
+
+  it("returns peliculas de Toru Hara", () => {
+    const arrayToFilter = [
+      { title: "My Neighbor Totoro", producer: "Hayao Miyazaki" },
+      { title: "Grave of the fireflies", producer: "Toru Hara" },
+      { title: "Tales from Earthsea", producer: "Toshio Suzuki" },
+      {
+        title: "Castle in the sky",
+        producer: "Isao Takahata",
+      },
+    ];
+    expect(filterByProducer(arrayToFilter, "Toru Hara")).toEqual([
+      { title: "Grave of the fireflies", producer: "Toru Hara" },
+    ]);
+  });
+
+  it("returns peliculas de Toshio Suzuki", () => {
+    const arrayToFilter = [
+      { title: "My Neighbor Totoro", producer: "Hayao Miyazaki" },
+      { title: "Grave of the fireflies", producer: "Toru Hara" },
+      { title: "Tales from Earthsea", producer: "Toshio Suzuki" },
+      {
+        title: "Castle in the sky",
+        producer: "Isao Takahata",
+      },
+    ];
+    expect(filterByProducer(arrayToFilter, "Toshio Suzuki")).toEqual([
+      {
+        title: "When Marnie was there",
+        producer: "Yoshiaki Nishimura",
       },
     ]);
   });
