@@ -132,7 +132,6 @@ buttonSearch.addEventListener("search", (e) => {
   }
 });
 
-
 buttonRelease.addEventListener("change", (e) => {
   const release_dateSelected = e.target.value;
   if (release_dateSelected === "") {
@@ -153,7 +152,7 @@ const releaseHTML = () => {
   const filmsReleaseUnique = dataFilms.filter((film, posicion) => {
     return dataFilms.indexOf(film) === posicion;
   });
-  
+
   filmsReleaseUnique.forEach((release_date) => {
     const createButton = document.createElement("option");
     createButton.classList.add("button-data");
@@ -163,4 +162,4 @@ const releaseHTML = () => {
     buttonRelease.appendChild(createButton);
   });
 };
-  releaseHTML();
+releaseHTML();

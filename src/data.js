@@ -2,8 +2,8 @@ export const filterByDirector = (array, directorSelected) => {
   return array.filter((item) => item.director === directorSelected);
 };
 export const filterByProducer = (array, producerSelected) => {
-    return array.filter((item) => item.producer === producerSelected);
-  };
+  return array.filter((item) => item.producer === producerSelected);
+};
 export const orderAzByTitle = (array) => {
   return array.sort((a, b) => a.title.localeCompare(b.title));
 };
@@ -15,6 +15,5 @@ export const searchByTitle = (array, text) => {
 };
 
 export const filterByYear = (array, release_dateSelected) => {
-    return array.filter((item) => item.release_date === release_dateSelected);
-  };
-  
+  return array.filter((item) => item.release_date === release_dateSelected);
+};
