@@ -1,0 +1,99 @@
+.titulo img {
+    width: 600px;
+    height: 200px;
+    margin:auto;
+    object-fit: scale-down;
+    display: block;
+}
+.dropbtn {
+    color: rgb(139, 204, 35);
+    width: 200px;
+    height: 80px;
+    font-size: 24px;
+    font-family: Cooper;
+    margin:auto;
+    border: solid rgba(0, 173, 226, 0.753);
+  }
+  
+  .personajes {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0ec2c2;
+    width: 195px;
+    height: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: Cooper;
+    z-index: 1;
+    border:solid rgb(139, 204, 35);;
+    overflow: auto;
+   
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .personajes:hover .dropdown-content {display: block;}
+  
+  .personajes:hover .dropbtn {background-color: #64d6c7;}
+
+  .dropbtn1 {
+    color: rgb(139, 204, 35);
+    width: 200px;
+    height: 80px;
+    font-size: 24px;
+    font-family: Cooper;
+    border: solid rgba(0, 173, 226, 0.753);
+    margin-left: 50%;
+}
+  
+  .especie {
+    position: relative;
+    display: inline-block ;
+  }
+  
+  .dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #0ec2c2;
+    width: 195px;
+    height: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: Cooper;
+    z-index: 1;
+    border:solid rgb(139, 204, 35);;
+    overflow: auto;
+    margin-left: 50%;
+  }
+  
+  .dropdown1-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown1-content a:hover {background-color: #ddd;}
+  
+  .especie:hover .dropdown1-content  {display: block;}
+  
+  .especie:hover .dropbtn1 {background-color: #64d6c7;}
+
+  .imgPersonajes{
+    display: flex;
+    justify-content: center;
+    padding: 15px 25px;
+    flex-wrap: wrap;
+    gap: 6%;
+    z-index: 1;
+  }
