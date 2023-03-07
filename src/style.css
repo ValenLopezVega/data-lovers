@@ -62,7 +62,7 @@ body {
 	top: 5px;
 }
 
-#bienvenida{
+#welcome{
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	display: flex;
 	text-align: center;
@@ -78,6 +78,14 @@ body {
 	background-color: white;
 
 }
+
+.slider-container {
+	scroll-snap-type: x mandatory;
+  }
+
+  .slider-container img {
+	scroll-snap-align: center;
+  }
 
 
 
