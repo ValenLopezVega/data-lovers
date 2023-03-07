@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 
 <body>
@@ -14,36 +16,64 @@
     Tu navegador no soporta audio HTML5.
   </audio>
 
-  <img src="extra/pikachu-running.gif" width=" 10%" /> <img src="extra/poGoLogo2.png" width="30%" />
+  <center><img src="extra/pikachu-running.gif" width=" 10%" /> <img src="extra/poGoLogo2.png" width="30%" /><img src="extra/pikachu-running.gif" width=" 10%" /> </center>
 
   <main class="boxtwo">
     <div id="menu">
-      <button id="home">Home</button>
-      <button id="pokedex"> Pokedex</button>
-      <button id="map"> Mapa</button>
-      <button id="extra"> Otros</button>
+      <button id="buttonHome">Home</button>
+      <button id="buttonPokedex"> Pokedex</button>
+      <button id="buttonMap"> Mapa</button>
+      <button id="buttonExtra"> Noticias</button>
     </div>
   </main>
 
+  <section id="homeSecction"> 
+
   <div id= "welcome">
-    Hola entrenador Pokemon
-    te damos la bienvenida al emocionante mundo de Pokemon Go!
+    <h1> Hola entrenador Pokemon </h1> 
+    <h2>  te damos la bienvenida al emocionante mundo de Pokemon Go!</h2>
 
-    Este juego te invita a salir de casa e ir en la búsqueda de pokemons!!
-    completa tu Pokedex y combate con otros jugadores en la liga de combates Go!
+   <p> Este juego te invita a salir de casa e ir en la búsqueda de pokemons!!
+    completa tu Pokedex y combate con otros jugadores en la liga de combates Go!</p>
 
-    Nosotras de ayudaremos mostrándote las características de cada pokemon de Kanto y Johto, además tenemos un mapa
-    donde te indicamos que pokemon puedes encontrar con mayor probabilidad
-    en cada zona geográfica.
+    <p>  Nosotras de ayudaremos mostrándote las características de cada pokemon de Kanto y Johto, 
+    además tenemos un mapa donde te indicamos que pokemon puedes encontrar con mayor probabilidad
+    en cada zona geográfica. </p> 
   </div>
 
-  <div class="slider-container"> 
-    <img class="slider-item" src="./extra/noticia1.png" alt="¡Perfecciona tus habilidades en el evento Objetivo de Captura!" ></img>
-    <img class="slider-item" src="./extra/noticia2.png" alt="Día de la Comunidad de marzo de 2023: Slowpoke y Slowpoke de Galar" ></img>
-    <img class="slider-item" src="./extra/noticia3.png" alt="Actualización sobre la Liga Combates GO: Rising Heroes" ></img>
+  <div id="carrusel"> 
+  <div class="swiffy-slider">    
+    <ul class="slider-container">
+     
+    <li><img class="slider-item" style="max-width: 100%;height: auto;" src="./extra/noticia1.png" alt="¡Perfecciona tus habilidades en el evento Objetivo de Captura!" ></img></li>
+    <li><img class="slider-item" style="max-width: 100%;height: auto;" src="./extra/noticia2.png" alt="Día de la Comunidad de marzo de 2023: Slowpoke y Slowpoke de Galar" ></img></li>
+    <li><img class="slider-item" style="max-width: 100%;height: auto;" src="./extra/noticia3.png" alt="Actualización sobre la Liga Combates GO: Rising Heroes" ></img></li>
+  </ul>
+  <button type="button" class="slider-nav"></button>
+  <button type="button" class="slider-nav slider-nav-next"></button>
 
-
+  <div class="slider-indicators">
+      <button class="active"></button>
+      <button></button>
+      <button></button>
   </div>
+</div>
+  </div>
+  </section>
+
+  <section id="pokedexSecction"> 
+
+  </section>
+
+
+  <section id="mapSecction"> 
+
+  </section>
+
+
+  <section id="extraSecction">
+    
+  </section>
 
 
 
@@ -58,7 +88,6 @@
 
 
 
-  <img alt="Logo PokemonGo" src="extra/poGoLogo.png" width="20%" />
 
 
   <script src="main.js" type="module"></script>
