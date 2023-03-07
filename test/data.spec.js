@@ -1,8 +1,10 @@
 import {
   filterByDirector,
+  filterByProducer,
   orderAzByTitle,
   orderZaByTitle,
   searchByTitle,
+  filterByYear,
 } from "../src/data.js";
 
 describe("filterByDirector", () => {
@@ -39,6 +41,44 @@ describe("filterByDirector", () => {
       {
         title: "The Secret World of Arrietty",
         director: "Hiromasa Yonebayashi",
+      },
+    ]);
+  });
+});
+describe("filterByProducer", () => {
+  it("is a function", () => {
+    expect(typeof filterByProducer).toBe("function");
+  });
+
+  it("returns peliculas de Toru Hara", () => {
+    const arrayToFilter = [
+      { title: "My Neighbor Totoro", producer: "Hayao Miyazaki" },
+      { title: "Grave of the fireflies", producer: "Toru Hara" },
+      { title: "Tales from Earthsea", producer: "Toshio Suzuki" },
+      {
+        title: "Castle in the sky",
+        producer: "Isao Takahata",
+      },
+    ];
+    expect(filterByProducer(arrayToFilter, "Toru Hara")).toEqual([
+      { title: "Grave of the fireflies", producer: "Toru Hara" },
+    ]);
+  });
+
+  it("returns peliculas de Toshio Suzuki", () => {
+    const arrayToFilter = [
+      { title: "My Neighbor Totoro", producer: "Hayao Miyazaki" },
+      { title: "Grave of the fireflies", producer: "Toru Hara" },
+      { title: "Tales from Earthsea", producer: "Toshio Suzuki" },
+      {
+        title: "Castle in the sky",
+        producer: "Isao Takahata",
+      },
+    ];
+    expect(filterByProducer(arrayToFilter, "Toshio Suzuki")).toEqual([
+      {
+        title: "Tales from Earthsea",
+        producer: "Toshio Suzuki",
       },
     ]);
   });
@@ -90,6 +130,22 @@ describe("searchByTitle", () => {
     ];
     expect(searchByTitle(arrayToSearch, "totoro")).toEqual([
       { title: "My Neighbor Totoro" },
+    ]);
+  });
+});
+
+describe("filterByYear", () => {
+  it("is a function", () => {
+    expect(typeof filterByYear).toBe("function");
+  });
+
+  it("order  A - Z", () => {
+    const arrayToSort = [
+      { title: "Spirited Away", release_date: "1998" },
+      { title: "Castle in the Sky", release_date: "1996" },
+    ];
+    expect(filterByYear(arrayToSort, "1998")).toEqual([
+      { title: "Spirited Away", release_date: "1998" },
     ]);
   });
 });
