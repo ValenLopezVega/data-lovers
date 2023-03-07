@@ -4,6 +4,7 @@ import {
   orderAzByTitle,
   orderZaByTitle,
   searchByTitle,
+  filterByYear,
 } from "../src/data.js";
 
 describe("filterByDirector", () => {
@@ -44,7 +45,6 @@ describe("filterByDirector", () => {
     ]);
   });
 });
-
 describe("filterByProducer", () => {
   it("is a function", () => {
     expect(typeof filterByProducer).toBe("function");
@@ -77,8 +77,8 @@ describe("filterByProducer", () => {
     ];
     expect(filterByProducer(arrayToFilter, "Toshio Suzuki")).toEqual([
       {
-        title: "When Marnie was there",
-        producer: "Yoshiaki Nishimura",
+        title: "Tales from Earthsea",
+        producer: "Toshio Suzuki",
       },
     ]);
   });
@@ -130,6 +130,22 @@ describe("searchByTitle", () => {
     ];
     expect(searchByTitle(arrayToSearch, "totoro")).toEqual([
       { title: "My Neighbor Totoro" },
+    ]);
+  });
+});
+
+describe("filterByYear", () => {
+  it("is a function", () => {
+    expect(typeof filterByYear).toBe("function");
+  });
+
+  it("order  A - Z", () => {
+    const arrayToSort = [
+      { title: "Spirited Away", release_date: "1998" },
+      { title: "Castle in the Sky", release_date: "1996" },
+    ];
+    expect(filterByYear(arrayToSort, "1998")).toEqual([
+      { title: "Spirited Away", release_date: "1998" },
     ]);
   });
 });
