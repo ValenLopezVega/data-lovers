@@ -1,91 +1,94 @@
 body {
-	background-image: url("extra/image.png");
-	position: absolute;
-	left: 0;
-	top: 0;
+	background-image: url("./extra/image.png");
 	width: 100%;
 	height: auto;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: scroll;
-	}
+	background-attachment: fixed;
+}
 
 #menu {
-    box-shadow: 0px 10px 14px -7px #a1a3e1;
-	background:linear-gradient(to bottom, #0927ec 5%, #030b47 100%);
-	background-color:#04239f;
-	border-radius:8px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
-	padding:13px 32px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #1117ca;
-    width: 90%;
-    text-align: center;  
-    margin-left: 2%;
-	
+	box-shadow: 0px 10px 14px -7px #a1a3e1;
+	background: linear-gradient(to bottom, #0927ec 5%, #030b47 100%);
+	background-color: #04239f;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 13px 32px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #1117ca;
+	width: 90%;
+	text-align: center;
+	margin-left: 2%;
+
 }
 
-#home, #pokedex, #map, #extra{
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    box-shadow: 3px 4px 0px 0px #899599;
-	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-	background-color:#ededed;
-	border-radius:15px;
-	border:1px solid #d6bcd6;
-	display:inline-block;
-	cursor:pointer;
-	color:#121db6;
-	font-family:Arial;
+#buttonHome,
+#buttonPokedex,
+#buttonMap,
+#buttonExtra {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	box-shadow: 3px 4px 0px 0px #899599;
+	background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color: #ededed;
+	border-radius: 15px;
+	border: 1px solid #d6bcd6;
+	display: inline-block;
+	cursor: pointer;
+	color: #121db6;
+	font-family: Arial;
 	font-size: 100%;
-	padding:7px 25px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #e1e2ed;
-    width: 12%;
-    text-align: center; 
-    margin-left: 5%; 
-	
-}
-
-#home:hover, #pokedex:hover, #map:hover, #extra:hover {
-	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-	background-color:#bab1ba;
+	padding: 7px 25px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #e1e2ed;
+	width: 12%;
+	text-align: center;
+	margin-left: 5%;
 
 }
-#home:active, #pokedex:active, #map:active, #extra:active{
-	position:relative;
+
+#buttonHome:hover,
+#buttonPokedex:hover,
+#buttonMap:hover,
+#buttonExtra:hover {
+	background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color: #bab1ba;
+
+}
+
+#buttonHome:active,
+#buttonPokedex:active,
+#buttonMap:active,
+#buttonExtra:active {
+	position: relative;
 	top: 5px;
 }
 
-#welcome{
+#welcome {
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	display: flex;
-	text-align: center;
+	position: Absolute;
 	width: 500px;
-	height: 180px;
-    justify-content: center;
-    border-style:double;
-    border-color: #ffaa22;
-    border-width: 10px;
-    margin-left: 60%;
-    margin-right: 10%;
+	height: 350px;
+	justify-content: center;
+	border-style: double;
+	border-color: #ffaa22;
+	border-width: 10px;
+	margin-left: 60%;
+	margin-right: 10%;
 	margin-top: 5%;
 	background-color: white;
 
 }
 
-.slider-container {
-	scroll-snap-type: x mandatory;
-  }
-
-  .slider-container img {
-	scroll-snap-align: center;
-  }
-
-
+#carrusel {
+	display: flex;
+	position: absolute;
+	margin-right: 50%;
+	margin-top: 5%;
+}
 
