@@ -1,0 +1,27 @@
+body {
+  background-image: url(back_1.png); /*imagen de fondo*/
+  background-size: 100%;
+}
+
+.logoinicio {
+  padding: 5px;
+  margin: auto;
+  width: 650px;
+  height: 300px;
+  display: grid;
+  justify-content: center;
+}
+
+
+
+@media screen and (max-width: 991px) {
+
+  .logoinicio {
+    padding: 5px;
+    margin: auto;
+    width: 450px;
+    height: 200px;
+    display: grid;
+    justify-content: center;
+  }
+}
