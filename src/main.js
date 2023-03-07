@@ -1,3 +1,4 @@
+
 import { renderizarData } from './data.js';
 //import ghibli from './data/ghibli/ghibli.js';
 // import data from './data/lol/lol.js';
