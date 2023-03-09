@@ -12,11 +12,19 @@
         </div>
         <div class="barra">
           <div class="buscar">
-            <p class="buscador">Buscar</p>
+            <p class="buscador">Buscar:</p>
             <input class="b-busqueda" type="text">
           </div>
-          <div class="filtro">Filtro</div>
-          <div class="orden">Orden</div>
+          <div class="filtro">Seleccionar filtro: <select>
+            <option value="pelicula">Pelicula</option>
+            <option value="anio">Año</option>
+            <option value="score">Score</option>
+            <option value="director">Director</option>
+          </select></div>
+          <div class="orden">Ordenar por: <select>
+            <option value="anio_up">Año</option>
+            <option value="name">Nombre</option>
+          </select></div>
         </div>
       </header>
       <section>
@@ -27,13 +35,10 @@
     </div>
 
     	<!-- Borde azul -->
-<!-- 	<div id="left"></div>
+	<div id="left"></div>
 	<div id="right"></div>
 	<div id="top"></div>
-	<br>
-	<br>
-	<div id="bottom"></div> -->
-
+	<div id="bottom"></div>
     <script src="main.js" type="module"></script>
   </body>
 </html>

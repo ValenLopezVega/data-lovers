@@ -8,30 +8,34 @@ body{
     padding: 0px;
     min-height: 100vh;
     min-width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #root{
     margin: 0px;
-    border-right-width: 10px;
+    /* border-right-width: 10px;
     border-left-width: 10px;
     border-left-style: solid;
     border-right-style: solid ;
     border-right-color: #49a4e1;
-    border-left-color: #49a4e1;
+    border-left-color: #49a4e1; */
     padding: 0px;
-    width: 98.45%;
+    width: 100%;
     height: 100vh;
     display: block;
 }
 
 header{
+    margin: 0px;
     height: 20%;
     width: 100%;
 }
 
 .logo{
+    margin: 0;
     display: flex;
     background-color: #49a4e1;
+    padding-bottom: 15px;
     width: 100%;
     height: 70%;
 }
@@ -43,6 +47,7 @@ header{
 }
 
 .barra{
+    margin: 0;
     display: flex;
     background-color: #49a4e1;
     width: 100%;
@@ -51,7 +56,7 @@ header{
 
 .buscar{
     background-color: #49a4e1;
-    width: 45%;
+    width: 33%;
 }
 
 .buscador {
@@ -68,12 +73,28 @@ header{
 
 .filtro{
     background-color: #49a4e1;
-    width: 30%;
+    width: 33%;
+}
+
+select{
+    background-color: white;
+    border-radius: 8px;
+    border: 0px;
+    height: 20px;
+    width: 120px;
+}
+
+input{
+    background-color: white;
+    border:0px;
+    border-radius: 8px;
+    height: 20px;
+    width: 120px;
 }
 
 .orden{
     background-color: #49a4e1;
-    width: 30%;
+    width: 34%;
 }
 
 section{
@@ -84,28 +105,40 @@ section{
 footer{
     background-color: #49a4e1;
     height: 3%;
-
+    margin-bottom: 0;
 }
 
 
 /* Borde de la Pagina */
-/* #top, #bottom,  */#left, #right {
-	background: #49a4e1;
+#top, #bottom, #left, #right {
+    background: #49a4e1;
 	position: fixed;
-    }
+}
 	
-	#left, #right {
+#left, #right{
 	margin-top: 0px;
     margin-bottom: 0px;
 	width: 10px;
-    }
+}
 	
-	#left { left: 0; }
-	#right { right: 0; }
+#left {
+    left: 0; 
+}
 
-/* 	#top, #bottom {
-	left: 0; right: 0;
-	height: 10px;}
+#right {
+    right: 0;
+}
+
+#top, #bottom {
+	left: 0;
+    right: 0;
+	height: 10px;
+}
 	
-	#top { top: 0; }
-	#bottom { bottom: 0; } */
+#top {
+    top: 0; 
+}
+
+#bottom {
+    bottom: 0;
+}
