@@ -56,10 +56,17 @@ console.log(data);
 const allType= data.pokemon;
 const pokemonDiv= document.getElementById('pokemons');
 
+let contador = 0;
 allType.forEach((pokemon) => {
     pokemonDiv.innerHTML +=
-        `<strong>Numero</strong>:${pokemon.num}<br> 
-     <strong>Nombre</strong>:${pokemon.name}<br>
-     <strong>Foto</strong>:<img src="${pokemon.img}"><br>`
-
+        `<div class="pokemon-container">
+            <img src="${pokemon.img}"><br>
+            <strong>N°:</strong>${pokemon.num}<br> 
+            <strong>${pokemon.name}</strong><br> 
+            <strong>Type</strong>:${pokemon.type}<br>
+        </div>`;
+    contador++;
+    if (contador % 3 === 0) {
+        pokemonDiv.innerHTML += "<br>"; // Salto de línea después de 3 elementos
+    }
 });
