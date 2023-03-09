@@ -1,9 +1,12 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  console.log(example);
-  return 'example';
+export const pokemonData = (data,condition) => {  
+  const filterType= data.filter(pokemon => pokemon.type === condition);
+    return filterType;
+
+  
 };
+
 
 
 export const anotherExample = () => {
