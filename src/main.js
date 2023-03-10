@@ -1,4 +1,4 @@
-import { pokemonData } from './data.js';
+import { typeData } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -62,7 +62,7 @@ allType.forEach((pokemon) => {
         `<div class="pokemon-container">
             <img src="${pokemon.img}"><br>
             <strong>N°:</strong>${pokemon.num}<br> 
-            <strong>${pokemon.name}</strong><br> 
+            <strong>${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</strong><br> 
             <strong>Type</strong>:${pokemon.type}<br>
         </div>`;
     contador++;
@@ -70,3 +70,9 @@ allType.forEach((pokemon) => {
         pokemonDiv.innerHTML += "<br>"; // Salto de línea después de 3 elementos
     }
 });
+
+const grassPokemon = typeData(data.pokemon, 'grass');
+console.log(grassPokemon);
+
+const poisonPokemon = typeData(data.pokemon, 'poison');
+console.log(poisonPokemon);
