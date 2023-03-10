@@ -6,6 +6,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="contenedor">
+      <h1>Bienvenido al maravilloso mundo de POKEMON GO conoce mas
+        de tus personajes favoritos</h1>
+    </div>
+    <div class="buscarNombre">
+      <input type="text" id="name" class="buscar" placeholder="Ingrese un nombre">
+      <button class = "btn-buscar" id="buscar">Buscar</button>
+      </div>
+
+      <div>
+      <label for="filtrarTipo"></label>
+      <input type="text" id="tipo" name="filtar" placeholder="FILTRAR POR TIPO">
+      <label for="ordenarNombre"></label>
+     <input type="text" id="ordenar" name="ordenar" placeholder="ORDENAR POR NOMBRE">    
+    </div>
+
+    <div id="bloqueTarjetas" >
+    </div>
+
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>

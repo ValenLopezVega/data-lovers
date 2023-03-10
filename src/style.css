@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(246, 246, 163);
+   
+ 
+ }
+ 
+ .contenedor {
+     background-image: url(img/pokemon.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 300px; 
+     margin: 0px;
+     padding: 0px;
+ }
+ .contenedor h1{
+     
+     font-size: xx-large;
+     font-weight: bold;
+     color: black;
+     justify-content:center;
+     margin-left: 70px;
+     padding-inline: 50px;
+     
+ }
+ 
+ #bloqueTarjetas{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    margin: 50px;
+    -webkit-perspective: 100;
+    perspective: 100; 
+    
+    
+    
+ }
+ .card {
+     margin: 10px;
+     width: 300px;
+     height: 350px;
+     flex-wrap: wrap;
+     position: relative;
+     transform-style: preserve-3d;
+     transition: .7s ease;
+     
+    
+ }
+ .frontTarjeta, .backTarjeta {
+     width: 200%;
+     height: 200%;
+     background: rgba(164, 226, 128, 0.874);
+     -webkit-backface-visibility: hidden;
+     backface-visibility: hidden;
+     
+     
+ }
+ 
+ .backTarjeta {
+     transform: rotateY(180deg);
+ }
+ 
