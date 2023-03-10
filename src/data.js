@@ -7,7 +7,7 @@ export const pokemonData = (data,condition) => {
   
 };
 
-export const typepokemon = (data, type) => {
+export const typePokemon = (data, type) => {
   const typePokemon = data.filter(pokemon => pokemon.type.includes(type));
   console.log(typePokemon);
   return typePokemon;
