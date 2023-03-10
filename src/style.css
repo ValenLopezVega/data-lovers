@@ -99,14 +99,14 @@ body {
 }
 
 .pokemon-container {
-	font-family: ;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	padding: 3%;
 	display: flex;
 	display: inline-block;
 	width: 16%;
 	margin-right: 2%;
 	margin-top: 2%;
-	background-color: rgba(200, 196, 196, 0.757);
+	background-color: rgba(200, 196, 196, 0.871);
 	
   }
 
