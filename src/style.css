@@ -85,6 +85,7 @@ body {
 	background-color: white;
 
 }
+
 #oak {
 
 	margin-left: 65%;
@@ -99,7 +100,7 @@ body {
 }
 
 .pokemon-container {
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	padding: 3%;
 	display: flex;
 	display: inline-block;
@@ -107,10 +108,41 @@ body {
 	margin-right: 2%;
 	margin-top: 2%;
 	background-color: rgba(200, 196, 196, 0.871);
-	
-  }
+
+}
 
 #pokemons {
 	margin-left: 30%;
-}  
+}
 
+#filterType {
+	
+	margin-left: 10%;
+}
+
+
+#typeNormal,
+#typeFighting,
+#typeFlying,
+#typePoison,
+#typeGround,
+#typeRock,
+#typeBug,
+#typeGhost,
+#typeSteel,
+#typeFire,
+#typeWater,
+#typeGrass,
+#typeElectric,
+#typePsychic,
+#typeIce, 
+#typeDragon,
+#typeDark, 
+#typeFairy{
+width: 4%;
+background-color: rgba(200, 196, 196, 0.871);
+}
+#allTypes {
+	width: 4.6%;
+	background-color: rgba(200, 196, 196, 0.871);
+}
