@@ -10,4 +10,7 @@ export const orderZaByTitle = (array) => {
 export const searchByTitle = (array, text) => {
   return array.filter((item) => item.title.toLowerCase().includes(text));
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> efac756d1297e5a1feaee8c0462c23c72f67280a

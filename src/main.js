@@ -7,7 +7,11 @@ import {
 
 import data from "./data/ghibli/ghibli.js";
 const listFilms = document.querySelector("#cards-model");
+<<<<<<< HEAD
 const buttonDirectors = document.querySelector("#buttons-directors");
+=======
+const buttonFilter = document.querySelector("#buttons-filter");
+>>>>>>> efac756d1297e5a1feaee8c0462c23c72f67280a
 const buttonOrder = document.querySelector("#buttons-order");
 const buttonSearch = document.querySelector("#buttons-search");
 let dataFilms = data.films;
@@ -27,7 +31,7 @@ const renderizarFilms = () => {
           src="${poster}"
           alt="imagen"
         />
-        <p class="films-name">"${title}"</p>
+        <p class="text-films">"${title}"</p>
 
       </div>
     </figure>`;
@@ -37,7 +41,7 @@ const renderizarFilms = () => {
 
 renderizarFilms();
 
-buttonDirectors.addEventListener("change", (e) => {
+buttonFilter.addEventListener("change", (e) => {
   const directorSelected = e.target.value;
   if (directorSelected === "") {
     dataFilms = data.films;
@@ -64,7 +68,7 @@ const directorsHTML = () => {
     createButton.value = director;
     createButton.innerHTML = director;
 
-    buttonDirectors.appendChild(createButton);
+    buttonFilter.appendChild(createButton);
   });
 };
 

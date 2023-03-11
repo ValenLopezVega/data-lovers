@@ -33,7 +33,13 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
+<<<<<<< HEAD
 
+=======
+.nav-texts:hover {
+  color: #000000;
+}
+>>>>>>> efac756d1297e5a1feaee8c0462c23c72f67280a
 .banner-two {
   background: #00283a;
 }
@@ -158,5 +164,27 @@ body {
   font-family: "Montserrat", sans-serif;
   width: 900px;
 }
+<<<<<<< HEAD
 
 
+=======
+@media (max-width: 768px) {
+  .cards-model {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .buttons-model {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-model {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .buttons-model {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+>>>>>>> efac756d1297e5a1feaee8c0462c23c72f67280a
