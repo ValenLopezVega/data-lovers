@@ -5,8 +5,6 @@ export const tarjetas = (data) => {
   let tarjetaString = " ";
   for (const pokemon of data.pokemon){
     tarjetaString +=`
-    
-    <div class = "card"></div>
     <div class= "backTarjeta">Descripcion</div>
     <div class= "frontTarjeta">
     <img class= "imagenPokemon" src = ${pokemon.img}>
