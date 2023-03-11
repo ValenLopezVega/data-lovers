@@ -27,14 +27,16 @@ body {
  #bloqueTarjetas{
     display: flex;
     flex-direction: row;
-    width: 100px;
-    margin: 50px;
-    -webkit-perspective: 100;
-    perspective: 100; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    align-content: space-between;
+    gap: 20px 20px 
+    /* -webkit-perspective: 100;
+    perspective: 100;  */
+  }
     
-    
-    
- }
+
  .card {
      margin: 10px;
      width: 300px;
@@ -47,8 +49,9 @@ body {
     
  }
  .frontTarjeta, .backTarjeta {
-     width: 200%;
-     height: 200%;
+    display: flex;
+    flex-wrap: wrap;
+     width: 10em;
      background: rgba(164, 226, 128, 0.874);
      -webkit-backface-visibility: hidden;
      backface-visibility: hidden;
