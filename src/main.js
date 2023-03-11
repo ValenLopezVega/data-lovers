@@ -7,11 +7,7 @@ import {
 
 import data from "./data/ghibli/ghibli.js";
 const listFilms = document.querySelector("#cards-model");
-<<<<<<< HEAD
-const buttonDirectors = document.querySelector("#buttons-directors");
-=======
 const buttonFilter = document.querySelector("#buttons-filter");
->>>>>>> efac756d1297e5a1feaee8c0462c23c72f67280a
 const buttonOrder = document.querySelector("#buttons-order");
 const buttonSearch = document.querySelector("#buttons-search");
 let dataFilms = data.films;

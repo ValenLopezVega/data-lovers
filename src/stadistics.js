@@ -40,7 +40,7 @@ const nameSpecies=Object.keys(contarspecies)
       options: {
         scales: {
           y: {
-            beginAtZero: true,
+            display: false,
           },
         },
       },
