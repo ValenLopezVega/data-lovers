@@ -39,12 +39,10 @@ const nameSpecies=Object.keys(contarspecies)
       },
       options: {
         scales: {
-          y: {
-            display: false,
           },
         },
-      },
-    });
-  };
-  stadistics();
 
+      },
+    )
+  };
+  stadistics(); 

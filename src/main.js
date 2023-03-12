@@ -94,3 +94,4 @@ buttonSearch.addEventListener("search", (e) => {
     renderizarFilms();
   }
 });
+
