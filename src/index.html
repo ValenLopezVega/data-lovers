@@ -6,6 +6,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--Header-->
+    <header class="container-header">
+      <h1 class="container-header__title">La casita de pinocho</h1>
+    </header>
+    <hr>
+    <nav class="container-nav">
+      <ul class="container-nav__nav">
+        <li data-target="#inicio" >Inicio</li>
+        <li  data-target="#pokedex">Pokédex</li>
+        <li  data-target="#noticias">Noticias</li>
+      </ul>
+    </nav>
+
+    <main data-content="content" class="active" id="inicio">
+      <p>hola pagina principal</p>
+    </main>
+
+    <section data-content="content" id="pokedex">
+      <p>secundario</p>
+    </section>
+
+    <section data-content="content" id="noticias">
+      <p><img src="https://us.123rf.com/450wm/aliaksandra/aliaksandra1501/aliaksandra150100026/35472507-las-l%C3%ADneas-diagonales-fondo-blanco.jpg"></p>
+    </section>
+
+
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
