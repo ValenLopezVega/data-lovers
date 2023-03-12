@@ -10,6 +10,7 @@ const listFilms = document.querySelector("#cards-model");
 const buttonFilter = document.querySelector("#buttons-filter");
 const buttonOrder = document.querySelector("#buttons-order");
 const buttonSearch = document.querySelector("#buttons-search");
+const buttonRestore = document.querySelector("#buttons-restore");
 let dataFilms = data.films;
 
 const renderizarFilms = () => {
@@ -93,4 +94,12 @@ buttonSearch.addEventListener("search", (e) => {
     dataFilms = [...dataFilter];
     renderizarFilms();
   }
+});
+
+buttonRestore.addEventListener("click", () => {
+  document.querySelector("#buttons-filter").value = "";
+  document.querySelector("#buttons-order").value = "";
+  document.querySelector("#buttons-search").value = "";
+  dataFilms = data.films;
+  renderizarFilms();
 });
