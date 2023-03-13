@@ -15,18 +15,16 @@ body{
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: block;
 }
 
 header{
-    margin-top: 10px;
     height: 140px;
     width: 100%;
 }
 
 .logo{
-    margin-top: 10px;
     display: flex;
     background-color: #49a4e1;
     width: 100%;
@@ -91,9 +89,12 @@ input{
 }
 
 section{
+    display: flex;
     margin: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: #F7F8F7;
-    height: 215px;
+    height: 730.91px;
 }
 
 footer{
@@ -138,6 +139,24 @@ footer{
 }
 
 /*trabajando en card 1 jackeline*/
+.card1, .card2, .card3, .card4, .card5, .card6 {
+    border: 15px solid #F7F8F7;
+    background-color: #49a4e1;
+    padding: 15px;
+    width: 19%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
+/*.card2 {
+    border: 15px solid #F7F8F7;
+    background-color: #49a4e1;
+    padding: 15px;
+    width: 15%;
+    height: 45%;
+    display: inline-block;
+}*/
 
 /*trabajando en card 2 Ale*/
