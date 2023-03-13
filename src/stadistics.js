@@ -1,29 +1,29 @@
 import data from "./data/ghibli/ghibli.js";
-const informacion = () => {
+const information = () => {
 let speciesTotal=[]
 const species=data.films.map((item)=>{
-  const contenedorSpecies=item.people.map((i)=>{
+  const containerSpecies=item.people.map((i)=>{
     return i.specie
   })
-  speciesTotal=[...speciesTotal,...contenedorSpecies]
-  return contenedorSpecies
+  speciesTotal=[...speciesTotal,...containerSpecies]
+  return containerSpecies
 
 })
-const contarSpecie={}
+const countSpecie={}
 speciesTotal.map((item)=>{
-if(contarSpecie[item] ){
-  contarSpecie[item]++
+if(countSpecie[item] ){
+  countSpecie[item]++
 }else{
-  contarSpecie[item]=1
+  countSpecie[item]=1
   
 }
 })
-return contarSpecie 
+return countSpecie 
 }
 const stadistics = () => {
-    let contarspecies = informacion()
-const cantidadSpecies=Object.values(contarspecies)
-const nameSpecies=Object.keys(contarspecies)
+    let countspecies = information()
+const amountSpecies=Object.values(countspecies)
+const nameSpecies=Object.keys(countspecies)
     const ctx = document.getElementById("myChart");
     new Chart(ctx, {
       type: "pie",
@@ -32,7 +32,7 @@ const nameSpecies=Object.keys(contarspecies)
         datasets: [
           {
             label: "# of Characters",
-            data: cantidadSpecies,
+            data: amountSpecies,
             borderWidth: 1,
           },
         ],
