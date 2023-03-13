@@ -588,4 +588,4 @@ btnTypeFairy.addEventListener("click", function mostrarFairy() {
       pokemonDiv.innerHTML += "<br>"; // Salto de línea después de 3 elementos
     }
   });
-});*/
+});
