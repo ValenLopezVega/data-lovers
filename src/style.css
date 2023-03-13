@@ -116,27 +116,22 @@ section{
 .card-body-img{
     /* padding: 15px 15px 10px; */
     display: flex;
-    position: absolute;
-    background-color: #ff0000;
     overflow: hidden;
     height: 300px;
-    width: 200px;
 }
 
 .poster {
     width: 100%;
     height: 100%;
-    margin-right: 10px;
-    position: absolute;
 }
 
 .card-body-text {
-    display: flex;
-    justify-content: space-between;
-    z-index: 2;
-
-    position: absolute;
+    display:flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
 }
 
 .card-title {

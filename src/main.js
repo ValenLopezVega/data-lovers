@@ -4,18 +4,18 @@ import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js'; */
 
 fetch("data/ghibli/ghibli.json")
-.then (response => response.json())
-.then(data => {
+  .then (response => response.json())
+  .then(data => {
     crearTarjetas(data.films)})
-    .catch(error => console.log(error));
+  .catch(error => console.log(error));
 
-    /*Cards Peliculas*/
+/*Cards Peliculas*/
 function crearTarjetas(peliculas){
-    let container = document.querySelector("section");
-    peliculas.forEach(pelicula => 
-        container.innerHTML += `
+  const container = document.querySelector("section");
+  peliculas.forEach(pelicula => 
+    container.innerHTML += `
         <div class="card">
-            <div class="card-body-img>
+            <div class="card-body-img">
                 <img class="poster" src="${pelicula.poster}" alt="Imagen de la película"/>
             </div>
             <div class="card-body-text">
@@ -24,8 +24,8 @@ function crearTarjetas(peliculas){
             </div>
         </div>
         `
-)
-console.log(peliculas)
+  )
+  console.log(peliculas)
 };
 
 //Aqui colocar el código relacionado con el usuario 
