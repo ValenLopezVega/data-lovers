@@ -1,18 +1,19 @@
 /*Paleta de colores
 bordes, header, footer = #49a4e1
 card = #2F7BAD
+borde de card= #1F5273
 fondo y barra busqueda = #F7F8F7*/
 
 body{
     margin: 0px;
     padding: 0px;
-    min-height: 100vh;
-    min-width: 100vw;
+/*     min-height: 100vh;
+    min-width: 100vw; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#root{
-    margin: 0px;
+main{
+    margin: 10px;
     padding: 0px;
     width: 100%;
     height: 100vh;
@@ -91,17 +92,68 @@ input{
 }
 
 section{
-    margin: 0px;
-    background-color: #F7F8F7;
-    height: 215px;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-footer{
+.card {
+    /* padding: 15px 15px 10px; */
+    display: flex;
+    flex-direction: column;
+    background-color: #2F7BAD;
+    border-style: solid;
+    border-color: #1F5273;
+    border-width: 1px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    flex: auto;
+    height: 400px;
+    width: 200px;
+}
+
+.card-body-img{
+    /* padding: 15px 15px 10px; */
+    display: flex;
+    position: absolute;
+    background-color: #ff0000;
+    overflow: hidden;
+    height: 300px;
+    width: 200px;
+}
+
+.poster {
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+    position: absolute;
+}
+
+.card-body-text {
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+
+    position: absolute;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 16px;
+}
+.card-body h5,
+.card-body span {
+    margin: 5px;
+}
+
+/* footer{
     background-color: #49a4e1;
     height: 3%;
     margin-bottom: 0;
-}
-
+} */
 
 /* Borde de la Pagina */
 #top, #bottom, #left, #right {
@@ -141,3 +193,6 @@ footer{
 
 
 /*trabajando en card 2 Ale*/
+
+
+  
