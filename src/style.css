@@ -10,6 +10,7 @@ body{
 
 /*Nav and title*/
 .menu{
+    top: 0;
     position: fixed;
     color: #ffff00;
     width: 100%;
@@ -45,6 +46,20 @@ body{
 }
 
 
+/*Prueba de cuadro*/
+.cuadrodeTarjeta{
+    display: flex;
+    flex-flow: column wrap;
+    width: 200px;
+    height: 200px;
+    justify-content: flex-end;
+    margin: 20px;
+}
+section div ul{
+    margin: 20px;
+    padding: 5px;
+    border: 3px solid #202f40;
+}
 /*mostrar contenido ventanas dinamicas*/
 .active[data-content] {
     display: block;
@@ -52,6 +67,18 @@ body{
 
 [data-content] {
     display: none;
+}
+
+/*caja pokedex*/
+.Cajon-pokedex{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: blue;
+}
+.Cajon-pokedex p{
+    color: crimson;
 }
 
 
