@@ -104,9 +104,9 @@ Criterios de Terminado:
 ## 4. Prototipado
 
 - Prototipo de baja fidelidad
-  ![studioghibli-datalovers](p-baja-fidelidad.png.png)
+  ![studioghibli-datalovers](p-baja-fidelidad.png)
 - Prototipo de alta fidelidad
-  ![studioghibli-datalovers](p-alta-fidelidad.png.png)
+  ![studioghibli-datalovers](p-alta-fidelidad.png)
 
 ## 5. Testeos de usabilidad
 
