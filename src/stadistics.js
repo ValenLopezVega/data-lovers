@@ -1,7 +1,7 @@
 import data from "./data/ghibli/ghibli.js";
 const information = () => {
   let speciesTotal = [];
-  const species = data.films.map((item) => {
+  data.films.map((item) => {
     const containerSpecies = item.people.map((i) => {
       return i.specie;
     });
@@ -22,7 +22,7 @@ const stadistics = () => {
   const countspecies = information();
   const amountSpecies = Object.values(countspecies);
   const nameSpecies = Object.keys(countspecies);
-  const ctx = document.getElementById("myChart");
+  const ctx = document.querySelector("#chart-js");
   new Chart(ctx, {
     type: "pie",
     data: {
@@ -32,7 +32,7 @@ const stadistics = () => {
           label: "# of Characters",
           data: amountSpecies,
           borderWidth: 0,
-          backgroundColor: [
+          backgrounColor: [
             "rgb(64, 224, 208)",
             "rgb(224, 255, 255)",
             "rgb(173, 216, 230)",
@@ -59,9 +59,13 @@ const stadistics = () => {
       ],
     },
     options: {
-      responsive: true,
-      scales: {},
+      plugins: {
+        legend: {
+          position: "left",
+        },
+      },
     },
   });
 };
+
 stadistics();

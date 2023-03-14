@@ -3,32 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Lovers</title>
+    <title>Studio Ghibli</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat&family=Oswald:wght@300&family=Roboto+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@600&family=Oswald:wght@300&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header class="banner-one" id="banner-one">
       <nav class="banner-one-content container">
-        <!-- <figure>
-          <img src="./img/logo.png" alt="logo1" class="img-logo1" />
-        </figure> -->
-        <a href="index.html#filmsGhibli" class="nav-texts">Films</a>
+        <a href="index.html#filmsGhibli" class="nav-text">Films</a>
         <img src="./img/logo.png" alt="logo1" class="img-logo1" />
-        <a href="stadistics.html" class="nav-texts">Statistics</a>
+        <a href="stadistics.html" class="nav-text">Statistics</a>
       </nav>
     </header>
-    <main class="banner-two" id="banner-two">
-      <section class="banner-two-content container"></section>
-      <div>
-        <h1>Statistics of existing Studio Ghibli's species.</h1>
-        <canvas id="myChart" class="myChart" width="400" height="400"></canvas>
-      </div>
+    <main class="banner-three" id="banner-three">
+      <section class="banner-three-content container">
+        <div class="statistics">
+          <h1 class="h1-text">How many species are there of each character?</h1>
+          <p class="p-text">
+            The graph below shows the number of character species
+          </p>
+          <canvas
+            class="chart-js"
+            id="chart-js"
+    
+          ></canvas>
+        </div>
+      </section>
     </main>
     <footer class="information">
       <article class="disclaimer">

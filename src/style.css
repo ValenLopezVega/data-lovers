@@ -26,15 +26,14 @@ body {
 .img-logo1 {
   width: 210px;
   height: 50px;
-  padding-left: 30px;
 }
-.nav-texts {
+.nav-text {
   color: #000000;
   text-decoration: none;
-  font-weight: 600;
-  font-family: "Bree Serif", serif;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
 }
-.nav-texts:hover {
+.nav-text:hover {
   color: #ffffff;
 }
 .banner-two {
@@ -161,21 +160,111 @@ body {
   font-family: "Montserrat", sans-serif;
   width: 900px;
 }
-.myChart {
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-  color: #f5f5f5;
-  text-align: right;
-  max-width: 600px;
-  max-height: 600px;
-  margin-left: 400px;
-  margin-bottom: 50px;
+.banner-three {
+  background: #00283a;
 }
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
+.banner-three-content {
+  height: 700px;
+  padding: 70px;
+}
+.h1-text {
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
   color: #f5f5f5;
   text-align: center;
-  margin-bottom: 50px;
+  padding-top: 20px;
+}
+.p-text {
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  color: #f5f5f5;
+  text-align: center;
+}
+.chart-js {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  font-family: "Bree Serif", serif;
+}
+@media screen and (max-width: 820px) {
+  .banner-two-content {
+    padding: 100px 70px;
+  }
+  .img-logo1 {
+    width: 70px;
+    height: 25px;
+  }
+  .nav-text {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .buttons-design {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+  .text-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cards-model {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .buttons-model {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .chart-js {
+    width: 500px;
+    height: 500px;
+    margin: 0 50px;
+  }
+  .p-text {
+    margin: 30px;
+  }
+  .banner-three-content {
+    padding: 70px 5px;
+  }
 }
 
+@media screen and (max-width: 600px) {
+  .banner-two-content {
+    padding: 100px 70px;
+  }
+  .img-logo1 {
+    width: 70px;
+    height: 25px;
+  }
+  .nav-text {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .buttons-design {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+  .text-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cards-model {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .buttons-model {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .chart-js {
+    height: 1000px;
+    margin: 15px;
+  }
+  .p-text {
+    margin: 30px;
+  }
+  .banner-three-content {
+    padding: 70px 5px;
+  }
+}
