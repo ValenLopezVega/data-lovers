@@ -1,4 +1,4 @@
-import { pokemonData } from "./data.js";
+import { pokemonData, filterByLetter } from "./data.js";
 // import data from './data/lol/lol.js';
 import data from "./data/pokemon/pokemon.js";
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -37,6 +37,12 @@ const btnTypeDragon    = document.getElementById('typeDragon');
 const btnTypeDark     = document.getElementById('typeDark');
 const btnTypeFairy    = document.getElementById('typeFairy');
 
+//Filtro Asc y desc
+//const filterAsc = document.getElementById('asc');
+//const filterDes = document.getElementById('des');
+const filterLetter = document.getElementById('filterLetter').value;;
+
+//Ocultar secciones
 function mostrarSeccion(seccion) {
   switch (seccion) {
   case "home":
@@ -212,3 +218,44 @@ btnTypeFairy.addEventListener("click", function() {
   pokemonDiv.innerHTML = "";
   mostrarPokemon(filtrarPorTipo("fairy"));
 });
+
+//Filtrar por abecedario 
+
+/*function sortData(data, name, sortOrder){
+if (sortOrder === 'asc') {
+  filterData.sort((a, b) => (a.name > b.name) ? 1 : -1);
+} else if (sortOrder === 'desc') {
+  filterData.sort((a, b) => (a.name < b.name) ? 1 : -1);
+  
+}
+console.log(sortData ())
+return filterData;
+}
+
+
+function sortData(data, name, sortOrder) {
+  if (sortOrder === 'asc') {
+    data.sort((a, b) => (a[name] > b[name]) ? 1 : -1);
+  } else if (sortOrder === 'desc') {
+    data.sort((a, b) => (a[name] < b[name]) ? 1 : -1);
+  }
+  console.log(data);
+  return data;
+}*/
+
+/*filterAsc.addEventListener("click", function() {
+  pokemonDiv.innerHTML = "";
+  mostrarPokemon(sortData());
+});*/
+
+/*function ordenarPokemon(pokemon, sortBy, sortOrder) {
+  // Se ordenan los pokemons por el campo especificado en 'sortBy' y en el orden especificado en 'sortOrder'
+  pokemon = sortData(pokemon, sortBy, sortOrder);
+
+  // Se devuelve el array de pokemons ordenado
+  return pokemon;
+  console.log(pokemon);
+} */
+
+
+
