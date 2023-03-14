@@ -3,8 +3,8 @@
 ## Índice
 
 - [1. Resumen del proyecto](#1-resumen-del-proyecto)
-- [2. Historias de usuario](#2-historias-de-usuario)
-- [3. Funcionamiento de la página](#3-funcionamiento-de-la-pagina)
+- [2. Funcionamiento de la página](#2-funcionamiento-de-la-pagina)
+- [3. Historias de usuario](#3-historias-de-usuario)
 - [4. Prototipado](#4-prototipado)
 - [5. Testeos de usabilidad](#5-testeos-de-usabilidad)
 
