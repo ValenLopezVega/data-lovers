@@ -7,6 +7,7 @@ fetch("data/ghibli/ghibli.json")
   .then (response => response.json())
   .then(data => {
     crearTarjetas(data.films)})
+  // eslint-disable-next-line no-console
   .catch(error => console.log(error));
 
 /*Cards Peliculas*/
@@ -24,9 +25,10 @@ function crearTarjetas(peliculas){
             </div>
         </div>
         `
-  )
-  console.log(peliculas)
-};
+  );
+  // eslint-disable-next-line no-console
+  console.log(peliculas);
+}
 
 //Aqui colocar el código relacionado con el usuario 
 // Aquí se debe pintar la data 
