@@ -17,7 +17,7 @@ body{
 main{
     padding: 0px;
     width: 99.2vw;
-    height: 100vw;
+    height: 100vh;
     display: block;
 }
 
@@ -100,7 +100,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     margin-left: 10px;
-    align-items: center;
+    justify-content: center;
 }
 
 .card {
@@ -114,15 +114,13 @@ section{
     color: #fff;
     position: relative;
     overflow: hidden;
-    margin-bottom: 25px;
-    margin-right: 25px;
+    margin: 1.5%;
     flex: auto;
-    height: 400px;
-    width: 200px;
+    max-height: 400px;
+    max-width: 200px;
 }
 
 .card-body-img{
-    /* padding: 15px 15px 10px; */
     display: flex;
     overflow: hidden;
     height: 300px;
@@ -134,28 +132,20 @@ section{
 }
 
 .card-body-text {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
+    display: flex;
     height: 100px;
-    /*z-index: 2;*/
+    width: 100%;
+    flex-direction: column;
 }
 
 .card-title {
     font-size: 16px;
     margin: 5px;
 }
-.card-body h5,
-.card-body span {
-    margin: 5px;
-}
 
-/* footer{
-    background-color: #49a4e1;
-    height: 3%;
-    margin-bottom: 0;
-} */
+.card-body-text span {
+    margin-left: 5px;
+}
 
 /* Borde de la Pagina */
 #top, #bottom, #left, #right {
@@ -190,7 +180,3 @@ section{
 #bottom {
     bottom: 0;
 }
-
-
-
-  
