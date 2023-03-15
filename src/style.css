@@ -29,9 +29,7 @@ body {
 }
 
 #buttonHome,
-#buttonPokedex,
-#buttonMap,
-#buttonExtra {
+#buttonPokedex {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   box-shadow: 3px 4px 0px 0px #899599;
@@ -53,49 +51,46 @@ body {
 }
 
 #buttonHome:hover,
-#buttonPokedex:hover,
-#buttonMap:hover,
-#buttonExtra:hover {
+#buttonPokedex:hover {
   background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
   background-color: #bab1ba;
 }
 
 #buttonHome:active,
-#buttonPokedex:active,
-#buttonMap:active,
-#buttonExtra:active {
+#buttonPokedex:active{
   position: relative;
   top: 5px;
 }
 
+.flexWelcome {
+  display: flex;
+  flex-direction: wrap;
+}
+
+
 #welcome {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  position: Absolute;
   display: flex;
   flex-wrap: wrap;
-  width: 500px;
-  height: 350px;
+  width: auto;
+  height: auto;
   border-radius: 25px;
   justify-content: center;
   border-style: double;
   border-color: #ffaa22;
   border-width: 10px;
-  margin-left: 60%;
-  margin-right: 10%;
+  margin-left: 10%;
   margin-top: 5%;
-  background-color: white;
+  margin-right: auto;
+  background-color: #f3ebdede;
 }
 
 #oak {
-  margin-left: 65%;
-}
-
-#carrusel {
-  display: flex;
-  position: relative;
-  margin-right: 50%;
-  margin-top: 5%;
+  margin: auto;
+  width: 70%; 
+  padding: auto;
+  margin-right: auto
 }
 
 
@@ -151,6 +146,14 @@ h3 {
   border-radius: 10px;
 }
 
+.type-normal::before{
+background-color: #04239f;
+content: "Normal";
+padding: 0 5em;
+border-radius: 8xp;
+font-size: .9em;
+}
+
 #allTypes {
   width: 4.6%;
   background-color: rgba(200, 196, 196, 0.871);
@@ -158,7 +161,7 @@ h3 {
 }
 
 footer {
-  position: fixed;
+  position: static;
   bottom: 0;
   text-align: center;
   font-size: large;
@@ -166,20 +169,21 @@ footer {
   padding: 0.5%;
   width: 100%;
   height: 40px;
+  left: 0;
 }
 
-#pokedexSecction,
-#mapSecction,
-#extraSecction {
+#pokedexSecction {
   display: none;
 }
 
+main {
+  box-sizing: border-box;
+  height: 100%;
+  margin-bottom: 50%;
+}
+
+
 @media screen and (max-width: 768px) {
-	#carrusel {
-	  margin-right: 0;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	}
   
 	.pokemon-container {
 	  width: 30%;
@@ -209,9 +213,7 @@ footer {
 
   @media only screen and (max-width: 768px) {
 	#buttonHome,
-    #buttonPokedex,
-    #buttonMap,
-    #buttonExtra {
+    #buttonPokedex {
 		display: flex;
 		flex-wrap: wrap;
 	    font-size: 50%;
@@ -222,3 +224,7 @@ footer {
   @media only screen and (max-width: 600px) {
 
   }
+  .type-normal {
+    color: green;
+  }
+  

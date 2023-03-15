@@ -7,14 +7,10 @@ import data from "./data/pokemon/pokemon.js";
 //secciones
 const homeSecction = document.getElementById("homeSecction");
 const pokedexSecction = document.getElementById("pokedexSecction");
-const mapSecction = document.getElementById("mapSecction");
-const extraSecction = document.getElementById("extraSecction");
 const pokemonDiv = document.getElementById("pokemons");
 //botones de barra menu
 const btnHome = document.getElementById("buttonHome");
 const btnPokedex = document.getElementById("buttonPokedex");
-const btnMap = document.getElementById("buttonMap");
-const btnExtra = document.getElementById("buttonExtra");
 
 //botones de tipos
 const btnAllTypes = document.getElementById("allTypes");
@@ -48,26 +44,10 @@ function mostrarSeccion(seccion) {
   case "home":
     homeSecction.style.display = "block";
     pokedexSecction.style.display = "none";
-    mapSecction.style.display = "none";
-    extraSecction.style.display = "none";
     break;
   case "pokedex":
     homeSecction.style.display = "none";
     pokedexSecction.style.display = "block";
-    mapSecction.style.display = "none";
-    extraSecction.style.display = "none";
-    break;
-  case "map":
-    homeSecction.style.display = "none";
-    pokedexSecction.style.display = "none";
-    mapSecction.style.display = "block";
-    extraSecction.style.display = "none";
-    break;
-  case "extra":
-    homeSecction.style.display = "none";
-    pokedexSecction.style.display = "none";
-    mapSecction.style.display = "none";
-    extraSecction.style.display = "block";
     break;
   default:
     console.error("Sección no válida");
@@ -76,8 +56,6 @@ function mostrarSeccion(seccion) {
 
 btnHome.addEventListener("click", () => mostrarSeccion("home"));
 btnPokedex.addEventListener("click", () => mostrarSeccion("pokedex"));
-btnMap.addEventListener("click", () => mostrarSeccion("map"));
-btnExtra.addEventListener("click", () => mostrarSeccion("extra"));
 
 
 console.log(pokemonData);
@@ -106,6 +84,11 @@ function mostrarPokemon(pokemon) {
 }
 
 // Mostrar todos los Pokémon
+btnPokedex.addEventListener("click", function() {
+  pokemonDiv.innerHTML = "";
+  mostrarPokemon(data.pokemon);
+});
+
 btnAllTypes.addEventListener("click", function() {
   pokemonDiv.innerHTML = "";
   mostrarPokemon(data.pokemon);
