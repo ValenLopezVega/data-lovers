@@ -106,6 +106,7 @@ Criterios de Terminado:
 - Prototipo de baja fidelidad
 
   ![studioghibli-datalovers](p-baja-fidelidad.png)
+
 - Prototipo de alta fidelidad
 
   ![studioghibli-datalovers](p-alta-fidelidad.png)
