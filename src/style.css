@@ -7,7 +7,6 @@ body{
     background-image: url(https://c8.alamy.com/compes/2eww0mr/lineas-diagonales-patron-de-fondo-fondo-blanco-con-lineas-diagonales-grises-vector-eps-10-2eww0mr.jpg); /*imagen de fondo*/
 }
 
-
 /*Nav and title*/
 .menu{
     top: 0;
@@ -81,7 +80,15 @@ section div ul{
     color: crimson;
 }
 
-
+/* Buscador */
+.bucador{ 
+    display: block;
+    background-color: red;
+    padding: 40px;
+    top: 150px;
+    position: absolute;
+    z-index: 2000;
+}
 
 .colores{
     color: #202f40;

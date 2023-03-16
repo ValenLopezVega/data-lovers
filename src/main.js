@@ -6,6 +6,8 @@ import data from './data/pokemon/pokemon.js';
 /*console.log(example,anotherExample,data);*/
 
 //DOM elements
+const input = document.getElementById('buscar')
+const boton = document.getElementById('btn')
 const targets = document.querySelectorAll('[data-target]');
 const content = document.querySelectorAll('[data-content]');
 
@@ -38,8 +40,10 @@ function mostrar (dataArray) {
                         `
     console.log('contenido pokedex' +contentPokedex);
     })
-    console.log(dataArray);
+ //   console.log(dataArray);
   document.getElementById('content-pokedexs').innerHTML = contentPokedex
 }
 mostrar (datosPokedex)
+
+//pruebas de filtro
 
