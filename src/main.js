@@ -1,45 +1,51 @@
-import { example } from './data.js';
+import { filtrado } from './data.js';
 
 import {anotherExample} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
-/*console.log(example,anotherExample,data);*/
 
-//DOM elements
-const targets = document.querySelectorAll('[data-target]');
-const content = document.querySelectorAll('[data-content]');
 
 
 
+//DOM elements
 //Functions that interact with the DOM
-//Dynamic windows
-targets.forEach(target => {
-  target.addEventListener('click', () => {
-    content.forEach(c => {
-      c.classList.remove('active');
-    });
-    const t = document.querySelector(target.dataset.target);
-    t.classList.add('active');
-  })
-});
+//Data Pokemon (Visualizar img,num,name en la interfaz)
 
-//data POkemon
 const datosPokedex = data.pokemon;
 function mostrar (dataArray) {
- // const cotenedorPokedex =document.querySelector('.contenedor-pokedex')
+// const cotenedorPokedex =document.querySelector('.contenedor-pokedex')
   let contentPokedex = "";
-  dataArray.forEach((elemento)=>{
-   // console.log('cada elemento; ', elemento)
-    contentPokedex += `<article> 
-                        <img src="${elemento.img}">
-                        <p>${elemento.num}</p>
-                        <p>${elemento.name}</p>
+  dataArray.forEach((element)=>{
+  // console.log('cada elemento; ', elemento)
+    contentPokedex += `<article class="card"> 
+                        <div class="pokemon-img">
+                        <img src="${element.img}">
+                        </div>
+                        <p>${element.num}</p>
+                        <p>${element.name}</p>
+                        <p>${element.generation.name}</p>
+                        <p>${element.type}<p>
                       </article>
                         `
-    console.log('contenido pokedex' +contentPokedex);
-    })
-    console.log(dataArray);
+  /*console.log('contenido pokedex' +contentPokedex);*/
+  })
+  /*console.log(dataArray);*/
   document.getElementById('content-pokedexs').innerHTML = contentPokedex
 }
 mostrar (datosPokedex)
 
+/*function filtrado1 (filtradoGen){
+  let contenedorFiltrado = "";
+  let fil = filtradoGen.filter(itemGen => { 
+    itemGen.generation.name === "kanto"}
+    )
+    contenedorFiltrado+=fil
+    console.log(fil)
+  }
+  
+
+filtrado1(datosPokedex)
+console.log(filtrado1)
+btnBuscar.addEventListener("click",filtrado1)*/
+
+filtrado(datosPokedex)

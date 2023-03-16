@@ -6,30 +6,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
     <body>
-      <!--Cabesa y navegador de la pagina-->
-      <header>
-        <nav class="menu">
-          <div class="container-title">
-            <h1>La casita de pinocho</h1>
-          </div>
-          <ul class="menu_items">
-            <li data-target="#inicio" class="menu_items__li">Inicio</li>
-            <li  data-target="#pokedex">Pokédex</li>
-            <li  data-target="#noticias">Noticias</li>
-          </ul>
-        </nav>
+      <!--Cabeza y navegador de la pagina-->
+      <header class="container-title">
+        <div class="container-logo">
+          <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon-720x450.png">
+        </div>
       </header>
-      <p></p>
       <!--Cuerpo o contenido principal -->
       <main data-content="content" id="inicio" class="active"> 
-        <div class=""></div>
-        <div></div>
+       
       </main>
 
        <!-- Caja 2 -->
         <section data-content="content" id="pokedex"  >
+          <div class="bucador">
+            <input id="buscar" placeholder="Buscador">
+            <button id="btn-buscar">Buscar</button>
+
+        </div>
           <div class="Cajon-pokedex" id="content-pokedexs"></div>
+          <select class="filtrado">//se creo para mirar lo de filtrado
+            
+          </select>
         </section>
+
        
       <!--caja 3 -->
         <section data-content="content" id="noticias" >
