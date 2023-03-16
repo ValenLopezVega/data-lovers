@@ -1,4 +1,4 @@
-import { pokemonData, sortPokemon} from "./data.js";
+import { pokemonData, sortPokemon, calculateSpawnMinMax} from "./data.js";
 import pokemon from "./data/pokemon/pokemon.js";
 // import data from './data/lol/lol.js';
 import data from "./data/pokemon/pokemon.js";
@@ -8,10 +8,12 @@ import data from "./data/pokemon/pokemon.js";
 //secciones
 const homeSecction = document.getElementById("homeSecction");
 const pokedexSecction = document.getElementById("pokedexSecction");
+const extraSecction = document.getElementById("extraSecction");
 const pokemonDiv = document.getElementById("pokemons");
 //botones de barra menu
 const btnHome = document.getElementById("buttonHome");
 const btnPokedex = document.getElementById("buttonPokedex");
+const btnExtra = document.getElementById("buttonExtra")
 
 //botones de tipos
 const btnAllTypes = document.getElementById("allTypes");
@@ -34,29 +36,33 @@ const btnTypeDragon    = document.getElementById('typeDragon');
 const btnTypeDark     = document.getElementById('typeDark');
 const btnTypeFairy    = document.getElementById('typeFairy');
 
-//Filtro Asc y desc
-//const filterAsc = document.getElementById('asc');
-//const filterDes = document.getElementById('des');
-//const filterLetter = document.getElementById('filterLetter').value;;
-
 //Ocultar secciones
 function mostrarSeccion(seccion) {
   switch (seccion) {
   case "home":
     homeSecction.style.display = "block";
     pokedexSecction.style.display = "none";
+    extraSecction.style.display = "none"
     break;
   case "pokedex":
     homeSecction.style.display = "none";
     pokedexSecction.style.display = "block";
+    extraSecction.style.display = "none"
     break;
+    case "extra":
+      homeSecction.style.display = "none";
+      pokedexSecction.style.display = "none";
+      extraSecction.style.display = "block"
+      break;
   default:
     console.error("Sección no válida");
   }
 }
 
+
 btnHome.addEventListener("click", () => mostrarSeccion("home"));
 btnPokedex.addEventListener("click", () => mostrarSeccion("pokedex"));
+btnExtra.addEventListener("click", () => mostrarSeccion("extra"));
 
 
 // Función para filtrar Pokémon por tipo
@@ -216,8 +222,47 @@ btnTypeDark.addEventListener("click", function() {
 btnTypeFairy.addEventListener("click", function() {
   pokemonDiv.innerHTML = "";
   mostrarPokemon(filtrarPorTipo("fairy"));
-  
 });
 
+//Spawn
+const mostrarPokeSpawn = document.getElementById("mostrarPokeSpawn")
+const spawnChanceMinMax = calculateSpawnMinMax(data);
 
+// obtén los valores mínimo y máximo de spawn_chance a través del objeto devuelto por la función
+const minSpawnChance = spawnChanceMinMax.min;
+const maxSpawnChance = spawnChanceMinMax.max;
 
+// imprime los valores mínimo y máximo de spawn_chance
+console.log("Mínimo: " + minSpawnChance + ", Máximo: " + maxSpawnChance);
+
+function mostrarSpawnMin(pokemones) {
+  const sortedPokemon = [...pokemones].sort((a, b) => b['spawn-chance'] - a['spawn-chance']).slice(0, 10);
+  sortedPokemon.forEach(pokemon => {
+    mostrarPokeSpawn.innerHTML += `<div class="spawn-container">
+      <img src="${pokemon.img}"><br>
+      <strong>N°: </strong>${pokemon.num}<br> 
+      <strong>${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</strong><br> 
+      <strong>Type</strong>: ${pokemon.type}<br>
+      <strong>spawn-chance</strong>: ${pokemon['spawn-chance']}<br>
+    </div>`;
+  });
+}
+
+function mostrarSpawnMax(pokemones) {
+  const sortedPokemon = [...pokemones].sort((a, b) => a['spawn-chance'] - b['spawn-chance']).slice(0, 10);
+  sortedPokemon.forEach(pokemon => {
+    mostrarPokeSpawn.innerHTML += `<div class="spawn-container">
+      <img src="${pokemon.img}"><br>
+      <strong>N°: </strong>${pokemon.num}<br> 
+      <strong>${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</strong><br> 
+      <strong>Type</strong>: ${pokemon.type}<br>
+      <strong>spawn-chance</strong>: ${pokemon['spawn-chance']}<br>
+    </div>`;
+  });
+}
+
+btnExtra.addEventListener("click", function() {
+  mostrarPokeSpawn.innerHTML = "";
+  mostrarSpawnMin(data.pokemon);
+  mostrarSpawnMax(data.pokemon);
+});
