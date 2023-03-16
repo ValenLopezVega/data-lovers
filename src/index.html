@@ -40,9 +40,7 @@
    <p> Este juego te invita a salir de casa e ir en la búsqueda de pokemons!!
     completa tu Pokedex y combate con otros jugadores en la liga de combates Go!</p>
 
-    <p>  Nosotras de ayudaremos mostrándote las características de cada pokemon de Kanto y Johto, 
-    además tenemos un mapa donde te indicamos que pokemon puedes encontrar con mayor probabilidad
-    en cada zona geográfica. </p>
+    <p>  Nosotras te ayudaremos mostrándote las características de cada pokemon de Kanto y Johto</p>
   </div>
     <div id="oak">
     <img id ="oak" src="/extra/profesorOak.webp" /> 
@@ -75,16 +73,13 @@
       <img id = "typeDragon" src="./extra/type_dragon.webp" alt="logo tipo dragon" />
       <img id = "typeDark" src="./extra/Type_Siniestro.webp" alt="logo tipo siniestro"/> 
       <img id = "typeFairy" src="./extra/Type_Hada.webp" alt="logo tipo hada" /> 
-    </div>
-    <article> 
-    <select name="ordenar" id="filterLetter" class="selector">
-      <option disabled selected>Ordenar por:</option>
-      <option id="asc" value="1">A-Z</option>
-      <option id="des" value="2">Z-A</option> </select>
-    </article>
-
-    
-
+    </div>   
+  
+<select id="order-select">
+  <option disabled selected>Ordenar por:</option>
+  <option id="btnAsc" value="asc">Ascendente A-Z </option>
+  <option id="btnDesc" value="desc">Descendente Z-A </option>
+</select>
     <!--Lista de pokemon-->
     <div id = "pokemons">
     </div>

@@ -1,4 +1,5 @@
-import { pokemonData, filterByLetter } from "./data.js";
+import { pokemonData, sortPokemon} from "./data.js";
+import pokemon from "./data/pokemon/pokemon.js";
 // import data from './data/lol/lol.js';
 import data from "./data/pokemon/pokemon.js";
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -36,7 +37,7 @@ const btnTypeFairy    = document.getElementById('typeFairy');
 //Filtro Asc y desc
 //const filterAsc = document.getElementById('asc');
 //const filterDes = document.getElementById('des');
-const filterLetter = document.getElementById('filterLetter').value;;
+//const filterLetter = document.getElementById('filterLetter').value;;
 
 //Ocultar secciones
 function mostrarSeccion(seccion) {
@@ -58,20 +59,15 @@ btnHome.addEventListener("click", () => mostrarSeccion("home"));
 btnPokedex.addEventListener("click", () => mostrarSeccion("pokedex"));
 
 
-console.log(pokemonData);
-console.log(data);
-//const allType = data.pokemon;
-
-
 // Función para filtrar Pokémon por tipo
 function filtrarPorTipo(tipo) {
   return data.pokemon.filter(pokemon => pokemon.type.includes(tipo));
 }
 
 // Función para mostrar los Pokémon en el contenedor
-function mostrarPokemon(pokemon) {
-  
-  pokemon.forEach(pokemon => {
+function mostrarPokemon(pokemones) {
+ 
+  pokemones.forEach(pokemon => {
     pokemonDiv.innerHTML += `<div class="pokemon-container">
       <img src="${pokemon.img}"><br>
       <strong>N°: </strong>${pokemon.num}<br> 
@@ -83,12 +79,32 @@ function mostrarPokemon(pokemon) {
   });
 }
 
-// Mostrar todos los Pokémon
+//seccion ordenar por abecedario
+const orderSelect = document.getElementById("order-select");
+
+orderSelect.addEventListener("change", function() {
+  const selectedOption = orderSelect.value;
+
+  if (selectedOption === "asc") {
+    // Ordenar y mostrar en orden ascendente
+    pokemonDiv.innerHTML = "";
+    const pokemonOrdenados = sortPokemon(data.pokemon, "asc");
+    mostrarPokemon(pokemonOrdenados);
+  } else if (selectedOption === "desc") {
+    // Ordenar y mostrar en orden descendente
+    pokemonDiv.innerHTML = "";
+    const pokemonOrdenados = sortPokemon(data.pokemon, "desc");
+    mostrarPokemon(pokemonOrdenados);
+  }
+});
+
+// Mostrar todos los Pokémon en pokedex
 btnPokedex.addEventListener("click", function() {
   pokemonDiv.innerHTML = "";
   mostrarPokemon(data.pokemon);
 });
 
+//Mostrar todos en bóton pokebola 
 btnAllTypes.addEventListener("click", function() {
   pokemonDiv.innerHTML = "";
   mostrarPokemon(data.pokemon);
@@ -200,45 +216,8 @@ btnTypeDark.addEventListener("click", function() {
 btnTypeFairy.addEventListener("click", function() {
   pokemonDiv.innerHTML = "";
   mostrarPokemon(filtrarPorTipo("fairy"));
-});
-
-//Filtrar por abecedario 
-
-/*function sortData(data, name, sortOrder){
-if (sortOrder === 'asc') {
-  filterData.sort((a, b) => (a.name > b.name) ? 1 : -1);
-} else if (sortOrder === 'desc') {
-  filterData.sort((a, b) => (a.name < b.name) ? 1 : -1);
   
-}
-console.log(sortData ())
-return filterData;
-}
-
-
-function sortData(data, name, sortOrder) {
-  if (sortOrder === 'asc') {
-    data.sort((a, b) => (a[name] > b[name]) ? 1 : -1);
-  } else if (sortOrder === 'desc') {
-    data.sort((a, b) => (a[name] < b[name]) ? 1 : -1);
-  }
-  console.log(data);
-  return data;
-}*/
-
-/*filterAsc.addEventListener("click", function() {
-  pokemonDiv.innerHTML = "";
-  mostrarPokemon(sortData());
-});*/
-
-/*function ordenarPokemon(pokemon, sortBy, sortOrder) {
-  // Se ordenan los pokemons por el campo especificado en 'sortBy' y en el orden especificado en 'sortOrder'
-  pokemon = sortData(pokemon, sortBy, sortOrder);
-
-  // Se devuelve el array de pokemons ordenado
-  return pokemon;
-  console.log(pokemon);
-} */
+});
 
 
 
