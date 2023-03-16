@@ -8,14 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      background-image: url(images/background.gif);
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-  </style>
 </head>
 
 <body>
@@ -24,6 +16,7 @@
     <button id="botonHistoria">HISTORIA</button>
     <button id="botonFilmografia">FILMOGRAFÍA</button>
     <button id="botonPersonajes">PERSONAJES</button>
+    
   </header>
 
   <main>
@@ -49,19 +42,48 @@
         de 2017, Toshio Suzuki anunció que Miyazaki había vuelto a salir de su retiro para dirigir un nuevo
         largometraje, ¿Cómo vives?, con Studio Ghibli.
       </p>
+      <button id="volver">VOLVER</button>
     </section>
 
     <section id="filmografia" class="filmografia">
       <h2>FILMOGRAFÍA</h2>
+      <div id="peliculas">¨jajajajajajajamahaha</div>
+      <div id="lista">
+      <form>
+        <select id="orden" name="tipo">
+        <option value="descendente"> A-Z </option>
+        <option value="ascendente"> Z-A </option>
+        </select>
+      </form>
+    </div>
+
       <p>Contenido de la sección Filmografía...</p>
+      <button id="volver2">VOLVER</button>
     </section>
 
     <section id="personajes" class="personajes">
       <h2>PERSONAJES</h2>
+
+      <div id="filtro_especie">
+      <input type="radio" id="especie">
+      <label for="especie"> ESPECIE </label>
+      </div>
+      <br>
+
+      <div id="filtro_genero">
+      <input type="radio" id="genero">
+      <label for="genero"> GÉNERO </label>
+      </div>
+      <br>
+
       <p>Contenido de la sección Personajes...</p>
+      <button id="volver3">VOLVER</button>
     </section>
+
+
   </main>
   <script src="main.js" type="module"></script>
+  <script src="data.js" type="module"></script>
 </body>
 
 </html>

@@ -14,12 +14,64 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+  margin: 50px;
+  color: #ffffff;
+
+}
+
 p {
   text-align: justify;
   margin: 50px;
+  color: #ffffff;
+}
+
+body {
+  background-image: url("Imagenes/chihiro.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @import url('@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap)');
+}
+#orden {
+  width: 15%;
+  padding: 15px 15px;
+  border: 3px solid #4C362E;
+  border-radius: 8px;
+  background-color: #C9B8A7;
+  font-size: 15px;
+  font-weight: bold;
+  color: #4C362E;
+  position: absolute;
+  left: 85%;
 }
 
 /* BUTTONS */
+
+#filtro_especie {
+  width: 70px;
+  border: 3px solid #4C362E;
+  border-radius: 8px;
+  background-color: #C9B8A7;
+  font-size: 12.5px;
+  font-weight: bold;
+  padding: 10px 30px;
+  margin: 5px;
+  color: #4C362E;
+}
+
+#filtro_genero {
+  width: 70px;
+  border: 3px solid #4C362E;
+  border-radius: 8px;
+  background-color: #C9B8A7;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 30px;
+  margin: 5px;
+  color: #4C362E;
+}
+
 button {
   background-color: #7F8462;
   color: #ffffff;
@@ -43,6 +95,9 @@ button:hover {
 }
 button:first-of-type {
   margin-top: 305px;
+}
+option {
+  
 }
 
 /* MOSTRAR-OCULTAR SECCIONES */
