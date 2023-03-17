@@ -1,12 +1,85 @@
+HTML
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Lovers</title>
+    <link rel="shortcut icon" href="./images/rmlogo1.png"/>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<body>
+  <header class="header">
+
+    <div class="content-nav" >
+
+      <nav class="nav container">
+        <ul class="link" >
+          <li><a class="items" href="">Home</a></li>
+          <li><a class="items" href="">Characters</a></li> 
+          <li><a class="items" href="">Games</a></li> 
+        </ul>
+
+        <div class="content-inp-icon">
+          <input class="inp" id="search" type="search" placeholder="Search Characters">
+          <img  src="./images/search.png" class="icon" alt="search">
+        </div>
+      </nav>
+
+    </div>
+
+    <img src="./images/rym.png " alt="" class="logo">
+
+    <div class="content-select-all container ">
+
+      <div class="group-select">
+        <select name="filter" class="select" id="select-species">
+          <option disabled selected>-Choose-</option>
+          <option value="Humanoid">Humanoid</option>
+          <option value="Robot">Robot</option>
+          <option value="Human">Human</option>
+          <option value="Alien">Alien</option>
+          <option value="Cronenberg">Cronenberg</option>
+          <option value="Disease">Disease</option>
+          <option value="Parasite">Parasite</option>
+          <option value="Mytholog">Mytholog</option>
+          <option value="Animal">Animal</option>
+        </select>
+      </div>
+          
+      <div class="group-select">
+     
+      </div>
+
+      <div class="group-select">
+
+      </div>
+
+    </div>
+  
+  </header>
+
+  <main>    
+
+    <section class="content ">
+      <div class="container-cards ">
+      </div> 
+    </section>
+
+  </main>
+
+
+    <footer class="footer container">
+      <p>footer</p>
+    </footer>
+
+
+  <!--<div id="root"></div>-->
+  <script src="main.js" type="module"></script>
+
+</body>
+
 </html>
