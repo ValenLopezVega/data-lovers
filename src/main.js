@@ -52,25 +52,33 @@ function show(characters) {
     const nameCharacters2 = document.createElement('h2');
     const paragraph = document.createElement('p');
     const paragraph2 = document.createElement('p');
+    const paragraph3 = document.createElement('p');
+    const paragraph4 = document.createElement('p');
 
     divCard2.classList.add('cards-reverse');
     nameCharacters2.classList.add('text-name-r');
     paragraph.classList.add('text1');
     paragraph2.classList.add('text1');
+    paragraph3.classList.add('text1');
+    paragraph4.classList.add('text1');
 
     nameCharacters2.textContent = element.name;
-    paragraph.textContent = element.species;
-    paragraph2.textContent = element.gender;
+    paragraph.textContent = 'Species: ' + element.species;
+    paragraph2.textContent = 'Gender: ' + element.gender;
+    paragraph3.textContent = 'Origin: ' + element['origin']['name'];
+    paragraph4.textContent = 'Location: ' + element['location']['name'];
 
     divCard2.appendChild(nameCharacters2);
     divCard2.appendChild(paragraph);
     divCard2.appendChild(paragraph2);
+    divCard2.appendChild(paragraph3);
+    divCard2.appendChild(paragraph4);
 
     contentCards.appendChild(divCard);
     contentCards.appendChild(divCard2);
     contentMain.appendChild(contentCards);
 
-    //evento click en la card (flip)
+    //evento click en la card
     contentCards.addEventListener('click',()=>{
       contentCards.classList.toggle('active');   
     })
@@ -133,44 +141,3 @@ selectOrder.addEventListener('change',() => {
   }
 
 });
-
-
-DATA .JS
-
-export const searchByName = (data,name) => {
-  // pasamos como parametro la data,y lo que queremos comparar
-  return data.filter((characters) => {
-    return characters.name.toLowerCase().includes(name.toLowerCase); 
-  })
-};
-
-
-export const filterBySpecies = (data,species) => {
-  return data.filter((characters) => {
-    return characters.species.includes(species);
-  })
-};
-
-
-export const filterByGender = (data,gender) => {
-  return data.filter((characters) => {
-    return characters.gender.includes(gender);
-  })
-};
-
-
-export const filterByOrderAZ = (characters) => {
-  return characters.sort((a,b) => {
-    if (a.name < b.name) {
-      return -1;
-    }  
-  })
-};
-
-export const filterByOrderZA = (characters) => {
-  return characters.sort((a,b) => {
-    if (a.name > b.name) {
-      return -1;
-    }    
-  })
-};
