@@ -1,42 +1,46 @@
-
-import { renderizarData } from './data.js';
-//import ghibli from './data/ghibli/ghibli.js';
-// import data from './data/lol/lol.js';
+import { ordenar, filtrar} from './data.js';
 import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-//console.log(Object.getOwnPropertyNames(data.films[5]))
 
-//let image = Object.values(data.films[5])
-//let linkImage = image[5]
+const films = data.films
+const container = document.getElementById("animaciones")
 
-for (let i = 0; i < Object.keys(data.films).length; i++) {
-  let img = document.createElement("img");
-  img.src = renderizarData(data, i, 5);
-  document.body.appendChild(img);
-  console.log(renderizarData(data,i,5));
+const pintarEnInterfaz = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    const img = document.createElement("img");
+    img.src=array[i].poster
+    container.appendChild(img);
+  }
 }
-/*
-let img = document.createElement("img");
-img.src = example(data,5);
-document.body.appendChild(img);
-*/
 
+pintarEnInterfaz(films)
 
+const selectedValue = document.getElementById("selectionBy")
 
-/*
-Copy code// Crea un nuevo elemento de imagen 
-var img = document.createElement('img'); 
- 
-// Establece la ubicación de la imagen 
-img.src = 'ruta/a/mi/imagen.jpg'; 
- 
-// Agrega la imagen al documento 
-document.body.appendChild(img); 
-También puedes utilizar el atributo innerHTML de un elemento existente para insertar la imagen en la página. Por ejemplo:
+function getSelectedValue(){
+  const optionUser = selectedValue.value
+  if(optionUser==="title-az"){
+    container.innerHTML=""
+    pintarEnInterfaz(ordenar(films,optionUser))
+  }
+  if(optionUser==="title-za"){
+    container.innerHTML=""
+    pintarEnInterfaz(ordenar(films,optionUser))    
+  }
+}
 
-Copy code// Selecciona el elemento donde deseas insertar la imagen 
-var container = document.getElementById('mi-container'); 
- 
-// Inserta la imagen en el elemento 
-container.innerHTML = '<img src="ruta/a/mi/imagen.jpg">'; 
-*/
+selectedValue.addEventListener("change", getSelectedValue)
+
+const selectedValueFilter = document.getElementById("filteringBy")
+
+function getSelectedValueFilter(){
+  for(let i=0;i<films.length;i++){
+    const optionDirector = selectedValueFilter.value
+    const director = films[i].director
+    if(optionDirector===director){
+      container.innerHTML=""
+      pintarEnInterfaz(filtrar(films,optionDirector))
+    }
+  }
+}
+
+selectedValueFilter.addEventListener("change", getSelectedValueFilter)
