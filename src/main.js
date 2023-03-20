@@ -45,6 +45,12 @@ elemento.addEventListener("change", (event) => {
 
 productor.addEventListener("change", (event) => {
   const productor = filtrarPro(data.films, event.target.value);
-  crearTarjetas(productor);
+  if(event.target.value === "todas") {
+    crearTarjetas(data.films);
+  }
+  else {
+    crearTarjetas(productor);
+  }
+  
   console.log(productor);
 });
