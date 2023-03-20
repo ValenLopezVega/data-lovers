@@ -42,10 +42,13 @@ mostrar (datosPokedex)
     contenedorFiltrado+=fil
     console.log(fil)
   }
-  
 
 filtrado1(datosPokedex)
 console.log(filtrado1)
 btnBuscar.addEventListener("click",filtrado1)*/
+
+
+/*datosPokedex.addEventListener("click", () => {
+})*/
 
 filtrado(datosPokedex)
