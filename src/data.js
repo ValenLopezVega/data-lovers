@@ -4,43 +4,9 @@ console.log(data);
 
 //import { filtroDirector, filtroProductor, filtroEspecie, filtroGenero } from "./data.js";
 
-//MANIPULACION A TRAVES DE ARRAYS Y OBJETOS
-//FUNCIONALIDAD PARA MANIPULAR, OBTENER Y PROCESAR DATOS
-//FUNCIONES PURAS E INDEPENDIENTES DEL DOM
-
-// const titulos = [data.films.title];
-
-// for (const title of titulos) {
-//   title;
-//   console.log(title);}
-
-//const result = data.filter(data => data.title );
-
-// const titulos = data.films.map(function (data, title){
-// // tu iterador
-
-// });
-
-// const ordenado = data.films
-//titulos.forEach(console.log(titulos));
-//ordenado.forEach(element => console.log(element));
-// ordenado.sort();
-
-
-// for(let i = 0; i < data.films; i++) {
-//   data[i].infoType.forEach(function(item) {
-//     console.log(item[0]);
-//   })
-// }
-
-
-// const resultado = [];
-// for(let i = 0, len = data.films.title; i < len; i++){
-//   resultado.push(data.films[i][2])
-//   console.log(resultado)
-// }
-
-
+// MANIPULACION A TRAVES DE ARRAYS Y OBJETOS
+// FUNCIONALIDAD PARA MANIPULAR, OBTENER Y PROCESAR DATOS
+// FUNCIONES PURAS E INDEPENDIENTES DEL DOM
 
 
 //ORDEN
@@ -49,28 +15,14 @@ console.log(data);
 
 // }
 
-
-
-// const titulos = [data.films.title];
-// for (let i = 0; i < titulos.length; i++) {
-//   console.log(titulos[i])}
-
-// Object.entries(titulos).forEach(([titulos, title]) => {
-//   console.log(titulos + ' ' + title); // "a 5", "b 7", "c 9"
-// });
-
-// const index = 0;
-// const titulos2 = titulos.map(function callback(films, index, title) {
-//   console.log(titulos2)// Elemento devuelto de nuevo_array
-// })
-
-//titulos.forEach(console.log(titulos));
-//titulos.forEach(data.films = console.log(titulos));
-// ordenado.sort();
+// orderTitle(data.films);
 
 
 // titulos.sort();
 // console.log(titulos);
+
+
+
 
 // //TITULO
 // const tituloAscendente = (a, b) => {

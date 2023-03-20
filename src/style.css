@@ -25,6 +25,7 @@ p {
   text-align: justify;
   margin: 50px;
   color: #ffffff;
+  @import url('@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap)');
 }
 
 body {
@@ -95,9 +96,6 @@ button:hover {
 }
 button:first-of-type {
   margin-top: 305px;
-}
-option {
-  
 }
 
 /* MOSTRAR-OCULTAR SECCIONES */

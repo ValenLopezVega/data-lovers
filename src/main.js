@@ -6,6 +6,7 @@ const peliculas= document.querySelector('#peliculas')
 //MUESTRA DATOS EN PANTALLA
 
 // SELECCION SECCION
+
 //HISTORIA
 const botonHistoria = document.getElementById("botonHistoria");
 const historia = document.getElementById("historia");
@@ -16,15 +17,12 @@ botonHistoria.addEventListener("click", function () {
   historia.style.display = "block";
 });
 
-function refresh() {
+
+function volverInicio() {
   window.location.reload();
 }
 
-//VOLVER
-
-volver.addEventListener("click", refresh);
-
-
+volver.addEventListener("click", volverInicio);
 
 
 //PERSONAJES
@@ -32,38 +30,33 @@ const botonPersonajes = document.getElementById("botonPersonajes");
 const seccionPersonajes = document.getElementById("personajes");
 const volver2 = document.getElementById("volver2");
 
-
 botonPersonajes.addEventListener("click", function () {
   document.getElementById("header").style.display = "none";
   seccionPersonajes.style.display = "block";
 });
 
-function refresh2() {
+function volverInicio2() {
   window.location.reload();
 }
 
-//DISABLE
-const especieBtn = document.getElementById('especie');
-const generoBtn = document.getElementById('genero')
-let generoDsbd = false
-let especieDsbd = false
+volver2.addEventListener("click", volverInicio2);
 
 
-generoBtn.addEventListener("click", function () {
-  especieDsbd = !especieDsbd;
-  especieBtn.disabled = especieDsbd;
+//DESACTIVAR
+const btnEspecie = document.getElementById('especie');
+const btnGenero = document.getElementById('genero')
+let desGenero = false
+let desEspecie = false
+
+btnGenero.addEventListener("click", function () {
+  desEspecie = !desEspecie;
+  btnEspecie.disabled = desEspecie;
 });
 
-especieBtn.addEventListener("click", function () {
-  generoDsbd = !generoDsbd;
-  generoBtn.disabled = generoDsbd;
+btnEspecie.addEventListener("click", function () {
+  desGenero = !desGenero;
+  btnGenero.disabled = desGenero;
 });
-
-//VOLVER
-
-volver2.addEventListener("click", refresh2);
-
-
 
 
 //FILMOGRAFIA
@@ -76,37 +69,44 @@ botonFilmografia.addEventListener("click", function () {
   seccionFilmografia.style.display = "block";
 });
 
-// const down = document.getElementById("descendente");
-
-// function bajar() {
-// }
-// down.addEventListener("click", bajar)
-
-// document.getElementById("descendente").innerHTML = down;
-
-
-
-
-function refresh3() {
+function recargar3() {
   window.location.reload();
 }
 
-//VOLVER
+volver3.addEventListener("click", recargar3);
 
-volver3.addEventListener("click", refresh3);
 
-function createHtml(pelicula) {
-  const titulo = `<h2>La pelicula es:${pelicula}</h2>`;
+//PANTALLA
+function crearHtml(pelicula) {
+  const titulo = `<h3>${pelicula}</h3>`;
   return titulo
+  
 }
 
-function printData(films){
-  let htmlAcumulado=''
+function impData(films){
+  let htmlAcumulado='';
   films.forEach(function(pelicula) {
-    htmlAcumulado+=createHtml(pelicula.title);
+    htmlAcumulado += crearHtml(pelicula.title);
   })
-  peliculas.innerHTML=htmlAcumulado;
+  
+  peliculas.innerHTML = htmlAcumulado;
+
+  films = films.sort(function(asc, desc) {
+    if (asc < desc) {
+      return -1;
+    } 
+    if (desc < asc) {
+      return 1;
+    }
+    return desc.title - asc.title;
+        
+  })
+
+  console.log(films);
 }
-printData(data.films)
+
+
+//}
+impData(data.films)
 
 console.log(data.films[2].title);
