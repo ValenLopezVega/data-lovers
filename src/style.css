@@ -30,7 +30,7 @@ body{
 }
 
 /*caja pokedex*/
-.Cajon-pokedex{
+.box-pokedex{
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -62,7 +62,7 @@ body{
 }
 
 /*buscador*/
-.bucador{
+.filter{
     display: block;
     background-color: red;
     padding: 40px;
