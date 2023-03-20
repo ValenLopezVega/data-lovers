@@ -45,7 +45,7 @@ selFilter.addEventListener("change",() => {
 
 filtrado1(datosPokedex)
 console.log(filtrado1)
-btnBuscar.addEventListener("click",filtrado1)*/
+btnBuscar.addEventListener("click",filtrado1)
 
 /*console.log(typeFilter(dataPokedex,"grass"))
 console.log(typeFilter(dataPokedex,"poison"))
