@@ -1,4 +1,4 @@
-import { pokemonData, sortPokemon, calculateSpawnMinMax } from "./data.js";
+import { pokemonData, sortPokemon, computeStats } from "./data.js";
 // import data Pokemon
 import data from "./data/pokemon/pokemon.js";
 
@@ -36,23 +36,23 @@ const btnTypeFairy = document.getElementById("typeFairy");
 //Ocultar secciones
 function mostrarSeccion(seccion) {
   switch (seccion) {
-    case "home":
-      homeSecction.style.display = "block";
-      pokedexSecction.style.display = "none";
-      extraSecction.style.display = "none";
-      break;
-    case "pokedex":
-      homeSecction.style.display = "none";
-      pokedexSecction.style.display = "block";
-      extraSecction.style.display = "none";
-      break;
-    case "extra":
-      homeSecction.style.display = "none";
-  pokedexSecction.style.display = "none";
-  extraSecction.style.display = "block";
-      break;
+  case "home":
+    homeSecction.style.display = "block";
+    pokedexSecction.style.display = "none";
+    extraSecction.style.display = "none";
+    break;
+  case "pokedex":
+    homeSecction.style.display = "none";
+    pokedexSecction.style.display = "block";
+    extraSecction.style.display = "none";
+    break;
+  case "extra":
+    homeSecction.style.display = "none";
+    pokedexSecction.style.display = "none";
+    extraSecction.style.display = "block";
+    break;
   default:
-  console.error("Sección no válida");
+      console.error("Sección no válida");
   }
 }
 
@@ -60,11 +60,10 @@ btnHome.addEventListener("click", () => mostrarSeccion("home"));
 btnPokedex.addEventListener("click", () => mostrarSeccion("pokedex"));
 btnExtra.addEventListener("click", () => mostrarSeccion("extra"));
 
-
 //const pokemonFiltro =  pokemonData(data);
 // Función para filtrar Pokémon por tipo
 function filtrarPorTipo(tipo) {
-  return data.pokemon.filter((pokemon) => pokemon.type.includes(tipo));
+  return pokemonData(data.pokemon, tipo)
 }
 
 // Función para mostrar los Pokémon en el contenedor
@@ -74,8 +73,8 @@ function mostrarPokemon(pokemones) {
       <img src="${pokemon.img}"><br>
       <strong>#${pokemon.num}</strong><br> 
       <strong>${
-        pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
-      }</strong><br> 
+  pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
+}</strong><br> 
       <strong>Type</strong>: ${pokemon.type}<br>
       <strong>Resistant</strong>: ${pokemon.resistant.join(", ")}<br>
       <strong>Weaknesses</strong>: ${pokemon.weaknesses.join(", ")}<br>
@@ -92,12 +91,12 @@ orderSelect.addEventListener("change", function () {
   if (selectedOption === "asc") {
     // Ordenar y mostrar en orden ascendente
     pokemonDiv.innerHTML = "";
-    let pokemonOrdenados = sortPokemon(data.pokemon, "asc");
+    const pokemonOrdenados = sortPokemon(data.pokemon, "asc");
     mostrarPokemon(pokemonOrdenados);
   } else if (selectedOption === "desc") {
     // Ordenar y mostrar en orden descendente
     pokemonDiv.innerHTML = "";
-    let pokemonOrdenados = sortPokemon(data.pokemon, "desc");
+    const pokemonOrdenados = sortPokemon(data.pokemon, "desc");
     mostrarPokemon(pokemonOrdenados);
   }
 });
@@ -222,33 +221,18 @@ btnTypeFairy.addEventListener("click", function () {
   mostrarPokemon(filtrarPorTipo("fairy"));
 });
 
-//Spawn
-const mostrarPokeSpawn = document.getElementById("mostrarPokeSpawn");
-const spawnChanceMinMax = calculateSpawnMinMax(data);
+const mostrarPokeAverage = document.getElementById("mostrarPokePeso")
 
-// obtén los valores mínimo y máximo de spawn_chance a través del objeto devuelto por la función
-const minSpawnChance = spawnChanceMinMax.min;
-const maxSpawnChance = spawnChanceMinMax.max;
-
-// imprime los valores mínimo y máximo de spawn_chance
-console.log("Mínimo: " + minSpawnChance + ", Máximo: " + maxSpawnChance);
-
-function mostrarSpawn(pokemones, spawn) {
-  const sortedPokemon = [...pokemones]
-    .sort((a, b) =>
-      spawn
-        ? a["spawn-chance"] - b["spawn-chance"]
-        : b["spawn-chance"] - a["spawn-chance"]
-    )
-    .slice(0, 10);
-  const containerClass = spawn ? "spawnMax-container" : "spawnMin-container";
-  sortedPokemon.forEach((pokemon) => {
-    mostrarPokeSpawn.innerHTML += `<div class="${containerClass}">
+function mostrarAverage(pokemones) {
+  const averagePokemon = computeStats(pokemones)
+  console.log (averagePokemon)
+  averagePokemon.forEach((pokemon) => {
+    mostrarPokeAverage.innerHTML += `<div class="${containerClass}">
       <img src="${pokemon.img}"><br>
       <strong>#${pokemon.num}</strong><br> 
       <strong>${
-        pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
-      }</strong><br> 
+  pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
+}</strong><br> 
       <strong>Type</strong>: ${pokemon.type}<br>
       <strong>spawn-chance</strong>: ${pokemon["spawn-chance"]}<br>
     </div>`;
@@ -256,7 +240,6 @@ function mostrarSpawn(pokemones, spawn) {
 }
 
 btnExtra.addEventListener("click", function () {
-  mostrarPokeSpawn.innerHTML = "";
-  mostrarSpawn(data.pokemon, false); // muestra los 10 pokémons con la probabilidad de spawn más baja
-  mostrarSpawn(data.pokemon, true); // muestra los 10 pokémons con la probabilidad de spawn más alta
+  //mostrarPokeAverage.innerHTML = "";
+  mostrarAverage(data)
 });
