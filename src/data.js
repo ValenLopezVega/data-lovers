@@ -1,9 +1,13 @@
-// estas funciones son de ejemplo
+
 
 export const example = () => {
-  return 'example';
+  return 'array de Score';
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export function filterMovies(peliculas, years) {
+  var newArray = peliculas.filter(function (año) {
+    return año.release_date == years;
+  });
+    return newArray;
 };
+
