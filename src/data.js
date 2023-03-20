@@ -1,7 +1,7 @@
 export function filterMovies(peliculas, years) {
   const newArray = peliculas.filter(año => año.release_date === years);
   return newArray;
-};
+}
 
 export function sortData(peliculas,type){
   peliculas.sort(function(a,b){
@@ -9,8 +9,6 @@ export function sortData(peliculas,type){
     if(a.title > b.title){ return 1; }
     return 0;
   }); 
-  // procesamiento para ordenar la data
-  // retornar las peliculas ordenadas
   return peliculas;
 }
 
