@@ -1,11 +1,6 @@
-// estas funciones son de ejemplo
-//aquí estará el objeto
-
-export const example = () => {
-  return 'example';
-};
-export const anotherExample = () => {
-  return 'OMG';
+export function filterMovies(peliculas, years) {
+  const newArray = peliculas.filter(año => año.release_date === years);
+  return newArray;
 };
 
 export function sortData(peliculas,type){
