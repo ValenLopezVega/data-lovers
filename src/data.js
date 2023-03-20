@@ -19,3 +19,7 @@ export function sortData(peliculas,type){
   return peliculas;
 }
 
+export function filtrarPro(peliculas,type){
+  return peliculas.filter(elemento => elemento.producer === type);
+}
+

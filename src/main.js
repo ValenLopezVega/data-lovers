@@ -1,5 +1,6 @@
 import data from './data/ghibli/ghibli.js';
 import { sortData } from './data.js'; 
+import { filtrarPro } from './data.js';
 /*
 fetch("data/ghibli/ghibli.json")
   .then (response => response.json())
@@ -27,8 +28,9 @@ function crearTarjetas(peliculas){
         `
   );
 }
-
+//Función para ordenar datos
 const elemento = document.querySelector(".seleccionar");
+const productor = document.querySelector(".select-filter");
 crearTarjetas(data.films);
 
 elemento.addEventListener("change", (event) => {
@@ -39,4 +41,10 @@ elemento.addEventListener("change", (event) => {
   console.log(datasort);
 }); 
 
-// console.log(example, data);
+// Función para filtrar según productores 
+
+productor.addEventListener("change", (event) => {
+  const productor = filtrarPro(data.films, event.target.value);
+  crearTarjetas(productor);
+  console.log(productor);
+});
