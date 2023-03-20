@@ -1,11 +1,10 @@
-import { filterMovies  } from './data.js';
+import { filterMovies, sortData, filtrarPro } from './data.js';
 import data from './data/ghibli/ghibli.js';
-    
-    /*Cards Peliculas*/
+
 function crearTarjetas(peliculas){
-    let container = document.querySelector("section");
+    const container = document.querySelector("section");
     container.innerHTML = "";
-     peliculas.forEach(pelicula => 
+    peliculas.forEach(pelicula => 
         container.innerHTML += `
         <div class="card">
             <div class="card-body-img">
@@ -38,7 +37,7 @@ crearTarjetas(data.films);
 const masInfo = document.getElementsByTagName("a")
 crearTarjetas(data.films);
 masInfo.addEventListener("click", (description) => 
-description.forEach(personaje => 
+  description.forEach(personaje => 
     container.innerHTML +=`
         <div class="card">
             <div class="card-body-img">
@@ -52,3 +51,33 @@ description.forEach(personaje =>
         </div>
         `
 ));
+
+//Función para ordenar datos
+const elemento = document.querySelector(".seleccionar");
+const productor = document.querySelector(".select-filter");
+crearTarjetas(data.films);
+
+elemento.addEventListener("change", (event) => {
+  const datasort = sortData(data.films, event.target.value);
+  if(event.target.value === "alfabeticamente") {
+    crearTarjetas(datasort);
+  }
+  console.log(datasort);
+}); 
+
+// Función para filtrar según productores 
+
+productor.addEventListener("change", (event) => {
+  const productor = filtrarPro(data.films, event.target.value);
+  if(event.target.value === "todas") {
+    crearTarjetas(data.films);
+  }
+  else {
+    crearTarjetas(productor);
+  }
+  
+  console.log(productor);
+});
+
+
+// console.log(example, data);

@@ -17,7 +17,15 @@
           </div>
           <div class="filtro">Seleccionar filtro: 
             <select class="selection-option">
-              <option value="all">Todos</option>
+              <option value="todas">Todas</option> 
+              <optgroup label="Productores"> 
+              <option value="Isao Takahata">Isao Takahata</option>
+              <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+              <option value="Toru Hara">Toru Hara</option>
+              <option value="Toshio Suzuki">Toshio Suzuki</option>
+              <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>    
+              </optgroup>
+              <optgroup label="Año">
               <option value="1986">1986</option>
               <option value="1988">1988</option>
               <option value="1989">1989</option>
@@ -36,18 +44,26 @@
               <option value="2011">2011</option>
               <option value="2013">2013</option>
               <option value="2014">2014</option>
+            </optgroup>
             </select>
           </div>
-          <div class="orden">Ordenar por: 
+          <div>Ordenar por: 
             <select class="seleccionar">
-              <option value="anio_up">Año</option>
-              <option value="name">Nombre</option>
+              <option value="">--Elige una opcion--</option>
+              <option value="alfabeticamente">Alfabeticamente</option>
+              <option value="año">Año</option>
+              <option value="puntaje">Puntaje</option>
             </select>
           </div>
         </div>
       </header>
       <section>
+
       </section>
+
+      
+
+<!--       <footer class="footer"></footer> -->
     </main>
 
     	<!-- Borde azul 
@@ -56,8 +72,8 @@
       -->
 	<div id="left"></div>
 	<div id="right"></div>
-	<div id="top"></div>
 	<div id="bottom"></div>
+  <div id="top"></div>
     <script src="main.js" type="module"></script>
   </body>
 </html>

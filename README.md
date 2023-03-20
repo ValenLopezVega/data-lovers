@@ -621,5 +621,3 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [ ] UI: Permite filtrar data en base a una condición.
 * [ ] UI: Es _responsive_.
-
-HOLA ESTE REPOSITORIO HA SIDO CLONADO DENTRO DE LA RAMA JACKELINE-CODIGO
