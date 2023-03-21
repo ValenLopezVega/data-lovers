@@ -2,11 +2,61 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Poke web (Data Lover)</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <header>
+      <figure><a href="https://fontmeme.com/es/fuente-pokemon/">
+        <img src="https://fontmeme.com/permalink/230321/687d67403dbb62892116f1b85225b722.png" alt="fuente-pokemon" borde="0"></a></figure>
+    </header>
+      <section> 
+        <div class="buscar" id="input-buscar">
+          <label for="name">Busqueda </label>   
+          <input type="text " id="inputBuscar" placeholder="Nombre" />
+        </div>
+    
+         <label for="region">Region</label>
+         <select name="region" id="Region">
+            <option value=""></option>
+            <option value="reg-uno">Johto</option>
+            <option value="reg-dos">Canto</option>
+            </select> 
+
+        <label for="tipo">Tipo</label>
+        <select name="tipo" id="Tipo">
+             <option value=""></option>
+             <option value="tipo uno">Agua</option>
+             <option value="tipo dos">Fuego</option>
+             <option value="tipo tres">Tierra</option>
+             <option value="tipo cuatro">Veneno</option>
+             <option value="tipo cinco">Electrico</option>
+             <option value="tipo seis">Aire</option>
+        </select> 
+        
+        <label for="orden">Orden</label>
+        <select name="orden" id="orden">
+              <option value=""></option>
+              <option value="az">az</option>
+              <option value="za">za</option>
+             <option value="menosp">Mayor a Menor Poder</option>
+              <option value="masp">Menor a Mayor poder</option>
+        </select>
+        
+      </section>
+      <section id="seccionUno">
+       
+      </section>
+    <section>
+<section id ="seccionDos">
+          </section>
+ <div id="root"></div>
+  <script src="main.js" type="module"></script>
+
+<footer>
+  <span>Proyecto creado por Maria & Brina</span>
+</footer>
+ </body>
 </html>
