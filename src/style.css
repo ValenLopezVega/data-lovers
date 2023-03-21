@@ -61,6 +61,7 @@ header{
     margin-left: 20px;
     margin-top: 0px;
     display: inline-block;
+    font-size: 20px;
 }
 
 .b-busqueda{
@@ -79,7 +80,7 @@ select{
     border-radius: 8px;
     border: 0px;
     height: 20px;
-    width: 120px;
+    width: 150px;
 }
 
 input{
