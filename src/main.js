@@ -34,15 +34,6 @@ console.log("prueba 5",practice3);
 
 
 
-
-
-
-
-
-
-
-
-
 const prueba = data.films;
 
 prueba.forEach((item)=>{
@@ -52,7 +43,7 @@ prueba.forEach((item)=>{
     const insertPoster=document.getElementById('insertPoster');
 
     console.log(post);
-    insertPoster.innerHTML +=`<div class="imgPoster"> <img src=${post} alt="${title}"></img> <figcaption>${title}</figcaption</div>`
+    insertPoster.innerHTML +=`<div class="imgPoster"> <img src=${post} alt="${title}"></img> <p>${title}</p</div>`
     
 
 })

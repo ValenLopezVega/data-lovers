@@ -4,33 +4,47 @@
     box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+}
+
 header {
     background-color: rgb(0, 0, 0);
-    height: 20vh;
-    width: 100vw;
+    height: 250px;
+    width: 100%;
     color: white;
     font-size: 6em;
     font-family: 'roboto';
     position: relative;
-   
+
+
 }
- 
-.img1{
+
+.img1 {
+
+    margin: auto;
+    background-color: red;
+    outline: 2px solid yellow;
     display: inline-block;
     margin: auto;
-     
+
+
+
+
 }
-.img1 img{
-    margin: auto;
-    width:1.8em;
+
+.img1 img {
+
+    width: 1.8em;
     height: 2em;
-    
-    
-    
-    
-   
+
+
+
+
+
 }
-.img1::after .img1::before{
+
+.img1::after .img1::before {
     content: '';
     width: 50%;
     position: absolute;
@@ -40,20 +54,20 @@ header {
     background-color: rgb(85, 233, 16);
 
 
-} 
-
-
-
-img{
-    width: 100%;
-    height: 1em;
-    
-    
 }
 
 
 
- 
+img {
+    width: 100%;
+    height: 1em;
+
+
+}
+
+
+
+
 
 
 
@@ -65,8 +79,8 @@ main {
     height: 100%;
     background-color: black;
     background-image: linear-gradient(rgba(5, 7, 12, .5), rgba(5, 7, 12, .5)),
-     url(./img/back.png );
-    font-family: 'Roboto',sans-serif;
+        url(./img/back.png );
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -78,52 +92,55 @@ main {
     width: 90%;
     height: 100%;
     margin: auto;
-    outline: 2px solid blue;
+    
 }
 
 
 .imgPoster {
 
-    width: 15em;
-    height: 28em;
+    width: 12em;
+    height: 22em;
     margin: 50px;
     position: relative;
     border-radius: 4%;
     display: flex;
     box-shadow: 0px 0px 15px 8px rgb(82, 76, 76);
     
+    justify-content: center;
+
 
 }
 
 
 img {
-    width: 15em;
-    height: 24em;
+    width: 12em;
+    height: 19em;
     border-radius: 4% 4% 0% 0%;
 
 
 }
 
 .imgPoster:hover {
-   
+
     bottom: 20px;
-    
+
     box-shadow: 0px 0px 25px 15px rgb(119, 112, 133);
     transition: .5s;
 
 }
 
-figcaption {
+p {
     position: absolute;
-    bottom: .8em;
+    bottom: .2em;
     text-align: center;
     color: rgb(235, 235, 235);
     font-size: 1.2em;
-    width: 80%; 
-    margin-top: 0.8em; 
-    margin-left: 1.3em;
-    margin-right: 3em;
-}  
+    width: 90%;
+    
+     
+    
+     
+}
 
 
 
