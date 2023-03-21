@@ -2,10 +2,6 @@ import { typeFilter } from './data.js';
 import {typeFilterGeneration} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-
-//DOM elements
-//const btnFilter=document.getElementById("btn-filter")
-//btnFilter.addEventListener("click",typeFilter)
 //Functions that interact with the DOM
 
 
@@ -106,24 +102,3 @@ selectGeneration.addEventListener("change",() => {
   }
 })
 
-
-
-
-/*console.log(typeFilter(dataPokedex,"grass"))0ok
-console.log(typeFilter(dataPokedex,"poison"))1ok
-console.log(typeFilter(dataPokedex,"fire"))2ok
-console.log(typeFilter(dataPokedex,"flying"))3ok
-console.log(typeFilter(dataPokedex,"water"))4ok
-console.log(typeFilter(dataPokedex,"bug"))5ok
-console.log(typeFilter(dataPokedex,"normal"6))
-console.log(typeFilter(dataPokedex,"electric"))7
-console.log(typeFilter(dataPokedex,"ground"))8
-console.log(typeFilter(dataPokedex,"fighting"))9
-console.log(typeFilter(dataPokedex,"psychic"))10
-console.log(typeFilter(dataPokedex,"rock"))11
-console.log(typeFilter(dataPokedex,"ice"))12
-console.log(typeFilter(dataPokedex,"ghost"))13
-console.log(typeFilter(dataPokedex,"dragon"))14
-console.log(typeFilter(dataPokedex,"fairy"))15
-console.log(typeFilter(dataPokedex,"dark"))16
-console.log(typeFilter(dataPokedex,"steel"))17*/
