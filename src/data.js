@@ -3,6 +3,7 @@ export function typeFilter (arrData,n) {
   return typeFilterData;
 }
   
-export const anotherExample = () => {
-  return 'OMG';
+export const typeFilterGeneration = (arrData, n) => {
+  const typeFilterDataGeneration = arrData.filter((elem) => elem.generation.name.includes(n));
+  return  typeFilterDataGeneration;
 }
