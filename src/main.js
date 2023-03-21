@@ -19,25 +19,14 @@ function crearTarjetas(peliculas){
                 <a href="#">Ver más</a>
                 </div>
             </div>
-        `
+            `
   );
 }
 
-const filterYear = document.querySelector(".selection-option");
-crearTarjetas(data.films);
-
-filterYear.addEventListener("change", (filter) => {
-  if (filter.target.value === "all"){
-    console.log("todas las peliculas")
-    return crearTarjetas(data.films);
-  } else {
-    return crearTarjetas(filterMovies(data.films, filter.target.value));
-  };  
-});
 
 //Función para ordenar datos
 const elemento = document.querySelector(".seleccionar");
-const productor = document.querySelector(".selection-option");
+//const productor = document.querySelector(".selection-option");
 crearTarjetas(data.films);
 
 elemento.addEventListener("change", (event) => {
@@ -48,17 +37,21 @@ elemento.addEventListener("change", (event) => {
   console.log(datasort);
 }); 
 
-// Función para filtrar según productores 
+// Función para filtrar 
+const seleccionar = document.querySelector(".selection-option");
 
-productor.addEventListener("change", (event) => {
+seleccionar.addEventListener("change", (event) => {
   const productor = filtrarPro(data.films, event.target.value);
+  const peliculaAño = filterMovies(data.films, event.target.value);
   if(event.target.value === "todas") {
     crearTarjetas(data.films);
   }
-  else {
+  else if (peliculaAño.length === 0){
     crearTarjetas(productor);
   }
-  console.log(productor);
+  else {
+    crearTarjetas(peliculaAño);
+  }
 });
 
 
