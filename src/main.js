@@ -3,7 +3,6 @@ import {anotherExample} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
-
 //DOM elements
 //const btnFilter=document.getElementById("btn-filter")
 //btnFilter.addEventListener("click",typeFilter)
@@ -17,10 +16,10 @@ function mostrar (dataArray) {
   let contentPokedexMain = "";
   dataArray.forEach((element)=>{
     contentPokedexMain += `<article class="card"> 
+                        <p>${element.num}</p>
                         <div class="pokemon-img">
                         <img src="${element.img}">
                         </div>
-                        <p>${element.num}</p>
                         <p>${element.name}</p>
                         <p>${element.generation.name}</p>
                         <p>${element.type}<p>
@@ -32,7 +31,7 @@ function mostrar (dataArray) {
 mostrar (dataPokedex)
 //Option select filter
 const selFilter = document.getElementById("type-pokemon");
-selFilter.addEventListener("change",() => {
+selFilter.addEventListener("change",function mainFilter(){
   const infoFiltrado=selFilter.selectedIndex;
   if(infoFiltrado === 0){
     console.log(typeFilter(dataPokedex,"grass"))
@@ -49,7 +48,10 @@ selFilter.addEventListener("change",() => {
   }else if(infoFiltrado === 4){
     console.log(typeFilter(dataPokedex,"water"))
     return mostrar(typeFilter(dataPokedex,"water"))
-  }
+  }else if(infoFiltrado === 5){
+    console.log(typeFilter(dataPokedex,"bug"))
+    return mostrar(typeFilter(dataPokedex,"bug"))
+  }else{anotherExample}
 })
 
 
@@ -59,7 +61,7 @@ console.log(typeFilter(dataPokedex,"poison"))1ok
 console.log(typeFilter(dataPokedex,"fire"))2ok
 console.log(typeFilter(dataPokedex,"flying"))3ok
 console.log(typeFilter(dataPokedex,"water"))4ok
-console.log(typeFilter(dataPokedex,"bug"))5
+console.log(typeFilter(dataPokedex,"bug"))5ok
 console.log(typeFilter(dataPokedex,"normal"6))
 console.log(typeFilter(dataPokedex,"electric"))7
 console.log(typeFilter(dataPokedex,"ground"))8

@@ -10,18 +10,19 @@ body{
 /*Titulo Logo*/
 .container-title{ 
     background-color: #202f40;
-    justify-content: center;
     display: flex;
-    flex-flow: row wrap;
-    height: 100px;
+    height: 60px;
     width: 100%;
-    position: fixed;
-    top:0px;
+    position:sticky;
+    top: 0px;
     z-index: 1000;
 }
 .container-logo{
     width: 100%;
     height: 100%;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    display: flex;
 }
 .container-title img{
     height: 100%;
@@ -31,47 +32,38 @@ body{
 
 /*caja pokedex*/
 .box-pokedex{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: blue;
+    background-color: rgb(0, 17, 255);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
-
 .card{
     background-color:plum;
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
-    display: flex;
-    flex-flow: column wrap;
-
- 
+     
 }
 .card p{
     border: 1px #202f40;
     direction:ltr;
-
-}
-.pokemon-img{
-    background-color: rgb(20, 255, 59);
 }
 .pokemon-img img{
-    width: 100%;
-    height: 100%;
+    width: 120px;
+    height: 100px;
     object-fit: contain;
+    background-image:url("https://e0.pxfuel.com/wallpapers/281/471/desktop-wallpaper-minimal-pokemon-go-for-iphone-8-plus-pokemongo-minimal-pokeball-thumbnail.jpg");
+    background-size: cover;
+    border-radius: 10px;
+   
 }
 
 /*buscador*/
-.filter{
-    display: block;
-    background-color: red;
-    padding: 40px;
-    top: 150px;
-    position: absolute;
-    z-index:1;
-
+.list-filter {
+    display:block;
+    background-color: rgb(255, 0, 0);
+    padding: 20px;
 }
-
 /*colores*/
 .colores{
     color: #202f40;
