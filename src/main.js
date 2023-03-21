@@ -15,14 +15,14 @@ function crearTarjetas(peliculas){
             <div class="card-body-text">
                 <h5 class="card-title">${pelicula.title}</h5>
                 <span class="año">Año: ${pelicula.release_date}</span>
+                <span class="score">Productor: ${pelicula.producer}</span>
                 <span class="score">Score: ${pelicula.rt_score}</span>
-                <a href="#">Ver más</a>
+                <button name="button" class="button">Mas información</button>
                 </div>
             </div>
             `
   );
 }
-
 
 //Función para ordenar datos
 const elemento = document.querySelector(".seleccionar");
