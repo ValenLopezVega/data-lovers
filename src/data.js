@@ -5,7 +5,6 @@ export const pokemonData = (data, tipo) => {
   return filterType;
 };
 
-
 //funcion orenar data
 export const sortPokemon = (pokemones, order) => {
   const copia = [...pokemones];
@@ -16,21 +15,46 @@ export const sortPokemon = (pokemones, order) => {
   );
 };
 
-// funcion calcular el spawn min y max
+// funcion calcular el peso min y max y el promedi
 export const computeStats = (data) => {
-  console.log(data.pokemon[0].size.weight)
   const pokemonArray = data.pokemon;
- const weightArray = pokemonArray.map(pokemon => pokemon.size.weight.split(' ')[0])
-  //.filter(weight => typeof weight === 'number' && !isNaN(weight))
-  console.log(weightArray)
-const averageWeight = calculateAverage(weightArray)
-return pokemonArray.filter(pokemon => pokemon.size.weight === averageWeight)
-};
+  const weightArray = pokemonArray.map(pokemon => parseFloat(pokemon.size.weight.split(' ')[0]));
+  const averageWeight = calculateAverage(weightArray);
+  const lightest = Math.min(...weightArray);
+  const heaviest = Math.max(...weightArray);
 
+  const pokemonWeights = pokemonArray.map(pokemon => {
+    return {
+      ...pokemon,
+      weight: parseFloat(pokemon.size.weight.split(' ')[0])
+    };
+  });
+
+  const lightestPokemon = pokemonWeights.find(pokemon => pokemon.weight === lightest);
+  const heaviestPokemon = pokemonWeights.find(pokemon => pokemon.weight === heaviest);
+
+  console.log(`El pokemon con el peso más liviano es ${lightestPokemon.name} con un peso de ${lightestPokemon.weight}`);
+  console.log(`El pokemon con el peso más pesado es ${heaviestPokemon.name} con un peso de ${heaviestPokemon.weight}`);
+
+  const closestPokemon = pokemonWeights.sort((a, b) => Math.abs(a.weight - averageWeight) - Math.abs(b.weight - averageWeight))[0];
+  
+
+  console.log(`El pokemon con el peso más cercano al peso promedio (${averageWeight}) es ${closestPokemon.name} con un peso de ${closestPokemon.weight}`);
+
+  return {
+    averageWeight,
+    lightest,
+    heaviest,
+    lightestPokemon,
+    heaviestPokemon,
+    closestPokemon
+  };
+};
 
 function calculateAverage(numbers) {
   const total = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
   const count = numbers.length;
   const average = total / count;
+  
   return average;
 }
