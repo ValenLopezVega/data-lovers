@@ -231,56 +231,19 @@ footer {
   align-items: center;
   width: 100%;
 }
-.min-container,
-.max-container {
-  background: #f0f0f0e2;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  padding: 2%;
-  margin-left: 2%;
-  margin-right: 5%;
-  border-radius: 10px;
-  width: 25%;
-  height: 40px;
-}
 
-#mostrarPokeSpawn {
-  margin-left: 5%;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 2900px;
-  flex-direction: column;
-}
-
-.containerClass {
-  display: flex;
-  width: 100%;
-  font-display: column;
-  flex-wrap: wrap;
-}
-.spawnMax-container {
-  flex: 1 0 auto;
+#pokePeso{
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  position: static;
-  padding: 2%;
-  width: 20%;
-  margin-left: 5%;
+  padding: 5%;
+  display: flex;
+  display: inline-block;
+  width: 16%;
+  margin-right: 2%;
+  margin-left: 40%;
   margin-top: 2%;
   background-color: rgba(200, 196, 196, 0.871);
   border-radius: 25px;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-.spawnMin-container {
-  flex: 1 0 auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 2%;
-  width: 20%;
-  margin-left: 7%;
-  margin-right: 5%;
-  margin-top: 2%;
-  background-color: rgba(200, 196, 196, 0.871);
-  border-radius: 25px;
+  
 }
 
 main {
@@ -318,7 +281,8 @@ main {
 
 @media only screen and (max-width: 768px) {
   #buttonHome,
-  #buttonPokedex {
+  #buttonPokedex, 
+  #buttonExtra {
     display: flex;
     flex-wrap: wrap;
     font-size: 50%;
