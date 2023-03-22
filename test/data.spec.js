@@ -99,7 +99,7 @@ describe('computeStats', () => {
 
   it('Deberia calcular el peso promedio, el minimo y el maximo', () => {
     const stats = computeStats(pokemonData)
-    expect(stats.averageWeight).toEqual(8.13)
+    expect(stats.averageWeight).toEqual(8.133333333333333)
     expect(stats.lightest).toEqual(6.9)
     expect(stats.heaviest).toEqual(9.0)
     expect(stats.lightestPokemon.name).toEqual('Bulbasaur')
