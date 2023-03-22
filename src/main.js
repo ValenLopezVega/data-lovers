@@ -10,6 +10,8 @@ import {searchByName,
 
 //guardo la data-objeto en una variable
 const characters = data.results; 
+const cutCharatcters = characters.slice(0,20)
+
 const contentMain = document.querySelector('.container-cards');
 const searchInput = document.querySelector('#search');
 const selectSpecies = document.querySelector('#select-species');
@@ -35,59 +37,59 @@ function show(characters) {
   contentMain.innerHTML = '';
 
   characters.forEach(element => {
-    const contentCards = document.createElement('div');// div card front y revers.
-    // front card 
-    const divCard = document.createElement('div');
-    const imag = document.createElement('img');
-    const nameCharacters = document.createElement('h2');
-      
-    // agrego clases a mis elementos creados segun correspondan
-    contentCards.classList.add('content-front-reverse')
-    divCard.classList.add('cards-front');
-    imag.classList.add('img');
-    nameCharacters.classList.add('text-name-f');
+      const contentCards = document.createElement('div');// div card front y revers.
+      // front card 
+      const divCard = document.createElement('div');
+      const imag = document.createElement('img');
+      const nameCharacters = document.createElement('h2');
+        
+      // agrego clases a mis elementos creados segun correspondan
+      contentCards.classList.add('content-front-reverse')
+      divCard.classList.add('cards-front');
+      imag.classList.add('img');
+      nameCharacters.classList.add('text-name-f');
+              
+      // inserto los datos a mis elementos creados
+      nameCharacters.textContent = element.name;
+      imag.src = element.image;
             
-    // inserto los datos a mis elementos creados
-    nameCharacters.textContent = element.name;
-    imag.src = element.image;
-           
-    // insertamos los elementos creados en cadas div correspondiente
-    divCard.appendChild(imag);
-    divCard.appendChild(nameCharacters);
+      // insertamos los elementos creados en cadas div correspondiente
+      divCard.appendChild(imag);
+      divCard.appendChild(nameCharacters);
 
-    // reves de la card
-    const divCard2 = document.createElement('div');
-    const nameCharacters2 = document.createElement('h2');
-    const paragraph = document.createElement('p');
-    const paragraph2 = document.createElement('p');
-    const paragraph3 = document.createElement('p');
-    const paragraph4 = document.createElement('p');
+      // reves de la card
+      const divCard2 = document.createElement('div');
+      const nameCharacters2 = document.createElement('h2');
+      const paragraph = document.createElement('p');
+      const paragraph2 = document.createElement('p');
+      const paragraph3 = document.createElement('p');
+      const paragraph4 = document.createElement('p');
 
-    divCard2.classList.add('cards-reverse');
-    nameCharacters2.classList.add('text-name-r');
-    paragraph.classList.add('text1');
-    paragraph2.classList.add('text1');
-    paragraph3.classList.add('text1');
-    paragraph4.classList.add('text1');
+      divCard2.classList.add('cards-reverse');
+      nameCharacters2.classList.add('text-name-r');
+      paragraph.classList.add('text1');
+      paragraph2.classList.add('text1');
+      paragraph3.classList.add('text1');
+      paragraph4.classList.add('text1');
 
-    nameCharacters2.textContent = element.name;
-    paragraph.textContent = 'Species: ' + element.species;
-    paragraph2.textContent = 'Gender: ' + element.gender;
-    paragraph3.textContent = 'Origin: ' + element['origin']['name'];
-    paragraph4.textContent = 'Location: ' + element['location']['name'];
+      nameCharacters2.textContent = element.name;
+      paragraph.textContent = 'Species: ' + element.species;
+      paragraph2.textContent = 'Gender: ' + element.gender;
+      paragraph3.textContent = 'Origin: ' + element['origin']['name'];
+      paragraph4.textContent = 'Location: ' + element['location']['name'];
 
-    divCard2.appendChild(nameCharacters2);
-    divCard2.appendChild(paragraph);
-    divCard2.appendChild(paragraph2);
-    divCard2.appendChild(paragraph3);
-    divCard2.appendChild(paragraph4);
+      divCard2.appendChild(nameCharacters2);
+      divCard2.appendChild(paragraph);
+      divCard2.appendChild(paragraph2);
+      divCard2.appendChild(paragraph3);
+      divCard2.appendChild(paragraph4);
 
-    contentCards.appendChild(divCard);
-    contentCards.appendChild(divCard2);
-    contentMain.appendChild(contentCards);
+      contentCards.appendChild(divCard);
+      contentCards.appendChild(divCard2);
+      contentMain.appendChild(contentCards);
 
-    //evento click en la card
-    contentCards.addEventListener('click',()=>{
+      //evento click en la card
+      contentCards.addEventListener('click',()=>{
       contentCards.classList.toggle('active');   
     })
   })
@@ -217,22 +219,13 @@ function showStat () {
     const chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
     chart.draw(data, options);
   }
-  
-  
-  
 }
 
-    
 
+// Método fetch para traer la data desde json
 
-
-
-
-
-//Método fetch para traer la data desde json
-
-// fetch("./data/rickandmorty/rickandmorty.json")
-//   .then((resp) => resp.json())
-//   .then((data) => {
-//     console.log(data);
-// });
+fetch("./data/rickandmorty/rickandmorty.json")
+  .then((resp) => resp.json())
+  .then((data) => {
+    console.log(data);
+});
