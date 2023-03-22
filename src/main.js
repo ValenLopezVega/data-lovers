@@ -1,6 +1,4 @@
-import { filterMovies } from './data.js';
-import { sortData } from './data.js';
-import { filtrarPro } from './data.js';
+import { filterMovies, sortData, filtrarPro, sortNum } from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 function crearTarjetas(peliculas){
@@ -17,7 +15,7 @@ function crearTarjetas(peliculas){
                 <span class="año">Año: ${pelicula.release_date}</span>
                 <span class="score">Productor: ${pelicula.producer}</span>
                 <span class="score">Score: ${pelicula.rt_score}</span>
-                <button name="button" class="button">Mas información</button>
+                <button name="button" class="button-info" data-id="${pelicula.id}">Mas información</button>
                 </div>
             </div>
             `
@@ -26,7 +24,6 @@ function crearTarjetas(peliculas){
 
 //Función para ordenar datos
 const elemento = document.querySelector(".seleccionar");
-//const productor = document.querySelector(".selection-option");
 crearTarjetas(data.films);
 
 elemento.addEventListener("change", (event) => {
@@ -34,7 +31,11 @@ elemento.addEventListener("change", (event) => {
   if(event.target.value === "alfabeticamente") {
     crearTarjetas(datasort);
   }
-  console.log(datasort);
+  else if (event.target.value === "año") {
+    return crearTarjetas(sortNum(data.films, event.target.value));
+  } else if (event.target.value === "puntaje") {
+    return crearTarjetas(sortNum(data.films, event.target.value))
+  }
 }); 
 
 // Función para filtrar 
@@ -54,25 +55,59 @@ seleccionar.addEventListener("change", (event) => {
   }
 });
 
+//Funcion para ir a la página siguiente
 
-const masInfo = document.getElementsByTagName("a")
-crearTarjetas(data.films);
+/*for(const info of masInfo) {
+  info.addEventListener("click", (event) => {
 
-masInfo.addEventListener("click", (description) => 
-  description.forEach(personaje => 
-    masInfo.innerHTML +=`
-        <div class="card">
+  })
+}*/
+  
+
+const masInfo = document.querySelectorAll(".button-info");
+const container = document.querySelector("section");
+for(const info of masInfo) {
+  info.addEventListener("click", (event) => {
+    const resultado = data.films.find(elemento => elemento.id === event.target.dataset.id);
+    container.innerHTML = "";
+    container.innerHTML +=`
+        <div class="card-info">
             <div class="card-body-img">
-                <img class="poster" src="${personaje.people.img[2]}" alt="Imagen de la película"/>
+                <img class="poster" src="${resultado.poster}" alt="Imagen de la película"/>
             </div>
             <div class="card-body-text">
-                <h5 class="card-title">${personaje.people.name[1]}</h5>
-                <span class="año">Edad: ${personaje.people.age[4]}</span>
-                <span class="score">Especie: ${personaje.people.specie[7]}</span>
+                <span class="card-title"> Nombre: ${resultado.title}</span>
+                <span class="card-title"> Año: ${resultado.release_date}</span>
+                <span class="card-title"> Director: ${resultado.director}</span>
+                <span class="card-title"> Productor: ${resultado.producer}</span>
+                <span class="card-title"> Puntaje: ${resultado.rt_score}</span>
+                <span class="card-title"> Descripción: ${resultado.description}</span>
+            </div>
+        </div>
+        `})}
+
+
+  
+/*container.innerHTML = "";
+  resultado.forEach(resultado =>
+    container.innerHTML +=`
+        <div class="card-info">
+            <div class="card-body-img">
+                <img class="poster" src="${resultado.poster}" alt="Imagen de la película"/>
+            </div>
+            <div class="card-body-text">
+                <span class="card-title"> Nombre: ${resultado.title}</span>
+                <span class="card-title"> Año: ${resultado.release_date}</span>
+                <span class="card-title"> Director: ${resultado.director}</span>
+                <span class="card-title"> Productor: ${resultado.producer}</span>
+                <span class="card-title"> Puntaje: ${resultado.rt_score}</span>
+                <span class="card-title"> Descripción: ${resultado.description}</span>
             </div>
         </div>
         `
-  ));
+
+  ); */
+
 
 
 
