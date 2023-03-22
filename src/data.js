@@ -31,3 +31,8 @@ export const filterByOrderZA = (characters) => {
     }
   })
 }
+
+export const calculate = (param,data) => {
+  const percentage = param.length / data.length * 100
+  return percentage.toFixed(2)
+}

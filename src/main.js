@@ -3,7 +3,8 @@ import {searchByName,
   filterBySpecies,
   filterByGender,
   filterByOrderAZ,
-  filterByOrderZA
+  filterByOrderZA,
+  calculate
 }
   from './data.js';
 
@@ -14,6 +15,11 @@ const searchInput = document.querySelector('#search');
 const selectSpecies = document.querySelector('#select-species');
 const selectGender = document.querySelector('#select-gender');
 const selectOrder = document.getElementById('select-order');
+const boxStatictics = document.querySelector('#box-statistics');
+const openModal = document.querySelector('#statistics');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('.modal_close');
+
 
 
 // RENDERIZAR DATA
@@ -140,4 +146,79 @@ selectOrder.addEventListener('change',() => {
     show(orderZA);
   }
 
+});
+
+//Calculando porcentaje por género
+
+openModal.addEventListener('click', (e)=> {
+  e.preventDefault();
+  modal.classList.add('modal--show');
+  showStat();
+
+});
+
+closeModal.addEventListener('click', ()=> {
+  modal.classList.remove('modal--show');
+});
+
+
+function showStat () {
+  
+  contentMain.innerHTML = '';
+  const percenFemale = calculate(filterByGender(characters,'Female'),characters);
+  const percenMale = calculate(filterByGender(characters,'Male'),characters);
+  const percenUnknown = calculate(filterByGender(characters,'unknown'),characters);
+  const percenGenderless = calculate(filterByGender(characters,'Genderless'),characters);
+  // Creando ventana para mostrar estadistica
+  // const box = document.createElement('div');
+  const textStatictics1 = document.createElement('p');
+  const textStatictics2 = document.createElement('p');
+  const textStatictics3 = document.createElement('p');
+  const textStatictics4 = document.createElement('p');
+
+  boxStatictics.classList.add('box-statis');
+  textStatictics1.classList.add('text-box');
+  textStatictics2.classList.add('text-box');
+  textStatictics3.classList.add('text-box');
+  textStatictics4.classList.add('text-box');
+
+  textStatictics1.textContent = `Female: ${percenFemale}`;
+  textStatictics2.textContent = `Male: ${percenMale}`;
+  textStatictics3.textContent = `Unknown: ${percenUnknown}`;
+  textStatictics4.textContent = `Genderless: ${percenGenderless}`;
+
+  boxStatictics.appendChild(textStatictics1);
+  boxStatictics.appendChild(textStatictics2);
+  boxStatictics.appendChild(textStatictics3);
+  boxStatictics.appendChild(textStatictics4);
+
+  //Gráfica
+
+google.charts.load("current", {packages:["corechart"]});
+google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    const data = google.visualization.arrayToDataTable([
+      ['Gender', '493'],
+      ['Female',   73  ],
+      ['Male',     372 ],
+      ['Unknown',  42],
+      ['Genderless',  6],
+    ]);
+
+    const options = {
+      title: 'Characters by gender',
+      is3D: true,
+    };
+
+    const chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+      chart.draw(data, options);
+    }
+}
+    
+//Método fetch para traer la data desde json
+
+fetch("./data/rickandmorty/rickandmorty.json")
+  .then((resp) => resp.json())
+  .then((data) => {
+    console.log(data);
 });
