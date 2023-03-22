@@ -57,5 +57,3 @@ export const procesar = (dataArray) => {
   genderPorcentages.push(femalePorcentage, malePorcentage, unknownPorcentage);
   return genderPorcentages
 }
-
-

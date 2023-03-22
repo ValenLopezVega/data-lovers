@@ -38,7 +38,6 @@ function getSelectedValue(){
   const optionUser = selectedValue.value
   if(optionUser==="title-az"){
     container.innerHTML=""
-    console.log(ordenar(films,optionUser))
     pintarEnInterfaz(ordenar(films,optionUser))
   }
   if(optionUser==="title-za"){
