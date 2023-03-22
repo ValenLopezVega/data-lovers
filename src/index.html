@@ -11,10 +11,9 @@
 </head>
 
 <body>
-  <!--(futura Pantalla Inicio) Logo -->
-  <header>
-    <img src="logo_OTRO.png" class="logoinicio">
 
+  <header>
+    <img src="main-logo.png" class="logoinicio">
     <select class ="sortBy" id="selectionBy">
       <option value="sort" selected>Sort by...</option>
       <option value="title-az">Title From A to Z</option>
@@ -30,14 +29,16 @@
       <option value="Gorō Miyazaki">Gorō Miyazaki</option>
       <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
     </select>  
-
+    
+    <div class="contenedorFunFact">
+      <button class="fun-fact" id="btnFunFact">Ghibli's Fun Fact<br>Click Me!</button>
+      <p id="procesar"></p>
+    </div>
   </header>
-
-  <!--Rederizado de posters en pantalla principal sprint 1-->
   
-<div id="animaciones" class="tarjetas"></div>
+  <div id="animaciones" class="tarjetas"></div>
 
-<script src="main.js" type="module"></script>
+  <script src="main.js" type="module"></script>
 </body>
 
 </html>
