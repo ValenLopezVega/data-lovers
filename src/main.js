@@ -237,7 +237,7 @@ function mostrarPokemonPorPeso(pokemon, title) {
       </div>
     </div>
   `;
-}
+} 
 
 function mostrarAverage(pokemones) {
   const averagePokemon = computeStats(pokemones);
