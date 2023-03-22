@@ -4,7 +4,11 @@ export const searchByName = (data,name) => {
   })
 };
 
-
+export const filterGeneral = (data,propiedad,option) => {
+  return data.filter((characters) => {
+    return characters[propiedad].includes(option);
+  })
+};
 
 export const filterBySpecies = (data,species) => {
   return data.filter((characters) => {
@@ -48,8 +52,8 @@ export const calculate = (param,data) => {
 
 // Método fetch para traer la data desde json
 
-fetch("./data/rickandmorty/rickandmorty.json")
-  .then((resp) => resp.json())
-  .then((data) => {
-    console.log(data);
-});
+// fetch("./data/rickandmorty/rickandmorty.json")
+//   .then((resp) => resp.json())
+//   .then((data) => {
+//     console.log(data);
+//   });
