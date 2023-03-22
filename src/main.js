@@ -219,8 +219,45 @@ btnTypeFairy.addEventListener("click", function () {
   mostrarPokemon(filtrarPorTipo("fairy"));
 });
 
-//poke peso
+
+// Mostrar pokemon por peso 
+
 const mostrarPokeAverage = document.getElementById("mostrarPokePeso");
+
+function mostrarPokemonPorPeso(pokemon, title) {
+  return `
+    <div>
+      <h3>${title}</h3>
+      <div id = pokePeso>
+      <img src="${pokemon.img}"><br>
+      <strong>#${pokemon.num}</strong><br> 
+      <strong>${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</strong><br> 
+      <strong>Type</strong>: ${pokemon.type}<br>
+      <strong>Peso</strong>: ${pokemon.size.weight}<br><br>
+      </div>
+    </div>
+  `;
+} 
+
+function mostrarAverage(pokemones) {
+  const averagePokemon = computeStats(pokemones);
+  console.log(averagePokemon);
+
+  const pokemonesPorPeso = [mostrarPokemonPorPeso(averagePokemon.lightestPokemon, "Curiosidad #1: El pokemon más liviano es GASTLY si, los fantasmas tambien pesan"),  mostrarPokemonPorPeso(averagePokemon.heaviestPokemon, "Curiosidad #2: El pokemon más pesado es SNORLAX puedes dormir junto a él, pero ten cuidado podría aplastarte"), mostrarPokemonPorPeso(averagePokemon.closestPokemon, "Curiosidad #3: El Pokemon más cercano al peso promedio es BLISSEY, cuando estes triste se acercará a ti para hacerte reír")  ];
+
+  let peso = "";
+  for (let i = 0; i <  pokemonesPorPeso.length; i++) {
+    peso  +=  pokemonesPorPeso[i];
+  }
+  mostrarPokeAverage.innerHTML = peso ;
+}
+
+btnExtra.addEventListener("click", function () {
+  mostrarAverage(data);
+});
+
+//poke peso
+/*const mostrarPokeAverage = document.getElementById("mostrarPokePeso");
 
 function mostrarAverage(pokemones) {
   const averagePokemon = computeStats(pokemones);
@@ -275,3 +312,5 @@ function mostrarAverage(pokemones) {
 btnExtra.addEventListener("click", function () {
   mostrarAverage(data);
 });
+*/
+
