@@ -1,112 +1,175 @@
-import data from './data/ghibli/ghibli.js';
-
-const peliculas= document.querySelector('#peliculas')
-
-//INTERACCION DEL DOM (LISTENERS, HANDLERS)
-//MUESTRA DATOS EN PANTALLA
+import data from "./data/ghibli/ghibli.js";
+import { filtroInformacionDirector, filtroInformacionProductor, filtroInformacionEspecie, ordenInformación, calculoInformacion } from './data.js';
 
 // SELECCION SECCION
 
 //HISTORIA
 const botonHistoria = document.getElementById("botonHistoria");
-const historia = document.getElementById("historia");
-const volver = document.getElementById("volver");
-
+const seccionHistoria = document.getElementById("historia");
 botonHistoria.addEventListener("click", function () {
   document.getElementById("header").style.display = "none";
-  historia.style.display = "block";
+  seccionHistoria.style.display = "block";
 });
-
-
-function volverInicio() {
-  window.location.reload();
-}
-
-volver.addEventListener("click", volverInicio);
-
-
-//PERSONAJES
 const botonPersonajes = document.getElementById("botonPersonajes");
 const seccionPersonajes = document.getElementById("personajes");
-const volver2 = document.getElementById("volver2");
-
 botonPersonajes.addEventListener("click", function () {
   document.getElementById("header").style.display = "none";
   seccionPersonajes.style.display = "block";
 });
-
-function volverInicio2() {
-  window.location.reload();
-}
-
-volver2.addEventListener("click", volverInicio2);
-
-
-//DESACTIVAR
-const btnEspecie = document.getElementById('especie');
-const btnGenero = document.getElementById('genero')
-let desGenero = false
-let desEspecie = false
-
-btnGenero.addEventListener("click", function () {
-  desEspecie = !desEspecie;
-  btnEspecie.disabled = desEspecie;
-});
-
-btnEspecie.addEventListener("click", function () {
-  desGenero = !desGenero;
-  btnGenero.disabled = desGenero;
-});
-
-
-//FILMOGRAFIA
 const botonFilmografia = document.getElementById("botonFilmografia");
 const seccionFilmografia = document.getElementById("filmografia");
-const volver3 = document.getElementById("volver3");
-
 botonFilmografia.addEventListener("click", function () {
   document.getElementById("header").style.display = "none";
   seccionFilmografia.style.display = "block";
 });
 
-function recargar3() {
+//VOLVER AL HOME
+const volver = document.getElementById("botonVolver");
+function volverInicio() {
   window.location.reload();
 }
+volver.addEventListener("click", volverInicio);
 
-volver3.addEventListener("click", recargar3);
+const volver2 = document.getElementById("botonVolver2");
+function volverInicio2() {
+  window.location.reload();
+}
+volver2.addEventListener("click", volverInicio2);
 
+const volver3 = document.getElementById("botonVolver3");
+function volverInicio3() {
+  window.location.reload();
+}
+volver3.addEventListener("click", volverInicio3);
 
-//PANTALLA
-function crearHtml(pelicula) {
-  const titulo = `<h3>${pelicula}</h3>`;
-  return titulo
-  
+// FILMOGRAFIA
+const matrizFilmografia = document.querySelector("#grillaFilmografia");
+const films = data.films;
+for (let i = 0; i < films.length; i++) {
+  const listaFilmografia = `
+  <div class="datosPelicula">
+  <a href="#"><img src="${films[i].poster}" alt=""></a>
+  <div class="tituloPelicula"><label><b>${films[i].title}</b></label></div>
+  <div class="fechaPelicula"><label><b>(${films[i].release_date})</b></label></div>
+  <div class="descripcionPelicula"><label><b>${films[i].description}</b></label></div>
+  </div>`;
+  matrizFilmografia.insertAdjacentHTML("beforeend", listaFilmografia);
+}
+export function nuevaListaFilmografia(films) {
+  matrizFilmografia.innerHTML = "";
+  for (let i = 0; i < films.length; i++) {
+    const listadoFilmografia = `
+    <div class="datosPelicula">
+    <a href="#"><img src="${films[i].poster}" alt=""></a>
+    <div class="tituloPelicula"><label><b>${films[i].title}</b></label></div>
+    <div class="fechaPelicula"><label><b>(${films[i].release_date})</b></label></div>
+    <div class="descripcionPelicula"><label><b>${films[i].description}</b></label></div>
+    </div>`;
+    matrizFilmografia.insertAdjacentHTML("beforeend", listadoFilmografia);
+  }
 }
 
-function impData(films){
-  let htmlAcumulado='';
-  films.forEach(function(pelicula) {
-    htmlAcumulado += crearHtml(pelicula.title);
-  })
-  
-  peliculas.innerHTML = htmlAcumulado;
+// FILMOGRAFIA - Directores
+const directores = document.querySelector("#filtroDirector");
+const a = new Set([]);
+data.films.forEach(x => {
+  a.add(x.director);
+});
 
-  films = films.sort(function(asc, desc) {
-    if (asc < desc) {
-      return -1;
-    } 
-    if (desc < asc) {
-      return 1;
-    }
-    return desc.title - asc.title;
-        
-  })
+// FILMOGRAFIA - Directores - Limpiar
+const limpiarDirector = [...a];
+for (let i = 0; i < limpiarDirector.length; i++) {
+  const listaFilmografia = `
+  <option value="${limpiarDirector[i]}">${limpiarDirector[i]}</option>`;
+  directores.insertAdjacentHTML("beforeend", listaFilmografia);
+}
+directores.addEventListener('change', (e) => {
+  const directorSeleccionado = filtroInformacionDirector(films, e.target.value);
+  nuevaListaFilmografia(directorSeleccionado);
+})
 
-  console.log(films);
+// FILMOGRAFIA - Productores
+const productores = document.querySelector("#filtroProductor");
+const b = new Set([]);
+data.films.forEach(x => {
+  b.add(x.producer);
+});
+
+// FILMOGRAFIA - Productores - Limpiar
+const limpiarProductor = [...b];
+for (let i = 0; i < limpiarProductor.length; i++) {
+  const listaFilmografia = `
+  <option value="${limpiarProductor[i]}">${limpiarProductor[i]}</option>`;
+  productores.insertAdjacentHTML("beforeend", listaFilmografia);
+}
+productores.addEventListener('change', (e) => {
+  const productorSeleccionado = filtroInformacionProductor(films, e.target.value);
+  nuevaListaFilmografia(productorSeleccionado);
+})
+
+// FILMOGRAFIA - Ordenamiento
+const orden = document.getElementById("filtroOrden");
+orden.addEventListener('change', (e) => {
+  const ordenSeleccionado = ordenInformación(e.target.value, films);
+  nuevaListaFilmografia(ordenSeleccionado);
+})
+
+// PERSONAJES
+export const listaPersonajes = [];
+for (let i = 0; i < data.films.length; i++) {
+  for (let j = 0; j < data.films[i].people.length; j++) {
+    listaPersonajes.push(data.films[i].people[j]);
+  }
+}
+const matrizPersonajes = document.querySelector("#grillaPersonajes");
+for (let i = 0; i < listaPersonajes.length; i++) {
+  const listaFilmografia = `
+  <div class="datosPelicula">
+  <a href="#"><img src="${listaPersonajes[i].img}" alt=""></a>
+  <div class="tituloPelicula"><label><b>${listaPersonajes[i].name}</b></label></div>
+  <div class="genero"><label><b>Género: ${listaPersonajes[i].gender}</b></label></div>
+  <div class="edad"><label><b>Edad: ${listaPersonajes[i].age} años</b></label></div>
+  <div class="especie"><label><b>Especie: ${listaPersonajes[i].specie}</b></label></div>
+  </div>`;
+  matrizPersonajes.insertAdjacentHTML("beforeend", listaFilmografia);
 }
 
+function personajes(listaPersonajes) {
+  matrizPersonajes.innerHTML = "";
+  for (let i = 0; i < listaPersonajes.length; i++) {
+    const listadoFilmografia = `
+    <div class="datosPelicula">
+    <a href="#"><img src="${listaPersonajes[i].img}" alt=""></a>
+    <div class="tituloPelicula"><label><b>${listaPersonajes[i].name}</b></label></div>
+    <div class="genero"><label><b>Género: ${listaPersonajes[i].gender}</b></label></div>
+    <div class="edad"><label><b>Edad: ${listaPersonajes[i].age} años</b></label></div>
+    <div class="especie"><label><b>Especie: ${listaPersonajes[i].specie}</b></label></div>
+    </div>`;
+    matrizPersonajes.insertAdjacentHTML("beforeend", listadoFilmografia);
+    
+  }
+  
+}
+const especiePersonajes = document.querySelector("#filtroEspecie");
+const c = new Set([]);
+listaPersonajes.forEach(x => {
+  c.add(x.specie);
+});
 
-//}
-impData(data.films)
+// PERSONAJES - Limpiar personajes
+const limpiarPersonajes = [...c];
+for (let i = 0; i < limpiarPersonajes.length; i++) {
+  const listaFilmografia = `
+<option value="${limpiarPersonajes[i]}">${limpiarPersonajes[i]}</option>`;
+  especiePersonajes.insertAdjacentHTML("beforeend", listaFilmografia);
+}
 
-console.log(data.films[2].title);
+// PERSONAJES - Calculo
+especiePersonajes.addEventListener('change', (e) => {
+  const especieSeleccionada = filtroInformacionEspecie(listaPersonajes, e.target.value);
+  const cantidadEspecie = calculoInformacion(data.films, e.target.value);
+  const mensajeCantidadEspecie = `<div><label>La cantidad de personajes de ésta especie es: ${cantidadEspecie}</label></div>`;
+  const resultadoCantidadEspecie = document.getElementById("numeroEspecies");
+  resultadoCantidadEspecie.innerHTML = mensajeCantidadEspecie;
+  personajes(especieSeleccionada);
+})

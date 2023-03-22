@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 h1 {
   position: absolute;
   top: 50%;
@@ -15,36 +16,42 @@ h1 {
 }
 
 h2 {
-  text-align: center;
-  margin: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  background-color: #7F8462;
   color: #ffffff;
-
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 3px solid #C9B8A7;
+  text-align: right !important;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 40px;
+  margin-left: 0;
+  /*clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);*/
+  box-sizing: border-box;
 }
 
 p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   text-align: justify;
   margin: 50px;
-  color: #ffffff;
-  @import url('@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap)');
-}
-
-body {
-  background-image: url("Imagenes/chihiro.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  @import url('@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap)');
-}
-#orden {
-  width: 15%;
-  padding: 15px 15px;
-  border: 3px solid #4C362E;
-  border-radius: 8px;
-  background-color: #C9B8A7;
+  background-color: #7F8462;
+  opacity: 0.8;
   font-size: 15px;
-  font-weight: bold;
-  color: #4C362E;
-  position: absolute;
-  left: 85%;
+  border-radius: 20px;
+  border: 3px solid #C9B8A7;
+  width: 1000px;
+  height: 410px;
+  padding: 40px;
+  margin: 40px auto;
 }
 
 /* BUTTONS */
@@ -74,6 +81,8 @@ body {
 }
 
 button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
   background-color: #7F8462;
   color: #ffffff;
   padding: 10px 20px 10px;
@@ -89,25 +98,59 @@ button {
   justify-content: flex-end;
   margin: 10px;
   margin-left: 0;
-  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+  /*clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);*/
 }
+
 button:hover {
   background-color: #4C362E;
 }
+
 button:first-of-type {
   margin-top: 305px;
 }
 
+#botonVolver,
+#botonVolver2,
+#botonVolver3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  background-color: #7F8462;
+  color: #ffffff;
+  padding: 10px 20px 10px;
+  font-size: 16px;
+  border: 3px solid #C9B8A7;
+  text-align: center !important;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  width: 110px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px;
+  margin-right: 0;
+  float: right;
+}
+
+#botonVolver:hover,
+#botonVolver2:hover,
+#botonVolver3:hover  {
+  background-color: #4C362E;
+}
+
 /* MOSTRAR-OCULTAR SECCIONES */
-#home {
+#header {
   display: auto;
 }
+
 #historia {
   display: none;
 }
+
 #filmografia {
   display: none;
 }
+
 #personajes {
   display: none;
 }
