@@ -18,7 +18,7 @@
         <ul class="link" >
           <li><a class="items" href="">Home</a></li>
           <li><a class="items" href="">Characters</a></li> 
-          <li><a class="items" href="">Games</a></li> 
+          <li id="statistics"><a class="items" href="">Statistics</a></li> 
         </ul>
 
         <div class="content-inp-icon">
@@ -30,10 +30,11 @@
     </div>
 
     <img src="./images/rym.png " alt="" class="logo">
-
+  
     <div class="content-select-all container ">
 
       <div class="group-select">
+        <label for="">Filter by specie</label>
         <select name="filter" class="select" id="select-species">
           <option disabled selected>-Choose-</option>
           <option value="Humanoid">Humanoid</option>
@@ -47,47 +48,67 @@
           <option value="Animal">Animal</option>
         </select>
       </div>
-          
+            
       <div class="group-select">
+        <label for="">Filter by gender</label>
         <select name="filter" class="select" id="select-gender">
           <option disabled selected>-Choose-</option>
           <option value="Female">Female</option>
           <option value="Male">Male</option>
           <option value="unknown">unknown</option>
+          <option value="Genderless">Genderless</option>
         </select>
-     
+      
       </div>
 
       <div class="group-select">
+        <label for="">Filter by gender</label>
         <select name="order" class="select" id="select-order">
           <option disabled selected>-Order-</option>
           <option value="Ascending">Order A - Z</option>
           <option value="Descending">Order Z - A</option>
         </select>
       </div>
-
-    </div>
-  
+    
   </header>
 
-  <main>    
+    <main>    
 
-    <section class="content ">
-      <div class="container-cards ">
-      </div> 
-    </section>
+      <section class="content ">
+        <div class="container-cards ">
+        </div> 
+      </section>
 
-  </main>
+      <section class="modal">
 
+        <div class="modal_container">
+          <h2 class="modal_title"> Character stats by gender </h2>
 
-    <footer class="footer container">
+          <div id="box-statistics">
+            <div id="piechart_3d" style="width: 400px; height: 250px;"></div>
+            
+          </div>
+
+          <a href="#" class="modal_close">Close</a>
+          
+        </div>
+
+      </section>
+      
+    </main>
+    
+  
+ 
+    <footer class="footer">
       <p>footer</p>
     </footer>
 
 
   <!--<div id="root"></div>-->
   <script src="main.js" type="module"></script>
-
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+  
 </body>
 
 </html>
