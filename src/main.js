@@ -17,13 +17,13 @@ const searchInput = document.querySelector('#search');
 const selectSpecies = document.querySelector('#select-species');
 const selectGender = document.querySelector('#select-gender');
 const selectOrder = document.getElementById('select-order');
+
 // modal
 const modal = document.querySelector('.modal');
 const boxStatictics = document.querySelector('#box-statistics');
 const openModal = document.querySelector('#statistics');
 const closeModal = document.querySelector('.modal_close');
 const modalContainer = document.querySelector('.modal_container');
-
 
 
 // RENDERIZAR DATA
@@ -154,29 +154,30 @@ selectOrder.addEventListener('change',() => {
 
 // PORCENTAJE POR GENERO
 
+
 openModal.addEventListener('click', (e)=> {
   e.preventDefault();
   modal.classList.add('modal--show');
   showStat();
- 
-
 });
 
 closeModal.addEventListener('click', (e)=> {
   e.preventDefault();
+  
   modal.classList.remove('modal--show');
 });
 
 
+
 function showStat () { 
-  
-  // boxStatictics.innerHTML = '';
+   
   const percenFemale = calculate(filterByGender(characters,'Female'),characters);
   const percenMale = calculate(filterByGender(characters,'Male'),characters);
   const percenUnknown = calculate(filterByGender(characters,'unknown'),characters);
   const percenGenderless = calculate(filterByGender(characters,'Genderless'),characters);
 
   // Creando ventana para mostrar estadistica
+
   const textStatictics1 = document.createElement('p');
   const textStatictics2 = document.createElement('p');
   const textStatictics3 = document.createElement('p');
@@ -199,6 +200,7 @@ function showStat () {
   boxStatictics.appendChild(textStatictics4);
 
   //Gráfica
+  
   google.charts.load("current", {packages:["corechart"]});
   google.charts.setOnLoadCallback(drawChart);
   
@@ -210,7 +212,7 @@ function showStat () {
       ['Unknown',  42],
       ['Genderless',  6],
     ]);
-    
+
     const options = {
       title: 'Characters by gender',
       is3D: true,
@@ -218,6 +220,7 @@ function showStat () {
     
     const chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
     chart.draw(data, options);
+<<<<<<< HEAD
   }
 }
 
@@ -229,3 +232,17 @@ fetch("./data/rickandmorty/rickandmorty.json")
   .then((data) => {
     console.log(data);
 });
+=======
+  } 
+}
+
+
+//Método fetch para traer la data desde json
+
+// fetch("./data/rickandmorty/rickandmorty.json")
+//   .then((resp) => resp.json())
+//   .then((data) => {
+//     console.log(data);
+// });
+
+>>>>>>> 7293cdb8cc336cce23231e3114f7fc240b578d42
