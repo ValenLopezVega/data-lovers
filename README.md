@@ -9,17 +9,17 @@ Iniciamos realizando las historias de usuario que surgen de la necesidad de cono
 
 ## Historias de usuario:
 
-![Historias de Usuario](./Extras/IMG/HistoriasDeUsuario.png)
+![Historias de Usuario](./src/Extras/IMG/HistoriasDeUsuario.png)
 
 Luego se realizaron distintos prototipos de baja fidelidad de como queriamos que fuera la web en relación a nuestras historias de usuario. Este prototipo se fue modificando hasta llegar a la interfaz que tenemos actualmente.
 
 ## Prototipos: 
 
 __Prototipo Baja Fidelidad:__
-![Prototipos baja](../Extras/IMG/Prototipo.png)
+![Prototipos baja](./src/Extras/IMG/Prototipo.png)
 
 __Prototipo Alta Fidelidad:__
-![Prototipos baja](../Extras/IMG/Prototipoalta.png)
+![Prototipos baja](./scr/Extras/IMG/Prototipoalta.png)
 
 [Has Click aqui para ver el prototipo en Figma](https://www.figma.com/file/PeRrZCA9exMS7emOrTOCbm/Prototipo-alta-fidelidad-data-Pokemon-Go?node-id=0%3A1&t=q0JyDs3WEiaoouoM-1)
 
