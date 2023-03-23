@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #271d45; 
+}
+
+/*Titulo Logo*/
+.container-title{ 
+    background-color:#45337b;
+    display: flex;
+    height: 40px;
+    width: 100%;
+    position:fixed;
+    top: 0px;
+    z-index: 1000;
+    flex-flow: row wrap;
+    justify-content:space-between;
+
+}
+.container-title nav{
+    width: 400px;
+    height: 40px;
+    background-color: aqua;
+}
+.nav-list{
+    list-style: none;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    
+}
+.nav-list li{
+    margin: 8px; 
+    padding: 8px;
+    background-color: forestgreen;
+    border-radius: 4px 4px 0px 0px;
+    font-size: 14px;
+}
+
+.container-logo{
+    width: 350px;
+    height: 100%;
+    display: flex;
+}
+.container-title img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background-color: #ffff00
+}
+
+
+/*caja pokedex*/
+.box-pokedex{
+    background-color:;
+    display: flex;
+    position:relative;
+    top: 120px;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    align-content:space-between;
+
+}
+.card{
+    background-color:plum;
+    height: 200px;
+    width: 150px;
+    margin: 10px;
+    padding:15px;
+     
+}
+.card p{
+    border: 1px #202f40;
+    direction:ltr;
+}
+.pokemon-img img{
+    width: 120px;
+    height: 100px;
+    object-fit: contain;
+    background-image:url("https://e0.pxfuel.com/wallpapers/281/471/desktop-wallpaper-minimal-pokemon-go-for-iphone-8-plus-pokemongo-minimal-pokeball-thumbnail.jpg");
+    background-size: cover;
+    border-radius: 10px;
+   
+}
+
+/*buscador*/
+.filter{
+    background-color:#0b24519f;
+    display: flex;
+    flex-flow: row;
+    justify-content:center;
+    align-items:flex-start;
+    height:60px;
+    width:100%;
+    padding: 13px;
+    top: 150px;
+    z-index:100;
+    position:fixed;
+    top: 60px;
+
+   
+}
+.filter label{
+    background-color: chartreuse;
+    border: 1px solid fuchsia;
+    font-size:13px;
+    margin: 7px;
+    text-align: center;
+    height: 20px;
+    padding: 1px;
+    
+    
+}
+.filter select{
+    background-color:#ffff00 ;
+    border: 1px solid darkblue;
+    font-size:13px;
+    margin: 7px;
+    text-align: center;
+    height: 20px;
+    padding: 1px;
+}
+/*colores*/
+.colores{
+    color: #202f40;
+    color: #ffff00;
+}
