@@ -1,5 +1,5 @@
-import { typeFilter } from './data.js';
-import {typeFilterGeneration} from './data.js';
+import { typeFilter, typeFilterGeneration} from './data.js';
+import { orderAscending,orderDescending} from "./data.js"
 import data from './data/pokemon/pokemon.js';
 
 
@@ -51,3 +51,19 @@ function filter2() {
   });
 }
 filter2()
+
+
+  const selectOrder = document.getElementById("type-order")
+  selectOrder.addEventListener("change", () =>{
+    const typ = selectOrder.value;
+    console.log(typ)
+
+    if (typ === "Ascending") {
+      console.log(paint(orderAscending(dataPokedex)))
+     return paint(orderAscending(dataPokedex));
+    } else if(typ ==="Descending"){
+      console.log(paint(orderDescending(dataPokedex)))
+      return paint(orderDescending(dataPokedex));
+    }
+
+    })
