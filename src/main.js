@@ -58,33 +58,33 @@ for(const info of masInfo) {
       container.innerHTML = "";
       container.innerHTML +=`
           <div class="card-info">
-              <div class="card-body-img">
+              <div class="card-body-img2">
                   <img class="poster" src="${resultado.poster}" alt="Imagen de la película"/>
               </div>
-              <div class="card-body-text">
-                  <span class="card-title"> Nombre: ${resultado.title}</span>
-                  <span class="card-title"> Año: ${resultado.release_date}</span>
-                  <span class="card-title"> Director: ${resultado.director}</span>
-                  <span class="card-title"> Productor: ${resultado.producer}</span>
-                  <span class="card-title"> Puntaje: ${resultado.rt_score}</span>
-                  <span class="card-title"> Descripción: ${resultado.description}</span>
+              <div class="card-body-text2">
+                  <span class="card-title"> <strong>Nombre:</strong> ${resultado.title}</span>
+                  <span class="card-title"> <strong>Año:</strong> ${resultado.release_date}</span>
+                  <span class="card-title"> <strong>Director:</strong> ${resultado.director}</span>
+                  <span class="card-title"> <strong>Productor:</strong> ${resultado.producer}</span>
+                  <span class="card-title"> <strong>Puntaje:</strong> ${resultado.rt_score}</span>
+                  <span class="card-title"> <strong>Descripción:</strong> ${resultado.description}</span>
               </div>
           </div>`
           resultado.people.forEach(elemento => {
             container.innerHTML+=
           `<div class="card-people">
-            <div class="card-body-img">
-                <img class="poster" src="${elemento.img}" alt="Imagen de la película"/>
+             <div class="c-people">
+              <div class="card-body-img3">
+                <img class="p-people" src="${elemento.img}" alt="Imagen de la película"/>
+              </div>
+              <div class="card-body-text3">
+                <span class="nombre"><strong>Nombre:</strong> ${elemento.name}</span>
+                <span class="año"><strong>Edad:</strong> ${elemento.age}</span>
+                <span class="score"><strong>Especie:</strong> ${elemento.specie}</span>
+              </div>
             </div>
-            <div class="card-body-text">
-                <span class="card-title">Nombre: ${elemento.name}</span>
-                <span class="año">Edad: ${elemento.age}</span>
-                <span class="score">Especie: ${elemento.specie}</span>
-            </div>
-        </div>
         </div>
         `
-        
           });
       });
     };
