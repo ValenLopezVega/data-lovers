@@ -13,9 +13,15 @@ Iniciamos realizando las historias de usuario que surgen de la necesidad de cono
 
 Luego se realizaron distintos prototipos de baja fidelidad de como queriamos que fuera la web en relación a nuestras historias de usuario. Este prototipo se fue modificando hasta llegar a la interfaz que tenemos actualmente.
 
-## Prototipo: 
+## Prototipos: 
 
-![Prototipos](./Extras/IMG/Prototipo.png)
+__Prototipo Baja Fidelidad:__
+![Prototipos baja](./Extras/IMG/Prototipo.png)
+
+__Prototipo Alta Fidelidad:__
+![Prototipos baja](.Extras/IMG/Prototipoalta.png)
+
+[Has Click aqui para ver el prototipo en Figma](https://www.figma.com/file/PeRrZCA9exMS7emOrTOCbm/Prototipo-alta-fidelidad-data-Pokemon-Go?node-id=0%3A1&t=q0JyDs3WEiaoouoM-1)
 
 De esta forma, hemos avanzado en nuestro proyecto "Pokemon Go para entrenadores" de Data Lovers, esperando ofrecer a los usuarios una herramienta útil y amigable para conocer más sobre los pokémon presentes en el juego.
 
