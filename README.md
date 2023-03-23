@@ -19,7 +19,8 @@ __Prototipo Baja Fidelidad:__
 ![Prototipo baja](./src/Extras/IMG/Prototipo.png)
 
 __Prototipo Alta Fidelidad:__
-![Prototip alta](.src/Extras/IMG/protAlta.png)
+![Prototip alta](.src/Extras/IMG\/rotAlta.png)
+
 [Has Click aqui para ver el prototipo en Figma](https://www.figma.com/file/PeRrZCA9exMS7emOrTOCbm/Prototipo-alta-fidelidad-data-Pokemon-Go?node-id=0%3A1&t=q0JyDs3WEiaoouoM-1)
 
 De esta forma, hemos avanzado en nuestro proyecto "Pokemon Go para entrenadores" de Data Lovers, esperando ofrecer a los usuarios una herramienta útil y amigable para conocer más sobre los pokémon presentes en el juego.
