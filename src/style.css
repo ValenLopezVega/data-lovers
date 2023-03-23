@@ -4,85 +4,127 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(https://c8.alamy.com/compes/2eww0mr/lineas-diagonales-patron-de-fondo-fondo-blanco-con-lineas-diagonales-grises-vector-eps-10-2eww0mr.jpg); /*imagen de fondo*/
+    background-color: #271d45; 
 }
 
-
-/*Nav and title*/
-.menu{
-    top: 0;
-    position: fixed;
-    color: #ffff00;
+/*Titulo Logo*/
+.container-title{ 
+    background-color:#45337b;
+    display: flex;
+    height: 40px;
     width: 100%;
+    position:fixed;
+    top: 0px;
     z-index: 1000;
-}
-.container-title{ /**/
-    flex: 100%;
-    padding: 10px;
-    background-color: #202f40;
-    text-align: center;
-}
-.container-title h1{
-    font-size: 25px;
-}
-.menu_items{
-    margin: 1px 0px;
-    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
-    list-style-type: none;
+    justify-content:space-between;
+
 }
-.menu_items li{
-    color: #ffff00;
-    padding: 10px 30px;
-    background-color: #202f40;
+.container-title nav{
+    width: 400px;
+    height: 40px;
+    background-color: aqua;
 }
-.menu_items__li{
-    border-radius: 0px 0px 0px 25px;
+.nav-list{
+    list-style: none;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    
 }
-.menu_items li:hover{
-    background-color: #ffff00;
-    color: #202f40;
+.nav-list li{
+    margin: 8px; 
+    padding: 8px;
+    background-color: forestgreen;
+    border-radius: 4px 4px 0px 0px;
+    font-size: 14px;
 }
 
-
-/*Prueba de cuadro*/
-.cuadrodeTarjeta{
+.container-logo{
+    width: 350px;
+    height: 100%;
     display: flex;
-    flex-flow: column wrap;
-    width: 200px;
-    height: 200px;
-    justify-content: flex-end;
-    margin: 20px;
 }
-section div ul{
-    margin: 20px;
-    padding: 5px;
-    border: 3px solid #202f40;
-}
-/*mostrar contenido ventanas dinamicas*/
-.active[data-content] {
-    display: block;
+.container-title img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background-color: #ffff00
 }
 
-[data-content] {
-    display: none;
-}
 
 /*caja pokedex*/
-.Cajon-pokedex{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: blue;
+.box-pokedex{
+    background-color:;
+    display: flex;
+    position:relative;
+    top: 120px;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    align-content:space-between;
+
 }
-.Cajon-pokedex p{
-    color: crimson;
+.card{
+    background-color:plum;
+    height: 200px;
+    width: 150px;
+    margin: 10px;
+    padding:15px;
+     
+}
+.card p{
+    border: 1px #202f40;
+    direction:ltr;
+}
+.pokemon-img img{
+    width: 120px;
+    height: 100px;
+    object-fit: contain;
+    background-image:url("https://e0.pxfuel.com/wallpapers/281/471/desktop-wallpaper-minimal-pokemon-go-for-iphone-8-plus-pokemongo-minimal-pokeball-thumbnail.jpg");
+    background-size: cover;
+    border-radius: 10px;
+   
 }
 
+/*buscador*/
+.filter{
+    background-color:#0b24519f;
+    display: flex;
+    flex-flow: row;
+    justify-content:center;
+    align-items:flex-start;
+    height:60px;
+    width:100%;
+    padding: 13px;
+    top: 150px;
+    z-index:100;
+    position:fixed;
+    top: 60px;
 
-
+   
+}
+.filter label{
+    background-color: chartreuse;
+    border: 1px solid fuchsia;
+    font-size:13px;
+    margin: 7px;
+    text-align: center;
+    height: 20px;
+    padding: 1px;
+    
+    
+}
+.filter select{
+    background-color:#ffff00 ;
+    border: 1px solid darkblue;
+    font-size:13px;
+    margin: 7px;
+    text-align: center;
+    height: 20px;
+    padding: 1px;
+}
+/*colores*/
 .colores{
     color: #202f40;
     color: #ffff00;
