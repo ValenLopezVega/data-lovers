@@ -1,5 +1,5 @@
-import { typeFilter, typeFilterGeneration} from './data.js';
-import { orderAscending,orderDescending} from "./data.js"
+import { filter} from './data.js';
+import { order} from "./data.js"
 import data from './data/pokemon/pokemon.js';
 
 
@@ -32,7 +32,7 @@ function filter1() {
     if (typeF === "Type") {
       paint(dataPokedex);
     } else {
-      paint(typeFilter(dataPokedex, typeF));
+      paint(filter.typeFilter(dataPokedex, typeF));
     }
   });
 }
@@ -46,24 +46,26 @@ function filter2() {
     if (generationF === "Gen") {
       paint(dataPokedex);
     } else {
-      return paint(typeFilterGeneration(dataPokedex, generationF));
+      return paint(filter.typeFilterGeneration(dataPokedex, generationF));
     }
   });
 }
 filter2()
 
-
-  const selectOrder = document.getElementById("type-order")
-  selectOrder.addEventListener("change", () =>{
+//Order (Ascending,orderDescending,Number
+function allOrder() {
+  const selectOrder = document.getElementById("type-order");
+  selectOrder.addEventListener("change", () => {
     const typ = selectOrder.value;
-    console.log(typ)
-
     if (typ === "Ascending") {
-      console.log(paint(orderAscending(dataPokedex)))
-     return paint(orderAscending(dataPokedex));
-    } else if(typ ==="Descending"){
-      console.log(paint(orderDescending(dataPokedex)))
-      return paint(orderDescending(dataPokedex));
+      return paint(order.orderAscending(dataPokedex));
+    } else if (typ === "Descending") {
+      return paint(order.orderDescending(dataPokedex));
+    } else if (typ === "Major-Minor") {
+      return paint(order.orderNumber1(dataPokedex));
+    } else if (typ === "Minor-Major") {
+      return paint(order.orderNumber2(dataPokedex));
     }
-
-    })
+  });
+}
+allOrder();
