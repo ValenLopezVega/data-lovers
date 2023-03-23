@@ -19,7 +19,7 @@ __Prototipo Baja Fidelidad:__
 ![Prototipo baja](./src/Extras/IMG/Prototipo.png)
 
 __Prototipo Alta Fidelidad:__
-![Prototip alta](.src/Extras/IMG\/rotAlta.png)
+![Prototip alta](.src/Extras/IMG/ProtAlta.png)
 
 [Has Click aqui para ver el prototipo en Figma](https://www.figma.com/file/PeRrZCA9exMS7emOrTOCbm/Prototipo-alta-fidelidad-data-Pokemon-Go?node-id=0%3A1&t=q0JyDs3WEiaoouoM-1)
 
