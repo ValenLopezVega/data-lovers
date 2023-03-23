@@ -16,10 +16,10 @@ Luego se realizaron distintos prototipos de baja fidelidad de como queriamos que
 ## Prototipos: 
 
 __Prototipo Baja Fidelidad:__
-![Prototipos baja](./src/Extras/IMG/Prototipo.png)
+![Prototipo baja](./src/Extras/IMG/Prototipo.png)
 
 __Prototipo Alta Fidelidad:__
-![Prototipos baja](./scr/Extras/IMG/Prototipoalta.png)
+![Prototip alta](./scr/Extras/IMG/Prototipoalta.png)
 
 [Has Click aqui para ver el prototipo en Figma](https://www.figma.com/file/PeRrZCA9exMS7emOrTOCbm/Prototipo-alta-fidelidad-data-Pokemon-Go?node-id=0%3A1&t=q0JyDs3WEiaoouoM-1)
 
