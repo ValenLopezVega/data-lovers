@@ -1,5 +1,6 @@
 import data from './data/rickandmorty/rickandmorty.js';
 import {searchByName, 
+  filterGeneral,
   filterBySpecies,
   filterByGender,
   filterByOrderAZ,
@@ -9,10 +10,12 @@ import {searchByName,
   from './data.js';
 
 //guardo la data-objeto en una variable
-const characters = data.results; 
-const cutCharatcters = characters.slice(0,20)
+const characters = data.results;
+const cutCharacters = characters.slice(0,20);
+const contentMain = document.getElementById('container-cards');
+const contentCharacters = document.getElementById('characters');
+const showCharacters = document.querySelector('#showCharacters');
 
-const contentMain = document.querySelector('.container-cards');
 const searchInput = document.querySelector('#search');
 const selectSpecies = document.querySelector('#select-species');
 const selectGender = document.querySelector('#select-gender');
@@ -23,13 +26,20 @@ const modal = document.querySelector('.modal');
 const boxStatictics = document.querySelector('#box-statistics');
 const openModal = document.querySelector('#statistics');
 const closeModal = document.querySelector('.modal_close');
-const modalContainer = document.querySelector('.modal_container');
+// const modalContainer = document.querySelector('.modal_container');
 
 
 // RENDERIZAR DATA
 document.addEventListener('DOMContentLoaded',()=>{
-  show(characters);
+  show(cutCharacters);
 })
+
+showCharacters.addEventListener('click',()=>{
+  contentCharacters.style.display = 'block';
+  contentMain.style.display = 'none';
+  
+  show(characters);
+});
 
 // Mostrando todos los personajes al cargar la pagina
 function show(characters) {
@@ -109,17 +119,19 @@ searchInput.addEventListener('keyup',() => {
 });
 
 
-// SPECIE
+// SPECIES
 selectSpecies.addEventListener('change',(event) => {
+  selectGender.value='-GENDER-';
   const specieValue = event.target.value;
-  const selectBySpecies = filterBySpecies(characters,specieValue);
+  const selectBySpecies = filterGeneral(characters,'species',specieValue);
   show(selectBySpecies);
 });
 
 // GENDER
 selectGender.addEventListener('change',(event) => {
+  selectSpecies.value='-SPECIES-';
   const genderValue = event.target.value;
-  const selectByGender = filterByGender(characters,genderValue);
+  const selectByGender = filterGeneral(characters,'gender',genderValue);
   show(selectByGender);
 });
 
@@ -158,7 +170,7 @@ selectOrder.addEventListener('change',() => {
 openModal.addEventListener('click', (e)=> {
   e.preventDefault();
   modal.classList.add('modal--show');
-  showStat();
+  showStat(); graphics();
 });
 
 closeModal.addEventListener('click', (e)=> {
@@ -170,7 +182,8 @@ closeModal.addEventListener('click', (e)=> {
 
 
 function showStat () { 
-   
+
+  // boxStatictics.innerHTML='';
   const percenFemale = calculate(filterByGender(characters,'Female'),characters);
   const percenMale = calculate(filterByGender(characters,'Male'),characters);
   const percenUnknown = calculate(filterByGender(characters,'unknown'),characters);
@@ -198,12 +211,13 @@ function showStat () {
   boxStatictics.appendChild(textStatictics2);
   boxStatictics.appendChild(textStatictics3);
   boxStatictics.appendChild(textStatictics4);
+};
 
-  //Gráfica
-  
+// Gráfica
+ function graphics () {
   google.charts.load("current", {packages:["corechart"]});
   google.charts.setOnLoadCallback(drawChart);
-  
+
   function drawChart() {
     const data = google.visualization.arrayToDataTable([
       ['Gender', '493'],
@@ -217,26 +231,13 @@ function showStat () {
       title: 'Characters by gender',
       is3D: true,
     };
-    
+  
     const chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
     chart.draw(data, options);
-<<<<<<< HEAD
-  }
-}
-
-
-// Método fetch para traer la data desde json
-
-fetch("./data/rickandmorty/rickandmorty.json")
-  .then((resp) => resp.json())
-  .then((data) => {
-    console.log(data);
-});
-=======
   } 
 }
 
-
+ 
 //Método fetch para traer la data desde json
 
 // fetch("./data/rickandmorty/rickandmorty.json")
@@ -245,4 +246,3 @@ fetch("./data/rickandmorty/rickandmorty.json")
 //     console.log(data);
 // });
 
->>>>>>> 7293cdb8cc336cce23231e3114f7fc240b578d42

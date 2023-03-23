@@ -17,7 +17,7 @@
       <nav class="nav container">
         <ul class="link" >
           <li><a class="items" href="">Home</a></li>
-          <li><a class="items" href="">Characters</a></li> 
+          <li id="showCharacters"><a class="items" href="">Characters</a></li> 
           <li id="statistics"><a class="items" href="">Statistics</a></li> 
         </ul>
 
@@ -34,9 +34,9 @@
     <div class="content-select-all container ">
 
       <div class="group-select">
-        <label for="">Filter by specie</label>
+        <label class="label" for="">Filter by</label>
         <select name="filter" class="select" id="select-species">
-          <option disabled selected>-Species-</option>
+          <option disabled selected value="-SPECIES-">-SPECIES-</option>
           <option value="Humanoid">Humanoid</option>
           <option value="Robot">Robot</option>
           <option value="Human">Human</option>
@@ -50,9 +50,9 @@
       </div>
             
       <div class="group-select">
-        <label for="">Filter by gender</label>
+        <label class="label" for="">Filter by</label>
         <select name="filter" class="select" id="select-gender">
-          <option disabled selected>-Gender-</option>
+          <option disabled selected value="-GENDER-">-GENDER-</option>
           <option value="Female">Female</option>
           <option value="Male">Male</option>
           <option value="unknown">unknown</option>
@@ -62,21 +62,27 @@
       </div>
 
       <div class="group-select">
-        <label for="">Filter by gender</label>
+        <label class="label" for="">Order by</label>
         <select name="order" class="select" id="select-order">
-          <option disabled selected>-Order-</option>
-          <option value="Ascending">Order A - Z</option>
-          <option value="Descending">Order Z - A</option>
+          <option disabled selected>-ORDER-</option>
+          <option value="Ascending">Ascending</option>
+          <option value="Descending">Descending</option>
         </select>
       </div>
+    </div>   
     
   </header>
 
     <main>    
 
       <section class="content ">
-        <div class="container-cards ">
-        </div> 
+        <div class="container-cards" id="container-cards"></div> 
+      </section>
+
+      <section class="content ">
+        <div class="characters" id="characters">
+
+        </div>
       </section>
 
       <section class="modal">
@@ -103,8 +109,9 @@
 
 
   <!--<div id="root"></div>-->
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="main.js" type="module"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
   
 </body>
 

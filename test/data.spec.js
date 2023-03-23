@@ -1,4 +1,4 @@
-import { searchByName,filterBySpecies, filterByGender, filterByOrderAZ, filterByOrderZA} from '../src/data.js';
+import { searchByName,filterBySpecies, filterByGender, filterByOrderAZ, filterByOrderZA, calculate} from '../src/data.js';
 //import rickandmorty from '../src/data/rickandmorty/rickandmorty.js';
 
 //Función que filtra por nombre
@@ -113,5 +113,28 @@ describe('filterByOrderZA', () => {
 
     const results = filterByOrderZA(characters);
     expect (results).toEqual([ { name: 'Rick Sanchez', gender: 'Male'}, { name: 'Morty Smith', gender: 'Male' }, {name: 'Cynthia', gender: 'Female'}, {name: 'Creepy Little Girl', gender: 'Female'}]);
+  });
+});
+
+//Función que calcula el porcentaje
+
+describe('calculate', () => {
+  it('Debería ser una función', () => {
+    expect(typeof calculate).toBe('function');
+  });
+  it ('debería calcular el porcentaje de mujeres con respecto a la data', () => {
+    const charactersFemale =   [{ name: 'Creepy Little Girl', gender: 'Female'},
+      { name: 'Cynthia', gender: 'Female'}
+    ];
+
+    const characters = [
+      { name: 'Rick Sanchez', gender: 'Male'},
+      { name: 'Morty Smith', gender: 'Male' },
+      { name: 'Creepy Little Girl', gender: 'Female'},
+      { name: 'Cynthia', gender: 'Female'}
+    ];
+   
+    const results = calculate(charactersFemale,characters);
+    expect (results).toEqual('50.00');
   });
 });
