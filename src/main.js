@@ -1,4 +1,4 @@
-import { filterMovies, sortData, filtrarPro, sortNum } from './data.js'
+import { filterMovies, sortData, filtrarPro, sortNum } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 function crearTarjetas(peliculas){
@@ -15,54 +15,42 @@ function crearTarjetas(peliculas){
                 <span class="año">Año: ${pelicula.release_date}</span>
                 <span class="score">Productor: ${pelicula.producer}</span>
                 <span class="score">Score: ${pelicula.rt_score}</span>
-                <button name="button" class="button-info" data-id="${pelicula.id}">Mas información</button>
-                </div>
+                <button name="button" class="button-info" data-id="${pelicula.id}">Más información</button>
             </div>
-            `
+        </div>
+        `
   );
 }
 
-//Función para ordenar datos
-const elemento = document.querySelector(".seleccionar");
 crearTarjetas(data.films);
 
+//Función para ordenar datos
+const elemento = document.querySelector(".seleccionar");
 elemento.addEventListener("change", (event) => {
   const datasort = sortData(data.films, event.target.value);
   if(event.target.value === "alfabeticamente") {
-    crearTarjetas(datasort);
-  }
-  else if (event.target.value === "año") {
+    return crearTarjetas(datasort);
+  } else if (event.target.value === "año") {
     return crearTarjetas(sortNum(data.films, event.target.value));
   } else if (event.target.value === "puntaje") {
-    return crearTarjetas(sortNum(data.films, event.target.value))
+    return crearTarjetas(sortNum(data.films, event.target.value));
   }
 }); 
 
-// Función para filtrar 
+// Función para filtrar
 const seleccionar = document.querySelector(".selection-option");
-
 seleccionar.addEventListener("change", (event) => {
   const productor = filtrarPro(data.films, event.target.value);
   const peliculaAño = filterMovies(data.films, event.target.value);
   if(event.target.value === "todas") {
     crearTarjetas(data.films);
-  }
-  else if (peliculaAño.length === 0){
+  } else if (peliculaAño.length === 0) {
     crearTarjetas(productor);
   }
   else {
     crearTarjetas(peliculaAño);
   }
 });
-
-//Funcion para ir a la página siguiente
-
-/*for(const info of masInfo) {
-  info.addEventListener("click", (event) => {
-
-  })
-}*/
-  
 
 const masInfo = document.querySelectorAll(".button-info");
 const container = document.querySelector("section");
@@ -71,51 +59,34 @@ for(const info of masInfo) {
     const resultado = data.films.find(elemento => elemento.id === event.target.dataset.id);
     container.innerHTML = "";
     container.innerHTML +=`
-        <div class="card-info">
-            <div class="card-body-img">
-                <img class="poster" src="${resultado.poster}" alt="Imagen de la película"/>
-            </div>
-            <div class="card-body-text">
-                <span class="card-title"> Nombre: ${resultado.title}</span>
-                <span class="card-title"> Año: ${resultado.release_date}</span>
-                <span class="card-title"> Director: ${resultado.director}</span>
-                <span class="card-title"> Productor: ${resultado.producer}</span>
-                <span class="card-title"> Puntaje: ${resultado.rt_score}</span>
-                <span class="card-title"> Descripción: ${resultado.description}</span>
-            </div>`
+          <div class="card-info">
+              <div class="card-body-img2">
+                  <img class="poster" src="${resultado.poster}" alt="Imagen de la película"/>
+              </div>
+              <div class="card-body-text2">
+                  <span class="card-title"> <strong>Nombre:</strong> ${resultado.title}</span>
+                  <span class="card-title"> <strong>Año:</strong> ${resultado.release_date}</span>
+                  <span class="card-title"> <strong>Director:</strong> ${resultado.director}</span>
+                  <span class="card-title"> <strong>Productor:</strong> ${resultado.producer}</span>
+                  <span class="card-title"> <strong>Puntaje:</strong> ${resultado.rt_score}</span>
+                  <span class="card-title"> <strong>Descripción:</strong> ${resultado.description}</span>
+              </div>
+          </div>`
     resultado.people.forEach(elemento => {
-      container.innerHTML +=`
-              <div class="card-body-text-people">
-                <span class="card-title"> Género: ${elemento.gender}</span>
-                <img class="poster-people" src="${elemento.img}"/>
-            </div>`
-    });
-            
-  })}
-
-
-  
-/*container.innerHTML = "";
-  resultado.forEach(resultado =>
-    container.innerHTML +=`
-        <div class="card-info">
-            <div class="card-body-img">
-                <img class="poster" src="${resultado.poster}" alt="Imagen de la película"/>
-            </div>
-            <div class="card-body-text">
-                <span class="card-title"> Nombre: ${resultado.title}</span>
-                <span class="card-title"> Año: ${resultado.release_date}</span>
-                <span class="card-title"> Director: ${resultado.director}</span>
-                <span class="card-title"> Productor: ${resultado.producer}</span>
-                <span class="card-title"> Puntaje: ${resultado.rt_score}</span>
-                <span class="card-title"> Descripción: ${resultado.description}</span>
+      container.innerHTML+=
+          `<div class="card-people">
+             <div class="c-people">
+              <div class="card-body-img3">
+                <img class="p-people" src="${elemento.img}" alt="Imagen de la película"/>
+              </div>
+              <div class="card-body-text3">
+                <span class="nombre"><strong>Nombre:</strong> ${elemento.name}</span>
+                <span class="año"><strong>Edad:</strong> ${elemento.age}</span>
+                <span class="score"><strong>Especie:</strong> ${elemento.specie}</span>
+              </div>
             </div>
         </div>
         `
-
-  ); */
-
-
-
-
-// console.log(example, data);
+    });
+  });
+}
