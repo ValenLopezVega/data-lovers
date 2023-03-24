@@ -1,7 +1,13 @@
-import { searchByName,filterBySpecies, filterByGender, filterByOrderAZ, filterByOrderZA, calculate} from '../src/data.js';
-//import rickandmorty from '../src/data/rickandmorty/rickandmorty.js';
+import { searchByName,
+  filterGeneral,
+  filterByGender,
+  filterByOrderAZ,
+  filterByOrderZA,
+  calculate
+} from '../src/data.js';
 
-//Función que filtra por nombre
+// FILTER BY NAME
+
 describe('searchByName', () => {
   it('Debería ser una función', () => {
     expect(typeof searchByName).toBe('function');
@@ -39,10 +45,11 @@ describe('searchByName', () => {
 });
 
 
-//Función que filtra por especie
-describe('filterBySpecies', () => {
+// FILTER GENERAL
+
+describe('filterGeneral', () => {
   it('Debería ser una función', () => {
-    expect(typeof filterBySpecies).toBe('function');
+    expect(typeof filterGeneral).toBe('function');
   });
 
   it ('debería devolver todos los robots cuando el usuario seleccione la opción robots', () => {
@@ -52,12 +59,13 @@ describe('filterBySpecies', () => {
       {name: 'Conroy', species: "Robot"},
     ];
 
-    const results = filterBySpecies(characters,'Robot');
+    const results = filterGeneral(characters, 'species','Robot');
     expect (results).toEqual([{name: 'Conroy', species: "Robot"}]);
   });
 });
 
-//Función que filtra por género
+// FILTER BY GENDER
+
 describe('filterByGender', () => {
   it('Debería ser una función', () => {
     expect(typeof filterByGender).toBe('function');
@@ -76,7 +84,7 @@ describe('filterByGender', () => {
   });
 });
 
-// Función que ordena de la A a la Z
+// ORDER ASCENDING
 
 describe('filterByOrderAZ', () => {
   it('Debería ser una función', () => {
@@ -96,7 +104,7 @@ describe('filterByOrderAZ', () => {
   });
 });
 
-// Función que ordena de la Z a la A
+// ORDER DESCENDING
 
 describe('filterByOrderZA', () => {
   it('Debería ser una función', () => {
@@ -116,7 +124,7 @@ describe('filterByOrderZA', () => {
   });
 });
 
-//Función que calcula el porcentaje
+// CALCULATE
 
 describe('calculate', () => {
   it('Debería ser una función', () => {

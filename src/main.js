@@ -1,19 +1,18 @@
 import data from './data/rickandmorty/rickandmorty.js';
 import {searchByName, 
   filterGeneral,
-  filterBySpecies,
   filterByGender,
   filterByOrderAZ,
   filterByOrderZA,
   calculate
-}
-  from './data.js';
+} from './data.js';
 
-//guardo la data-objeto en una variable
+//DECLARING VARIABLES
 const characters = data.results;
 const cutCharacters = characters.slice(0,20);
+
 const contentMain = document.getElementById('container-cards');
-const contentCharacters = document.getElementById('characters');
+// const contentCharacters = document.getElementById('characters');
 const showCharacters = document.querySelector('#showCharacters');
 
 const searchInput = document.querySelector('#search');
@@ -21,7 +20,6 @@ const selectSpecies = document.querySelector('#select-species');
 const selectGender = document.querySelector('#select-gender');
 const selectOrder = document.getElementById('select-order');
 
-// modal
 const modal = document.querySelector('.modal');
 const boxStatictics = document.querySelector('#box-statistics');
 const openModal = document.querySelector('#statistics');
@@ -29,124 +27,135 @@ const closeModal = document.querySelector('.modal_close');
 // const modalContainer = document.querySelector('.modal_container');
 
 
-// RENDERIZAR DATA
+// RENDERING THE DATA
 document.addEventListener('DOMContentLoaded',()=>{
   show(cutCharacters);
 })
 
-showCharacters.addEventListener('click',()=>{
-  contentCharacters.style.display = 'block';
-  contentMain.style.display = 'none';
+// showCharacters.addEventListener('click',()=>{
+//   contentCharacters.style.display = 'block';
+//   contentMain.style.display = 'none';
   
+//   show(characters);
+// });
+
+showCharacters.addEventListener('click', (e)=> {
+  e.preventDefault();
+  characters.classList.add('show--characters');
   show(characters);
 });
 
-// Mostrando todos los personajes al cargar la pagina
+
+// SHOWING ALL CHARACTERS
+
 function show(characters) {
-  //Limpiando el contenedor
+  
   contentMain.innerHTML = '';
 
   characters.forEach(element => {
-      const contentCards = document.createElement('div');// div card front y revers.
-      // front card 
-      const divCard = document.createElement('div');
-      const imag = document.createElement('img');
-      const nameCharacters = document.createElement('h2');
-        
-      // agrego clases a mis elementos creados segun correspondan
-      contentCards.classList.add('content-front-reverse')
-      divCard.classList.add('cards-front');
-      imag.classList.add('img');
-      nameCharacters.classList.add('text-name-f');
-              
-      // inserto los datos a mis elementos creados
-      nameCharacters.textContent = element.name;
-      imag.src = element.image;
+    const contentCards = document.createElement('div');// div card front y revers.
+    
+    const divCard = document.createElement('div');
+    const imag = document.createElement('img');
+    const nameCharacters = document.createElement('h2');
+      
+    contentCards.classList.add('content-front-reverse')
+    divCard.classList.add('cards-front');
+    imag.classList.add('img');
+    nameCharacters.classList.add('text-name-f');
             
-      // insertamos los elementos creados en cadas div correspondiente
-      divCard.appendChild(imag);
-      divCard.appendChild(nameCharacters);
+    nameCharacters.textContent = element.name;
+    imag.src = element.image;
+           
+    divCard.appendChild(imag);
+    divCard.appendChild(nameCharacters);
 
-      // reves de la card
-      const divCard2 = document.createElement('div');
-      const nameCharacters2 = document.createElement('h2');
-      const paragraph = document.createElement('p');
-      const paragraph2 = document.createElement('p');
-      const paragraph3 = document.createElement('p');
-      const paragraph4 = document.createElement('p');
+    const divCard2 = document.createElement('div');
+    const nameCharacters2 = document.createElement('h2');
+    const paragraph = document.createElement('p');
+    const paragraph2 = document.createElement('p');
+    const paragraph3 = document.createElement('p');
+    const paragraph4 = document.createElement('p');
 
-      divCard2.classList.add('cards-reverse');
-      nameCharacters2.classList.add('text-name-r');
-      paragraph.classList.add('text1');
-      paragraph2.classList.add('text1');
-      paragraph3.classList.add('text1');
-      paragraph4.classList.add('text1');
+    divCard2.classList.add('cards-reverse');
+    nameCharacters2.classList.add('text-name-r');
+    paragraph.classList.add('text1');
+    paragraph2.classList.add('text1');
+    paragraph3.classList.add('text1');
+    paragraph4.classList.add('text1');
 
-      nameCharacters2.textContent = element.name;
-      paragraph.textContent = 'Species: ' + element.species;
-      paragraph2.textContent = 'Gender: ' + element.gender;
-      paragraph3.textContent = 'Origin: ' + element['origin']['name'];
-      paragraph4.textContent = 'Location: ' + element['location']['name'];
+    nameCharacters2.textContent = element.name;
+    paragraph.textContent = 'Species: ' + element.species;
+    paragraph2.textContent = 'Gender: ' + element.gender;
+    paragraph3.textContent = 'Origin: ' + element['origin']['name'];
+    paragraph4.textContent = 'Location: ' + element['location']['name'];
 
-      divCard2.appendChild(nameCharacters2);
-      divCard2.appendChild(paragraph);
-      divCard2.appendChild(paragraph2);
-      divCard2.appendChild(paragraph3);
-      divCard2.appendChild(paragraph4);
+    divCard2.appendChild(nameCharacters2);
+    divCard2.appendChild(paragraph);
+    divCard2.appendChild(paragraph2);
+    divCard2.appendChild(paragraph3);
+    divCard2.appendChild(paragraph4);
 
-      contentCards.appendChild(divCard);
-      contentCards.appendChild(divCard2);
-      contentMain.appendChild(contentCards);
+    contentCards.appendChild(divCard);
+    contentCards.appendChild(divCard2);
+    contentMain.appendChild(contentCards);
 
-      //evento click en la card
-      contentCards.addEventListener('click',()=>{
+    contentCards.addEventListener('click',()=>{
       contentCards.classList.toggle('active');   
     })
   })
 }
 
 
+// FILTERING CHARACTERS
+
+
+let searchValue='';
+let specieValue='';
+let genderValue='';
+
 // SEARCH
 searchInput.addEventListener('keyup',() => {
-  const searchValue = searchInput.value.toLowerCase().trim();
-  const filterByName = searchByName(characters,searchValue);
-  // para mostar un mensaje si no se encuentra lo buscado
-  if (filterByName.length) {
-    show(filterByName); //si exite algo en el array que a generado filter muestralo
-  } else {
-    error();
-  }
+  searchValue = searchInput.value.toLowerCase().trim();
+  applyFilter(); 
 });
 
 
 // SPECIES
 selectSpecies.addEventListener('change',(event) => {
-  selectGender.value='-GENDER-';
-  const specieValue = event.target.value;
-  const selectBySpecies = filterGeneral(characters,'species',specieValue);
-  show(selectBySpecies);
+  specieValue = event.target.value;
+  applyFilter(); 
 });
 
 // GENDER
 selectGender.addEventListener('change',(event) => {
-  selectSpecies.value='-SPECIES-';
-  const genderValue = event.target.value;
-  const selectByGender = filterGeneral(characters,'gender',genderValue);
-  show(selectByGender);
+  genderValue = event.target.value;
+  applyFilter(); 
 });
 
+//APPLY FILTER
 
+function applyFilter() {
 
-// ALERT
-function error() {
+  const filterByName = searchValue === '' ? characters : searchByName(characters,searchValue);
+  const selectBySpecies =specieValue === '' ? filterByName : filterGeneral(filterByName,'species',specieValue);
+  const selectByGender = genderValue === '' ? selectBySpecies : filterGeneral(selectBySpecies,'gender',genderValue);
+
+  if (selectByGender.length) {
+    show(selectByGender); 
+  } else {
+    notFound();
+  }
+}
+
+// ALERT NOT FOUND
+function notFound() {
   contentMain.innerHTML = '';
   const messageError = document.createElement('h3');
   messageError.classList.add('messageError');
   messageError.textContent =`No se encontro resultado para...'${searchInput.value}'`;
   contentMain.appendChild(messageError);
 }
-
-
 
 // ORDER A-Z / Z-A
 selectOrder.addEventListener('change',() => {
@@ -164,13 +173,14 @@ selectOrder.addEventListener('change',() => {
 
 });
 
-// PORCENTAJE POR GENERO
+// CALCULATING PERCENTAGE BY GENDER
 
 
 openModal.addEventListener('click', (e)=> {
   e.preventDefault();
   modal.classList.add('modal--show');
-  showStat(); graphics();
+  showStat(); 
+  // graphics();
 });
 
 closeModal.addEventListener('click', (e)=> {
@@ -183,66 +193,67 @@ closeModal.addEventListener('click', (e)=> {
 
 function showStat () { 
 
-  // boxStatictics.innerHTML='';
+  boxStatictics.innerHTML = '';
   const percenFemale = calculate(filterByGender(characters,'Female'),characters);
   const percenMale = calculate(filterByGender(characters,'Male'),characters);
   const percenUnknown = calculate(filterByGender(characters,'unknown'),characters);
   const percenGenderless = calculate(filterByGender(characters,'Genderless'),characters);
 
-  // Creando ventana para mostrar estadistica
-
   const textStatictics1 = document.createElement('p');
   const textStatictics2 = document.createElement('p');
   const textStatictics3 = document.createElement('p');
   const textStatictics4 = document.createElement('p');
+  const boxStatictics2 = document.createElement('div');
 
   boxStatictics.classList.add('box-statis');
+  boxStatictics2.classList.add('contain-text');
   textStatictics1.classList.add('text-box');
   textStatictics2.classList.add('text-box');
   textStatictics3.classList.add('text-box');
   textStatictics4.classList.add('text-box');
 
-  textStatictics1.textContent = `Female: ${percenFemale}`;
-  textStatictics2.textContent = `Male: ${percenMale}`;
-  textStatictics3.textContent = `Unknown: ${percenUnknown}`;
-  textStatictics4.textContent = `Genderless: ${percenGenderless}`;
+  textStatictics1.textContent = `In the series there are: ${percenFemale}% Female Characters`;
+  textStatictics2.textContent = `In the series there are: ${percenMale}% Male Characters`;
+  textStatictics3.textContent = `In the series there are: ${percenUnknown}% Unknown Characters`;
+  textStatictics4.textContent = `In the series there are: ${percenGenderless}% Genderless Characters`;
 
-  boxStatictics.appendChild(textStatictics1);
-  boxStatictics.appendChild(textStatictics2);
-  boxStatictics.appendChild(textStatictics3);
-  boxStatictics.appendChild(textStatictics4);
-};
-
-// Gráfica
- function graphics () {
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-    const data = google.visualization.arrayToDataTable([
-      ['Gender', '493'],
-      ['Female',   73  ],
-      ['Male',     372 ],
-      ['Unknown',  42],
-      ['Genderless',  6],
-    ]);
-
-    const options = {
-      title: 'Characters by gender',
-      is3D: true,
-    };
-  
-    const chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-    chart.draw(data, options);
-  } 
+  boxStatictics2.appendChild(textStatictics1);
+  boxStatictics2.appendChild(textStatictics2);
+  boxStatictics2.appendChild(textStatictics3);
+  boxStatictics2.appendChild(textStatictics4);
+  boxStatictics.appendChild(boxStatictics2);
 }
 
+// GRAPHICS
+
+// function graphics () {
+//   google.charts.load("current", {packages:["corechart"]});
+//   google.charts.setOnLoadCallback(drawChart);
+
+//   function drawChart() {
+//     const data = google.visualization.arrayToDataTable([
+//       ['Gender', '493'],
+//       ['Female',   73  ],
+//       ['Male',     372 ],
+//       ['Unknown',  42],
+//       ['Genderless',  6],
+//     ]);
+
+//     const options = {
+//       title: 'Characters by gender',
+//       is3D: true,
+//     };
+  
+//     const chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+//     chart.draw(data, options);
+//   }
+// }
+
  
-//Método fetch para traer la data desde json
+// GETTING DATA FROM JSON
 
 // fetch("./data/rickandmorty/rickandmorty.json")
 //   .then((resp) => resp.json())
 //   .then((data) => {
 //     console.log(data);
-// });
-
+// })
