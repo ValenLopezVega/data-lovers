@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    margin-bottom: 50px;
+    margin-bottom: 120px;
     background-image: url('images/fondo4.png');
 }
 
@@ -53,6 +53,11 @@ body{
     color: #fff;
 }
 
+.items:hover{
+    transition: 0.3s ease;
+    color: #3ab54aae;
+}
+
 .content-inp-icon{
     width: 100%;
     max-width: 300px;
@@ -81,32 +86,12 @@ body{
 
 .logo{
     width: 100%;
-    max-width: 600px;
+    max-width: 450px;
     display: block;
     margin: 0 auto;
     padding: 30px;
-    margin-top: 20px;
-}
- 
-/* creando modal */
-
-
-
-
-
-
-.box-statis{
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    margin: 0 auto;
-    /* padding: 130px 30px 30px 30px; */
-    background-color:rgb(0, 255, 145);
-    height: 350px;
-    border-radius: 9px;
 }
 
-/* ----------------------------------------- */
 
 .content-select-all{
     margin: 0 auto;
@@ -115,24 +100,21 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 10px;
 }
 
 .group-select{
-   
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-left: 20px;
-   gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    gap: 10px;
 }
 
 .label{
     color: white;
     width: 60px;
     font-size: 1.5rem;
-    font-weight: bold;
-    
+    font-weight: bold; 
 }
 
 .select{
@@ -143,16 +125,11 @@ body{
     color: #fff;
 }
 
- 
-/* ----------------MAIN--------------------------------------- */
-
-
-.title{
-    font-size: 7.6rem ;
-    text-align: center;
-    padding: 60px 0;
-    color: #fff;
+option{
+    background-color: #0c232dc8;
 }
+
+/* ----------------MAIN--------------------------------------- */
 
 .container-cards{
     display: flex;
@@ -160,12 +137,11 @@ body{
     align-items: center;
     flex-wrap: wrap;
     gap: 35px;
-    padding: 10px;
-    
+    padding: 10px; 
 }
 
 .characters{
-    /* display: flex; */
+    display: flex;
     display: none;
     justify-content: center;
     align-items: center;
@@ -173,6 +149,12 @@ body{
     gap: 35px;
     padding: 10px;
 }
+
+.show--characters{
+    display: block;
+}
+
+/* CREATED FROM JS */
 
 .content-front-reverse{
     display: flex;
@@ -193,6 +175,8 @@ body{
     border: 2px solid #3ab54aae;
     background-color: #000;
 }
+
+
 
 .img{
     width: 100%;
@@ -236,9 +220,9 @@ body{
     padding-top: 100px;
 }
 
- /* --------------------- modal------------------------------- */
+/* --------------------- modal------------------------------- */
 
- .modal {
+.modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -249,6 +233,7 @@ body{
     opacity: 0;
     pointer-events: none;
     transition: opacity .6s;
+    max-width: 390px;
 }
 
 .modal--show {
@@ -259,37 +244,47 @@ body{
 
 .modal_container{
     width: 90%;
-    height: 90%;
     margin: auto;
     max-width: 1000px;
     max-height: 700px;
-    background-color: #fff;
-    
+    background-image: url('./images/fondo4.png');
     border-radius: 6px;
-    padding: 3em 2.5em;
+    padding: 40px 16px;
     display: grid;
-    gap: 1em;
+    gap: 12px;
     place-items: center;
-    grid-auto-columns: 100%;
-}
-.box-statis{
-    width: 500px;
-    max-width: 600px;
-    display: block;
-    margin: 0 auto;
-    padding: 50px 50px 350px 50px;
-    background-color:rgb(0, 255, 145);
 }
 
 .modal_title{
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.box-statis{
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    opacity: 0.95;
+    height: 390px;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+}
+
+
+.text-box{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 18px;
+    color: #111;
+    font-weight: bold;
 }
 
 .modal_close{
 
     text-decoration: none;
-    color: #000;
-    background-color: orange;
+    color: #fff;
+    background-color: #3ab54aae;
     padding: 1em 3em;
     border-radius: 6px;
     display: inline-block;
@@ -300,13 +295,8 @@ body{
 
 .modal_close:hover {
     color: black;
-    background-color:rgba(255, 166, 0, 0.533);
+    background-color:white;
 }
-
-/* .piechart_3d{
-    width:400px; 
-    height: 250px;
-}  */
 
 
 /* --------------------- footer------------------------------- */
@@ -315,11 +305,51 @@ body{
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 50px;
+    padding: 10px 0;
     color: #000;
     background-color:#07060675;
     border-top: 1px solid #8181815f;
 }
+
+.content-footer{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    
+}
+
+.sofy,
+.andre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.logoGitHub{
+    width: 60px;
+}
+
+.link-github{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+span{
+    padding: 7px;
+    border-bottom: 1px solid transparent;
+
+}
+
+span:hover{
+    border-bottom: 1px solid #fff;
+}
+
+
+
  
 
 /* ---------------------------------------------------------- */
@@ -340,12 +370,34 @@ body{
         top: 50%;
         transform: translate(-50%,-50%);
     }
+
+    .modal {
+        max-width: 1000px;
+        max-height: 1000px;
+    }
+
+    .modal_title{
+        font-size: 3rem;
+    }
+
+    .text-box{
+        font-size: 2rem;
+    }
 } 
 
 
 @media (min-width:1050px){
     .cards-front, .cards-reverse{
         width: 240px;
+    }
+
+    .container{
+        max-width: 1100px;
+    }
+
+    .content{
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .content-select-all{
@@ -357,31 +409,45 @@ body{
     .content-inp-icon{
       max-width: 400px;
     }
-}
-    
 
-.text-box{
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 5px;
-    color: #000;
-    font-weight: bold;
+    .modal {
+        max-width: 1400px;
+        max-height: 1000px;
+    }
+
+    .modal_title{
+        font-size: 3rem;
+    }
+
+    .text-box{
+        font-size: 2rem;
+    }
 }
+
 
 @media ( min-width:1900px) {
+
+    .nav{
+        padding: 30px 0;
+    }
+
+    .container{
+        max-width: 1900px;
+    }
+
+    .inp {
+        padding: 10px ;
+    }
 
     .items{
         font-size: 2.5rem;
         font-weight: bold;
-        
     }
 
-    .container {
-        max-width: 2000px;
-    }
     .logo{
         margin-top: 50px;
     }
+
     .content-select-all{
         margin-top: 50px;
     }
@@ -415,4 +481,20 @@ body{
         padding: 2px;
     }
 
+    .modal {
+        max-width: 1900px;
+        max-height: 1050px;
+    }
+
+    .modal_title{
+        font-size: 3rem;
+    }
+
+    .text-box{
+        font-size: 2rem;
+    }
+
+    .modal_close{
+        font-size: 20px;
+    }
 }

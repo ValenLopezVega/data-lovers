@@ -10,19 +10,11 @@ export const filterGeneral = (data,propiedad,option) => {
   })
 };
 
-export const filterBySpecies = (data,species) => {
-  return data.filter((characters) => {
-    return characters.species.includes(species);
-  })
-};
-
 export const filterByGender = (data,gender) => {
   return data.filter((characters) => {
     return characters.gender.includes(gender);
   })
 };
-
-
 
 
 export const filterByOrderAZ = (characters) => {
@@ -42,18 +34,7 @@ export const filterByOrderZA = (characters) => {
   })
 }
 
-//calcular
-
 export const calculate = (param,data) => {
   const percentage = param.length / data.length * 100
   return percentage.toFixed(2)
 }
-
-
-// Método fetch para traer la data desde json
-
-// fetch("./data/rickandmorty/rickandmorty.json")
-//   .then((resp) => resp.json())
-//   .then((data) => {
-//     console.log(data);
-//   });
