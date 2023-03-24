@@ -6,6 +6,8 @@
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Historias de Usuarios y Diseño de la interfaz de usuario ](#3-objetivos-de-aprendizaje)
 * [4. Implemententación de la interfaz de usuario.](#4-producto-final)
+* [5. Pruebas unitarias.](#5-pruebas-unitarias)
+* [6. Checklist.](#6-checklist)
 
 
 ***
@@ -16,9 +18,9 @@ Rick y Morty es una serie de televisión americana de animación para adultos cr
 
 ![rickandmorty](./src/images/rickandmorty.webp)
 
-## 2. Resumen del proyecto
+## 2. Definición del producto
 
-En este proyecto el objetivo principal es que el usuario de Rick and Morty Lovers pueda ver una interfaz con la data de la serie televisión, en donde pueda encontrar las características más importantes de sus personajes.
+En este proyecto el objetivo principal es que el usuario de Rick and Morty Lovers pueda ver una interfaz con la data de la serie televisión, en donde pueda encontrar las características más importantes de sus personajes, buscar, filtrar y ordenar los mismos y también visualizar la estadística de personajes por género.
 
 Estos son los datos utilizados:
 
@@ -102,6 +104,9 @@ Yo como usuario de Rick and Morty Lovers quiero ver estadísticas sobre los pers
 
 ![Prototipo de alta fidelidad](./src/images/figma-hu5.jpg)
 
+*Link a Figma:* 
+![Link a Figma](https://www.figma.com/file/TqvwtLuqPk3W6o0ut0DZ1C/Rick-and-Morty-Lovers?node-id=0-1&t=wesxInzlX0jsB2ga-0)
+
 
 ## 4. Implemententación de la interfaz de usuario.
 #### Producto final
@@ -146,8 +151,33 @@ Al ingresar a la pestaña de estadísticas (stadistics), ubicada en la parte sup
 ![Filtrado](./src/images/statistics.png)
 
 
+## 5. Pruebas unitarias.
+#### Test
+![Test](./src/images/test.jpg)
 
+#### Test de usabilidad:
 
+- Limitamos el mostrar todos los personajes, indicaron que se veía recargado.
+- Mostramos los personajes en filas de 4 tarjetas y con cierto espacio entre ellos, para visualizarlos mejor.
+- Aumentamos el tamaño de los botones de selección.
+- Utilizamos una etiqueta para describir el nombre de cada botón de selección, para ser más descriptivo.
+- Cambiamos el color de fondo de las opciones del botón de filtrado, para tener mejor contraste.
+- Se realizó el anidado de los filtros buscar, especie y género, para que el usuario pueda encontrar el personaje de forma más específica.
+- Agregamos interacción al link de estadística para desplegar una pantalla con la información del porcentaje por género.
 
+## 6. Checklist.
 
-
+* [x]Usa VanillaJS.
+* [x]Pasa linter (npm pretest)
+* [x]Pasa tests (npm test)
+* [x]Pruebas unitarias cubren un mínimo del 70% de statements, functions y lines y branches.
+* [x]Incluye Definición del producto clara e informativa en README.md.
+* [x]Incluye historias de usuario en README.md.
+* [x]Incluye sketch de la solución (prototipo de baja fidelidad) en README.md.
+* [x]Incluye Diseño de la Interfaz de Usuario (prototipo de alta fidelidad) en README.md.
+* [x]Incluye link a Figma en README.md.
+* [x]Incluye el listado de problemas que detectaste a través de tests de usabilidad en el README.md.
+* [x]UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [x]UI: Permite ordenar data por uno o más campos (asc y desc).
+* [x]UI: Permite filtrar data en base a una condición.
+* [x]UI: Es responsive.
