@@ -24,7 +24,6 @@ const modal = document.querySelector('.modal');
 const boxStatictics = document.querySelector('#box-statistics');
 const openModal = document.querySelector('#statistics');
 const closeModal = document.querySelector('.modal_close');
-// const modalContainer = document.querySelector('.modal_container');
 
 
 // RENDERING THE DATA

@@ -49,10 +49,9 @@ Yo como usuario de Rick and Morty Lovers quiero ver los personajes para conocerl
 Yo como usuario de Rick and Morty Lovers quiero buscar los personajes por su nombre para acceder de forma más especifica
 
 
-
 #### Prototipo de baja fidelidad
 
-![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu1.jpg)
+![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu2.jpg)
 
 
 #### Prototipo de alta fidelidad
@@ -67,7 +66,7 @@ Yo como usuario de Rick and Morty Lovers quiero filtrar los personajes para acce
 
 #### Prototipo de baja fidelidad
 
-![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu1.jpg)
+![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu3.jpg)
 
 
 #### Prototipo de alta fidelidad
@@ -82,7 +81,7 @@ Yo como usuario de Rick and Morty Lovers quiero ordenar los personajes para enco
 
 #### Prototipo de baja fidelidad
 
-![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu1.jpg)
+![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu4.jpg)
 
 
 #### Prototipo de alta fidelidad
@@ -96,7 +95,7 @@ Yo como usuario de Rick and Morty Lovers quiero ver estadísticas sobre los pers
 
 #### Prototipo de baja fidelidad
 
-![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu1.jpg)
+![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu5.jpg)
 
 
 #### Prototipo de alta fidelidad
@@ -108,21 +107,45 @@ Yo como usuario de Rick and Morty Lovers quiero ver estadísticas sobre los pers
 #### Producto final
 
 
-*Home*
+*Inicio*
 
-Al ingresar al home, carga los primeros 20 personajes de la data, y el usuario puede visualizar las opciones para filtrar, bien sea por nombre (en el buscador), por especie o por género, asímismo se encuentra un botón para ordenar alfabeticamente de forma ascendente y descendente.
+Al ingresar al inicio (home), carga los primeros 20 personajes de la data, y el usuario puede visualizar las opciones para filtrar, bien sea por nombre (en el buscador), por especie o por género, asímismo se encuentra un botón para ordenar alfabeticamente de forma ascendente y descendente.
 
-![Home](./src/images/home.jpg)
+![Inicio](./src/images/home.png)
+
+*Personajes*
+
+Al ingresar a la pestaña de personajes (characters), carga los 493 personajes que existen en la data, para que el usuario pueda acceder a la información de cada uno de ellos.
+
+![Personajes](./src/images/characters.png)
 
 
-*Interacción de la tarjetas*
+*Interacción de las tarjetas*
 
 Cada tarjeta de cada personaje, contiene en la parte trasera información relevante del mismo, con sólo dar clic el usuario puede acceder a esa información.
 
-![Home](./src/images/flip.jpg)
+![Interacción](./src/images/flip.png)
 
 
-*Interacción de la tarjetas*
+*Filtrar*
+
+En la pantalla principal el usuario puede ver dos botones para filtrar los personajes, bien sea por especie o por género, y en la parte superior derecha un buscador que funciona con el nombre de los personajes; al escoger la opción que desee, le muestra todos los personajes que hay en la data con ese tipo de filtro (estos filtros funcionan de forma anidada).
+
+![Filtrar](./src/images/filter.png)
+
+*Ordenar*
+
+Asímismo, se encuentra en la pantalla principal un botón para ordenar alfabéticamente de forma ascendente y descendente todos los personajes.
+
+![Filtrado](./src/images/order.png)
+
+*Estadística*
+
+Al ingresar a la pestaña de estadísticas (stadistics), ubicada en la parte superior izquierda, el usuario podrá visualizar la estadística de los personajes por género. 
+
+![Filtrado](./src/images/statistics.png)
+
+
 
 
 
