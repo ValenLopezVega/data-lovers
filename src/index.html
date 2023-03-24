@@ -9,69 +9,69 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-<body>
-  <header class="header">
+  <body>
+    <header class="header">
 
-    <div class="content-nav" >
+      <div class="content-nav" >
 
-      <nav class="nav container">
-        <ul class="link" >
-          <li><a class="items" href="">Home</a></li>
-          <li id="showCharacters"><a class="items" href="">Characters</a></li> 
-          <li id="statistics"><a class="items" href="">Statistics</a></li> 
-        </ul>
+        <nav class="nav container">
+          <ul class="link" >
+            <li><a class="items" href="">Home</a></li>
+            <li id="showCharacters"><a class="items" href="">Characters</a></li> 
+            <li id="statistics"><a class="items" href="">Statistics</a></li> 
+          </ul>
 
-        <div class="content-inp-icon">
-          <input class="inp" id="search" type="search" placeholder="Search Characters">
-          <img  src="./images/search.png" class="icon" alt="search">
-        </div>
-      </nav>
+          <div class="content-inp-icon">
+            <input class="inp" id="search" type="search" placeholder="Search Characters">
+            <img  src="./images/search.png" class="icon" alt="search">
+          </div>
+        </nav>
 
-    </div>
-
-    <img src="./images/rym.png " alt="logoRickAndMorty" class="logo">
-  
-    <div class="content-select-all container ">
-
-      <div class="group-select">
-        <label class="label" for="">Filter by</label>
-        <select name="filter" class="select" id="select-species">
-          <option disabled selected value="-SPECIES-">-SPECIES-</option>
-          <option value="Humanoid">Humanoid</option>
-          <option value="Robot">Robot</option>
-          <option value="Human">Human</option>
-          <option value="Alien">Alien</option>
-          <option value="Cronenberg">Cronenberg</option>
-          <option value="Disease">Disease</option>
-          <option value="Parasite">Parasite</option>
-          <option value="Mytholog">Mytholog</option>
-          <option value="Animal">Animal</option>
-        </select>
-      </div>
-            
-      <div class="group-select">
-        <label class="label" for="">Filter by</label>
-        <select name="filter" class="select" id="select-gender">
-          <option disabled selected value="-GENDER-">-GENDER-</option>
-          <option value="Female">Female</option>
-          <option value="Male">Male</option>
-          <option value="unknown">unknown</option>
-          <option value="Genderless">Genderless</option>
-        </select>
-      
       </div>
 
-      <div class="group-select">
-        <label class="label" for="">Order by</label>
-        <select name="order" class="select" id="select-order">
-          <option disabled selected>-ORDER-</option>
-          <option value="Ascending">Ascending</option>
-          <option value="Descending">Descending</option>
-        </select>
-      </div>
-    </div>   
+      <img src="./images/rym.png " alt="logoRickAndMorty" class="logo">
     
-  </header>
+      <div class="content-select-all container ">
+
+        <div class="group-select">
+          <label class="label" for="">Filter by</label>
+          <select name="filter" class="select" id="select-species">
+            <option disabled selected value="-SPECIES-">-SPECIES-</option>
+            <option value="Humanoid">Humanoid</option>
+            <option value="Robot">Robot</option>
+            <option value="Human">Human</option>
+            <option value="Alien">Alien</option>
+            <option value="Cronenberg">Cronenberg</option>
+            <option value="Disease">Disease</option>
+            <option value="Parasite">Parasite</option>
+            <option value="Mytholog">Mytholog</option>
+            <option value="Animal">Animal</option>
+          </select>
+        </div>
+              
+        <div class="group-select">
+          <label class="label" for="">Filter by</label>
+          <select name="filter" class="select" id="select-gender">
+            <option disabled selected value="-GENDER-">-GENDER-</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="unknown">unknown</option>
+            <option value="Genderless">Genderless</option>
+          </select>
+        </div>
+
+        <div class="group-select">
+          <label class="label" for="">Order by</label>
+          <select name="order" class="select" id="select-order">
+            <option disabled selected>-ALPHABET-</option>
+            <option value="Ascending">Ascending</option>
+            <option value="Descending">Descending</option>
+          </select>
+        </div>
+        
+      </div>   
+      
+    </header>
 
     <main>    
 
@@ -91,35 +91,39 @@
           <div id="box-statistics">
           </div>
 
-          <a href="#" class="modal_close">Close</a>
+          <button type="button" class="modal_close">Close</button>
         </div>
-        
+          
       </section>
-      
+        
     </main>
-    
+      
     <footer class="footer">
+        
       <div class="content-footer container">
+
         <div class="sofy">
-            <img src="./images/github.png" class="logoGitHub" alt="logoGitHub">
+          <img src="./images/github.png" class="logoGitHub" alt="logoGitHub">
           <span>
             <a href="https://github.com/Sofiauldemia/" target="_blank" class="link-github"> Sofía Torres </a>
-          </span>
-          
+          </span>    
         </div>
+
         <div class="andre">
-            <img src="./images/github.png" class="logoGitHub" alt="logoGitHub">
+          <img src="./images/github.png" class="logoGitHub" alt="logoGitHub">
           <span>
             <a href="https://github.com/andrenavas/" target="_blank" class="link-github"> Andre Navas </a>
           </span>
         </div>
+
       </div>
+
     </footer>
 
 
-  <!--<div id="root"></div>-->
-  <script src="main.js" type="module"></script>  
-  
-</body>
+    <!--<div id="root"></div>-->
+    <script src="main.js" type="module"></script>  
+    
+  </body>
 
 </html>

@@ -92,7 +92,6 @@ body{
     padding: 30px;
 }
 
-
 .content-select-all{
     margin: 0 auto;
     padding: 15px 0 40px 0;
@@ -142,7 +141,7 @@ option{
 
 .characters{
     display: flex;
-    display: none;
+    /* display: none; */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -150,12 +149,7 @@ option{
     padding: 10px;
 }
 
-.show--characters{
-    display: block;
-}
-
 /* CREATED FROM JS */
-
 .content-front-reverse{
     display: flex;
     justify-content: center;
@@ -175,8 +169,6 @@ option{
     border: 2px solid #3ab54aae;
     background-color: #000;
 }
-
-
 
 .img{
     width: 100%;
@@ -211,6 +203,7 @@ option{
 .text-name-r , .text1{
     color: #fff;
     font-size: 2rem;
+    line-height: 25px;
 }
 
 .messageError{
@@ -281,7 +274,6 @@ option{
 }
 
 .modal_close{
-
     text-decoration: none;
     color: #fff;
     background-color: #3ab54aae;
@@ -315,17 +307,13 @@ option{
     display: flex;
     justify-content: center;
     gap: 60px;
-    
 }
 
-.sofy,
-.andre{
+.sofy, .andre{
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
 }
-
 
 .logoGitHub{
     width: 60px;
@@ -341,15 +329,11 @@ option{
 span{
     padding: 7px;
     border-bottom: 1px solid transparent;
-
 }
 
 span:hover{
     border-bottom: 1px solid #fff;
 }
-
-
-
  
 
 /* ---------------------------------------------------------- */
@@ -426,7 +410,6 @@ span:hover{
 
 
 @media ( min-width:1900px) {
-
     .nav{
         padding: 30px 0;
     }
