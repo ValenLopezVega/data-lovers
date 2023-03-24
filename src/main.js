@@ -51,7 +51,37 @@ seleccionar.addEventListener("change", (event) => {
     crearTarjetas(peliculaAño);
   }
 });
+//Función para buscar
+const search = document.querySelector(".b-busqueda");
+const result = document.querySelector("section")
+const filtrar = () => {
+  result.innerHTML ="";
+  const text = search.value.toLowerCase();
+  for (let film of data.films){
+    let title = film.title.toLowerCase();
+    if(title.indexOf(text) !== -1){
+      result.innerHTML += `
+      <div class="card">
+          <div class="card-body-img">
+              <img class="poster" src="${film.poster}" alt="Imagen de la película"/>
+          </div>
+          <div class="card-body-text">
+              <h5 class="card-title">${film.title}</h5>
+              <span class="año">Año: ${film.release_date}</span>
+              <span class="score">Productor: ${film.producer}</span>
+              <span class="score">Score: ${film.rt_score}</span>
+              <button name="button" class="button-info" data-id="${film.id}">Más información</button>
+          </div>
+      </div>
+      `
+    }
+  }
+  if(result.innerHTML === ""){
+    result.innerHTML = "Pelicula no encontrada";
+  }
+}
 
+search.addEventListener("keyup", filtrar);
 
 
 const masInfo = document.querySelectorAll(".button-info");

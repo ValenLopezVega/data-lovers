@@ -19,9 +19,8 @@ export function sortNum(peliculas, type){
   peliculas.sort(function (a,b) {
     if (type === "año"){
       return a.release_date - b.release_date;
-    } else if (type === "puntaje") {
+    } else if (type === "puntaje"){
       return a.rt_score - b.rt_score;
     }})
-  return peliculas; 
+  return peliculas;
 } 
-
