@@ -1,43 +1,44 @@
 import data from './data/pokemon/pokemon.js';
-import { buscarPorNombre, cartillas} from "./data.js";
+import { filtro, cartillasHtml, ordenar} from "./data.js";
 
 const listaDePokemon = data.pokemon;
  
 // importando datos desde pokemon.js a main.js
 const pokeSectionUno = document.getElementById("seccionUno");
+pokeSectionUno.innerHTML = cartillasHtml(listaDePokemon);
 
-listaDePokemon.forEach ((item)=>{
-  const pokeCard = document.createElement("article");
-  const poketitulo = document.createElement("h3");
-  const pokeParrafo = document.createElement("p");
-  const pokeImagen = document.createElement("img");
-  const linkVer = document.createElement("a");
-  linkVer.href = "pokemon.html?nombre=" + item.name
-  linkVer.target = "_blank"
-  linkVer.textContent="ver mas"
-
-  poketitulo.textContent = item.name;
-  pokeParrafo.textContent = item.about;
-  pokeImagen.src = item.img;
-
-
-  pokeSectionUno.appendChild(pokeCard);
-  pokeCard.appendChild(poketitulo);
-  pokeCard.appendChild(pokeParrafo);
-  pokeCard.appendChild(pokeImagen);
-  pokeCard.appendChild(linkVer);
-});
 //filtrar los pokemon
-
-//const pokeSection= document.getElementById("seccionUno");
-
 const inputBuscar = document.getElementById("inputBuscar");
+//creo el evento para filtrar cuando el usuario digite desde la primera letra
+inputBuscar.addEventListener("input",ejecutarFiltros) 
 
-inputBuscar.addEventListener("input", function () {
-  const FiltroNombre = buscarPorNombre(data, inputBuscar.value.trim().substring(0, 3));
-  if (FiltroNombre.pokemon.length === 0) {
-    alert("verica el nombre del pokemon ingresado");
+function ejecutarFiltros() {
+  const listaFiltradoDePokemon = filtro.porNombrePokemon (listaDePokemon, inputBuscar.value.trim());
+  
+  if (listaFiltradoDePokemon.length === 0) {
+    alert("verificar el nombre del pokemon ingresado");
   }
-  pokeSectionUno.innerHTML = cartillas(FiltroNombre);
+  pokeSectionUno.innerHTML = cartillasHtml(listaFiltradoDePokemon);
+}
 
-});
+//manipulacion del dom para traer informacion de la seleccion del orden
+const selectOrden = document.getElementById("orden");
+selectOrden.addEventListener("change", ordenarPokemones);
+
+// funcion para ordenar el pokemon
+function ordenarPokemones(){
+
+  const ordenSeleccionado = selectOrden.value;
+  if(ordenSeleccionado === "ascendente"){
+
+    const listaOrdenada = ordenar.ascendente(listaDePokemon);
+    pokeSectionUno.innerHTML = cartillasHtml(listaOrdenada);
+  } else if(ordenSeleccionado === "descendente"){
+
+    const listaOrdenada = ordenar.descendente(listaDePokemon);
+    pokeSectionUno.innerHTML = cartillasHtml(listaOrdenada);
+  } else {
+    
+    pokeSectionUno.innerHTML = cartillasHtml(listaDePokemon);
+  }
+}
