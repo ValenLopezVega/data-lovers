@@ -12,7 +12,6 @@ const characters = data.results;
 const cutCharacters = characters.slice(0,20);
 
 const contentMain = document.getElementById('container-cards');
-const contentCharacters = document.getElementById('characters');
 const showCharacters = document.getElementById('showCharacters');
 
 const searchInput = document.querySelector('#search');
@@ -22,9 +21,8 @@ const selectOrder = document.getElementById('select-order');
 
 const modal = document.querySelector('.modal');
 const boxStatictics = document.querySelector('#box-statistics');
-const openModal = document.querySelector('#statistics');
+const openModal = document.querySelector('#statistics'); 
 const closeModal = document.querySelector('.modal_close');
-// const modalContainer = document.querySelector('.modal_container');
 
 
 // RENDERING THE DATA
@@ -34,12 +32,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 showCharacters.addEventListener('click', (e)=> {
   e.preventDefault();
-  contentCharacters.classList.add('show--characters');
   show(characters);
 });
 
-// SHOWING ALL CHARACTERS
 
+// SHOWING ALL CHARACTERS
 function show(characters) {
   
   contentMain.innerHTML = '';
@@ -102,9 +99,9 @@ function show(characters) {
 // FILTERING CHARACTERS
 
 
-let searchValue='';
-let specieValue='';
-let genderValue='';
+let searchValue = '';
+let specieValue = '';
+let genderValue = '';
 
 // SEARCH
 searchInput.addEventListener('keyup',() => {
@@ -125,8 +122,8 @@ selectGender.addEventListener('change',(event) => {
   applyFilter(); 
 });
 
-//APPLY FILTER
 
+//APPLY FILTER
 function applyFilter() {
 
   const filterByName = searchValue === '' ? characters : searchByName(characters,searchValue);
@@ -165,8 +162,7 @@ selectOrder.addEventListener('change',() => {
 
 });
 
-// CALCULATING PERCENTAGE BY GENDER
-
+// PERCENTAGE event and function
 
 openModal.addEventListener('click', (e)=> {
   e.preventDefault();
@@ -183,7 +179,7 @@ closeModal.addEventListener('click', (e)=> {
 
 
 function showStat () { 
-
+  
   boxStatictics.innerHTML = '';
   const percenFemale = calculate(filterByGender(characters,'Female'),characters);
   const percenMale = calculate(filterByGender(characters,'Male'),characters);
