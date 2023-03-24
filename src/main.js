@@ -52,6 +52,8 @@ seleccionar.addEventListener("change", (event) => {
   }
 });
 
+
+
 const masInfo = document.querySelectorAll(".button-info");
 const container = document.querySelector("section");
 for(const info of masInfo) {
@@ -90,3 +92,5 @@ for(const info of masInfo) {
     });
   });
 }
+
+

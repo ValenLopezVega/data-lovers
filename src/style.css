@@ -277,7 +277,8 @@ section{
 }
 
 /*media pagina 1*/
-@media(max-width: 480px) {
+@media(max-width: 380px) {
+
     .source {
         margin-left: auto;
         margin-right: auto;
@@ -330,4 +331,116 @@ section{
         height: 20px;
         width: 150px;
     }
+
+    .card {
+        /*display: flex;
+        flex-direction: column;
+        background-color: #2F7BAD;
+        border-style: solid;
+        border-color: #1F5273;
+        border-width: 1px;
+        color: #fff;
+        position: relative;
+        overflow: hidden;*/
+        margin: 15px;
+        flex: auto;
+        max-height: 500px;
+        max-width: 250px;
+    }
+
+    .card-body-img{
+        display: flex;
+        overflow: hidden;
+        height: 320px;
+        width: 250px;
+    }
+    
+    .poster {
+        width: 250px;
+        height: 320px;
+    }
+
+    .button-info {
+        height: 17px;
+        margin-top: 25px;
+    }
+
+    .card-body-text span {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    }
+
+@media(max-width: 480px) {
+
+    .source {
+        margin-left: auto;
+        margin-right: auto;
+       }
+
+    img{
+        width:200px;
+        height:70px;
+    }   
+       
+    .logo {
+        width:100%;
+        height:80px;
+       }
+
+    .barra{
+        display: flex;
+        margin: auto;
+        background-color: #49a4e1;
+        width: 100vw;
+        height: 80px;
+        font-size:1em;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .buscar{
+        background-color: #49a4e1;
+        width: 33%;
+        border-radius: 8px;
+     }
+
+    .b-busqueda{
+        text-align: center;
+        padding: 0px;
+        border-radius: 8px;
+        margin-bottom: 1px;
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 150px;
+        height: 20px;
+    }
+
+     select{
+        text-align: center;
+        margin-bottom: 1px;
+        background-color: white;
+        border-radius: 8px;
+        border: 0px;
+        height: 20px;
+        width: 150px;
+    }
+
+    .card {
+        /*display: flex;
+        flex-direction: column;
+        background-color: #2F7BAD;
+        border-style: solid;
+        border-color: #1F5273;
+        border-width: 1px;
+        color: #fff;
+        position: relative;
+        overflow: hidden;*/
+        margin: 0.5%;
+        /*flex: auto;
+        max-height: 460px;
+        max-width: 200px;*/
+    }
+
     }

@@ -24,3 +24,4 @@ export function sortNum(peliculas, type){
     }})
   return peliculas; 
 } 
+
