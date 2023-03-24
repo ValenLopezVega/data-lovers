@@ -4,8 +4,8 @@
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Historias de Usuarios](#3-objetivos-de-aprendizaje)
-* [4. Diseño de la interfaz de usuario](#4-consideraciones-generales)
+* [3. Historias de Usuarios y Diseño de la interfaz de usuario ](#3-objetivos-de-aprendizaje)
+* [4. Implemententación de la interfaz de usuario.](#4-producto-final)
 
 
 ***
@@ -35,8 +35,6 @@ Estos son los datos utilizados:
 Yo como usuario de Rick and Morty Lovers quiero ver los personajes para conocerlos.
 
 
-## 4. Diseño de la interfaz de Usuario
-
 #### Prototipo de baja fidelidad
 
 ![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu1.jpg)
@@ -45,3 +43,88 @@ Yo como usuario de Rick and Morty Lovers quiero ver los personajes para conocerl
 #### Prototipo de alta fidelidad
 
 ![Prototipo de alta fidelidad](./src/images/figma-hu1.jpg)
+
+*Historia Usuario 2:*
+
+Yo como usuario de Rick and Morty Lovers quiero buscar los personajes por su nombre para acceder de forma más especifica
+
+
+
+#### Prototipo de baja fidelidad
+
+![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu1.jpg)
+
+
+#### Prototipo de alta fidelidad
+
+![Prototipo de alta fidelidad](./src/images/figma-hu2.jpg)
+
+*Historia Usuario 3:*
+
+Yo como usuario de Rick and Morty Lovers quiero filtrar los personajes para acceder a información de especie y género de forma más especifica
+
+
+
+#### Prototipo de baja fidelidad
+
+![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu1.jpg)
+
+
+#### Prototipo de alta fidelidad
+
+![Prototipo de alta fidelidad](./src/images/figma-hu3.jpg)
+
+
+*Historia Usuario 4:*
+
+Yo como usuario de Rick and Morty Lovers quiero ordenar los personajes para encontrarlos en orden alfabético.
+
+
+#### Prototipo de baja fidelidad
+
+![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu1.jpg)
+
+
+#### Prototipo de alta fidelidad
+
+![Prototipo de alta fidelidad](./src/images/figma-hu4.jpg)
+
+*Historia Usuario 5:*
+
+Yo como usuario de Rick and Morty Lovers quiero ver estadísticas sobre los personajes para conocer la cantidad por especia que hay en la serie.
+
+
+#### Prototipo de baja fidelidad
+
+![Prototipo de baja fidelidad](./src/images/prototipo-baja-hu1.jpg)
+
+
+#### Prototipo de alta fidelidad
+
+![Prototipo de alta fidelidad](./src/images/figma-hu5.jpg)
+
+
+## 4. Implemententación de la interfaz de usuario.
+#### Producto final
+
+
+*Home*
+
+Al ingresar al home, carga los primeros 20 personajes de la data, y el usuario puede visualizar las opciones para filtrar, bien sea por nombre (en el buscador), por especie o por género, asímismo se encuentra un botón para ordenar alfabeticamente de forma ascendente y descendente.
+
+![Home](./src/images/home.jpg)
+
+
+*Interacción de la tarjetas*
+
+Cada tarjeta de cada personaje, contiene en la parte trasera información relevante del mismo, con sólo dar clic el usuario puede acceder a esa información.
+
+![Home](./src/images/flip.jpg)
+
+
+*Interacción de la tarjetas*
+
+
+
+
+

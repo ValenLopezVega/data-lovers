@@ -12,8 +12,8 @@ const characters = data.results;
 const cutCharacters = characters.slice(0,20);
 
 const contentMain = document.getElementById('container-cards');
-// const contentCharacters = document.getElementById('characters');
-const showCharacters = document.querySelector('#showCharacters');
+const contentCharacters = document.getElementById('characters');
+const showCharacters = document.getElementById('showCharacters');
 
 const searchInput = document.querySelector('#search');
 const selectSpecies = document.querySelector('#select-species');
@@ -32,19 +32,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   show(cutCharacters);
 })
 
-// showCharacters.addEventListener('click',()=>{
-//   contentCharacters.style.display = 'block';
-//   contentMain.style.display = 'none';
-  
-//   show(characters);
-// });
-
 showCharacters.addEventListener('click', (e)=> {
   e.preventDefault();
-  characters.classList.add('show--characters');
+  contentCharacters.classList.add('show--characters');
   show(characters);
 });
-
 
 // SHOWING ALL CHARACTERS
 
@@ -180,7 +172,6 @@ openModal.addEventListener('click', (e)=> {
   e.preventDefault();
   modal.classList.add('modal--show');
   showStat(); 
-  // graphics();
 });
 
 closeModal.addEventListener('click', (e)=> {
@@ -224,30 +215,6 @@ function showStat () {
   boxStatictics.appendChild(boxStatictics2);
 }
 
-// GRAPHICS
-
-// function graphics () {
-//   google.charts.load("current", {packages:["corechart"]});
-//   google.charts.setOnLoadCallback(drawChart);
-
-//   function drawChart() {
-//     const data = google.visualization.arrayToDataTable([
-//       ['Gender', '493'],
-//       ['Female',   73  ],
-//       ['Male',     372 ],
-//       ['Unknown',  42],
-//       ['Genderless',  6],
-//     ]);
-
-//     const options = {
-//       title: 'Characters by gender',
-//       is3D: true,
-//     };
-  
-//     const chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-//     chart.draw(data, options);
-//   }
-// }
 
  
 // GETTING DATA FROM JSON
