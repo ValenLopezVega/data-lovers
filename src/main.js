@@ -82,9 +82,16 @@ for(const info of masInfo) {
                 <span class="card-title"> Productor: ${resultado.producer}</span>
                 <span class="card-title"> Puntaje: ${resultado.rt_score}</span>
                 <span class="card-title"> Descripción: ${resultado.description}</span>
-            </div>
-        </div>
-        `})}
+            </div>`
+    resultado.people.forEach(elemento => {
+      container.innerHTML +=`
+              <div class="card-body-text-people">
+                <span class="card-title"> Género: ${elemento.gender}</span>
+                <img class="poster-people" src="${elemento.img}"/>
+            </div>`
+    });
+            
+  })}
 
 
   
