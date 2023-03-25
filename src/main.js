@@ -1,5 +1,6 @@
 import { filter} from './data.js';
-import { order} from "./data.js"
+import { order} from "./data.js";
+import {porcentajeFil} from "./data.js"
 import data from './data/pokemon/pokemon.js';
 
 
@@ -18,12 +19,32 @@ function paint (dataArray) {
                         <p>${element.generation.name}</p>
                         <p>${element.type}<p>
                       </article>`                    
-  /*console.log('contenido pokedex' +contentPokedex);*/
   })
   document.getElementById('content-pokedexs').innerHTML = contentPokedexMain
 }
 paint (dataPokedex)
 
+// vizualizacion del porcentaje pokemon poder
+ function statsPokemon (dataArry) {
+  let contentPokedexStats = "";
+  dataArry.forEach((element)=> {
+    contentPokedexStats += `
+                        <tr>
+                         <td>${element.num}</td>
+                         <td><img src="${element.img}"/></td>
+                         <td>${element.name}</td>
+                         <td>${element.type}</td>
+                         <td>${element.stats["base-attack"]}</td>
+                         <td>${element.stats["base-defense"]}</td>
+                         <td>${element.stats["base-stamina"]}</td>
+                         <td>${element.stats["max-cp"]}</td>
+                         <td>${element.stats["max-hp"]}</td>
+                         <td></td>
+                       </tr>`
+  })
+  document.getElementById('pokedex-stats').innerHTML =contentPokedexStats;
+ }
+ console.log(statsPokemon(dataPokedex))
 //Type filter
 function filter1() {
   const selectFilter = document.getElementById("type-pokemon");
@@ -68,4 +89,17 @@ function allOrder() {
     }
   });
 }
+
 allOrder();
+
+
+
+
+function porcentagePower() {
+  const porcentagePower = document.getElementById("power");
+  porcentagePower.addEventListener("change", () => {
+    const porcentage =  porcentagePower.value;
+    console.log
+  })
+}
+console.log(porcentage);

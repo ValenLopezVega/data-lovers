@@ -63,3 +63,9 @@ export const order = {
     return orderNum2;
   },
 };
+
+export const porcentajeFil ={
+  porcentajePoder: function (number, percentage) {
+    return ((number / 100) * percentage)
+  }
+}
