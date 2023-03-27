@@ -3,6 +3,18 @@ import { order} from "./data.js";
 import {porcentajeFil} from "./data.js"
 import data from './data/pokemon/pokemon.js';
 
+//dynamic browser windows
+const targets = document.querySelectorAll('[data-target]')
+const content = document.querySelectorAll('[data-content]')
+targets.forEach(target => {
+  target.addEventListener('click', () => {
+    content.forEach(c => {
+      c.classList.remove('index');
+    });
+    const t = document.querySelector(target.dataset.target);
+    t.classList.add('index');
+  })
+});
 
 //Constant where the data is stored
 const dataPokedex = data.pokemon;
@@ -24,7 +36,7 @@ function paint (dataArray) {
 }
 paint (dataPokedex)
 
-// vizualizacion del porcentaje pokemon poder
+// pokemon power percentage display
  function statsPokemon (dataArry) {
   let contentPokedexStats = "";
   dataArry.forEach((element)=> {
@@ -73,7 +85,7 @@ function filter2() {
 }
 filter2()
 
-//Order (Ascending,orderDescending,Number
+//Order (Ascending,orderDescending,Number)
 function allOrder() {
   const selectOrder = document.getElementById("type-order");
   selectOrder.addEventListener("change", () => {
@@ -89,17 +101,4 @@ function allOrder() {
     }
   });
 }
-
 allOrder();
-
-
-
-
-function porcentagePower() {
-  const porcentagePower = document.getElementById("power");
-  porcentagePower.addEventListener("change", () => {
-    const porcentage =  porcentagePower.value;
-    console.log
-  })
-}
-console.log(porcentage);

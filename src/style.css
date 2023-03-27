@@ -14,7 +14,7 @@ body{
     color: #271d45;     
     color: #c0b4df;
 }
-/*Titulo Logo*/
+/*Header y navegador */
 .container-title{ 
     background-color:#45337b;
     display: flex;
@@ -64,10 +64,19 @@ body{
     object-fit: contain;
 }
 
+/*Ventanas del navegador funcionalidad js*/
+.index[data-content] {
+    display: block;
+}
+
+[data-content] {
+    display: none;
+}
 
 
 /*caja pokedex*/
 .box-pokedex{
+    background-color: #ffff00;
     display: flex;
     /* position:relative;
     top: 120px; */
@@ -99,7 +108,8 @@ body{
    
 }
 
-/*buscador*/
+
+/*Seccion de los filtrados*/
 .filter{
     background-color:#0b24519f;
     display: flex;
@@ -135,6 +145,10 @@ body{
     text-align: center;
     height: 20px;
     padding: 1px;
+}
+/*Footer*/
+.cotainer-footer{
+    display: block;
 }
 /*colores*/
 .colores{
