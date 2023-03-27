@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Varela+Round&display=swap" rel="stylesheet">
+
   </head>
     <body>
       <!--Cabeza y navegador de la pagina-->
@@ -12,12 +17,12 @@
           <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon-720x450.png" alt="Logo titulo pokemon">
         </div>
         <nav>
-          <ul class="nav-list">
+         <ul class="nav-list">
             <li data-target="#filters">Home</li>
             <li data-target="#stats">Article</li>
             <li data-target="#news">Setting</li>
           </ul>
-        </nav>
+        </nav> 
       </header>
 
       <!--main menu box one-->
@@ -77,14 +82,36 @@
                </tr>
             </thead>
             <tbody id="pokedex-stats"></tbody>
+          </table>
       </section>
         
       <!--news box number two three-->
       <section  data-content="content" id="news">
       </section>
 
-     
+      <!--Footer-->
+      <footer id="" class="cotainer-footer">
+        <div class="logo-footer">
+          <div class="box-img-poke">
+            <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon-720x450.png" src="">
+          </div>
+        </div>
+        <div class="data-collaborator">  
+          <div>
+            <a href="">@angiemorarosas</a>
+            <a href="">@fiorella.dm2002</a>
+          </div>
+          <p>Project collaborators: Diana Fiorella Diaz Mayta and Angie Lorena Mora Rosas </p>
+        </div>
+        <div class="icon-info">
+          <ion-icon name="logo-github"></ion-icon>
+          <ion-icon name="logo-figma"></ion-icon>
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </div>
+      </footer>
 
+     
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="main.js" type="module"></script>
   </body>
 </html>

@@ -1,8 +1,8 @@
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;   
-
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif !important; 
 }
 body{
     background-color: #c0b4df; 
@@ -78,7 +78,7 @@ body{
 .box-pokedex{
     background-color: #ffff00;
     display: flex;
-    /* position:relative;
+    /* position:static;
     top: 120px; */
     flex-flow: row wrap;
     justify-content:space-evenly;
@@ -107,6 +107,7 @@ body{
     border-radius: 10px;
    
 }
+
 
 
 /*Seccion de los filtrados*/
@@ -146,10 +147,85 @@ body{
     height: 20px;
     padding: 1px;
 }
-/*Footer*/
+/*footer*/
+
 .cotainer-footer{
-    display: block;
+    bottom: 0px;
+    position: static;
+    background-color: #45337b;
+    width: 100%; 
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+    border-color: red;
+    border-style: solid;
+    border-width: 5px 0px 0px;
+    
+
 }
+.logo-footer{
+    flex: 28%;
+    background-color: #c0b4df;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.box-img-poke{
+    width: 45%;
+}
+.logo-footer img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.data-collaborator{
+  flex: 34%;
+  background-color: #8338ec;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content:center;
+}
+.data-collaborator div{
+    margin: 5px 0px;
+    background-color: aliceblue;
+    text-align: center;
+}
+.data-collaborator div a{
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.data-collaborator p{
+    margin: 5px 0px;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: aqua;
+}
+
+
+.icon-info{
+    background-color: greenyellow;
+    padding: 10px;
+    flex: 28%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content:center;
+}
+.icon-info ion-icon{
+    font-size: 2em;
+    text-align: center;
+    color: #45337b;
+    margin: 5px;
+}
+
+
+
 /*colores*/
 .colores{
     color: #202f40;
