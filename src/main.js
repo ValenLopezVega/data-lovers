@@ -1,7 +1,6 @@
-import { filter} from './data.js';
-import { order} from "./data.js";
-import {porcentajeFil} from "./data.js"
-import pokemon from './data/pokemon/pokemon.js';
+import {filter} from './data.js';
+import {order} from "./data.js";
+import {spawnCal} from "./data.js";
 import data from './data/pokemon/pokemon.js';
 
 //dynamic browser windows
@@ -35,10 +34,9 @@ function paint (dataArray) {
   })
   document.getElementById('content-pokedexs').innerHTML = contentPokedexMain
 }
-paint (dataPokedex)
-
+paint (dataPokedex);
 // pokemon power percentage display
- function statsPokemon (dataArry) {
+function statsPokemon (dataArry) {
   let contentPokedexStats = "";
   dataArry.forEach((element)=> {
     contentPokedexStats += `
@@ -52,12 +50,12 @@ paint (dataPokedex)
                          <td>${element.stats["base-stamina"]}</td>
                          <td>${element.stats["max-cp"]}</td>
                          <td>${element.stats["max-hp"]}</td>
-                         <td>${porcentajeFil.porcentajePoder(element["spawn-chance"])}</td>
+                         <td>${spawnCal.spawnPer(element["spawn-chance"])}</td>
                        </tr>`
   })
   document.getElementById('pokedex-stats').innerHTML =contentPokedexStats;
- }
- console.log(statsPokemon(dataPokedex))
+}
+statsPokemon(dataPokedex);
 //Type filter
 function filter1() {
   const selectFilter = document.getElementById("type-pokemon");
@@ -70,7 +68,7 @@ function filter1() {
     }
   });
 }
-filter1()
+filter1();
 
 //Generation filter
 function filter2() {
@@ -84,7 +82,7 @@ function filter2() {
     }
   });
 }
-filter2()
+filter2();
 
 //Order (Ascending,orderDescending,Number)
 function allOrder() {
@@ -103,10 +101,3 @@ function allOrder() {
   });
 }
 allOrder();
-function name(data) {
-  pokemon.forEch((element) =>{
-  return porcentajeFil.porcentajePoder(element["spawn-chance"]);
-
-  })
-}
-console.log("datos " + name)
