@@ -10,14 +10,27 @@
   <body>
     <header>
       <figure>
-        <img src="https://fontmeme.com/permalink/230321/687d67403dbb62892116f1b85225b722.png"></figure>
+        <a href="https://fonttmeme.com/es/fuente-pokemon/">
+        <img src="https://fontmeme.com/permalink/230321/687d67403dbb62892116f1b85225b722.png"
+         alt="fuente-pokemon" borde="0">
+         </a>
+        </figure>
     </header>
-      <section> 
+       
+      <section id="Encabezado"> 
         <div class="buscar" id="input-buscar">
-          <label for="name">Busqueda </label>   
-          <input type="text " id="inputBuscar" placeholder="Nombre" />
+        <label for="name"> Busqueda </label>
+        <input type="text" id="inputBuscar" placeholder="nombre">
+         <button>Buscar</button>
         </div>
-        
+
+         <label for="region">Region</label>
+         <select name="region" id="Region">
+            <option value=""></option>
+            <option value="reg-uno">Johto</option>
+            <option value="reg-dos">Canto</option>
+            </select> 
+
         <label for="tipo">Tipo</label>
         <select id="TipoPokemon">
           <option value="All">Todos</option>
@@ -50,11 +63,12 @@
         
       </section>
       <section id="seccionUno">
-       
-      </section>
+      </section>   
+    
+      <button name="button">Retroceder</button>
+      <button name="button">Siguiente</button>
      
-   
- <div id="root"></div>
+   <div id="root"></div>
   <script src="main.js" type="module"></script>
 
 <footer>
