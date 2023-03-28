@@ -18,7 +18,7 @@ body{
 }
 /*Header y navegador */
 .container-title{ 
-    background-color:#45337b;
+    background-color:#bb201d;
     display: flex;
     height: 65px;
     width: 100%;
@@ -78,7 +78,7 @@ body{
 
 /*caja pokedex*/
 .box-pokedex{
-    background-color: #ffff00;
+    background-color: white;
     display: flex;
     /* position:static;
     top: 120px; */
@@ -115,7 +115,7 @@ body{
 
 /*Seccion de los filtrados*/
 .filter{
-    background-color:#0b24519f;
+    background-color:rgba(255, 255, 255, 0.692);
     display: flex;
     flex-flow: row;
     justify-content:center;
