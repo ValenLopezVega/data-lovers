@@ -9,49 +9,51 @@
   </head>
   <body>
     <header>
-      <figure><a href="https://fontmeme.com/es/fuente-pokemon/">
-        <img src="https://fontmeme.com/permalink/230321/687d67403dbb62892116f1b85225b722.png" alt="fuente-pokemon" borde="0"></a></figure>
+      <figure>
+        <img src="https://fontmeme.com/permalink/230321/687d67403dbb62892116f1b85225b722.png"></figure>
     </header>
       <section> 
         <div class="buscar" id="input-buscar">
           <label for="name">Busqueda </label>   
           <input type="text " id="inputBuscar" placeholder="Nombre" />
         </div>
-    
-         <label for="region">Region</label>
-         <select name="region" id="Region">
-            <option value=""></option>
-            <option value="reg-uno">Johto</option>
-            <option value="reg-dos">Canto</option>
-            </select> 
-
-        <label for="tipo">Tipo</label>
-        <select name="tipo" id="Tipo">
-             <option value=""></option>
-             <option value="tipo uno">Agua</option>
-             <option value="tipo dos">Fuego</option>
-             <option value="tipo tres">Tierra</option>
-             <option value="tipo cuatro">Veneno</option>
-             <option value="tipo cinco">Electrico</option>
-             <option value="tipo seis">Aire</option>
-        </select> 
         
-        <label for="orden">Orden</label>
-        <select name="orden" id="orden">
-              <option value=""></option>
-              <option value="az">az</option>
-              <option value="za">za</option>
-             <option value="menosp">Mayor a Menor Poder</option>
-              <option value="masp">Menor a Mayor poder</option>
+        <label for="tipo">Tipo</label>
+        <select id="TipoPokemon">
+          <option value="All">Todos</option>
+          <option value="water">Agua</option>
+          <option value="fire">Fuego</option>
+          <option value="grass">Planta</option>
+          <option value="ground">Tierra</option>
+          <option value="rock">Roca</option>
+          <option value="steel">Metal</option>
+          <option value="ice">Hielo</option>
+          <option value="electric">Eléctrico</option>
+          <option value="dragon">Dragon</option>
+          <option value="ghost">Fantasma</option>
+          <option value="psychic">Psiquico</option>
+          <option value="normal">Normal</option>
+          <option value="fighting">Lucha</option>
+          <option value="poison">Veneno</option>
+          <option value="bug">Insecto</option>
+          <option value="flying">Volador</option>
+          <option value="dark">Oscuro</option>
+          <option value="fairy">Hada</option>
         </select>
+        <label for="tipo">Orden</label>
+        <select id="OrdePokemon">
+          <option>Sin Ordenar</option>
+          <option>Ordenar A-Z</option>
+          <option>Ordenar Z-A</option>
+        </select>
+      
         
       </section>
       <section id="seccionUno">
        
       </section>
-    <section>
-<section id ="seccionDos">
-          </section>
+     
+   
  <div id="root"></div>
   <script src="main.js" type="module"></script>
 
