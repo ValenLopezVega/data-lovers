@@ -57,8 +57,8 @@ const result = document.querySelector("section")
 const filtrar = () => {
   result.innerHTML ="";
   const text = search.value.toLowerCase();
-  for (let film of data.films){
-    let title = film.title.toLowerCase();
+  for (const film of data.films){
+    const title = film.title.toLowerCase();
     if(title.indexOf(text) !== -1){
       result.innerHTML += `
       <div class="card">
@@ -85,6 +85,7 @@ search.addEventListener("keyup", filtrar);
 
 
 const masInfo = document.querySelectorAll(".button-info");
+console.log(masInfo);
 const container = document.querySelector("section");
 for(const info of masInfo) {
   info.addEventListener("click", (event) => {
@@ -102,6 +103,7 @@ for(const info of masInfo) {
                   <span class="card-title"> <strong>Productor:</strong> ${resultado.producer}</span>
                   <span class="card-title"> <strong>Puntaje:</strong> ${resultado.rt_score}</span>
                   <span class="card-title"> <strong>Descripción:</strong> ${resultado.description}</span>
+                  <button name="button" class="button-personajes" data-id="${resultado.id}">Calcular</button>
               </div>
           </div>`
     resultado.people.forEach(elemento => {
@@ -123,4 +125,40 @@ for(const info of masInfo) {
   });
 }
 
+//Crear botón de volver
 
+/*const personajes = document.querySelectorAll(".button-personajes");
+personajes.addEventListener("click", (event) => {
+  const calcular = data.films.find(elemento => elemento.id === event.target.dataset.id);
+  container.innerHTML = "";
+  container.innerHTML +=`
+        <div class="card-info">
+            <div class="card-body-caculo">
+                <span class="card-title"> <strong>Numero de mujeres:</strong> ${calcular.title}</span>
+                <span class="card-title"> <strong>Numero de hombres:</strong> ${calcular.release_date}</span>
+                <span class="card-title"> <strong>Numero de animales:</strong> ${calcular.director}</span>
+            </div>
+        </div>`
+
+})*/
+
+
+// eslint-disable-next-line no-const-assign
+const personajes = document.querySelectorAll(".button-personajes");
+console.log(personajes);
+personajes.addEventListener("click", (event) => { 
+  const pelicula = data.films.find(elemento => elemento.id === event.target.dataset.id);
+  for(let i = 0; i < pelicula.length; i++) {
+    const valor = pelicula[i]['people'];
+    console.log(valor);
+  }
+  container.innerHTML = "";
+  container.innerHTML +=`
+        <div class="card-info">
+            <div class="card-body-caculo">
+                <span class="card-title"> <strong>Numero de mujeres:</strong> ${pelicula.people.gender}</span>
+                <span class="card-title"> <strong>Numero de hombres:</strong> ${pelicula.people.gender}</span>
+                <span class="card-title"> <strong>Numero de animales:</strong> ${pelicula.people.gender}</span>
+            </div>
+        </div>`
+})
