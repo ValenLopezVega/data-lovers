@@ -1,6 +1,7 @@
 import { filter} from './data.js';
 import { order} from "./data.js";
 import {porcentajeFil} from "./data.js"
+import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 
 //dynamic browser windows
@@ -51,7 +52,7 @@ paint (dataPokedex)
                          <td>${element.stats["base-stamina"]}</td>
                          <td>${element.stats["max-cp"]}</td>
                          <td>${element.stats["max-hp"]}</td>
-                         <td></td>
+                         <td>${porcentajeFil.porcentajePoder(element["spawn-chance"])}</td>
                        </tr>`
   })
   document.getElementById('pokedex-stats').innerHTML =contentPokedexStats;
@@ -102,3 +103,10 @@ function allOrder() {
   });
 }
 allOrder();
+function name(data) {
+  pokemon.forEch((element) =>{
+  return porcentajeFil.porcentajePoder(element["spawn-chance"]);
+
+  })
+}
+console.log("datos " + name)
