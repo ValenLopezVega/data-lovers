@@ -65,7 +65,11 @@ export const order = {
 };
 
 export const porcentajeFil ={
-  porcentajePoder: function (number, percentage) {
-    return ((number / 100) * percentage)
+  porcentajePoder: function (number) {
+    const multiplo = ((number * 100)/15.98).toFixed(2);
+    const numero=(multiplo + "%");
+    console.log(numero)
+    return numero ;
+
   }
 }
