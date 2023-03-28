@@ -1,7 +1,7 @@
 // FILTROS
 
 // Director
-export function filtroInformacionDirector(films, nombreDirector) {
+export function filtroInformacionDirector(films, nombreDirector) {  
   const resultadoDirector = films.filter((y) => y.director === nombreDirector);
   return resultadoDirector;
 }
@@ -39,6 +39,7 @@ export const ordenInformación = (order, films) => {
   } else {
     const resultadoOrden = films.sort(fechaDescendente);
     return resultadoOrden;
+
   }
 };
 
@@ -54,6 +55,6 @@ export const calculoInformacion = (data, especie) => {
     }
   }
   const cantPersonajes = 171;
-  const calculo =  "%" + Math.round((calculoEspecie /= cantPersonajes) * 100);
+  const calculo = Math.round((calculoEspecie /= cantPersonajes) * 100) + "%";
   return calculo;
 };

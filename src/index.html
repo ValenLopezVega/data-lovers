@@ -8,27 +8,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      background-image: url(images/background.gif);
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  </style>
 </head>
 
-<body>
+  <section id="principal" class="">
   <header id="header">
-    <h1>スタジオジブリ<br>STUDIO GHIBLI</h1>
+    <h1 class="">スタジオジブリ<br>STUDIO GHIBLI</h1>
+    <!-- <div lang="zn">ALGO EN CHINO</div> -->
     <button id="botonHistoria">HISTORIA</button>
     <button id="botonFilmografia">FILMOGRAFÍA</button>
     <button id="botonPersonajes">PERSONAJES</button>
-
   </header>
+</section>
 
+<body>
   <main>
-    <section id="historia" class="historia"><br>
+    <section id="historia" class="col-3"><br>
       <h2>HISTORIA</h2>
+      <br>
+      <button id="botonVolver">VOLVER</button>
+      <br>
       <p class="textoHistoria">Fundado en 1985, el estudio está dirigido por el galardonado director Hayao Miyazaki, y hasta 2018 estuvo
         dirigido por Miyazaki junto a su amigo y mentor, Isao Takahata, fallecido en ese año. Sus orígenes datan de
         1984, con la película Nausicäa del Valle del Viento, la cual comenzó como un manga en una publicación de la
@@ -66,11 +64,12 @@
         El 1 de noviembre de 2022, el parque temático Studio Ghibli, fue lanzado. Se caracterizó por disponer de muschas
         zonas verdes y carecer de atracciones mecánicas.
       </p>
-      <button id="botonVolver">VOLVER</button>
     </section>
 
-    <section id="filmografia" class="filmografia">
+    <section id="filmografia" class="col-4">
       <h2>FILMOGRAFÍA</h2>
+      <br>
+      <button id="botonVolver2">VOLVER</button>
       <section class="filtrosFilmografia">
         <select id="filtroDirector" class="filtroDirector">
           <option value="" selected>DIRECTOR</option>
@@ -80,24 +79,26 @@
         </select>
         <form>
           <select id="filtroOrden" class="filtroOrden">
-            <option id="anio" value="numero"> AÑO </option>
+            <option id="anio" value="numero">AÑO</option>
             <option id="ascendente" value="Ascendente"> ASCENDENTE </option>
             <option id="descendente" value="Descendente"> DESCENDENTE </option>
           </select>
         </form>
       </section>
       <section id="grillaFilmografia" class="imagenesFilmografia"></section>
-      <button id="botonVolver2">VOLVER</button>
     </section>
 
-    <section id="personajes" class="personajes">
+    <section id="personajes" class="col-5">
       <h2>PERSONAJES</h2>
+      <br>
+      <button id="botonVolver3">VOLVER</button>
       <section class="filtroPersonajes">
-        <select id="filtroEspecie" class="filtroSeleccion"></select>
+        <select id="filtroEspecie" class="filtroEspecie">
+          <option value="" selected>ESPECIE</option>
+        </select>
       </section>
       <section id="numeroEspecies"></section>
       <section id="grillaPersonajes" class="imagenesPersonajes"></section>
-      <button id="botonVolver3">VOLVER</button>
     </section>
 
 
