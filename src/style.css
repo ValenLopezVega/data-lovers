@@ -12,12 +12,6 @@ body{
     flex-flow: column wrap;
 }
 
-.colores{
-    color: #1d1533;
-    color: #ffff00;
-    color: #271d45;     
-    color: #c0b4df;
-}
 /*Header y navegador */
 .container-title{ 
     background-color:#bb201d;
