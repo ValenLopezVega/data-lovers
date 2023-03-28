@@ -64,12 +64,10 @@ export const order = {
   },
 };
 
-export const porcentajeFil ={
-  porcentajePoder: function (number) {
-    const multiplo = ((number * 100)/15.98).toFixed(2);
-    const numero=(multiplo + "%");
-    console.log(numero)
-    return numero ;
-
-  }
-}
+export const spawnCal = {
+  spawnPer: function (number) {
+    const perOperation = ((number * 100) / 15.98).toFixed(2);
+    const answerOperation = perOperation + "%";
+    return answerOperation;
+  },
+};
