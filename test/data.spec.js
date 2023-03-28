@@ -1,18 +1,22 @@
-import { example, anotherExample } from '../src/data.js';
+import { filter } from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('filter', () => {
+  it('is a object', () => {
+    expect(typeof filter).toBe('object');
   });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+  describe('filter.typeFilter',() => {
+    it('is a function', () => {
+      expect(typeof filter.typeFilter).toBe('function');
+    })
+  })
+  //it('returns `example`', () => {
+  //expect(example()).toBe('example');
+  //});
 });
 
 
-describe('anotherExample', () => {
+/*describe('anotherExample', () => {
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
   });
@@ -20,4 +24,4 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+});*/

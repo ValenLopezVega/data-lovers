@@ -5,7 +5,7 @@
     font-family: 'Varela Round', sans-serif !important; 
 }
 body{
-    background-color: #c0b4df;
+    background-color: #ffffff;
     position: absolute;
     width: 100%;    
 }
@@ -230,4 +230,13 @@ body{
 .colores{
     color: #202f40;
     color: #ffff00;
+    color:#1d1533
+}
+/*stats*/
+#stats{
+    background-color:cornflowerblue;
+    margin-top: 26px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 26px;
 }
