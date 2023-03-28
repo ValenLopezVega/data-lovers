@@ -129,14 +129,6 @@ for(const info of masInfo) {
 
 
 
-//Colocar el boton en el footer 
-//Guardar el boton en un objeto
-//Crear la función con el método addEventListener
-//Hacer que mediante un for se puedan recolectar los generos de la pelicula a la que le hicimos click
-//Crear la función que calcule la cantidad de hombres y mujeres en cada pelicula
-//Hacer que el resultado se muestre usando "modal" 
-
-
 document.addEventListener("click", (event) => { 
   const pelicula = data.films.find(elemento => elemento.id === event.target.dataset.id);
   console.log(pelicula);
