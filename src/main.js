@@ -83,7 +83,6 @@ const filtrar = () => {
 
 search.addEventListener("keyup", filtrar);
 
-
 const masInfo = document.querySelectorAll(".button-info");
 console.log(masInfo);
 const container = document.querySelector("section");
@@ -91,8 +90,7 @@ for(const info of masInfo) {
   info.addEventListener("click", (event) => {
     const resultado = data.films.find(elemento => elemento.id === event.target.dataset.id);
     container.innerHTML = "";
-    container.innerHTML +=`
-          <div class="card-info">
+    const html = `
               <div class="card-body-img2">
                   <img class="poster" src="${resultado.poster}" alt="Imagen de la película"/>
               </div>
@@ -103,9 +101,12 @@ for(const info of masInfo) {
                   <span class="card-title"> <strong>Productor:</strong> ${resultado.producer}</span>
                   <span class="card-title"> <strong>Puntaje:</strong> ${resultado.rt_score}</span>
                   <span class="card-title"> <strong>Descripción:</strong> ${resultado.description}</span>
-                  <button name="button" class="button-personajes" data-id="${resultado.id}">Calcular</button>
+                  <button name="button" class="button-personajes" data-id="${resultado.id}" id="jaja">Calcular</button>
               </div>
-          </div>`
+         `
+    const  containerCardInfo= document.createElement('div')
+    containerCardInfo.innerHTML=html
+    container.append(containerCardInfo);
     resultado.people.forEach(elemento => {
       container.innerHTML+=
           `<div class="card-people">
@@ -125,34 +126,58 @@ for(const info of masInfo) {
   });
 }
 
-//Crear botón de volver
-
-/*const personajes = document.querySelectorAll(".button-personajes");
-personajes.addEventListener("click", (event) => {
-  const calcular = data.films.find(elemento => elemento.id === event.target.dataset.id);
-  container.innerHTML = "";
-  container.innerHTML +=`
-        <div class="card-info">
-            <div class="card-body-caculo">
-                <span class="card-title"> <strong>Numero de mujeres:</strong> ${calcular.title}</span>
-                <span class="card-title"> <strong>Numero de hombres:</strong> ${calcular.release_date}</span>
-                <span class="card-title"> <strong>Numero de animales:</strong> ${calcular.director}</span>
-            </div>
-        </div>`
-
-})*/
 
 
-// eslint-disable-next-line no-const-assign
-const personajes = document.querySelectorAll(".button-personajes");
-console.log(personajes);
-personajes.addEventListener("click", (event) => { 
+
+//Colocar el boton en el footer 
+//Guardar el boton en un objeto
+//Crear la función con el método addEventListener
+//Hacer que mediante un for se puedan recolectar los generos de la pelicula a la que le hicimos click
+//Crear la función que calcule la cantidad de hombres y mujeres en cada pelicula
+//Hacer que el resultado se muestre usando "modal" 
+
+
+document.addEventListener("click", (event) => { 
   const pelicula = data.films.find(elemento => elemento.id === event.target.dataset.id);
-  for(let i = 0; i < pelicula.length; i++) {
-    const valor = pelicula[i]['people'];
-    console.log(valor);
+  console.log(pelicula);
+
+  let female = 0;
+  let male = 0;
+  let nodefinido = 0;
+
+  for(let i = 0; i < pelicula["people"].length; i++) {
+
+    if(pelicula["people"][i]["gender"] === "Female") {
+      female = female + 1;
+    } 
+    else if(pelicula["people"][i]["gender"] === "Male") {
+      male = male + 1;
+    }
+    else {
+      nodefinido = nodefinido + 1;
+    }
   }
-  container.innerHTML = "";
+  let animals = 0;
+  let human = 0;
+
+  for(let i = 0; i < pelicula["people"].length; i++) {
+
+    if(pelicula["people"][i]["specie"] === "Human") {
+      human = human + 1;
+    } 
+    else {
+      animals = animals + 1;
+    }
+  }
+
+  console.log(female)
+  console.log(male)
+  console.log(nodefinido)
+  console.log(animals)
+  console.log(human)
+  
+
+  /*container.innerHTML = "";
   container.innerHTML +=`
         <div class="card-info">
             <div class="card-body-caculo">
@@ -160,5 +185,6 @@ personajes.addEventListener("click", (event) => {
                 <span class="card-title"> <strong>Numero de hombres:</strong> ${pelicula.people.gender}</span>
                 <span class="card-title"> <strong>Numero de animales:</strong> ${pelicula.people.gender}</span>
             </div>
-        </div>`
+        </div>`*/
 })
+
