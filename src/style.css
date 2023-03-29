@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /*box-sizing: border-box; Se agrega esta propiedad para incluir los bordes en el cálculo del tamaño de los elementos */
 }
 
 h1 {
@@ -319,6 +318,8 @@ button:first-of-type {
     background-image: url(./Imagenes/Tablet\ \(720x1280\).png);
     background-repeat: no-repeat;
     background-size: auto;
+    height: auto;
+    min-height: 100vh;
   }
 
   .textoHistoria {
@@ -576,6 +577,8 @@ button:first-of-type {
     background-image: url(./Imagenes/Smartphone\ \(640x900\).png);
     background-repeat: no-repeat;
     background-size: auto;
+    height: auto;
+    min-height: 100vh;
   }
 
   .textoHistoria {
