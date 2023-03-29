@@ -133,25 +133,90 @@ search.addEventListener("keyup", filtrar);
 
 //Segunda pagina
 const masInfo = document.querySelectorAll(".button-info");
-console.log(masInfo);
 const container = document.querySelector("section");
 const headerPag2 = document.querySelector("header")
 for(const info of masInfo) {
   info.addEventListener("click", (event) => {
     const resultado = data.films.find(elemento => elemento.id === event.target.dataset.id);
+
+    let female = 0;
+    let male = 0;
+    let nodefinido = 0;
+
+    for(let i = 0; i < resultado["people"].length; i++) {
+      if(resultado["people"][i]["gender"] === "Female") {
+        female = female + 1;
+      } 
+      else if(resultado["people"][i]["gender"] === "Male") {
+        male = male + 1;
+      }
+      else {
+        nodefinido = nodefinido + 1;
+      }
+    }
+    let animals = 0;
+    let human = 0;
+
+    for(let i = 0; i < resultado["people"].length; i++) {
+      if(resultado["people"][i]["specie"] === "Human") {
+        human = human + 1;
+      } 
+      else {
+        animals = animals + 1;
+      }
+    }
+    
     headerPag2.innerHTML= `
     <a href="index.html">
     <picture class="logo">
         <source id="logo2" class="l-ghibli" srcset="img/logoghibli.png" media="(max-width: 480px)">
         <img id="logo1" src="img/ghibli1.png" alt="Logo estudio Ghibli">
     </picture>
-    </a> 
+    </a>
 `
+    
     container.innerHTML = "";
-    container.innerHTML +=`    
+    container.innerHTML +=`
+    <div class="botones"> 
+    <div> 
     <a class="home" href="index.html">
-    <img class="backarrow" src="img/backblack.svg" alt="Volver a peliculas"
-    </a>`
+    <img class="backarrow" src="img/backblack.svg" alt="Volver a peliculas">
+    </a>
+    <button id= "abrirModal">Abrir Modal</button>
+    </div>   
+    <div id="ventanaModal" class="modal">
+      <div class="modal-content">
+      <span class="cerrar">&times;</span>
+      <h2>Estadistica de los personajes<h2/>
+      <span> Personajes mujeres: ${female}</span>
+      <span> Personajes Hombres: ${male}</span>
+      <span> Personajes no definidos: ${nodefinido}</span>
+      <span> Cantidad de animales: ${nodefinido}</span>
+      <span> Cantidad de humanos: ${nodefinido}</span>
+    </div> 
+    `
+    const modal = document.getElementById("ventanaModal");
+    console.log(modal);
+    const boton = document.getElementById("abrirModal")
+    console.log(boton);
+    const span = document.getElementsByClassName("cerrar")[0];
+    console.log(span);
+
+    boton.addEventListener("click", function() {
+      console.log("Aqui estoy");
+      modal.style.display = "block";
+    });
+    span.addEventListener("click", function(){
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("clik", function(event){
+      if (event.target === modal) {
+        modal.style.display = "none;"
+      }
+    })
+
+
     container.innerHTML +=`
           <div class="card-info">
             <div class="card-body-img2">
@@ -185,7 +250,21 @@ for(const info of masInfo) {
   });
 }
 
-document.addEventListener("click", (event) => { 
+//Ventana modal
+
+
+//Boton que are el modal 
+
+
+//Elemento <span> que tiene la X que cierra la ventana
+
+
+
+
+
+/*const estadistica = document.querySelector(".button-personajes")
+console.log(estadistica);
+estadistica.addEventListener("click", (event) => { 
   const pelicula = data.films.find(elemento => elemento.id === event.target.dataset.id);
   console.log(pelicula);
 
@@ -222,11 +301,11 @@ document.addEventListener("click", (event) => {
   console.log(male)
   console.log(nodefinido)
   console.log(animals)
-  console.log(human)
+  console.log(human)*/
   
 
 
-  /*container.innerHTML = "";
+/*container.innerHTML = "";
   container.innerHTML +=`
         <div class="card-info">
             <div class="card-body-caculo">
@@ -236,5 +315,5 @@ document.addEventListener("click", (event) => {
                 <span class="card-title"> <strong>Número de humanos:</strong> ${human}</span>
                 <span class="card-title"> <strong>Número de humanos:</strong> ${animals}</span>
             </div>
-        </div>` */
-})
+        </div>` 
+})*/

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { filterMovies, filtrarPro, sortData, sortNum} from '../src/data.js';
 import data from '../src/data/ghibli/ghibli.js';
 
@@ -82,17 +81,9 @@ describe('Probar que sortNum permite ordenar las peliculas segun el año', () =>
 })
 
 
+//Test Alejandra
 
-
-
-
-
-
-=======
-import { filterMovies, filtrarPro, sortData, sortNum } from '../src/data.js';
-import data from '../src/data/ghibli/ghibli.json';
-
-describe('filterMovies', () => {
+/*describe('filterMovies', () => {
   it('Debería ser una función', () => {
     expect(typeof filterMovies ).toBe('function');
   });
@@ -139,5 +130,4 @@ describe('sortNum', () => {
   it('Debería retornar peliculas ordenadas por score', () => {
     expect(sortNum(data.films, 'score')).toContainEqual(data.films[13, 9, 6, 16, 12, 11, 17, 7, 14, 8, 19, 1, 5, 0, 15, 2, 3, 10, 4, 18]);
   });
-}); lo
->>>>>>> c40ebb08bc150ef95f8e80b61e64575aafb7cda4
+});*/ 
