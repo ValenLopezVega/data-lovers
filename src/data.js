@@ -11,8 +11,8 @@ export function filtroInformacionProductor(films, nombreProductor) {
   return resultadoProductor;
 }
 // Especie
-export function filtroInformacionEspecie(listaPersonajes, tipoEspecie) {
-  const resultadoEspecie = listaPersonajes.filter((y) => y.specie === tipoEspecie);
+export function filtroInformacionEspecie(films, tipoEspecie) {
+  const resultadoEspecie = films.filter((y) => y.specie === tipoEspecie);
   return resultadoEspecie;
 }
 
@@ -32,7 +32,7 @@ export const fechaDescendente = (a, b) => {
     return 1;
   }
 };
-export const ordenInformación = (order, films) => {
+export const ordenInformacion = (order, films) => {
   if (order === "Ascendente") {
     const resultadoOrden = films.sort(fechaAscendente);
     return resultadoOrden;

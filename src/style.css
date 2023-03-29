@@ -316,7 +316,8 @@ button:first-of-type {
   }
 
   body {
-    background-image: url(images/background.gif) no-repeat;
+    background-image: url(./Imagenes/Tablet\ \(720x1280\).png);
+    background-repeat: no-repeat;
     background-size: auto;
   }
 
@@ -572,7 +573,8 @@ button:first-of-type {
   }
 
   body {
-    background-image: url(images/background.gif) no-repeat;
+    background-image: url(./Imagenes/Smartphone\ \(640x900\).png);
+    background-repeat: no-repeat;
     background-size: auto;
   }
 
