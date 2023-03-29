@@ -5,62 +5,96 @@
     font-family: 'Varela Round', sans-serif !important; 
 }
 body{
-    background-color: #ffffff;
+    background-color: #e0e1dd;
     position: absolute;
     width: 100%;  
     display: flex; 
     flex-flow: column wrap;
+    justify-content: center;
+}
+.colores{
+    color: #ef233c;
+    color: #e0e1dd;
+    color: #0d1b2a ;
 }
 
 /*Header y navegador */
 .container-title{ 
-    background-color:#bb201d;
+    background-color:#e6504d;
     display: flex;
-    height: 65px;
+    height: 75px;
     width: 100%;
-    /* position:fixed;
-    top: 0px;
-    z-index: 1000; */
     flex-flow: row wrap;
-    justify-content:space-between;
-
+    justify-content: space-between;
 }
 .container-title nav{
     width: 60%;
     height: 100%;
-    padding: 10px 0px 0px;
 }
-
-.nav-list{
-    width: 100%;
+.container-title nav ul{
     height: 100%;
     list-style: none;
     display:flex;
     flex-flow: row wrap;
+    justify-content: right;
+}
+.br{
+    display: none;
 }
 
-.nav-list li{
-  
-    color: #c0b4df;
-    padding:  10px 6.9%;
+.container-title nav li{
+    transition: .3s;
+    color: #fbebec;
+    text-shadow: 2px 2px 2px gray;
+    padding:  20px;
     border-radius: 5px 5px 0px 0px;
-    font-size: 20px;
+    font-size: 1.5em;
 
 }
 .nav-list li:hover{
+    text-shadow: 2px 2px 2px black;
     color: #fff;
-    background-color: #1d1533;
+    background-color: #ae2f2c;
 }
 
 .container-logo{
     height: 100%;
-    width: 40%;
+    width: 30%;
 }
 .container-title img{
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
+@media only screen and (max-width: 850px){
+    .container-title{ 
+        background-color:#8338ec;
+        display: flex;
+        height: 80px;
+    }
+    .container-title nav{
+
+    }
+    .container-title nav ul{
+
+    }
+    .br{
+    }
+    .container-title nav li{
+        font-size:;
+        display: none;
+    }
+    .nav-list li:hover{
+    }
+    
+    .container-logo{
+
+    }
+    .container-title img{
+
+    }
+}
+
 
 /*Ventanas del navegador funcionalidad js*/
 .index[data-content] {
@@ -73,25 +107,36 @@ body{
 
 
 /*caja pokedex*/
+.filters{
+    width: 100%;
+    height: auto;
+    background-color: #8338ec;
+    display: flex;
+    flex-flow: column wrap;
+    height: 60px;
+}
 .box-pokedex{
-    background-color: white;
+    margin: 0px 180px  ;
+    background-color: #fff;
     display: flex;
     flex-flow: row wrap;
     justify-content:space-evenly;
     align-items: flex-start;
     align-content:space-between;
-    /* position:static;
-    top: 120px; */
     min-height: calc(100vh - 430px);
 
 }
 .card{
-    background-color:plum;
+    border: 2px solid grey;
+    box-shadow:2px 2px 4px black ;
     height: 200px;
     width: 150px;
     margin: 10px;
     padding:15px;
-     
+}
+.card:hover{
+    background-color: #e6504d7a;   
+    transition: .5s;
 }
 .card p{
     border: 1px #202f40;
@@ -110,23 +155,49 @@ body{
 
 
 /*Seccion de los filtrados*/
+.seeker{
+    padding: 10px;
+    display: flex;
+    margin: 20px  0px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.seeker h1{
+    width: 20%;    
+    color: #fcc805;
+    text-shadow: 2px 3px 0px #1e5d9f;
+}
+.seeker div{
+    display: flex;
+    flex-flow: row;
+}
+.seeker input{
+    width: 20%;
+    font-size: 1.5em;
+    background-color: white;
+    border: none;
+    box-shadow: 2px 1px 4px grey; 
+    color: #e6504d;
+    outline: none;
+    text-align: center;
+    padding-left:30px ;
+    padding-right: 30px;
+    border-radius: 5px;
+}
+.seeker input:active{
+    border: 2px solid white;
+}
 .filter{
     background-color:rgba(255, 255, 255, 0.692);
     display: flex;
     flex-flow: row;
-    justify-content:center;
-    align-items:flex-start;
+    justify-content: space-evenly;
     height:50%;
-    width:100%;
     padding: 13px;
-    /* top: 150px;
-    z-index:100;
-    position:fixed;
-    top: 100px; */
-
-
+    margin:30px 180px;
    
 }
+
 .filter label{
     background-color: chartreuse;
     border: 1px solid fuchsia;
