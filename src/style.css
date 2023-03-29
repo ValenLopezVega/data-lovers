@@ -5,7 +5,7 @@
     font-family: 'Varela Round', sans-serif !important;
 }
 
-body {
+body{
     background-color: #e0e1dd;
     position: absolute;
     width: 100%;
@@ -13,16 +13,15 @@ body {
     flex-flow: column wrap;
     justify-content: center;
 }
-
-.colores {
+.colores{
     color: #ef233c;
     color: #e0e1dd;
-    color: #0d1b2a;
+    color: #0d1b2a ;
 }
 
 /*Header y navegador */
-.container-title {
-    background-color: #e6504d;
+.container-title{ 
+    background-color:#e6504d;
     display: flex;
     height: 75px;
     width: 100%;
@@ -34,30 +33,28 @@ body {
     width: 60%;
     height: 100%;
 }
-
-.container-title nav ul {
+.container-title nav ul{
     height: 100%;
     list-style: none;
     display: flex;
     flex-flow: row wrap;
     justify-content: right;
 }
-
-.br {
+.br{
     display: none;
 }
 
-.container-title nav li {
+.container-title nav li{
     transition: .3s;
     color: #fbebec;
     text-shadow: 2px 2px 2px gray;
-    padding: 20px;
+    padding:  20px;
     border-radius: 5px 5px 0px 0px;
     font-size: 1.5em;
 
 }
 
-.nav-list li:hover {
+.nav-list li:hover{
     text-shadow: 2px 2px 2px black;
     color: #fff;
     background-color: #ae2f2c;
@@ -73,6 +70,35 @@ body {
     width: 100%;
     object-fit: contain;
 }
+@media only screen and (max-width: 850px){
+    .container-title{ 
+        background-color:#8338ec;
+        display: flex;
+        height: 80px;
+    }
+    .container-title nav{
+
+    }
+    .container-title nav ul{
+
+    }
+    .br{
+    }
+    .container-title nav li{
+        font-size:;
+        display: none;
+    }
+    .nav-list li:hover{
+    }
+    
+    .container-logo{
+
+    }
+    .container-title img{
+
+    }
+}
+
 
 @media only screen and (max-width: 850px) {
     .container-title {
@@ -111,7 +137,7 @@ body {
 
 
 /*caja pokedex*/
-.filters {
+.filters{
     width: 100%;
     height: auto;
     background-color: #8338ec;
@@ -119,26 +145,29 @@ body {
     flex-flow: column wrap;
     height: 60px;
 }
-
-.box-pokedex {
-    margin: 0px 180px;
+.box-pokedex{
+    margin: 0px 180px  ;
     background-color: #fff;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    align-content: space-between;
+
+    align-content:space-between;
     min-height: calc(100vh - 430px);
 
 }
-
-.card {
+.card{
     border: 2px solid grey;
-    box-shadow: 2px 2px 4px black;
+    box-shadow:2px 2px 4px black ;
     height: 200px;
     width: 150px;
     margin: 10px;
-    padding: 15px;
+    padding:15px;
+}
+.card:hover{
+    background-color: #e6504d7a;   
+    transition: .5s;
 }
 
 .card:hover {
@@ -213,6 +242,51 @@ body {
 }
 
 .filter label {
+
+.seeker{
+    padding: 10px;
+    display: flex;
+    margin: 20px  0px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.seeker h1{
+    width: 20%;    
+    color: #fcc805;
+    text-shadow: 2px 3px 0px #1e5d9f;
+}
+.seeker div{
+    display: flex;
+    flex-flow: row;
+}
+.seeker input{
+    width: 20%;
+    font-size: 1.5em;
+    background-color: white;
+    border: none;
+    box-shadow: 2px 1px 4px grey; 
+    color: #e6504d;
+    outline: none;
+    text-align: center;
+    padding-left:30px ;
+    padding-right: 30px;
+    border-radius: 5px;
+}
+.seeker input:active{
+    border: 2px solid white;
+}
+.filter{
+    background-color:rgba(255, 255, 255, 0.692);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    height:50%;
+    padding: 13px;
+    margin:30px 180px;
+   
+}
+
+.filter label{
     background-color: chartreuse;
     border: 1px solid fuchsia;
     font-size: 13px;
@@ -367,4 +441,40 @@ body {
 .colores {
     color: #202f40;
     color: #ffff00;
+    color:#1d1533
+}
+/*stats*/
+#stats{
+    background-color:#a6a5a5a8;
+    margin:30px;
+    padding: 15px;
+    border:#0000007e solid 5px;
+    border-radius: 13px;
+    display: flex;
+
+}
+#main-table{
+    background-color: #f8dbd556;
+    width: 100%;
+}
+#main-table thead{
+    font-size: 13px;
+    font-style: oblique;
+    background-color: #bb201ddc;
+    color: #ffffff;
+}
+
+#pokedex-stats tr td {
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    margin: 20px;
+    padding: 3px;
+    
+    
+        
+}
+#pokedex-stats tr td img{
+    width: 100%;
+    height: 80%;
 }
