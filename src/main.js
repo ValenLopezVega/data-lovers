@@ -224,6 +224,8 @@ document.addEventListener("click", (event) => {
   console.log(animals)
   console.log(human)
   
+
+
   /*container.innerHTML = "";
   container.innerHTML +=`
         <div class="card-info">
@@ -234,5 +236,5 @@ document.addEventListener("click", (event) => {
                 <span class="card-title"> <strong>Número de humanos:</strong> ${human}</span>
                 <span class="card-title"> <strong>Número de humanos:</strong> ${animals}</span>
             </div>
-        </div>`
-})*/
+        </div>` */
+})
