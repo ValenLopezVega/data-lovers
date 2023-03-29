@@ -40,11 +40,10 @@ function statsPokemon (dataArry) {
   let contentPokedexStats = "";
   dataArry.forEach((element)=> {
     contentPokedexStats += `
-                        <tr>
+                        <tr class="element-datatr">
                          <td>${element.num}</td>
                          <td><img src="${element.img}"/></td>
                          <td>${element.name}</td>
-                         <td>${element.type}</td>
                          <td>${element.stats["base-attack"]}</td>
                          <td>${element.stats["base-defense"]}</td>
                          <td>${element.stats["base-stamina"]}</td>
@@ -52,9 +51,9 @@ function statsPokemon (dataArry) {
                          <td>${element.stats["max-hp"]}</td>
                          <td>${spawnCal.spawnPer(element["spawn-chance"])}</td>
                        </tr>`
-  })
+  });
   document.getElementById('pokedex-stats').innerHTML =contentPokedexStats;
-}
+};
 statsPokemon(dataPokedex);
 //Type filter
 function filter1() {
