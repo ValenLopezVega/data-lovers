@@ -128,7 +128,6 @@ for(const info of masInfo) {
 
 
 
-
 document.addEventListener("click", (event) => { 
   const pelicula = data.films.find(elemento => elemento.id === event.target.dataset.id);
   console.log(pelicula);
@@ -168,15 +167,16 @@ document.addEventListener("click", (event) => {
   console.log(animals)
   console.log(human)
   
-
-  /*container.innerHTML = "";
+  container.innerHTML = "";
   container.innerHTML +=`
         <div class="card-info">
             <div class="card-body-caculo">
-                <span class="card-title"> <strong>Numero de mujeres:</strong> ${pelicula.people.gender}</span>
-                <span class="card-title"> <strong>Numero de hombres:</strong> ${pelicula.people.gender}</span>
-                <span class="card-title"> <strong>Numero de animales:</strong> ${pelicula.people.gender}</span>
+                <span class="card-title"> <strong>Numero de mujeres:</strong> ${female}</span>
+                <span class="card-title"> <strong>Numero de hombres:</strong> ${male}</span>
+                <span class="card-title"> <strong>No definidos:</strong> ${nodefinido}</span>
+                <span class="card-title"> <strong>Número de humanos:</strong> ${human}</span>
+                <span class="card-title"> <strong>Número de humanos:</strong> ${animals}</span>
             </div>
-        </div>`*/
+        </div>`
 })
 
