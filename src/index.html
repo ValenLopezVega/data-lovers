@@ -14,54 +14,66 @@
       <!--Cabeza y navegador de la pagina-->
       <header class="container-title">
         <div class="container-logo">
-          <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon-720x450.png" alt="Logo titulo pokemon">
+          <a href="index.html"><img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon-720x450.png" alt="Logo titulo pokemon"></a>
         </div>
         <nav>
          <ul class="nav-list">
             <li data-target="#filters">Home</li>
             <li data-target="#stats">Stats Pokemon</li>
             <li data-target="#news">Notice</li>
+            <li class="br"><ion-icon  name="reorder-three-outline"></ion-icon></li>
           </ul>
         </nav> 
       </header>
 
       <!--main menu box one-->
       <main  data-content="content" id="filters" class="index">
-        <div class="filter"> 
-          <label>Filter by:</label>
-          <select id="type-pokemon" name="type-pokemon" class="type-pokemon">
-            <option selected value="Type">Type</option>
-            <option value="bug">Bug</option>
-            <option value="dark">Dark</option>
-            <option value="dragon">Dragon</option>
-            <option value="electric">Electric</option>
-            <option value="fairy">Fairy</option>
-            <option value="fighting">Fighting</option>
-            <option value="fire">Fire</option>
-            <option value="flying">Flying</option>
-            <option value="ghost">Ghost</option>
-            <option value="grass">Grass</option>
-            <option value="ground">Ground</option>
-            <option value="ice">Ice</option>
-            <option value="normal">Normal</option>
-            <option value="poison">Poison</option>
-            <option value="psychic">Psychic</option>
-            <option value="rock">Rock</option>
-            <option value="steel">Steel</option>
-            <option value="water">Water</option>
-          </select>
-          <select id="type-generation" name="type-generation" class="type-generation">
-            <option selected value="Gen">Generation</option>
-            <option value="kanto">Kanto</option>
-            <option value="johto">Johto</option>
-          </select>
-          <select id="type-order"> <!--order filtering-->
-            <option selected value="1">Order</option>
-            <option value="Ascending">Ascending</option>
-            <option value="Descending">Descending</option>
-            <option value="Major-Minor">Major-Minor</option>
-            <option value="Minor-Major">Minor-Major</option>
-          </select>
+        <div>
+          <div class="seeker">
+            <h2>pokemon data</h2>
+            <div>
+              <label for="seeker"><ion-icon name="search-outline"></ion-icon></label>
+              <input type="text" placeholder="seeker" id="seeker">
+            </div>
+          </div>
+          <div class="filter">
+            <div>
+              <label>Filter by:</label>
+              <select id="type-pokemon" name="type-pokemon" class="type-pokemon">
+                <option selected value="Type">Type</option>
+                <option value="bug">Bug</option>
+                <option value="dark">Dark</option>
+                <option value="dragon">Dragon</option>
+                <option value="electric">Electric</option>
+                <option value="fairy">Fairy</option>
+                <option value="fighting">Fighting</option>
+                <option value="fire">Fire</option>
+                <option value="flying">Flying</option>
+                <option value="ghost">Ghost</option>
+                <option value="grass">Grass</option>
+                <option value="ground">Ground</option>
+                <option value="ice">Ice</option>
+                <option value="normal">Normal</option>
+                <option value="poison">Poison</option>
+                <option value="psychic">Psychic</option>
+                <option value="rock">Rock</option>
+                <option value="steel">Steel</option>
+                <option value="water">Water</option>
+              </select>
+              <select id="type-generation" name="type-generation" class="type-generation">
+                <option selected value="Gen">Generation</option>
+                <option value="kanto">Kanto</option>
+                <option value="johto">Johto</option>
+              </select>
+            </div>
+            <select id="type-order"> <!--order filtering-->
+              <option selected value="1">Order</option>
+              <option value="Ascending">Ascending</option>
+              <option value="Descending">Descending</option>
+              <option value="Major-Minor">Major-Minor</option>
+              <option value="Minor-Major">Minor-Major</option>
+            </select>
+          </div>
         </div>
         <div class="box-pokedex" id="content-pokedexs"></div> <!--pokemon box-->
       </main>
