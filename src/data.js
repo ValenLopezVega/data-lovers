@@ -24,4 +24,4 @@ export function sortNum(peliculas, type){
       return a.rt_score - b.rt_score;
     }})
   return peliculas;
-}
+} 
