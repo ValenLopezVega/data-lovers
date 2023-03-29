@@ -8,6 +8,7 @@
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
     "test": "jest --verbose --coverage",
+    "quicktest": "jest --verbose",
     "open-coverage-report": "opener ./coverage/lcov-report/index.html",
     "start": "serve src/",
     "deploy": "gh-pages -d src"
