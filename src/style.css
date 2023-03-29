@@ -1,14 +1,15 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Varela Round', sans-serif !important; 
+    font-family: 'Varela Round', sans-serif !important;
 }
+
 body{
     background-color: #e0e1dd;
     position: absolute;
-    width: 100%;  
-    display: flex; 
+    width: 100%;
+    display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
@@ -27,14 +28,15 @@ body{
     flex-flow: row wrap;
     justify-content: space-between;
 }
-.container-title nav{
+
+.container-title nav {
     width: 60%;
     height: 100%;
 }
 .container-title nav ul{
     height: 100%;
     list-style: none;
-    display:flex;
+    display: flex;
     flex-flow: row wrap;
     justify-content: right;
 }
@@ -51,17 +53,19 @@ body{
     font-size: 1.5em;
 
 }
+
 .nav-list li:hover{
     text-shadow: 2px 2px 2px black;
     color: #fff;
     background-color: #ae2f2c;
 }
 
-.container-logo{
+.container-logo {
     height: 100%;
     width: 30%;
 }
-.container-title img{
+
+.container-title img {
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -96,6 +100,32 @@ body{
 }
 
 
+@media only screen and (max-width: 850px) {
+    .container-title {
+        background-color: #8338ec;
+        display: flex;
+        height: 80px;
+    }
+
+    .container-title nav {}
+
+    .container-title nav ul {}
+
+    .br {}
+
+    .container-title nav li {
+        font-size: ;
+        display: none;
+    }
+
+    .nav-list li:hover {}
+
+    .container-logo {}
+
+    .container-title img {}
+}
+
+
 /*Ventanas del navegador funcionalidad js*/
 .index[data-content] {
     display: block;
@@ -120,8 +150,9 @@ body{
     background-color: #fff;
     display: flex;
     flex-flow: row wrap;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: flex-start;
+
     align-content:space-between;
     min-height: calc(100vh - 430px);
 
@@ -138,23 +169,80 @@ body{
     background-color: #e6504d7a;   
     transition: .5s;
 }
-.card p{
-    border: 1px #202f40;
-    direction:ltr;
+
+.card:hover {
+    background-color: #e6504d7a;
+    transition: .5s;
 }
-.pokemon-img img{
+
+.card p {
+    border: 1px #202f40;
+    direction: ltr;
+}
+
+.pokemon-img img {
     width: 120px;
     height: 100px;
     object-fit: contain;
-    background-image:url("https://e0.pxfuel.com/wallpapers/281/471/desktop-wallpaper-minimal-pokemon-go-for-iphone-8-plus-pokemongo-minimal-pokeball-thumbnail.jpg");
+    background-image: url("https://e0.pxfuel.com/wallpapers/281/471/desktop-wallpaper-minimal-pokemon-go-for-iphone-8-plus-pokemongo-minimal-pokeball-thumbnail.jpg");
     background-size: cover;
     border-radius: 10px;
-   
+
 }
 
 
 
 /*Seccion de los filtrados*/
+.seeker {
+    padding: 10px;
+    display: flex;
+    margin: 20px 0px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.seeker h1 {
+    width: 20%;
+    color: #fcc805;
+    text-shadow: 2px 3px 0px #1e5d9f;
+}
+
+.seeker div {
+    display: flex;
+    flex-flow: row;
+}
+
+.seeker input {
+    width: 20%;
+    font-size: 1.5em;
+    background-color: white;
+    border: none;
+    box-shadow: 2px 1px 4px grey;
+    color: #e6504d;
+    outline: none;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+}
+
+.seeker input:active {
+    border: 2px solid white;
+}
+
+.filter {
+    background-color: rgba(255, 255, 255, 0.692);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    height: 50%;
+    padding: 13px;
+    margin: 30px 180px;
+
+}
+
+.filter label {
+
 .seeker{
     padding: 10px;
     display: flex;
@@ -201,30 +289,77 @@ body{
 .filter label{
     background-color: chartreuse;
     border: 1px solid fuchsia;
-    font-size:13px;
+    font-size: 13px;
     margin: 7px;
     text-align: center;
     height: 20px;
     padding: 1px;
-    
-    
+
+
 }
-.filter select{
-    background-color:#ffff00 ;
+
+.filter select {
+    background-color: #ffff00;
     border: 1px solid darkblue;
-    font-size:13px;
+    font-size: 13px;
     margin: 7px;
     text-align: center;
     height: 20px;
     padding: 1px;
 }
 
+/*stats*/
+.element-datatr {
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    margin: 20px;
+    padding: 3px;
+}
+
+.element-datatr tr td img {
+    width: 50%;
+    height: 80%;
+}
+
+.stats-contain {
+    background-color: #a6a5a5a8;
+    margin: 30px ;
+    padding: 15px;
+    border:5px  solid #0000007e ;
+    border-radius: 13px;
+}
+.title-table{
+    background-color: #f8dbd556;
+    width: 100%;}
+
+.main-table {
+    background-color: #f8dbd556;
+    width: 100%;
+    height: 100%;
+}
+
+.main-table thead {
+    font-size: 13px;
+    font-style: oblique;
+    background-color: #bb201ddc;
+    color: #ffffff;
+}g
+
+.element-datatr tr td {
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    margin: 20px;
+    padding: 3px;
+}
+
 /*footer*/
-.cotainer-footer{
+.cotainer-footer {
     position: relative;
     background-color: #45337b;
     width: 100%;
-    max-width: 100vw;    
+    max-width: 100vw;
     min-height: calc(100vh - 430px);
     display: flex;
     flex-flow: wrap row;
@@ -234,41 +369,47 @@ body{
     border-style: solid;
     border-width: 5px 0px 0px;
 }
-.logo-footer{
+
+.logo-footer {
     flex: 28%;
     background-color: #c0b4df;
     display: flex;
     justify-content: center;
     height: 100%;
 }
-.box-img-poke{
+
+.box-img-poke {
     width: 45%;
 }
-.logo-footer img{
+
+.logo-footer img {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
-.data-collaborator{
-  flex: 34%;
-  background-color: #8338ec;
-  height: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content:center;
+
+.data-collaborator {
+    flex: 34%;
+    background-color: #8338ec;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
 }
-.data-collaborator div{
+
+.data-collaborator div {
     margin: 5px 0px;
     background-color: aliceblue;
     text-align: center;
 }
-.data-collaborator div a{
+
+.data-collaborator div a {
     margin: 10px;
     text-decoration: none;
     font-size: 1.1em;
 }
 
-.data-collaborator p{
+.data-collaborator p {
     margin: 5px 0px;
     font-size: 1.1em;
     text-align: center;
@@ -276,7 +417,7 @@ body{
 }
 
 
-.icon-info{
+.icon-info {
     background-color: greenyellow;
     padding: 10px;
     flex: 28%;
@@ -284,9 +425,10 @@ body{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
 }
-.icon-info ion-icon{
+
+.icon-info ion-icon {
     font-size: 2em;
     text-align: center;
     color: #45337b;
@@ -296,7 +438,7 @@ body{
 
 
 /*colores*/
-.colores{
+.colores {
     color: #202f40;
     color: #ffff00;
     color:#1d1533
