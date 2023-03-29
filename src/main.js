@@ -127,7 +127,6 @@ for(const info of masInfo) {
 }
 
 
-
 document.addEventListener("click", (event) => { 
   const pelicula = data.films.find(elemento => elemento.id === event.target.dataset.id);
   console.log(pelicula);
