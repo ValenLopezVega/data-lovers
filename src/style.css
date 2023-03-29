@@ -338,7 +338,7 @@ section{
         padding: 0px;
         border-radius: 8px;
         margin-bottom: 1px;
-        margin-left: 0px;
+        margin-left: auto;
         margin-top: 0px;
         width: 150px;
         height: 20px;
@@ -422,9 +422,9 @@ section{
         width: auto;
     }
 
-    .card-body-text2 span{
-        text-align: justify;
-
+    .card-title{
+        text-align: center;
+        flex-direction: column;
         display: flex;
         font-size: 15px;
     }
