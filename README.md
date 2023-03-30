@@ -20,7 +20,7 @@ Studio Ghibli es un estudio de animación japonés, conocido por sus largometraj
 Las animaciones tienen gran acogida a nivel mundial y algunas han recibido varias nominaciones y premios. De todo este fandom hay un grupo que desea poder interactuar y ver la información de las animaciones y sus personajes.
 
 #colocar a un totoro
-![Mi vecino Totoro](./src/img/totorohoja.png)
+![Mi vecino Totoro|20](./src/img/totorohoja.png) 
 
 ## 2. Definición del producto
 
