@@ -199,17 +199,32 @@ section{
 }
 
 /*diseño pagina 2*/
+.buttons-up {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .home{
     display: flex;
-    margin-top: 15px;
-    margin-left: 30px;
-    height: 5%;
+    margin-left: 0px;
+    height: 100%;
+    width: 50%;
 }
 
 .backarrow{
     display: flex;
+    padding-top: 10px;
+    margin-left: 30px;
     width: 40px;
     height: 40px;
+}
+
+.estadistic{
+    margin-top: 10px;
+    height: 40px;
+    width: 70px;
+    margin-right: 40px;
 }
 
 .card-info{
@@ -497,34 +512,33 @@ section{
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.8);
 
 }
 
 .modal-content {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
     border-radius: 20px;
     position: relative;
-    background-color: white;
+    background-color: #49a4e1;
     margin: auto;
     padding: 20px;
     width: 60%;
     -webkit-animation-name:animarsuperior;
-    -webkit-animation-duration: 05s;
+    -webkit-animation-duration: 0.5s;
     animation-name: animarsuperior;
     animation-duration: 0.5s;
 }
+.people
 
 /* Add Animation */
-@-webkit-keyframes animatetop {
+/* @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
   }
   @keyframes animarsuperior {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
-  }
+  } */
 
   .close {
     color: black;
