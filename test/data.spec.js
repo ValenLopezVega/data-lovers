@@ -48,4 +48,5 @@ describe('sortNum', () => {
   it('Debería retornar peliculas ordenadas por score', () => {
     expect(sortNum(data.films, 'score')).toContainEqual(data.films[13, 9, 6, 16, 12, 11, 17, 7, 14, 8, 19, 1, 5, 0, 15, 2, 3, 10, 4, 18]);
   });
-}); lo
+  
+});

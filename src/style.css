@@ -199,17 +199,78 @@ section{
 }
 
 /*diseño pagina 2*/
+.buttons-up{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .home{
     display: flex;
-    margin-top: 15px;
-    margin-left: 30px;
-    height: 5%;
+    margin-left: 0px;
+    height: 100%;
+    width: 50%;
 }
 
 .backarrow{
     display: flex;
-    width: 40px;
-    height: 40px;
+    padding-top: 10px;
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+.estadistic{
+    margin-top: 10px;
+    height: 60px;
+    width: 60px;
+    margin-right: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: #fff;
+    font-weight:600;
+    text-align-last: center;
+    border-style: solid;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 200px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.8);
+
+}
+.modal-content{
+    border-radius: 20px;
+    position: relative;
+    background-color: #49a4e1;
+
+    margin: auto;
+    padding: 20px;
+    width: 60%;
+}
+
+.people-info{
+    color: #fff;
+}
+
+.close{
+    color: rgb(0, 0, 0);
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .card-info{
@@ -252,7 +313,6 @@ section{
     overflow: hidden;
     margin: 8px;
     height: 45%;
-
 }
 
 .c-people{
