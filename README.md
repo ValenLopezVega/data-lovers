@@ -2,14 +2,14 @@
 
 ## índice 
 
-* [1. Preámbulo] (#1-preámbulo)
-* [2. Definición del producto] (#2-definición-del-producto) 
+* [1. Preámbulo](#1-preámbulo)
+* [2. Definición del producto](#2-definición-del-producto) 
 "Documenta brevemente tu trabajo en el archivo README.md de tu repositorio, contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve el problema (o problemas) que tiene tu usuario."
-* [3. Historias de usuario] (#3-historias-de-usuario) 
-* [4. Diseño de la interfaz de usuario] (#4-diseño-de-la-interfaz-de-usuario) 
+* [3. Historias de usuario](#3-historias-de-usuario) 
+* [4. Diseño de la interfaz de usuario](#4-diseño-de-la-interfaz-de-usuario) 
 Colocar el protipo de baja y alta fidelidad
 Inlcuir link a Figma
-* [5. Descripción del producto final] (#5-descripción-del-producto-final) 
+* [5. Descripción del producto final](#5-descripción-del-producto-final) 
 
 ***
 
