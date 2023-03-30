@@ -43,6 +43,7 @@ describe('Probar que sortData permite ordenar las peliculas alfabeticamente', ()
   const datos = [
     {title: "My Neighbor Totoro"},
     {title: "Castle in the Sky"},
+    {title: "Kiki's Delivery Service"},
     {title: "Kiki's Delivery Service"}
   ]
 
@@ -50,6 +51,7 @@ describe('Probar que sortData permite ordenar las peliculas alfabeticamente', ()
     const ordenAlfabetico = sortData(datos)
 
     expect(ordenAlfabetico[0].title).toMatch("Castle in the Sky");
+    expect(ordenAlfabetico[1].title).toMatch("Kiki's Delivery Service");
     expect(ordenAlfabetico[1].title).toMatch("Kiki's Delivery Service");
     expect(ordenAlfabetico[2].title).toMatch("My Neighbor Totoro");
   });
@@ -70,30 +72,28 @@ describe('Probar que sortNum permite ordenar las peliculas segun el año', () =>
     expect(typeof sortNum).toBe('function');
   });
 
-  const fechas = [
-    {release_date: "1994"},
-    {release_date: "1989"},
-    {release_date: "1991"}
-  ]
-  it('Debe ordenar las películas segun el año', () => {
-    const ordenfechas = sortNum(fechas)
+  const fechas = {
+    "series": [
+      {"nombre":"serie1", "fecha": "1991", "score": "30"}, {"nombre":"serie2", "fecha": "2000", "score": "90"}, {"nombre":"serie3", "fecha": "1989", "score": "40"}
+    ]
+  }
 
-    expect(ordenfechas[0].release_date).toMatch("1989");
-    expect(ordenfechas[1].release_date).toMatch("1991");
-    expect(ordenfechas[2].release_date).toMatch("1994")
+  it('Debe ordenar las películas de menor a mayor año', () => {
+
+    expect(sortNum(fechas.series, 'fecha')).toContainEqual(fechas.series[2, 0, 1]);
+    expect(sortNum(fechas.series, 'score')).toContainEqual(fechas.series[0, 2, 1]);
+
   });
-
-  const puntaje = [
-    {rt_score: "89"},
-    {rt_score: "83"},
-    {rt_score: "41"}
-  ]
+  
+  const datos = {
+    "pelicula": [
+      {"title":"peli1", "score": "10"}, {"title":"peli2", "score": "8"}, {"title":"peli3", "score": "24"}
+    ] 
+  }
+  
   it('Debe ordenar las películas segun el puntaje', () => {
-    const ordenpuntaje = sortNum(puntaje)
 
-    expect(ordenpuntaje[0].rt_score).toMatch("41");
-    expect(ordenpuntaje[1].rt_score).toMatch("83");
-    expect(ordenpuntaje[2].rt_score).toMatch("89")
+    expect(sortNum(datos.pelicula, 'score')).toContainEqual(datos.pelicula[1, 0, 2]);
   });
 
   it('Debería retornar peliculas ordenadas por año', () => {

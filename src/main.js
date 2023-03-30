@@ -210,23 +210,23 @@ for(const info of masInfo) {
     let animal = 0;
     let human = 0;
 
+    for(const i of resultado.people){
+      if (i.gender === "Female"){
+        female += 1;
+      } else if (i.gender === "Male"){
+        male += 1;
+      } else if (i.gender !== "Male" || i.gender !== "Female") {
+        other += 1;
+      } else if (i.specie === "Human"){
+        human += 1;
+      } else if (i.specie === "Animal"){
+        animal +=1;
+      }
+    }
+    
     bestadistic.addEventListener("click", function() { 
       modal.style.display = "block";
 
-      for(const i of resultado.people){
-        if (i.gender === "Female"){
-          female += 1;
-        } else if (i.gender === "Male"){
-          male += 1;
-        } else if (i.gender !== "Male" || i.gender !== "Female") {
-          other += 1;
-        } else if (i.specie === "Human"){
-          human += 1;
-        } else if (i.specie === "Animal"){
-          animal +=1;
-        }
-      }
-      
       parrafo.innerHTML = ("En esta pelicula hay " + female + " mujeres, " + male + " hombres y " + other + " personajes sin género. Tambien hay " + human + " humanos y " + animal + " animales .");
 
       closeButton.addEventListener("click", function(){
