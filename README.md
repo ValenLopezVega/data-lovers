@@ -21,7 +21,7 @@ Las animaciones tienen gran acogida a nivel mundial y algunas han recibido varia
 
 ![Mi vecino Totoro](./src/img/"totorohoja.png" width="50%")
 
-<img src="https://www.pngmart.com/files/12/My-Neighbor-Totoro-Transparent-Background.png" width="50%">
+<img src="https://www.pngmart.com/files/12/My-Neighbor-Totoro-Transparent-Background.png" width="500px" height="30px">
 
 
 
