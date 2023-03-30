@@ -20,7 +20,7 @@ Studio Ghibli es un estudio de animación japonés, conocido por sus largometraj
 Las animaciones tienen gran acogida a nivel mundial y algunas han recibido varias nominaciones y premios. De todo este fandom hay un grupo que desea poder interactuar y ver la información de las animaciones y sus personajes.
 
 <p align="center">
-<img src="https://www.pngmart.com/files/12/My-Neighbor-Totoro-Transparent-Background.png" width="150px" height="220px">
+<img src="https://cdn.worldvectorlogo.com/logos/studio-ghibli-logo.svg" width="250px" height="150px">
 </p>
 
 ## 2. Definición del producto
@@ -81,6 +81,10 @@ Estos son datos que te proponemos:
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
 interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
 usuario necesita.
+
+<p align="center">
+<img src="https://www.pngmart.com/files/12/My-Neighbor-Totoro-Transparent-Background.png" width="150px" height="220px">
+</p>
 
 ## 3. Historias de usuario
 
