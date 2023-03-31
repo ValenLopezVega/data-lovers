@@ -226,7 +226,7 @@ export default {
         {
           "id": "d5df3c04-f355-4038-833c-83bd3502b6b9",
           "name": "Mei Kusakabe",
-          "img": "https://www.ghibli.jp/gallery/totoro018.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b5/God_Jul_Mei_%C3%B6nskar_fr%C3%A5n_Tomten.jpg",
           "gender": "Female",
           "age": "4",
           "eye_color": "Brown",
