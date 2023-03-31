@@ -152,22 +152,20 @@ for(const info of masInfo) {
     </a>
 `
     container.innerHTML = "";
-    container.innerHTML +=`
-    <div class="buttons-up"> 
+    container.innerHTML +=`  
+    <div class="buttons-up">  
     <a class="home" href="index.html">
     <img class="backarrow" src="img/backblack.svg" alt="Volver a peliculas">
     </a>
-    <button class="estadistic" id="modal">Dato Curioso</button>
+    <button class="estadistic" id="modal">Más Info</button>
     </div>
     <div id="ventanaModal" class="modal">
-      <div class="modal-content"> 
-      <span class="close">&times;</span>
-      <h2>Estadistica de los personajes<h2/>
-      <p class="contenido"></p>
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Más información sobre los personajes</h2>
+        <p class="people-info"></p>
     </div>
-    </div>
-    `
-
+  </div>`
     container.innerHTML +=`
           <div class="card-info">
             <div class="card-body-img2">
@@ -198,56 +196,41 @@ for(const info of masInfo) {
           </div>
         </div>`
     });
-
+    
     const bestadistic = document.querySelector(".estadistic");
     const modal = document.getElementById("ventanaModal");
     const closeButton = document.querySelector(".close");
-    const parrafo = document.querySelector(".contenido");
-
+    const peopleInfo = document.querySelector(".people-info");
     let female = 0;
     let male = 0;
     let other = 0;
     let animal = 0;
     let human = 0;
-
     for(const i of resultado.people){
       if (i.gender === "Female"){
         female += 1;
       } else if (i.gender === "Male"){
         male += 1;
-      } else if (i.gender !== "Male" || i.gender !== "Female") {
+      } else  {
         other += 1;
-      } else if (i.specie === "Human"){
+      } if (i.specie === "Human"){
         human += 1;
-      } else if (i.specie === "Animal"){
+      } else {
         animal +=1;
-      }
+      } 
     }
-    
-    bestadistic.addEventListener("click", function() { 
-      modal.style.display = "block";
-
-      parrafo.innerHTML = ("En esta pelicula hay " + female + " mujeres, " + male + " hombres y " + other + " personajes sin género. Tambien hay " + human + " humanos y " + animal + " animales .");
-
+    bestadistic.addEventListener("click", function (){
+      modal.style.display = "block"; 
       closeButton.addEventListener("click", function(){
         modal.style.display = "none";
-      });
-        
-      window.addEventListener("click", function(event){
-        if (event.target === modal) {
+      });    
+      window.addEventListener("click", function (event) {
+        if (event.target === modal){
           modal.style.display = "none";
         }
       });
-
+      peopleInfo.innerHTML = ("<strong>En esta película hay:<br></strong>"+ "" +human + " humanos, "+ animal +" animales"+ 
+      "<strong><br><br>Visto de otra forma:</strong><br>" +female+" son mujeres, "+male+" son hombres y "+other+" son de otro genero"); 
     });
-  }); 
+  });
 }
-
-
-
-
-
-    
-
-
-
