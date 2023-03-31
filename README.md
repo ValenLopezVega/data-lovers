@@ -34,19 +34,19 @@ Después de definir nuestra área de interés creamos un diseño de baja y alta 
 Esta página web de películas de Studio Ghibli es un proyecto de Vanilla Javascript, HTML semántico y CSS que muestra una colección de películas de Studio Ghibli. La página carga todas las películas desde una data proporcionada y al seleccionar una película, muestra detalles adicionales sobre la pelicula y sus personajes.
 
 Características:
-    * Lista de todas las películas de Studio Ghibli en la página principal
-    * Filtra las películas por año y productor
-    * Ordena las películas de A-Z, por año y puntaje
-    * Al seleccionar una película, se muestra información detallada en una segunda página
-    * La información detallada incluye el título, año de lanzamiento, director, productor, puntaje  y una sinopsis breve
-    * La información detallada también incluye una lista de personajes, su nombre, edad y genero
+  - Lista de todas las películas de Studio Ghibli en la página principal
+  - Filtra las películas por año y productor
+  - Ordena las películas de A-Z, por año y puntaje
+  - Al seleccionar una película, se muestra información detallada en una segunda página
+  - La información detallada incluye el título, año de lanzamiento, director, productor, puntaje  y una sinopsis breve
+  - La información detallada también incluye una lista de personajes, su nombre, edad y genero
 
 Tecnologías utilizadas:
-    * HTML Semántico
-    * CSS
-    * Vanilla JavaScript
-    * Git
-    * Jest 
+  - HTML Semántico
+  - CSS
+  - Vanilla JavaScript
+  - Git
+  - Jest 
 
 Público objetivo:
 
@@ -54,15 +54,15 @@ La página web está dirigida a un público amplio, que incluye tanto a niños c
 
 Requerimientos para utilizar la página web:
 
-    * Un dispositivo con conexión a internet: esto puede ser un  computador, tablet o celular
-    * Un navegador web: Google Chrome, Mozilla Firefox, Safari o Microsoft Edge
-    * La dirección URL de la página web
+  - Un dispositivo con conexión a internet: esto puede ser un  computador, tablet o celular
+  - Un navegador web: Google Chrome, Mozilla Firefox, Safari o Microsoft Edge
+  - La dirección URL de la página web
     
 Como utilizar la página web
 
-    * Acceda a la página web: 
-  <p>This is <a href="https://jackelinegs.github.io/DEV005-data-lovers/src/" title="Página web">Página web</a> inline link.</p>
-    * Explorar el contenido: una vez que haya accedido a la página web, puede explorar su contenido y buscar información sobre las películas
+  - Acceda a la página web: 
+  <p>Esta es <a href="https://jackelinegs.github.io/DEV005-data-lovers/src/" title="Página web"> Página web</a></p>
+  - Explorar el contenido: una vez que haya accedido a la página web, puede explorar su contenido y buscar información sobre las películas
 
 
 ## 4. Historias de usuario
