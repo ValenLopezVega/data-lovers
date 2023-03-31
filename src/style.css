@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #e0e1dd;
+    background-color: #fff;
     position: absolute;
     width: 100%;
     display: flex;
@@ -45,6 +45,7 @@ body{
 }
 
 .container-title nav li{
+    cursor: pointer;
     transition: .3s;
     color: #fbebec;
     text-shadow: 2px 2px 2px gray;
@@ -70,6 +71,7 @@ body{
     width: 100%;
     object-fit: contain;
 }
+/*  fala responsive cel table nav
 @media only screen and (max-width: 850px){
     .container-title{ 
         background-color:#8338ec;
@@ -97,46 +99,18 @@ body{
     .container-title img{
 
     }
-}
-
-
-@media only screen and (max-width: 850px) {
-    .container-title {
-        background-color: #8338ec;
-        display: flex;
-        height: 80px;
-    }
-
-    .container-title nav {}
-
-    .container-title nav ul {}
-
-    .br {}
-
-    .container-title nav li {
-        font-size: ;
-        display: none;
-    }
-
-    .nav-list li:hover {}
-
-    .container-logo {}
-
-    .container-title img {}
-}
+}*/
 
 /*Ventanas del navegador funcionalidad js*/
 .index[data-content] {
     display: block;
 }
-
 [data-content] {
     display: none;
 }
 
-
 /*caja pokedex*/
-.filters{
+ .filters{
     width: 100%;
     height: auto;
     background-color: #8338ec;
@@ -144,6 +118,7 @@ body{
     flex-flow: column wrap;
     height: 60px;
 }
+/*falta responsive*/
 .box-pokedex{
     margin: 0px 180px  ;
     background-color: #fff;
@@ -151,10 +126,13 @@ body{
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-
     align-content:space-between;
     min-height: calc(100vh - 430px);
-
+    background-color:#a6a5a57a;
+    margin: 15px 78px;
+    padding: 1% 5%;
+    border:5px solid #0000007e ;
+    border-radius: 13px;
 }
 .card{
     border: 2px solid grey;
@@ -162,20 +140,18 @@ body{
     height: 200px;
     width: 150px;
     margin: 10px;
+    background-color: #fff;;
     padding:15px;
 }
 .card:hover{
-    background-color: #e6504d7a;   
+    border: 2px solid #000;
+    box-shadow: 2px 2px 8px 9px #fff;
+    background-color: #7f7f7f;   
     transition: .5s;
-}
-
-.card:hover {
-    background-color: #e6504d7a;
-    transition: .5s;
+    cursor: pointer;
 }
 
 .card p {
-    border: 1px #202f40;
     direction: ltr;
 }
 
@@ -186,10 +162,7 @@ body{
     background-image: url("https://e0.pxfuel.com/wallpapers/281/471/desktop-wallpaper-minimal-pokemon-go-for-iphone-8-plus-pokemongo-minimal-pokeball-thumbnail.jpg");
     background-size: cover;
     border-radius: 10px;
-
 }
-
-
 
 /*Seccion de los filtrados*/
 .seeker {
@@ -281,7 +254,6 @@ body{
     margin:30px 180px;
    
 }
-
 .filter label{
     background-color: chartreuse;
     border: 1px solid fuchsia;
@@ -293,7 +265,6 @@ body{
 
 
 }
-
 .filter select {
     background-color: #ffff00;
     border: 1px solid darkblue;
