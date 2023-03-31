@@ -117,7 +117,7 @@ Posteriormente se solicitaron test de usabilidad a algunos usuarios para corrobo
 
   ![Diseño de baja fidelidad 1](/dise%C3%B1os/dise%C3%B1o_baja_fidelidad/baja_fidelidad_uno.PNG)
 
-  ![Diseño de baja fidelidad 1](/diseños/diseños_baja_fidelidad/baja_fidelidad_uno.PNG)
+  ![Diseño de baja fidelidad 1](/diseños/diseño_baja_fidelidad/baja_fidelidad_uno.PNG)
 
   ![Diseño de baja fidelidad 2](/dise%C3%B1os/dise%C3%B1o_baja_fidelidad/baja_fidelidad_dos.PNG)
 
