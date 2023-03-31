@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Varela Round', sans-serif !important;
+    font-family:monospace, serif;
 }
 
 body{
@@ -13,17 +13,12 @@ body{
     flex-flow: column wrap;
     justify-content: center;
 }
-.colores{
-    color: #ef233c;
-    color: #e0e1dd;
-    color: #0d1b2a ;
-}
 
 /*Header y navegador */
 .container-title{ 
-    background-color:#e6504d;
+    background-image: url(https://tophinhanhdep.com/wp-content/uploads/2021/11/Star-Anime-Wallpapers.jpg);
     display: flex;
-    height: 75px;
+    height: 100px;
     width: 100%;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -47,18 +42,14 @@ body{
 .container-title nav li{
     cursor: pointer;
     transition: .3s;
-    color: #fbebec;
-    text-shadow: 2px 2px 2px gray;
-    padding:  20px;
-    border-radius: 5px 5px 0px 0px;
-    font-size: 1.5em;
-
+    color: #fff;
+    padding:  30px;
+    font-size: 2em;
 }
 
 .nav-list li:hover{
-    text-shadow: 2px 2px 2px black;
     color: #fff;
-    background-color: #ae2f2c;
+    background-color: #1e3780;
 }
 
 .container-logo {
@@ -71,7 +62,7 @@ body{
     width: 100%;
     object-fit: contain;
 }
-/*  fala responsive cel table nav
+/*  fala responsive cel table nav 
 @media only screen and (max-width: 850px){
     .container-title{ 
         background-color:#8338ec;
@@ -101,7 +92,7 @@ body{
     }
 }*/
 
-/*Ventanas del navegador funcionalidad js*/
+/*Browser windows functionality js*/
 .index[data-content] {
     display: block;
 }
@@ -109,62 +100,69 @@ body{
     display: none;
 }
 
-/*caja pokedex*/
- .filters{
-    width: 100%;
-    height: auto;
-    background-color: #8338ec;
-    display: flex;
-    flex-flow: column wrap;
-    height: 60px;
-}
-/*falta responsive*/
+/*box data of the pokemon*/
 .box-pokedex{
     margin: 0px 180px  ;
     background-color: #fff;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    align-items: flex-start;
     align-content:space-between;
     min-height: calc(100vh - 430px);
-    background-color:#a6a5a57a;
     margin: 15px 78px;
-    padding: 1% 5%;
-    border:5px solid #0000007e ;
+    border:5px solid #1e3780;
     border-radius: 13px;
 }
 .card{
+    text-align: center;
     border: 2px solid grey;
     box-shadow:2px 2px 4px black ;
-    height: 200px;
-    width: 150px;
-    margin: 10px;
+    height: 240px;
+    width: 180px;
+    margin: 10px 5px;
     background-color: #fff;;
-    padding:15px;
+    padding:10px;
 }
-.card:hover{
+.card:hover {
+    color: #fff;
     border: 2px solid #000;
-    box-shadow: 2px 2px 8px 9px #fff;
-    background-color: #7f7f7f;   
+    background-color: hsla(278, 30%, 50%, 0.71);   
     transition: .5s;
-    cursor: pointer;
+    color: #000;
 }
 
-.card p {
-    direction: ltr;
+.card .p-1{
+    text-align: center;
+    text-transform: capitalize;
+    width: 150px;
+    display: inline-block;
+    background-color:hsl(225, 90%, 60%);
 }
-
+.card .p-2{
+    text-transform: capitalize;
+    text-align: center;
+    width: 150px;
+    display: inline-block;
+    background-color:hsl(225, 90%, 70%);
+}
+.card .p-3{
+    text-transform: capitalize;
+    text-align: center;
+    width:150px;
+    background-color:hsl(225, 90%, 80%);
+    display: inline-block;
+    padding-bottom:5px ;
+}
 .pokemon-img img {
-    width: 120px;
+    width: 150px;
     height: 100px;
     object-fit: contain;
-    background-image: url("https://e0.pxfuel.com/wallpapers/281/471/desktop-wallpaper-minimal-pokemon-go-for-iphone-8-plus-pokemongo-minimal-pokeball-thumbnail.jpg");
-    background-size: cover;
+    background-image: url('https://i.pinimg.com/736x/33/ac/6a/33ac6af8e90054568ab47ad0ef2d02a2.jpg');
+    background-size: 450px;
     border-radius: 10px;
 }
 
-/*Seccion de los filtrados*/
+/*Seccion de los filtrados
 .seeker {
     padding: 10px;
     display: flex;
@@ -182,8 +180,8 @@ body{
 .seeker div {
     display: flex;
     flex-flow: row;
-}
-
+}*/
+/* 
 .seeker input {
     width: 20%;
     font-size: 1.5em;
@@ -244,76 +242,139 @@ body{
 .seeker input:active{
     border: 2px solid white;
 }
+*/
+/*filter design*/
 .filter{
-    background-color:rgba(255, 255, 255, 0.692);
     display: flex;
+    background-color: hsla(278, 30%, 50%, 0.71);
+    padding: 25px;
+    border-radius: 10px;
     flex-flow: row;
-    justify-content: space-evenly;
-    height:50%;
-    padding: 13px;
-    margin:30px 180px;
-   
+    justify-content: space-between;
+    margin:15px 72px;
 }
-.filter label{
-    background-color: chartreuse;
-    border: 1px solid fuchsia;
-    font-size: 13px;
-    margin: 7px;
-    text-align: center;
-    height: 20px;
-    padding: 1px;
-
-
+.filter__01{
+    display: flex;
+    flex-flow: row wrap;
 }
-.filter select {
-    background-color: #ffff00;
-    border: 1px solid darkblue;
-    font-size: 13px;
-    margin: 7px;
+.filter__01-1{
+    height: 100%;
+}
+.filter__01 select{
+    width: 150px;
+    margin: 0px 10px;
+    background-color:#fffafa;
+    border:5px solid #1e3780 ;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-size: 18px;
+    height: 50px;
+    font-weight: bolder;
+}
+.filter__01 select option{
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    border:1px solid #a6a5a57a ;
+    border-top: #000 solid 1px;
+    position: absolute;
+    top: 0;
+    width: 100%;
     text-align: center;
-    height: 20px;
-    padding: 1px;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.filter__01 select:focus option{
+    position: relative;
+    position: all;
+}
+.filter-label-1{
+    background-color:#e3e3f6;
+    font-size: 20px; 
+    font-weight: bold;
+    padding:0px ;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 7px ;
+}
+.filter__02{
+    text-align: center;
+    width: 150px;
+    margin: 0px 10px;
+    background-color:#fff;
+    border:5px solid #1e3780 ;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 50px;
+    font-size: 18px;
+font-weight: bold;
+}
+.filter__01 select option{
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    border:1px solid #8a59a6 ;
+    border-top: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+    order:2;
+    z-index: 1;
+    transition: background 0.5s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 /*stats*/
 .stats-contain {
-    background-color:#a6a5a57a;
+    background-color:#fff;
     width: 85%;
     margin: 15px 8%;
-    border:5px solid #0000007e ;
+    border:5px solid #1e3780 ;
     border-radius: 13px;
 }
 .main-table {
-    background-color:#ffffff9b ;/*#f8dbd556*/
+    background-color:#fff ;/*#f8dbd556*/
     padding: 10px;
     width: 100%;
     height: 100%;
 }
 .main-table thead {
-    padding: 10px;
-    font-size: 13px;
-    background-color: #dd2522dc;
+    padding: 20px;
+    font-size: 1.2em;
+    background-color: #8a59a6;
     color: #ffffff;
 }
 .title-table{
-    background-color: #7e2827
+    background-color: #27408d;
+    padding: 5px;
+    font-size: 1.5em;
 }
 .element-datatr {
-    font-size: 20px;
-    font-style: italic;
+    font-size: 25px;
+    font-weight: bolder;
     text-align: center;
+    text-transform: capitalize;
 }
 .element-datatr td {
-    font-style: italic;
-    text-align: center;
+   text-align: center;
     margin: 10px;
     padding: 6px;
 }
 .element-datatr td img{
-    width:80px;
-    height:80px;
+    width:100%;
+    height:100%;
 }   
-@media screen and (min-width: 320px) and (min-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
     table{
         display: block;
         overflow-x: auto;
@@ -337,7 +398,7 @@ body{
 /*footer*/
 .cotainer-footer {
     position: relative;
-    background-color: #45337b;
+    background-color: #1e3780;
     width: 100%;
     max-width: 100vw;
     min-height: calc(100vh - 430px);
@@ -345,14 +406,13 @@ body{
     flex-flow: wrap row;
     justify-content: space-evenly;
     align-items: center;
-    border-color: red;
+    border-color: #8a59a6;
     border-style: solid;
     border-width: 5px 0px 0px;
 }
 
 .logo-footer {
     flex: 28%;
-    background-color: #c0b4df;
     display: flex;
     justify-content: center;
     height: 100%;
@@ -370,7 +430,6 @@ body{
 
 .data-collaborator {
     flex: 34%;
-    background-color: #8338ec;
     height: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -379,26 +438,27 @@ body{
 
 .data-collaborator div {
     margin: 5px 0px;
-    background-color: aliceblue;
     text-align: center;
 }
 
 .data-collaborator div a {
+    color:#dbd5d5;
     margin: 10px;
-    text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .data-collaborator p {
     margin: 5px 0px;
     font-size: 1.1em;
     text-align: center;
-    background-color: aqua;
+    font-weight: bold;
+    color:#fff;
 }
 
 
 .icon-info {
-    background-color: greenyellow;
+    background-color: ;
     padding: 10px;
     flex: 28%;
     height: 100%;
@@ -409,10 +469,12 @@ body{
 }
 
 .icon-info ion-icon {
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
-    color: #45337b;
+    color: #fff;
     margin: 5px;
+    cursor: pointer;
+
 }
 
 
