@@ -115,23 +115,21 @@ Posteriormente se solicitaron test de usabilidad a algunos usuarios para corrobo
 
   ### Diseños de baja fidelidad
 
-  ![Diseño de baja fidelidad 1](/dise%C3%B1os/dise%C3%B1o_baja_fidelidad/baja_fidelidad_uno.PNG)
-
   ![Diseño de baja fidelidad 1](/diseños/diseño_baja_fidelidad/baja_fidelidad_uno.PNG)
 
-  ![Diseño de baja fidelidad 2](/dise%C3%B1os/dise%C3%B1o_baja_fidelidad/baja_fidelidad_dos.PNG)
+  ![Diseño de baja fidelidad 2](/diseños/diseño_baja_fidelidad/baja_fidelidad_dos.PNG)
 
-  ![Diseño en celular](/dise%C3%B1os/dise%C3%B1o_baja_fidelidad/baja_fidelidad_celular.PNG)
+  ![Diseño en celular](/diseños/diseño_baja_fidelidad/baja_fidelidad_celular.PNG)
 
   ### Diseños de alta fidelidad
 
-  ![Diseño de alta fidelidad, primera página web](/dise%C3%B1os/dise%C3%B1o_alta_fidelidad/pagina1_web.png)
+  ![Diseño de alta fidelidad, primera página web](/diseños/diseño_alta_fidelidad/pagina1_web.png)
 
-  ![Diseño de alta fidelidad, segunda página web](/dise%C3%B1os/dise%C3%B1o_alta_fidelidad/pagina2_web.png)
+  ![Diseño de alta fidelidad, segunda página web](/diseños/diseño_alta_fidelidad/pagina2_web.png)
 
-  ![Diseño de alta fidelidad, primera página celular](/dise%C3%B1os/dise%C3%B1o_alta_fidelidad/pagina1_iphone.png)
+  ![Diseño de alta fidelidad, primera página celular](/diseños/diseño_alta_fidelidad/pagina1_iphone.png)
 
-  ![Diseño de alta fidelidad, segunda página celular](/dise%C3%B1os/dise%C3%B1o_alta_fidelidad/pagina2_iphone.png)
+  ![Diseño de alta fidelidad, segunda página celular](/diseños/diseño_alta_fidelidad/pagina2_iphone.png)
 
   
 ## 5. Test de usabilidad
