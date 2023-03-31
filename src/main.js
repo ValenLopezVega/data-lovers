@@ -27,9 +27,9 @@ function paint (dataArray) {
                         <div class="pokemon-img">
                         <img src="${element.img}">
                         </div>
-                        <p>${element.name}</p>
-                        <p>${element.generation.name}</p>
-                        <p>${element.type}<p>
+                        <p class="p-1">${element.name}</p>
+                        <p class="p-2">${element.generation.name}</p>
+                        <p class="p-3">${element.type}<p>
                       </article>`                    
   })
   document.getElementById('content-pokedexs').innerHTML = contentPokedexMain
