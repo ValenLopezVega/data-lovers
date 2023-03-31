@@ -1,12 +1,12 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterByProducer,} from '../src/data.js';
 
 
-describe('example', () => {
+describe('filterByProducer', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterByProducer).toBe('function');
   });
 
-  it('returns `example`', () => {
+  /*it('returns `example`', () => {
     expect(example()).toBe('example');
   });
 });
@@ -19,5 +19,5 @@ describe('anotherExample', () => {
 
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
-  });
+  });*/
 });

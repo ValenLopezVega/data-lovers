@@ -1,6 +1,7 @@
 // estas funciones son de ejemplo
 import dataFunction from './data/ghibli/ghibli.js';
-
+const allDataFunction = dataFunction.films;
+console.log(allDataFunction);
 /*export const example = () => {
   return 'example';
 };
@@ -11,12 +12,12 @@ export const anotherExample = () => {
 
 
 
-const allDataFunction = dataFunction.films;
+
 
 
 export function filterByProducer(films,option){
 
-return films.filter((item)=>item.producer===option)
+  return films.filter((item)=>item.producer===option)
  
 }
 
