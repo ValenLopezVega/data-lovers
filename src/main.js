@@ -1,79 +1,79 @@
-import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA } from './data.js';
+import {filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-//variable de data de peliculas en array
 
-//console.log(arrayFilms);
+//VARIABLE QUE ENGLOBA EL ARREGLOS DE PELICULAS
 
 const arrayFilms = data.films;
-//IMPRIMIR POSTER DE TODAS LAS PELICULAS
+
+//TRAYENDO EL DOM QUE CONTENDRÁ LAS PORTADAS DE PELICULAS
+
 const insertPoster = document.getElementById('insertPoster');
 
-function printAllPoster(allFilms) {
+//FUNCION QUE IMPRIME TODAS LAS PORTADASY NOMBRES
 
-    allFilms.forEach((item) => {
-        const post = item.poster;
-        const title = item.title;
-        insertPoster.innerHTML += `<div class="imgPoster"> <img src=${post} alt="${title}"></img> <p>${title}</p</div>`;
-
-    })
+function printAllPoster(allFilms){
+  allFilms.forEach((item) => {
+    const post = item.poster;
+    const title = item.title;
+    insertPoster.innerHTML += `<div class="imgPoster"> <img src=${post} alt="${title}"></img> <p>${title}</p</div>`;
+  })
 
 }
 
-
-//DECLARANDO FUNCION DE IMPRIMIR
+//DECLARANDO FUNCION DE IMPRIMIR CON LA VARIABLE QUE GUARDA NUESTROS ARREGLOS
 printAllPoster(arrayFilms)
 
+//DOM QUE GUARDA EL CONJUNTO DE SELECTORES
 const selectProducer = document.getElementById('selectProducer')
 
-
-//CAPTURAR EL EVENTO
-//PODER IGUALAR EL EVENTO(VALUE) CON EL PARAMETRO DEL FILTRO(OPTION)
-
-
+//EVENTO PARA EL SELECTOR DEL FILTRO DE PRODUCER
 selectProducer.addEventListener('change', selectOption);
 
-
-//console.log('prueba', )
+//FUNCION QUE PERMITE INTERACTUAR CON EL SELECTOR DE FILTRO
 
 function selectOption() {
+  insertPoster.innerHTML = '';
+  const optionValue = selectProducer.value;
+  console.log('prueba1', optionValue);
+
+  const filter = filterByProducer(arrayFilms, optionValue);
+  printAllPoster(filter)
+  console.log(filter)
+
+  if (optionValue === 'all') {
     insertPoster.innerHTML = '';
-    let optionValue = selectProducer.value;
-    console.log('prueba1', optionValue);
-   
-    const filter = filterByProducer(arrayFilms, optionValue);
-    printAllPoster(filter)
-    console.log(filter)
-  
-    if (optionValue === 'all') {
-        insertPoster.innerHTML = '';
-        printAllPoster(arrayFilms)
-    }
+    printAllPoster(arrayFilms)
+  }
 }
 
 
-
+//DOM PARA EL SELECT DE ORDEN ALFABETICO
 const alphabeticalOrder = document.getElementById('alphabeticalOrder')
+
+//EVENTO PARA EL SELECTOR DE ORDENAMIENTO
 alphabeticalOrder.addEventListener('change', orderOption);
 
-function orderOption() {
-    let orderValue = alphabeticalOrder.value;
-    console.log('prueba1', orderValue);
+//FUNCION QUE PERMITE INTERACTUAR CON EL SELECTOR DE ORDENAMIENTO
 
-    if (orderValue === 'A-Z') {
-        insertPoster.innerHTML = '';
-        const orderA_Z = orderAlphabetical_AZ(arrayFilms);
-        console.log('prueba2', orderA_Z)
-        printAllPoster(orderA_Z)
-    }
-    else {
-        insertPoster.innerHTML = '';
-        const orderZ_A = orderAlphabetical_ZA(arrayFilms);
-        console.log('prueba3', orderZ_A)
-        printAllPoster(orderZ_A)
-    }
+function orderOption() {
+  const orderValue = alphabeticalOrder.value;
+  console.log('prueba1', orderValue);
+
+  if (orderValue === 'A-Z') {
+    insertPoster.innerHTML = '';
+    const orderA_Z = orderAlphabetical_AZ(arrayFilms);
+    console.log('prueba2', orderA_Z)
+    printAllPoster(orderA_Z)
+  }
+  else {
+    insertPoster.innerHTML = '';
+    const orderZ_A = orderAlphabetical_ZA(arrayFilms);
+    console.log('prueba3', orderZ_A)
+    printAllPoster(orderZ_A)
+  }
 }
 
 

@@ -1,47 +1,44 @@
 // estas funciones son de ejemplo
 import dataFunction from './data/ghibli/ghibli.js';
 
-/*export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};*/
-
-
+//CONSTANTE QUE GUARDA EL ARREGLO DE FILMS(PELICULAS)
 
 const allDataFunction = dataFunction.films;
+console.log(allDataFunction);
 
+//FUNCION QUE PERMITE FILTRAR POR PRODUCTOR
 
-export function filterByProducer(films,option){
-
-return films.filter((item)=>item.producer===option)
- 
+export function filterByProducer(films, option) {
+  return films.filter((item) => item.producer === option)
 }
 
+
+
+//FUNCION QUE PERMITE ORDERNAR ALFABETICAMENTE DE LA A -Z
+export function orderAlphabetical_AZ(prueba) {
+  return prueba.sort((a, b) => {
  
-export function orderAlphabetical_AZ (prueba){
-  return prueba.sort((item1, item2)=>{
-    if(item1.title>item2.title){
-      return 1
+    if (a.title<b.title) {
+      return -1;
     }
-    else {
+    if (a.title>b.title) {
+      return 1;
+    }
+    return 0;
+    
+  })
+}
+//FUNCION QUE PERMITE ORDERNAR ALFABETICAMENTE DE LA Z -A
+export function orderAlphabetical_ZA(prueba1) {
+  return prueba1.sort((a, b) => {
+    if (a.title > b.title) {
       return -1
     }
+    if (a.title<b.title) {
+      return 1;
+    }
+    return 0;
   })
 }
 
-export function orderAlphabetical_ZA (prueba1){
-  return prueba1.sort((item1, item2)=>{
-    if(item1.title<item2.title){
-      return 1
-    }
-    else {
-      return -1
-    }
-  })
-}
- 
 
- 
