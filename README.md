@@ -35,9 +35,9 @@ Antes de comenzar a desarrollar la página web, se realizó una encuesta a un gr
 Se recopilaron las siguientes Historias de Usuario:
 
 ### Historia de usuario 1 
-#Quiero : Que la página sea responsiva. 
-#Para : Poder revisarlo en diferentes dispositivos. 
-#Beneficios : Poder acceder a la información de manera cómoda.
+Quiero : Que la página sea responsiva. 
+Para : Poder revisarlo en diferentes dispositivos. 
+Beneficios : Poder acceder a la información de manera cómoda.
 
 - [ ] **Criterios de aceptación**
 
@@ -77,13 +77,23 @@ Posteriormente se solicitaron test de usabilidad a algunos usuarios para corrobo
 
 ## 4. Diseño de la interfaz de usuario
 
+  ### Diseños de baja fidelidad
+
   ![Diseño de baja fidelidad 1](/dise%C3%B1os/dise%C3%B1o_baja_fidelidad/baja_fidelidad_uno.PNG)
 
   ![Diseño de baja fidelidad 2](/dise%C3%B1os/dise%C3%B1o_baja_fidelidad/baja_fidelidad_dos.PNG)
 
   ![Diseño en celular](/dise%C3%B1os/dise%C3%B1o_baja_fidelidad/baja_fidelidad_celular.PNG)
 
-  ![Diseño de alta fidelidad]{}
+  ### Diseños de alta fidelidad
+
+  ![Diseño de alta fidelidad, primera página web](/diseños/pagina1_web.png)
+
+  ![Diseño de alta fidelidad, segunda página web](/diseños/pagina2_web.png)
+
+  ![Diseño de alta fidelidad, primera página celular](/diseños/pagina1_iphone.png)
+
+  ![Diseño de alta fidelidad, segunda página celular](/diseños/pagina2_iphone.png)
 
   
 ## 5. Test de usabilidad
