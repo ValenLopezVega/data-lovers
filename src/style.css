@@ -278,19 +278,20 @@ body{
 /*stats*/
 .stats-contain {
     background-color:#a6a5a57a;
-    margin: 15px 30px;
-    padding: 1%;
+    width: 85%;
+    margin: 15px 8%;
     border:5px solid #0000007e ;
     border-radius: 13px;
 }
 .main-table {
     background-color:#ffffff9b ;/*#f8dbd556*/
+    padding: 10px;
     width: 100%;
     height: 100%;
 }
 .main-table thead {
-    font-size: 24px;
-    font-style: oblique;
+    padding: 10px;
+    font-size: 13px;
     background-color: #dd2522dc;
     color: #ffffff;
 }
@@ -298,28 +299,41 @@ body{
     background-color: #7e2827
 }
 .element-datatr {
-    font-size: 22px;
+    font-size: 20px;
     font-style: italic;
     text-align: center;
 }
 .element-datatr td {
     font-style: italic;
     text-align: center;
-    margin: 20px;
+    margin: 10px;
     padding: 6px;
 }
 .element-datatr td img{
-    width:90px;
-    height:90px;
+    width:80px;
+    height:80px;
 }   
-@media only screen and (max-width: 700px){
+@media screen and (min-width: 320px) and (min-width: 480px) {
     table{
         display: block;
         overflow-x: auto;
     }
+    .stats-contain {
+        margin: 15px 7%;
+    }
 
+    .main-table thead {
+        font-size: 22px;
+    }
+    .element-datatr {
+        font-size: 20px;
+       
+    }
+    .element-datatr td img{
+        width:70px;
+        height:70px;
+    }
 }
-
 /*footer*/
 .cotainer-footer {
     position: relative;
