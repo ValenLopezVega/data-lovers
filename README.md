@@ -87,13 +87,13 @@ Posteriormente se solicitaron test de usabilidad a algunos usuarios para corrobo
 
   ### Diseños de alta fidelidad
 
-  ![Diseño de alta fidelidad, primera página web](/dise%C3%B1os/dise%C3%B1os/pagina1_web.png)
+  ![Diseño de alta fidelidad, primera página web](/dise%C3%B1os/dise%C3%B1o_alta_fidelidad/pagina1_web.png)
 
-  ![Diseño de alta fidelidad, segunda página web](/dise%C3%B1os/dise%C3%B1os/pagina2_web.png)
+  ![Diseño de alta fidelidad, segunda página web](/dise%C3%B1os/dise%C3%B1o_alta_fidelidad/pagina2_web.png)
 
-  ![Diseño de alta fidelidad, primera página celular](/dise%C3%B1os/dise%C3%B1os/pagina1_iphone.png)
+  ![Diseño de alta fidelidad, primera página celular](/dise%C3%B1os/dise%C3%B1o_alta_fidelidad/pagina1_iphone.png)
 
-  ![Diseño de alta fidelidad, segunda página celular](/dise%C3%B1os/dise%C3%B1os/pagina2_iphone.png)
+  ![Diseño de alta fidelidad, segunda página celular](/dise%C3%B1os/dise%C3%B1o_alta_fidelidad/pagina2_iphone.png)
 
   
 ## 5. Test de usabilidad
