@@ -101,7 +101,6 @@ body{
     }
 }*/
 
-
 /*Ventanas del navegador funcionalidad js*/
 .index[data-content] {
     display: block;
@@ -279,8 +278,8 @@ body{
 /*stats*/
 .stats-contain {
     background-color:#a6a5a57a;
-    margin: 15px 78px;
-    padding: 1% 5%;
+    margin: 15px 30px;
+    padding: 1%;
     border:5px solid #0000007e ;
     border-radius: 13px;
 }
@@ -290,14 +289,16 @@ body{
     height: 100%;
 }
 .main-table thead {
-    font-size: 18px;
+    font-size: 24px;
     font-style: oblique;
     background-color: #dd2522dc;
     color: #ffffff;
 }
+.title-table{
+    background-color: #7e2827
+}
 .element-datatr {
-    background-color: gold;
-    font-size: 18px;
+    font-size: 22px;
     font-style: italic;
     text-align: center;
 }
@@ -305,13 +306,19 @@ body{
     font-style: italic;
     text-align: center;
     margin: 20px;
-    padding: 3px;
+    padding: 6px;
 }
-.element-datatr td img {
-    width: 60%;
-    height: 60%;
-}
+.element-datatr td img{
+    width:90px;
+    height:90px;
+}   
+@media only screen and (max-width: 700px){
+    table{
+        display: block;
+        overflow-x: auto;
+    }
 
+}
 
 /*footer*/
 .cotainer-footer {

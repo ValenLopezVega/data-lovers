@@ -30,8 +30,6 @@ export const order = {
     const orderDes = arrData.sort((a, b) => {
       if (a.name > b.name) {
         return -1;
-      } else if (b.name > a.name) {
-        return 1;
       } else {
         return 0;
       }
@@ -40,7 +38,7 @@ export const order = {
   },
   orderNumber1:function (arrData) {
     const orderNum1 = arrData.sort((a, b) => {
-      if (a.num> b.num) {
+      if (a.num > b.num) {
         return -1;
       } else if (b.num > a.num) {
         return 1;
@@ -52,9 +50,7 @@ export const order = {
   },
   orderNumber2: function (arrData) {
     const orderNum2 = arrData.sort((a, b) => {
-      if (a.num > b.num) {
-        return 1;
-      } else if (b.num > a.num) {
+      if (b.num > a.num) {
         return -1;
       } else {
         return 0;
