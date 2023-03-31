@@ -53,7 +53,7 @@ function statsPokemon (dataArry) {
                        </tr>`
   });
   document.getElementById('pokedex-stats').innerHTML =contentPokedexStats;
-};
+}
 statsPokemon(dataPokedex);
 //Type filter
 function filter1() {
