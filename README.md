@@ -60,8 +60,7 @@ Requerimientos para utilizar la página web:
     
 Como utilizar la página web
 
-  - Acceda a la página web: 
-  <p>Esta es <a href="https://jackelinegs.github.io/DEV005-data-lovers/src/" title="Página web"> Página web</a></p>
+  - Acceda a la página web: <p>Esta es <a href="https://jackelinegs.github.io/DEV005-data-lovers/src/" title="Página web"> Página web</a></p>
   - Explorar el contenido: una vez que haya accedido a la página web, puede explorar su contenido y buscar información sobre las películas
 
 
@@ -137,10 +136,10 @@ Posteriormente se solicitaron test de usabilidad a algunos usuarios para corrobo
 
 Se realizaron test de usabilidad para saber la opinion de usuarios sobre el uso de la página, obteniendo los siguientes resultados:
 
-Se nos solicitó que se pudiera volver a la página principal a través del logo principal.
+  - Se nos solicitó que se pudiera volver a la página principal a través del logo principal.
 
-Se nos solicito que se corrija el diseño de la página para que sea responsivo en dispositivos con diferentes tamaños y que el logo principal sea más pequeño. También se nos pidió que la forma en que se entrega la descripción de la película se adapte de otra forma, ya que no les permitía leerlo facilmente.
+  - Se nos solicito que se corrija el diseño de la página para que sea responsivo en dispositivos con diferentes tamaños y que el logo principal sea más pequeño. También se nos pidió que la forma en que se entrega la descripción de la película se adapte de otra forma, ya que no les permitía leerlo facilmente.
 
-Se nos solicitó que en el diseño movil el menú se viera ordenado de forma apilada.
+  - Se nos solicitó que en el diseño movil el menú se viera ordenado de forma apilada.
 
-Se nos solicitó que los titulos de las descripciones resalten, por lo tanto se las colocó en negrita.
+  - Se nos solicitó que los titulos de las descripciones resalten, por lo tanto se las colocó en negrita.
