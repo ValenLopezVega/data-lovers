@@ -126,7 +126,7 @@ body{
 .card:hover {
     color: #fff;
     border: 2px solid #000;
-    background-colo r: hsla(278, 30%, 50%, 0.71);   
+    background-color: hsla(278, 30%, 50%, 0.71);   
     transition: .5s;
     color: #000;
 }
