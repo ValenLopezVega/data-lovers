@@ -41,4 +41,9 @@ export function orderAlphabetical_ZA(prueba1) {
   })
 }
 
+//Funcion que filtra top 10 de mejores peliculas
 
+export const topMovies={
+  orderbyScore: function(score){ return score.sort((item1,item2)=> item2.rt_score-item1.rt_score) },
+  mayorScore: function(top){return top.slice(0,10)}
+}
