@@ -1,4 +1,4 @@
-import {filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA } from './data.js';
+import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -14,7 +14,7 @@ const insertPoster = document.getElementById('insertPoster');
 
 //FUNCION QUE IMPRIME TODAS LAS PORTADASY NOMBRES
 
-function printAllPoster(allFilms){
+function printAllPoster(allFilms) {
   allFilms.forEach((item) => {
     const post = item.poster;
     const title = item.title;
@@ -78,10 +78,20 @@ function orderOption() {
 
 
 
+arrayFilms.forEach((item) => {
+  item.rt_score
+})
 
 
+const btnTop = document.getElementById("btnTop");
+btnTop.addEventListener('click', selecTop)
 
-
+function selecTop() {
+  insertPoster.innerHTML = '';
+  const orderScore = topMovies.orderbyScore(arrayFilms)
+  const top10 = topMovies.mayorScore(orderScore)
+  printAllPoster(top10)
+}
 
 
 
