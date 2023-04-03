@@ -91,18 +91,18 @@ usuario necesita.
 
 ## 3. Prototipo de baja fidelidad
 * [1.Pagina principal]
-* [Baja Fidelidad Pg1](Img/Prototipo%20de%20baja%20fidelidad%201-3.jpeg)
+   ![Baja Fidelidad Pg1](Img/Prototipo%20de%20baja%20fidelidad%201-3.jpeg)
 * [2.Pagina Pokedex]
-* 2.1 Pagina Pokedex
-* [Baja Fidelidad Pg2](Img/Prototipo%20de%20baja%20fidelidad%202-3.jpeg)
-* 2.2 Pagina Pokedex por Pokémon
-* [Baja Fidelidad Pg3](Img/Prototipo%20de%20baja%20fidelidad%203-3.jpeg)
-* Link Figma de prototipo baja fidelidad: [Figma baja Fidelidad](https://www.figma.com/file/Y67UUAZMNFkhOfAnAiwzv2/Prototipo-baja-fidelidad-(Pokemon)?t=QIhCz0UNkgrg8QMo-0)
+   2.1 Pagina Pokedex
+   ![Baja Fidelidad Pg2](Img/Prototipo%20de%20baja%20fidelidad%202-3.jpeg)
+   2.2 Pagina Pokedex por Pokémon
+  ![Baja Fidelidad Pg3](Img/Prototipo%20de%20baja%20fidelidad%203-3.jpeg)
+* Link Figma de prototipo baja fidelidad: [Figma baja fidelidad](https://www.figma.com/file/Y67UUAZMNFkhOfAnAiwzv2/Prototipo-baja-fidelidad-(Pokemon)?t=QIhCz0UNkgrg8QMo-0)
 
 ## 4. Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
-* Link Figma de prototipo alta fidelidad: [Figma alta Fidelidad](https://www.figma.com/file/dWaBoVgg9WwTnCZDYm3WgZ/Prototipo-alta-fidelidad-(Pokemon)?node-id=0-1&t=ai5mnZTjA4YR2bzw-0)
-* Link Zeplin:[Zeplin alta Fidelidad](https://app.zeplin.io/project/642a85ecbf80762361886fde/screen/642a85fc10ced4244dff93d5)
+* Link Figma de prototipo alta fidelidad: [Figma alta fidelidad](https://www.figma.com/file/dWaBoVgg9WwTnCZDYm3WgZ/Prototipo-alta-fidelidad-(Pokemon)?node-id=0-1&t=ai5mnZTjA4YR2bzw-0)
+* Link Zeplin:[Zeplin alta fidelidad](https://app.zeplin.io/project/642a85ecbf80762361886fde/screen/642a85fc10ced4244dff93d5)
 ## 5. Tests de usabilidad
 * 1.El color que se encuentra en el menú no concuerda con los colores de Pokémon y el logo se ve pequeño.
 * 2.La transparencia que está en la carta cuando se pasa el mouse, esta oscura y no deja ver bien la información y esta se pierde, además el fondo de cada Pokémon también está oscuro y hay características de ciertos pokemones que no se alcanzan apreciar.
@@ -111,9 +111,9 @@ usuario necesita.
 * 5.Los colores que están utilizando en la tabla deberían cambiarlos, bien sea a rojo más fuerte, azul oscuro o un amarillo.
 * 6.Las imágenes de cada Pokémon en la tabla,  sean un poco más grandes para apreciarlos mejor
 Página antes de los cambios.
-[Test de usabilidad 1](Img/Test%20Usabilidad%201.png)
-[Test de usabilidad 2](Img/Test%20Usabilidad%202.png)
-[Test de usabilidad 3](Img/Test%20Usabilidad%204.png)
-[Test de usabilidad 4](Img/Test%20Usabilidad%203.png)
+![Test de usabilidad 1](Img/Test%20Usabilidad%201.png)
+![Test de usabilidad 2](Img/Test%20Usabilidad%202.png)
+![Test de usabilidad 3](Img/Test%20Usabilidad%204.png)
+![Test de usabilidad 4](Img/Test%20Usabilidad%203.png)
 Página después de los cambios
 
