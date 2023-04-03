@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA } from './data.js';
+=======
+import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies } from './data.js';
+>>>>>>> origin/main
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -87,6 +91,7 @@ prueba1.forEach((item)=>{
 })*/
 
 
+<<<<<<< HEAD
 
 /*function findPeople(arrayFilms) {
   arrayFilms.forEach((item) => {
@@ -122,6 +127,22 @@ console.log('prueba3', people(arrayFilms))*/
 /*arrayFilms.forEach((item) =>{return item.people})
 console.log('prueba1', arrayPeople(arrayFilms));*/
 
+=======
+arrayFilms.forEach((item) => {
+  item.rt_score
+})
+
+
+const btnTop = document.getElementById("btnTop");
+btnTop.addEventListener('click', selecTop)
+
+function selecTop() {
+  insertPoster.innerHTML = '';
+  const orderScore = topMovies.orderbyScore(arrayFilms)
+  const top10 = topMovies.mayorScore(orderScore)
+  printAllPoster(top10)
+}
+>>>>>>> origin/main
 
 const female = [];
 const male =[];
