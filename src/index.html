@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poke web (Data Lover)</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -10,37 +10,52 @@
     <header>
       <figure>
         <a href="https://fonttmeme.com/es/fuente-pokemon/">
-        <img src="https://fontmeme.com/permalink/230321/687d67403dbb62892116f1b85225b722.png"
+        <img id="pokeweb" src="https://fontmeme.com/permalink/230321/687d67403dbb62892116f1b85225b722.png"
          alt="fuente-pokemon" borde="0">
          </a>
         </figure>
-    </header>
-       
-      <section id="Encabezado"> 
+        
+      <section id="encabezado"> 
         <div class="buscar" id="input-buscar">
         <label for="name"> Busqueda </label>
         <input type="text" id="inputBuscar" maxlength="15" placeholder="nombre">
         </div>
         
-        <label for="orden">Orden</label>
+        <label id="ordenado" for="orden">Orden</label>
         <select name="orden" id="orden">
               <option value=""></option>
              <option value="ascendente">A - Z</option>
               <option value="descendente">Z - A</option>
         </select>
+      
       </section>
+    </header>  
+    <main>
+      <div id="estadistica">
+        <table>
+          <tr>
+            <th>Region</th>
+            <th>Procentaje%</th>
+          </tr>
+          <tr>
+            <td>kanto</td>
+            <td id="kantoRow">0</td>
+          </tr>
+          <tr>
+            <td>johto</td>
+            <td id="johtoRow">0</td>
+          </tr>
+        </table>
+       </div>
       <section id="seccionUno">
-      </section>   
-    
-      <button name="button">Retroceder</button>
-      <button name="button">Siguiente</button>
-     
-   <div id="root"></div>
-  <script src="main.js" type="module"></script>
-
+      </section>
+      <script src="main.js" type="module"></script>
+    </main>
 <footer>
   <span>Proyecto creado por Maria Y Brina</span>
 </footer>
- </body>
+
+</body>
+
 </html>
 

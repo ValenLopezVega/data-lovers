@@ -4,11 +4,11 @@ export const filtro = {
     const dataFiltrada = listaPokemones.filter((pokemon) => pokemon.name.startsWith(busca))
     return  dataFiltrada;
   },
-  elPrimeroPorNombre: (listaPokemones, nombreBuscar) => {
-    const busca = nombreBuscar.trim();
-    const dataFiltrada = listaPokemones.filter((pokemon) => pokemon.name === busca)
-    return  dataFiltrada[0];
-  } 
+  porRegion: (listaPokemones, regionBuscar) => {
+    const busca = regionBuscar.toLowerCase();
+    const dataFiltrada = listaPokemones.filter((pokemon) => pokemon.generation.name.startsWith(busca))
+    return  dataFiltrada;
+  },
 };
 
 export const ordenar = {
@@ -32,7 +32,6 @@ function compararNombresAscendente( a, b ) {
   return 0;
 }
 
-
 function compararNombresDescendente( a, b ) {
   if (  b.name < a.name){
     return -1;
@@ -45,16 +44,13 @@ function compararNombresDescendente( a, b ) {
 
 //te devuelve un string que contiene la estructura html , la cual se forma apartir
 // de la lista recibida por parametro
-
 export const cartillasHtml = (listaPokemons) => {
   let cartillaString = ""; 
   listaPokemons.forEach ((pokemon)=>{
     cartillaString = cartillaString + `
-    <article>
+    <article class = "cartillaSeccUno">
       <h3>${pokemon.name}</h3>
-      <p>
-      ${pokemon.about} 
-      </p>
+      <p>${pokemon.about}</p>
       <img src=${pokemon.img}>
       <a href="pokemon.html?nombre=${pokemon.name}" target="_blank" >ver mas</a>
     </article>`;
