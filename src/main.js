@@ -1,4 +1,4 @@
-import {filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA } from './data.js';
+import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -14,7 +14,7 @@ const insertPoster = document.getElementById('insertPoster');
 
 //FUNCION QUE IMPRIME TODAS LAS PORTADASY NOMBRES
 
-function printAllPoster(allFilms){
+function printAllPoster(allFilms) {
   allFilms.forEach((item) => {
     const post = item.poster;
     const title = item.title;
@@ -76,14 +76,90 @@ function orderOption() {
   }
 }
 
+/*const prueba1=arrayFilms.sort((a, b) => b.rt_score - a.rt_score);
+ 
+
+prueba1.forEach((item)=>{
+  console.log(item.rt_score)
+})
+/*const prueba2=prueba1.filter((item)=>{
+ console.log('prueba2',item.rt_score) 
+})*/
 
 
 
+/*function findPeople(arrayFilms) {
+  arrayFilms.forEach((item) => {
+    const people1 = item.people
+    console.log('prueba1', people1)
+  }
+  )
+
+}*/
+
+/*const people = arrayFilms.forEach((item)=>
+  item.people.filter((index)=>index.gender==='female'
+  )
+)*/
+
+//console.log('prueba1', people)
 
 
+/*function people(arrayFilms) {
+  const people = [];
+  
+  arrayFilms.forEach((element) =>
+    people.push(element.people)
+  )
+  const female = [];
+  people.forEach((item) => female.push(item.gender)
+  )
+  console.log('prueba1', people)
+  console.log('prueba2', female)
+
+}
+console.log('prueba3', people(arrayFilms))*/
+/*arrayFilms.forEach((item) =>{return item.people})
+console.log('prueba1', arrayPeople(arrayFilms));*/
 
 
+const female = [];
+const male =[];
+const other =[];
 
+arrayFilms.forEach((item) =>
+  item.people.forEach((index) => {
+    if (index.gender === 'Female') {
+      female.push(index.gender)
+    }
+    if (index.gender === 'Male'){
+      male.push(index.gender)
+    }
+    if(index.gender !== 'Male' && index.gender !== 'Female'){
+      other.push(index.gender)
+    }
+  })
+)
 
+console.log('prueba3', female.length);
+console.log('prueba4', male.length);
+console.log('prueba5', other.length);
 
+function genderStadisctic(a,b,c){
 
+  
+  const sum= a.length + b.length + c.length;
+  const femalePorcent=Math.round((a.length*100)/sum);
+  const malePorcent=Math.round((b.length*100)/sum);
+  const otherPorcent=Math.round((c.length*100)/sum);
+
+ 
+
+  // console.log('prueba7', femalePorcent);
+  // console.log('prueba8', malePorcent);
+  // console.log('prueba9', otherPorcent);
+
+}
+console.log('prueba6',genderStadisctic(female,male,other));
+
+ 
