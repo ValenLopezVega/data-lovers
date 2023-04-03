@@ -5,7 +5,7 @@
 * [1. Definición del producto](#1-definición-del-producto)
 * [2. Historias de usuario](#2-historias-de-usuario)
 * [3. Prototipo de baja fidelidad](#3-prototipo-de-baja-fidelidad)
-* [4. Diseño de la Interfaz de Usuario](#4-diseño-de-la-Interfaz-de-Usuario)
+* [4. Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)](#4-diseño-de-la-interfaz-de-Usuario)
 * [5. Tests de usabilidad](#5-tests-de-usabilidad)
 
 ***
@@ -22,73 +22,56 @@ En home se encuentra la información básica de cada Pokémon, como lo es el nú
 ## 2. Historias de usuario
 * [HU1.] 
 Yo como usuario quiero ver una lista completa de Pokémon en la página principal.
+  * Criterios de aceptación
+    - Mostrar los pokemones con imagen, nombre, número y tipo
+    - Mostrar la lista de pokemones en columnas
+    - Poner margen a cada cuadro de cada pokemon
+  * Definición de terminado
+    - Página esta adelantada visualmente con la ubicación de los pokemones
+    - La ubicación de los cuadros de Pokémon se encuentre debajo de la búsqueda y filtro
 * [HU2.]  
-Yo como usuario quiero filtrar el Pokémon por pueblos y por tipo.
+Yo como usuario quiero filtrar el Pokémon por debilidades, resistencia, pueblos y por tipo.
+  * Criterios de aceptación
+    - Ubicar los filtros como lista desplegable.
+    - Filtre por tipo
+    - Filtre por generación
+    - La lista de filtros debe estar ubicada debajo del cuadro búsqueda
+  * Definición de terminado
+    - El filtro debe traer el tipo o la generación seleccionado
+    - Que las funciones de filtrado pasen el test
 * [HU3.] 
 Yo como usuario quiero ordenar de manera descendente, ascendente y por número mayor a menor y de menor a mayor.
+  * Criterios de aceptación
+    - En una lista desplegable poner los ordenados necesarios (A-Z o Z-A)
+    - Ubicar el listado en la parte izquierda de la pantalla
+    - Organizar diseño del listado
+  * Definición de terminado
+    - La función de organizar alfabéticamente debe funcionar
+    - Que las funciones de filtrado pasen el test
+
 * [HU4.] 
 Yo como usuario quiero buscar el Pokémon por nombre.
+  * Criterios de aceptación
+    - Visualizar el buscador en la página principal debajo del título
+    - Buscador debe traer el Pokémon buscado mostrando su imagen, nombre y número
+  * Definición de terminado
+    - Debe pasar los test
+    - Que el buscador, durante la búsqueda vaya descartando los pokemones por nombre según información dada al buscador
 * [HU5.]
 Yo como usuario quiero ver la información completa del Pokémon filtrado, al tocar la imagen.
-
-
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
-
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
-
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
-
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
-
-Estos son datos que te proponemos:
+  * Criterios de aceptación
+    - Recargar la pantalla mostrando un recuadro con toda la información
+    - Que en la información esté la imagen, nombre, número, tipo, habilidades, debilidades,generación.
+    - Boton para llevar al inicio
+    - Imagen al lado izquierdo y al lado derecho la información
+  * Definición de terminado
+    - Que se visualice toda la información de la tarjeta Pokémon
 
 * [Pokémon](src/data/pokemon/pokemon.json):
   En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
   y Johto, junto con sus respectivas estadísticas usadas en el juego
   [Pokémon GO](http://pokemongolive.com).
   - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
-
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
-
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
-
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
-
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
-
-* [Harry Potter](src/data/harrypotter/harry.json).
-  En este set encontrarás una lista de los personajes,libros pociones
-  y hechizos de toda la saga de
-  [Harry Potter](https://harrypotter.fandom.com).
-  - [Investigación con seguidoras de Harry Potter](src/data/harrypotter/README.md)
-
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
-
 ## 3. Prototipo de baja fidelidad
 * [1.Pagina principal]
    ![Baja Fidelidad Pg1](Img/Prototipo%20de%20baja%20fidelidad%201-3.jpeg)
@@ -110,10 +93,11 @@ usuario necesita.
 * 4.El pie de página se vería mejor si fuera de los mismos tonos del encabezado.
 * 5.Los colores que están utilizando en la tabla deberían cambiarlos, bien sea a rojo más fuerte, azul oscuro o un amarillo.
 * 6.Las imágenes de cada Pokémon en la tabla,  sean un poco más grandes para apreciarlos mejor
-Página antes de los cambios.
+*  Página antes de los cambios.
 ![Test de usabilidad 1](Img/Test%20Usabilidad%201.png)
-![Test de usabilidad 2](Img/Test%20Usabilidad%202.png)
-![Test de usabilidad 3](Img/Test%20Usabilidad%204.png)
-![Test de usabilidad 4](Img/Test%20Usabilidad%203.png)
+![Test de usabilidad 2](Img/Test%20Usabilidad%204.png)
+![Test de usabilidad 3](Img/Test%20Usabilidad%203.png)
+![Test de usabilidad 4](Img/Test%20Usabilidad%202.png)
 Página después de los cambios
+
 
