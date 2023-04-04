@@ -90,7 +90,7 @@ Yo como usuario quiero ver la información completa del Pokémon filtrado, al to
 * 5.Los colores que están utilizando en la tabla deberían cambiarlos, bien sea a rojo más fuerte, azul oscuro o un amarillo.
 * 6.Las imágenes de cada Pokémon en la tabla,  sean un poco más grandes para apreciarlos mejor
 *  Página antes y después de los cambios.
-![Test de usabilidad 1](Img/Test%20Usabilidad%201.png)[](Img/Prototipo%20de%20alta%20fidelidad%201-4.jpeg.png)
+![Test de usabilidad 1](Img/Comparacion%201.png)
 ![Test de usabilidad 2](Img/Test%20Usabilidad%204.png)
 ![Test de usabilidad 3](Img/Test%20Usabilidad%203.png)[](Img/Pg.Principal.png)
 ![Test de usabilidad 4](Img/Test%20Usabilidad%202.png)[](Img/Pg.Stats.png)
