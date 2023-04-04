@@ -5,7 +5,7 @@
 * [1. Definición del producto](#1-definición-del-producto)
 * [2. Historias de usuario](#2-historias-de-usuario)
 * [3. Prototipo de baja fidelidad](#3-prototipo-de-baja-fidelidad)
-* [4. Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)](#4-diseño-de-la-interfaz-de-Usuario)
+* [4. Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)](#4-diseño-de-la-interfaz-de-Usuario-(prototipo-de-alta-fidelidad))
 * [5. Tests de usabilidad](#5-tests-de-usabilidad)
 
 ***
@@ -17,7 +17,7 @@ Al ingresar a la página principal se puede visualizar un menú donde se encuent
 En home se encuentra la información básica de cada Pokémon, como lo es el número, la imagen, el tipo y la generación, mientras que en Stats Pokémon se encuentra las estadísticas de cada Pokémon, como lo son: la base de ataque, defensa, resistencia, puntos de combate, puntos de salud y porcentaje de encuentros, este último hace referencia al porcentaje en la que aparece un Pokémon frente al Pokémon con mayor posibilidades de encuentro.
 
 
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
+![pokemon-data-to-ui](Img/Proyecto%20Pokemon%201%20(Final).png)
 
 ## 2. Historias de usuario
 * [HU1.] 
@@ -67,24 +67,20 @@ Yo como usuario quiero ver la información completa del Pokémon filtrado, al to
   * Definición de terminado
     - Que se visualice toda la información de la tarjeta Pokémon
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
 ## 3. Prototipo de baja fidelidad
 * [1.Pagina principal]
    ![Baja Fidelidad Pg1](Img/Prototipo%20de%20baja%20fidelidad%201-3.jpeg)
 * [2.Pagina Pokedex]
-   2.1 Pagina Pokedex
+   - 2.1 Pagina Pokedex
    ![Baja Fidelidad Pg2](Img/Prototipo%20de%20baja%20fidelidad%202-3.jpeg)
-   2.2 Pagina Pokedex por Pokémon
+   - 2.2 Pagina Pokedex por Pokémon
   ![Baja Fidelidad Pg3](Img/Prototipo%20de%20baja%20fidelidad%203-3.jpeg)
 * Link Figma de prototipo baja fidelidad: [Figma baja fidelidad](https://www.figma.com/file/Y67UUAZMNFkhOfAnAiwzv2/Prototipo-baja-fidelidad-(Pokemon)?t=QIhCz0UNkgrg8QMo-0)
 
 ## 4. Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
-
-* Link Figma de prototipo alta fidelidad: [Figma alta fidelidad](https://www.figma.com/file/dWaBoVgg9WwTnCZDYm3WgZ/Prototipo-alta-fidelidad-(Pokemon)?node-id=0-1&t=ai5mnZTjA4YR2bzw-0)
+* Pagina Principal
+![Pg.Principal](Img/Prototipo%20de%20alta%20fidelidad%201-4.jpeg.png)
+ -Link Figma de prototipo alta fidelidad: [Figma alta fidelidad](https://www.figma.com/file/dWaBoVgg9WwTnCZDYm3WgZ/Prototipo-alta-fidelidad-(Pokemon)?node-id=0-1&t=ai5mnZTjA4YR2bzw-0)
 * Link Zeplin:[Zeplin alta fidelidad](https://app.zeplin.io/project/642a85ecbf80762361886fde/screen/642a85fc10ced4244dff93d5)
 ## 5. Tests de usabilidad
 * 1.El color que se encuentra en el menú no concuerda con los colores de Pokémon y el logo se ve pequeño.
@@ -93,11 +89,11 @@ Yo como usuario quiero ver la información completa del Pokémon filtrado, al to
 * 4.El pie de página se vería mejor si fuera de los mismos tonos del encabezado.
 * 5.Los colores que están utilizando en la tabla deberían cambiarlos, bien sea a rojo más fuerte, azul oscuro o un amarillo.
 * 6.Las imágenes de cada Pokémon en la tabla,  sean un poco más grandes para apreciarlos mejor
-*  Página antes de los cambios.
-![Test de usabilidad 1](Img/Test%20Usabilidad%201.png)
+*  Página antes y después de los cambios.
+![Test de usabilidad 1](Img/Test%20Usabilidad%201.png)[](Img/Prototipo%20de%20alta%20fidelidad%201-4.jpeg.png)
 ![Test de usabilidad 2](Img/Test%20Usabilidad%204.png)
-![Test de usabilidad 3](Img/Test%20Usabilidad%203.png)
-![Test de usabilidad 4](Img/Test%20Usabilidad%202.png)
-Página después de los cambios
+![Test de usabilidad 3](Img/Test%20Usabilidad%203.png)[](Img/Pg.Principal.png)
+![Test de usabilidad 4](Img/Test%20Usabilidad%202.png)[](Img/Pg.Stats.png)
+
 
 
