@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA } from './data.js';
-=======
-import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies } from './data.js';
->>>>>>> origin/main
+import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies, genderStadisctic, specieStadistic } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+ 
 
 
 //VARIABLE QUE ENGLOBA EL ARREGLOS DE PELICULAS
@@ -80,107 +76,26 @@ function orderOption() {
   }
 }
 
-/*const prueba1=arrayFilms.sort((a, b) => b.rt_score - a.rt_score);
- 
 
-prueba1.forEach((item)=>{
-  console.log(item.rt_score)
-})
-/*const prueba2=prueba1.filter((item)=>{
- console.log('prueba2',item.rt_score) 
-})*/
-
-
-<<<<<<< HEAD
-
-/*function findPeople(arrayFilms) {
-  arrayFilms.forEach((item) => {
-    const people1 = item.people
-    console.log('prueba1', people1)
-  }
-  )
-
-}*/
-
-/*const people = arrayFilms.forEach((item)=>
-  item.people.filter((index)=>index.gender==='female'
-  )
-)*/
-
-//console.log('prueba1', people)
-
-
-/*function people(arrayFilms) {
-  const people = [];
-  
-  arrayFilms.forEach((element) =>
-    people.push(element.people)
-  )
-  const female = [];
-  people.forEach((item) => female.push(item.gender)
-  )
-  console.log('prueba1', people)
-  console.log('prueba2', female)
-
-}
-console.log('prueba3', people(arrayFilms))*/
-/*arrayFilms.forEach((item) =>{return item.people})
-console.log('prueba1', arrayPeople(arrayFilms));*/
-
-=======
-arrayFilms.forEach((item) => {
-  item.rt_score
-})
-
-
+//CREACION DE BOTON TOP 10
 const btnTop = document.getElementById("btnTop");
 btnTop.addEventListener('click', selecTop)
 
 function selecTop() {
   insertPoster.innerHTML = '';
-  const orderScore = topMovies.orderbyScore(arrayFilms)
-  const top10 = topMovies.mayorScore(orderScore)
-  printAllPoster(top10)
+  printAllPoster(topMovies(arrayFilms) )
 }
->>>>>>> origin/main
 
-const female = [];
-const male =[];
-const other =[];
+//CREACION EVENTO DATOS CURIOSOS
+const btnCurious = document.getElementById("btnCurious");
+btnCurious.addEventListener('click', selectCurious);
 
-arrayFilms.forEach((item) =>
-  item.people.forEach((index) => {
-    if (index.gender === 'Female') {
-      female.push(index.gender)
-    }
-    if (index.gender === 'Male'){
-      male.push(index.gender)
-    }
-    if(index.gender !== 'Male' && index.gender !== 'Female'){
-      other.push(index.gender)
-    }
-  })
-)
-
-console.log('prueba3', female.length);
-console.log('prueba4', male.length);
-console.log('prueba5', other.length);
-
-function genderStadisctic(a,b,c){
-
-  
-  const sum= a.length + b.length + c.length;
-  const femalePorcent=Math.round((a.length*100)/sum);
-  const malePorcent=Math.round((b.length*100)/sum);
-  const otherPorcent=Math.round((c.length*100)/sum);
-
- 
-
-  // console.log('prueba7', femalePorcent);
-  // console.log('prueba8', malePorcent);
-  // console.log('prueba9', otherPorcent);
-
+function selectCurious() {
+  insertPoster.innerHTML = '';
+  insertPoster.innerHTML = `<div class="textEstadistics"> <h1 id="titleDiv">¿Sabias que?</h1> 
+  <div id="datePeople" class="cajaCuriosa"> <spam>El ${genderStadisctic(arrayFilms).female}% de personajes que aparecen en las peliculas de Studios Ghibli son femeninos, y que el ${genderStadisctic(arrayFilms).male} % son masculinos y el ${genderStadisctic(arrayFilms).other}% no se encuentran definidos.</spam>
+  <img class="child" src="./img/child.png" alt=""></div>
+  <div id="dateSpecies" class="cajaCuriosa"> <spam >El ${specieStadistic(arrayFilms).human}% de personajes que aparecen en las peliculas de Studios Ghibli son Humanos y tan solo el ${specieStadistic(arrayFilms).sumaOthers}% son personajes conformados por animales y criaturas fantásticas.</spam> 
+  <img class="child" src="./img/imgc.png" alt=""></div>
+  </div>`;
 }
-console.log('prueba6',genderStadisctic(female,male,other));
-
- 
