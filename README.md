@@ -91,9 +91,6 @@ Yo como usuario quiero ver la información completa del Pokémon filtrado, al to
 * 6.Las imágenes de cada Pokémon en la tabla,  sean un poco más grandes para apreciarlos mejor
 *  Página antes y después de los cambios.
 ![Test de usabilidad 1](Img/Comparacion%201.png)
-![Test de usabilidad 2](Img/Test%20Usabilidad%204.png)
-![Test de usabilidad 3](Img/Test%20Usabilidad%203.png)[](Img/Pg.Principal.png)
-![Test de usabilidad 4](Img/Test%20Usabilidad%202.png)[](Img/Pg.Stats.png)
-
+![Test de usabilidad 2](Img/Comparacion%202.png)
 
 
