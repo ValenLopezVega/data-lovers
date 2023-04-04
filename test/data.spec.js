@@ -1,4 +1,4 @@
-import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA } from '../src/data.js';
+import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies, genderStadisctic } from '../src/data.js';
 
 describe('filterByProducer', () => {
 
@@ -24,12 +24,7 @@ describe('filterByProducer', () => {
 
   }];
 
-  const entradaOrder = [{ "title": "The Secret World of Arrietty" }, { "title": "The Wind Rises" }, { "title": "The Tale of the Princess Kaguya" }];
-  const salidaOrderAscendente = [{ "title": "The Secret World of Arrietty" }, { "title": "The Tale of the Princess Kaguya" }, { "title": "The Wind Rises" }];
-  const salidaOrderDescendente = [{ "title": "The Wind Rises" }, { "title": "The Tale of the Princess Kaguya" }, { "title": "The Secret World of Arrietty" }];
-  const entradaOrder2 = [{ "title": "123argaret" }, { "title": "123artha" }, { "title": "67aria" }];
-  const salidaOrderAscendente2 = [{ "title": "123argaret" }, { "title": "123artha" }, { "title": "67aria" }];
-  const salidaOrderDescendente2 = [{ "title": "67aria" }, { "title": "123artha" }, { "title": "123argaret" }];
+
   //test de filtro
   describe('testeando la funcion filterByProducer', () => {
 
@@ -44,23 +39,30 @@ describe('filterByProducer', () => {
     });
 
   })
+});
 
+
+
+describe('testeando funcion orderAlphabetical_AZ', () => {
+  const entradaOrder = [{ "title": "The Secret World of Arrietty" }, { "title": "The Wind Rises" }, { "title": "The Tale of the Princess Kaguya" }];
+  const salidaOrderAscendente = [{ "title": "The Secret World of Arrietty" }, { "title": "The Tale of the Princess Kaguya" }, { "title": "The Wind Rises" }];
+  const salidaOrderDescendente = [{ "title": "The Wind Rises" }, { "title": "The Tale of the Princess Kaguya" }, { "title": "The Secret World of Arrietty" }];
+  const entradaOrder2 = [{ "title": "123argaret" }, { "title": "123artha" }, { "title": "67aria" }];
+  const salidaOrderAscendente2 = [{ "title": "123argaret" }, { "title": "123artha" }, { "title": "67aria" }];
+  const salidaOrderDescendente2 = [{ "title": "67aria" }, { "title": "123artha" }, { "title": "123argaret" }];
   // test de orden alfabético A-Z
-  describe('testeando funcion orderAlphabetical_AZ', () => {
+  it('orderAlphabetical_AZ debería ser una función', () => {
+    expect(typeof orderAlphabetical_AZ).toBe('function');
+  });
 
-    it('orderAlphabetical_AZ debería ser una función', () => {
-      expect(typeof orderAlphabetical_AZ).toBe('function');
-    });
+  it('entradaOrderAscendente deberia de ordenar de la A-Z', () => {
+    expect(orderAlphabetical_AZ(entradaOrder)).toEqual(salidaOrderAscendente);
+  });
 
-    it('entradaOrderAscendente deberia de ordenar de la A-Z', () => {
-      expect(orderAlphabetical_AZ(entradaOrder)).toEqual(salidaOrderAscendente);
-    });
+  it('entradaOrderAscendente deberia de ordenar de la A-Z-2', () => {
+    expect(orderAlphabetical_AZ(entradaOrder2)).toEqual(salidaOrderAscendente2);
+  });
 
-    it('entradaOrderAscendente deberia de ordenar de la A-Z-2', () => {
-      expect(orderAlphabetical_AZ(entradaOrder2)).toEqual(salidaOrderAscendente2);
-    });
-
-  })
   //test de orden alfabético Z-A
   describe('testeando funcion orderAlphabetical_ZA', () => {
 
@@ -78,25 +80,34 @@ describe('filterByProducer', () => {
   })
 
 
+})
 
-  /*
-  describe('filterByProducer', () => {
-    it('is a function', () => {
-      expect(typeof filterByProducer).toBe('function');
-    });
-  
-    /*it('returns `example`', () => {
-      expect(example()).toBe('example');
-    });
+//test top 10 peliculas
+
+describe('testeando funcion topMovies', () => {
+  const topEntrada = [{ "rt_score": "95" }, { "rt_score": "93" }, { "rt_score": "87" }, { "rt_score": "14" }, { "rt_score": "77" }, { "rt_score": "96" }, { "rt_score": "20" }, { "rt_score": "45" }, { "rt_score": "74" }, { "rt_score": "85" }, { "rt_score": "88" }, { "rt_score": "80" }];
+  const topSalida = [{ "rt_score": "96" }, { "rt_score": "95" }, { "rt_score": "93" }, { "rt_score": "88" }, { "rt_score": "87" }, { "rt_score": "85" }, { "rt_score": "80" }, { "rt_score": "77" }, { "rt_score": "74" }, { "rt_score": "45" }];
+
+  it('topMovies debería ser una función', () => {
+    expect(typeof topMovies).toBe('function');
   });
-  
-  
-  /*describe('anotherExample', () => {
-    it('is a function', () => {
-      expect(typeof anotherExample).toBe('function');
-    });
-  
-    it('returns `anotherExample`', () => {
-      expect(anotherExample()).toBe('OMG');
-    });*/
+
+  it('topMovies deberia de seleccionar las 10 mejores peliculas con el score', () => {
+    expect(topMovies(topEntrada)).toEqual(topSalida);
+  });
 });
+
+//test datos curiosos
+
+describe('testeando funcion genderStadisctic', () => {
+  // const topEntrada = [{ "rt_score": "95" }, { "rt_score": "93" }, { "rt_score": "87" }, { "rt_score": "14" }, { "rt_score": "77" }, { "rt_score": "96" }, { "rt_score": "20" }, { "rt_score": "45" }, { "rt_score": "74" }, { "rt_score": "85" }, { "rt_score": "88" }, { "rt_score": "80" }];
+  // const topSalida = [{ "rt_score": "96" }, { "rt_score": "95" }, { "rt_score": "93" }, { "rt_score": "88" }, { "rt_score": "87" }, { "rt_score": "85" }, { "rt_score": "80" }, { "rt_score": "77" }, { "rt_score": "74" }, { "rt_score": "45" }];
+
+  it('genderStadisctic debería ser una función', () => {
+    expect(typeof genderStadisctic).toBe('function');
+  });
+
+});
+
+
+
