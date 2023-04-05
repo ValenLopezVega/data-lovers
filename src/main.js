@@ -1,7 +1,8 @@
+import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies, genderStadisctic, specieStadistic } from './data.js';
 import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies, genderStadisctic, specieEstadistic} from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+ 
 
 
 //VARIABLE QUE ENGLOBA EL ARREGLOS DE PELICULAS
@@ -77,22 +78,18 @@ function orderOption() {
 }
 
 
-
-arrayFilms.forEach((item) => {
-  item.rt_score
-})
-
-
+//CREACION DE BOTON TOP 10
 const btnTop = document.getElementById("btnTop");
 btnTop.addEventListener('click', selecTop)
 
 function selecTop() {
   insertPoster.innerHTML = '';
-  const orderScore = topMovies.orderbyScore(arrayFilms)
-  const top10 = topMovies.mayorScore(orderScore)
-  printAllPoster(top10)
+  printAllPoster(topMovies(arrayFilms) )
 }
 
+//CREACION EVENTO DATOS CURIOSOS
+const btnCurious = document.getElementById("btnCurious");
+btnCurious.addEventListener('click', selectCurious);
 //CREACION EVENTO DATOS CURIOSOS
 const btnCurious = document.getElementById("btnCurious");
 btnCurious.addEventListener('click', selectCurious);
@@ -100,21 +97,9 @@ btnCurious.addEventListener('click', selectCurious);
 function selectCurious() {
   insertPoster.innerHTML = '';
   insertPoster.innerHTML = `<div class="textEstadistics"> <h1 id="titleDiv">¿Sabias que?</h1> 
-  <div id="datePeople" class="cajaCuriosa"> <h2>El ${genderStadisctic(arrayFilms).female}% de personajes que aparecen en las peliculas de Studios Ghibli son femeninos, y que el ${genderStadisctic(arrayFilms).male} % son masculinos y el ${genderStadisctic(arrayFilms).other}% no se encuentran definidos.</h2>
-  </div>
-  <div id="dateSpecies" class="cajaCuriosa"> <h2 >El ${specieEstadistic(arrayFilms).human}% de personajes que aparecen en las peliculas de Studios Ghibli son Humanos y tan solo el ${specieEstadistic(arrayFilms).semiHuman}% son semi-Humanos, mientras que el ${specieEstadistic(arrayFilms).animals}% son animales y tan solo ${specieEstadistic(arrayFilms).noHuman}%son personajes fantasticos.</h2> 
-  </div>
+  <div id="datePeople" class="cajaCuriosa"> <spam>El ${genderStadisctic(arrayFilms).female}% de personajes que aparecen en las peliculas de Studios Ghibli son femeninos, y que el ${genderStadisctic(arrayFilms).male} % son masculinos y el ${genderStadisctic(arrayFilms).other}% no se encuentran definidos.</spam>
+  <img class="child" src="./img/child.png" alt=""></div>
+  <div id="dateSpecies" class="cajaCuriosa"> <spam >El ${specieStadistic(arrayFilms).human}% de personajes que aparecen en las peliculas de Studios Ghibli son Humanos y tan solo el ${specieStadistic(arrayFilms).sumaOthers}% son personajes conformados por animales y criaturas fantásticas.</spam> 
+  <img class="child" src="./img/imgc.png" alt=""></div>
   </div>`;
 }
- 
-//no tendria que ir en un div, sino en un body
-
-
-/*display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-flex-direction: row;
-width: 100%;
-height: 50%;
-position: relative;
-top: 10px;*/
