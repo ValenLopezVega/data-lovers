@@ -1,6 +1,5 @@
 import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies, genderStadisctic, specieStadistic } from './data.js';
-import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies, genderStadisctic, specieEstadistic} from './data.js';
-// import data from './data/lol/lol.js';
+
 import data from './data/ghibli/ghibli.js';
  
 
@@ -87,9 +86,6 @@ function selecTop() {
   printAllPoster(topMovies(arrayFilms) )
 }
 
-//CREACION EVENTO DATOS CURIOSOS
-const btnCurious = document.getElementById("btnCurious");
-btnCurious.addEventListener('click', selectCurious);
 //CREACION EVENTO DATOS CURIOSOS
 const btnCurious = document.getElementById("btnCurious");
 btnCurious.addEventListener('click', selectCurious);
