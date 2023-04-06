@@ -1,4 +1,4 @@
-import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies, genderStadisctic } from '../src/data.js';
+import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies, genderStadisctic, specieStadistic } from '../src/data.js';
 
 describe('filterByProducer', () => {
 
@@ -100,14 +100,45 @@ describe('testeando funcion topMovies', () => {
 //test datos curiosos
 
 describe('testeando funcion genderStadisctic', () => {
-  // const topEntrada = [{ "rt_score": "95" }, { "rt_score": "93" }, { "rt_score": "87" }, { "rt_score": "14" }, { "rt_score": "77" }, { "rt_score": "96" }, { "rt_score": "20" }, { "rt_score": "45" }, { "rt_score": "74" }, { "rt_score": "85" }, { "rt_score": "88" }, { "rt_score": "80" }];
-  // const topSalida = [{ "rt_score": "96" }, { "rt_score": "95" }, { "rt_score": "93" }, { "rt_score": "88" }, { "rt_score": "87" }, { "rt_score": "85" }, { "rt_score": "80" }, { "rt_score": "77" }, { "rt_score": "74" }, { "rt_score": "45" }];
+
+  const entradaGender = [{ people: [{ gender: 'Male' }, { gender: 'Female' }, { gender: 'NA' }, { gender: 'Male' }] },
+    { people: [{ gender: 'Male' }, { gender: 'Female' }, { gender: 'NA' }, { gender: 'Male' }] }];
+  const salidaGender = { "female": 25, "male": 50, "other": 25 };
 
   it('genderStadisctic debería ser una función', () => {
     expect(typeof genderStadisctic).toBe('function');
   });
+  it('Funcion que saca los porcentajes de personajes femeninos y masculinos', () => {
+    expect(genderStadisctic(entradaGender)).toEqual(salidaGender);
+  });
+
+
 
 });
 
+//test datos curiosos2
 
+describe('testeando funcion specieStadistic', () => {
+  const entradaSpecies = [{ people: [{ specie: 'Human' }, { specie: 'Cat' }, { specie: 'NA' }, { specie: 'Wizard' }] },
+    {people: [{ specie: 'Witch' }, { specie: 'Dog' }, { specie: 'NA' }, { specie: 'Human' }] }];
+  const salidaSpecies = {
+    human: 25,
+    semiHuman: 25,
+    animals: 25,
+    noHuman: 25,
+    sumaOthers: 75
+  }
 
+  it('specieStadistic debería ser una función', () => {
+    expect(typeof specieStadistic).toBe('function');
+  });
+  it('specieStadistic debería ser una función', () => {
+    expect(typeof specieStadistic).toBe('function');
+  });
+
+  it('Funcion que saca los porcentajes de personajes de acuerdo a su especie', () => {
+    expect(specieStadistic(entradaSpecies)).toEqual(salidaSpecies);
+  });
+
+ 
+});

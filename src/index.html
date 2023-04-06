@@ -13,6 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@200;300&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -26,19 +27,21 @@
 
     </div>-->
       <div class="titleHeader">
-        <img class="imgd" src="./img/imgd.png" alt="">
-        <img class="img0" src="./img/img0.png" alt="">
-        <img class="imgd-1" src="./img/imgd.png" alt="">
+        <img class="imgd totoro" src="./img/imgd.png" alt="">
+        <img class="img0 " src="./img/img0.png" alt="">
+        <img class="imgd-1 totoro" src="./img/imgd.png" alt="">
       </div>
 
 
 
-    </header>
-    <nav>
-      <div class="menu">
-        <ul>
-          <select class="btnMenu" id="selectProducer" class="select">
-            <option disabled selected >PRODUCER</option>
+  </header>
+  <nav>
+    <div class="menu">
+      <ul>
+        <div class="titleOption">
+          <label for="">Filter By Producer</label>
+          <select class="btnMenu" id="selectProducer">
+            <option disabled selected>Producer</option>
             <option value="all" class="filterProducer">All</option>
             <option value="Isao Takahata" class="filterProducer">Isao Takahata</option>
             <option value="Hayao Miyazaki" class="filterProducer">Hayao Miyazaki</option>
@@ -46,35 +49,43 @@
             <option value="Toshio Suzuki" class="filterProducer">Toshio Suzuki</option>
             <option value="Yoshiaki Nishimura" class="filterProducer">Yoshiaki Nishimura</option>
           </select>
+        </div>
 
-
-          <select class="btnMenu" id="alphabeticalOrder" class="select">
-            <option value="alphabetical_order" id="1">ALPHABETICAL ORDER</option>
-            <option value="A-Z" class="alphabetical">A-Z</option>
-            <option value="Z-A" class="alphabetical">Z-A</option>
+          <div class="titleOption">
+          <label for="">Alphabetical Order</label>
+            <select class="btnMenu select" id="alphabeticalOrder">
+              <option value="A-Z" class="alphabetical">Ascendente</option>
+              <option value="Z-A" class="alphabetical">Descendente</option>
 
           </select>
-          <button class="btnMenu" type="button" id="btnTop">MOVIES TO 10</button>
-          <button class="btnMenu" type="button" id="btnCurious">CURIOUS FACTS</button>
-        </ul>
-
-      </div>
-    </nav>
-
-    <main>
-
-      <div id="insertPoster"></div>
-
-
-
-    </main>
-  </div>
-    <footer>
-      <img id="imgFooter" src="./img/imgFooter.png" alt="img footer">
-      <ul class="Names">
-        <li class="created">CreatedBy</li>
-        <li id="nameCM">Caro Raquel & Mariana Magallanes</li>
+        </div>
+        <div class="titleOption">
+          <label for=""> </label>
+          <button class="btnMenu btn" type="button" id="btnTop">Movies Top 10</button>
+        </div>
+        <div class="titleOption">
+          <label for=""> </label>
+          <button class="btnMenu btn" type="button" id="btnCurious">Curious Facts</button>
+        </div>
       </ul>
+
+
+
+    </div>
+  </nav>
+
+  <main>
+
+    <div id="insertPoster"></div>
+
+  </main>
+  <footer>
+    <img id="imgFooter" src="./img/imgFooter.png" alt="img footer">
+    <ul class="Names">
+      <li class="created  nameFooter">CreatedBy</li>
+      <li id="nameCM" class="nameFooter">Caro Raquel and Mariana Magallanes</li>
+
+    </ul>
 
   </footer>
 

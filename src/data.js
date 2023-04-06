@@ -17,18 +17,13 @@ export function filterByProducer(films, option) {
 //FUNCION QUE PERMITE ORDERNAR ALFABETICAMENTE DE LA A -Z
 export function orderAlphabetical_AZ(prueba) {
   return prueba.sort((a, b) => {
+
     if (a.title < b.title) {
       return -1;
     }
 
-    if (a.title > b.title) {
-      return 1;
-    }
-    return 0;
-  }
-  )
+  })
 }
-
 //FUNCION QUE PERMITE ORDERNAR ALFABETICAMENTE DE LA Z -A
 export function orderAlphabetical_ZA(prueba1) {
   return prueba1.sort((a, b) => {
@@ -37,12 +32,21 @@ export function orderAlphabetical_ZA(prueba1) {
     }
   })
 }
+
 //Funcion que filtra top 10 de mejores peliculas
 
-export const topMovies = {
-  orderbyScore: function (score) { return score.sort((item1, item2) => item2.rt_score - item1.rt_score) },
-  mayorScore: function (top) { return top.slice(0, 10) }
+
+
+export function topMovies(allDataFunction) {
+
+  const score = allDataFunction.sort((item1, item2) => item2.rt_score - item1.rt_score);
+  const mayorScore = score.slice(0, 10);
+  return mayorScore;
+
 }
+
+
+//Estadisticas de datos curiosos
 
 export function genderStadisctic(arrayFilms) {
 
@@ -54,6 +58,7 @@ export function genderStadisctic(arrayFilms) {
 
   arrayFilms.forEach((item) =>
     item.people.forEach((index) => {
+       
       if (index.gender === 'Female') {
         dataPeople.female.push(index.gender)
       }
@@ -82,6 +87,7 @@ export function genderStadisctic(arrayFilms) {
 
 }
 
+
 console.log('funcion', genderStadisctic(allDataFunction))
 
 //estadistica  Dato curioso especie
@@ -109,8 +115,9 @@ export function specieStadistic(arrayFilms) {
       }
 
     })
-
   })
+
+
   const sumSpecies = species.human.length + species.animals.length + species.semiHuman.length + species.noHuman.length;
   const humanPOrcent = Math.round((species.human.length * 100) / sumSpecies)
   const animalsPorcent = Math.round((species.animals.length * 100) / sumSpecies)
@@ -125,8 +132,6 @@ export function specieStadistic(arrayFilms) {
     animals: animalsPorcent,
     noHuman: noHumanPorcent,
     sumaOthers: sumOthers
-
-
   }
   return allSpecies
 }

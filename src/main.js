@@ -1,7 +1,7 @@
 import { filterByProducer, orderAlphabetical_AZ, orderAlphabetical_ZA, topMovies, genderStadisctic, specieStadistic } from './data.js';
 
 import data from './data/ghibli/ghibli.js';
- 
+
 
 
 //VARIABLE QUE ENGLOBA EL ARREGLOS DE PELICULAS
@@ -18,10 +18,30 @@ function printAllPoster(allFilms) {
   allFilms.forEach((item) => {
     const post = item.poster;
     const title = item.title;
-    insertPoster.innerHTML += `<div class="imgPoster"> <img src=${post} alt="${title}"></img> <p>${title}</p</div>`;
+    insertPoster.innerHTML += `<div class="imgPoster" id="imgPoster"> <img src=${post} alt="${title}"></img> <p>${title}</p</div>`;
   })
+}
+
+
+
+
+/*function clickMoreInformation(index) {
+  const description = index.description;
+  const title = index.title;
+  const director = index.director;
+  const rt_score = index.rt_score;
+  const yearFilm = index.release_date;
+
+  insertPoster.innerHTML = `<div class="moreInformacion"> </h1>${title}<h1><p>${description}</p> <h3>${director} </h3> <h3>${rt_score} </h3> <h3>${yearFilm} </h3></div> `
 
 }
+
+
+
+console.log(clickMoreInformation(arrayFilms[4]))*/
+
+
+
 
 //DECLARANDO FUNCION DE IMPRIMIR CON LA VARIABLE QUE GUARDA NUESTROS ARREGLOS
 printAllPoster(arrayFilms)
@@ -76,15 +96,13 @@ function orderOption() {
 }
 
 
+
 //CREACION DE BOTON TOP 10
 const btnTop = document.getElementById("btnTop");
 btnTop.addEventListener('click', selecTop)
 
 function selecTop() {
   insertPoster.innerHTML = '';
-  const orderScore = topMovies.orderbyScore(arrayFilms)
-  const top10 = topMovies.mayorScore(orderScore)
-  printAllPoster(top10)
   printAllPoster(topMovies(arrayFilms))
 }
 
