@@ -61,7 +61,6 @@ alphabeticalOrder.addEventListener('change', orderOption);
 function orderOption() {
   const orderValue = alphabeticalOrder.value;
   console.log('prueba1', orderValue);
-
   if (orderValue === 'A-Z') {
     insertPoster.innerHTML = '';
     const orderA_Z = orderAlphabetical_AZ(arrayFilms);
@@ -83,8 +82,12 @@ btnTop.addEventListener('click', selecTop)
 
 function selecTop() {
   insertPoster.innerHTML = '';
-  printAllPoster(topMovies(arrayFilms) )
+  const orderScore = topMovies.orderbyScore(arrayFilms)
+  const top10 = topMovies.mayorScore(orderScore)
+  printAllPoster(top10)
+  printAllPoster(topMovies(arrayFilms))
 }
+
 
 //CREACION EVENTO DATOS CURIOSOS
 const btnCurious = document.getElementById("btnCurious");
