@@ -118,8 +118,6 @@ export function specieStadistic(arrayFilms) {
   })
 
 
-
-
   const sumSpecies = species.human.length + species.animals.length + species.semiHuman.length + species.noHuman.length;
   const humanPOrcent = Math.round((species.human.length * 100) / sumSpecies)
   const animalsPorcent = Math.round((species.animals.length * 100) / sumSpecies)
@@ -134,8 +132,6 @@ export function specieStadistic(arrayFilms) {
     animals: animalsPorcent,
     noHuman: noHumanPorcent,
     sumaOthers: sumOthers
-
-
   }
   return allSpecies
 }
