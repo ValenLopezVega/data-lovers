@@ -34,7 +34,7 @@ export function orderAlphabetical_ZA(prueba1) {
 }
 
 //Funcion que filtra top 10 de mejores peliculas
- 
+
 
 
 export function topMovies(allDataFunction) {
@@ -58,6 +58,7 @@ export function genderStadisctic(arrayFilms) {
 
   arrayFilms.forEach((item) =>
     item.people.forEach((index) => {
+       
       if (index.gender === 'Female') {
         dataPeople.female.push(index.gender)
       }
@@ -86,6 +87,7 @@ export function genderStadisctic(arrayFilms) {
 
 }
 
+
 console.log('funcion', genderStadisctic(allDataFunction))
 
 //estadistica  Dato curioso especie
@@ -113,14 +115,15 @@ export function specieStadistic(arrayFilms) {
       }
 
     })
-
   })
+
+
   const sumSpecies = species.human.length + species.animals.length + species.semiHuman.length + species.noHuman.length;
   const humanPOrcent = Math.round((species.human.length * 100) / sumSpecies)
   const animalsPorcent = Math.round((species.animals.length * 100) / sumSpecies)
   const semiHumanPorcent = Math.round((species.semiHuman.length * 100) / sumSpecies)
   const noHumanPorcent = Math.round((species.noHuman.length * 100) / sumSpecies)
-  const sumOthers=semiHumanPorcent+animalsPorcent+noHumanPorcent
+  const sumOthers = semiHumanPorcent + animalsPorcent + noHumanPorcent
 
   //para que se guarda en un objeto?
   const allSpecies = {
@@ -128,9 +131,7 @@ export function specieStadistic(arrayFilms) {
     semiHuman: semiHumanPorcent,
     animals: animalsPorcent,
     noHuman: noHumanPorcent,
-    sumaOthers:sumOthers
-
-
+    sumaOthers: sumOthers
   }
   return allSpecies
 }
