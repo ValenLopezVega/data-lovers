@@ -4,462 +4,288 @@
   box-sizing: border-box;
 }
 
-body {
-  background-image: url("./img/seccionUno3.jpg");
+header{
   width: 100%;
-  height: auto;
-  background-repeat: no-repeat;
+  position: relative;
+}
+
+main{
+  padding: 0 25px;
+
+}
+
+body {
+  background-image: url(./img/seccionUno3.jpg);
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
 }
 
 #encabezado {
-  box-shadow: 0px 10px 14px -7px #393a45;
-  background-color: white;
-  border-radius: 8px;
-  color: #1b1c37;
-  font-size: 2rem;
-  padding: 20px 20px 20px 20px;
-  width: 100%;
-  display: -webkit-inline-box;
-  text-align: center;
-  margin: 20px 20px 20px 20px;
-  background-image: url("./img/40134.jpg");
+    border-radius: 8px;
+    color: #1b1c37;
+    font-size: 100%;
+    width: 100%;
+    text-align: center;
+    top: 13px;
 }
 
 #seccionUno{
-  padding: 50px 50px 50px 50px;
-  margin: 60px 60px 60px 60px;
-  background-image: url("./img/40134.jpg");
-  opacity: 350px;
-  border-radius: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 13px;
 }
 
-article {
-  padding: 50px;
-  display: inline-block;
-  width: 250px;
-  margin-right: 2%;
-  margin-top: 2%;
+
+.cartillaSeccUno{
+  
+  width: 24%;
   background-color: rgb(147 147 164 / 87%);
   border-radius: 25px;
-  height: 450px;
-  text-align: justify;
+  height: 499px;
   display: grid;
-  gap: 20px;
+  gap: 10px;
+  margin: 0.5%;
 }
+  
   h3 {
-        text-align: center;
-        font-size: 25px;
-        text-transform: uppercase;
+    margin-top: 20px;
+    display: block;
+    height: 3px;
+    line-height: 28px;
+    text-transform: uppercase;
   }
 
   
-  .buscar {
-    position: relative;
-    width: 230px;
-    height: 45px;
-    color: rgb(7 24 24);
-}
    
+p {
+  padding: 0px 20px;
+}
+
+a{
+  text-align: center;
+  padding: 10px;
+  width: 120px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #514a8b;
+  color: white;
+  height: 42px;
+  text-decoration: none;
+}
 
  select{
-  position: relative;
-  left: 730px;
-  width: 230px;
-  height: 45px;
+  left: -163px;
+  margin-top: 16px;
+  width: 106px;
+  padding: 12px;
+  color: rgb(25 37 37);
+  display: inline-block;
+  top: 25px;
+  border-radius: 8px;
+}
+ 
+
+  #inputBuscar{
+    width: 58%;
+    height: 30%;
+    color: rgb(25 37 37);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 10px 14px -7px #393a45;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+  figure{
+    margin: 10px;
+  }
+  #estadistica {
+    text-transform: uppercase;
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-left: 0.5%;
+  }
+
+#ordenado{
+  left: -197px;
+  color: rgb(25 37 37);
+  top: 24px;
+  margin-right: 12px;
+  font-weight: bolder;
+}
+#orden{
+  margin-top: 16px;
+  width: 149px;
+  padding: 12px;
+  color: rgb(25 37 37);
+  display: inline-block;
+  top: 25px;
+
+
+
+
+  border-radius: 8px;
+}
+
+
+#pokeweb{
+  width: 169px;
+}
+
+
+.pokecart{
+  margin: 0 auto;
+}
+
+
+
+.buscar{
+  color: rgb(7 24 24)
+}
+
+label{
   color: rgb(25 37 37);
 }
 
-  #inputBuscar{
-      position: relative;
-      left: 230px;
-      top: -37px;
-      width: 568px;
-      height: 45px;
-      color: rgb(25 37 37);
-      font-size: 30px;
-      font-family: Arial, Helvetica, sans-serif;
+th {
+  background: #cfcfdb;
+  padding: 12px;
+  border-radius: 5px;
+  width: 230px;
+}
 
-  }
+td {
+  padding: 6px;
+  font-style: italic;
+  background: #fbf1e3bf;
+  border-radius: 5px;
+}
 
-  #estadistica {
-    text-align: center;
-    text-transform: uppercase;
-    color: rgb(25 37 37);
-    align-items: center;
-    display: flex;
+#seccionDos{
+  display: flex;
     justify-content: center;
-    margin: 18px;
-    padding: 5px;
-  }
-
-  #ordenado{
-    position: relative;
-    left: 674px;
-    width: 230px;
-    height: 45px;
-    color: rgb(25 37 37);
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 13px;
 }
 
-
-  /*label{
-    margin-left: 10%;
-    position: relative;
-    left: 674px;
-    width: 230px;
-    height: 45px;
-  }
-/*
-#buttonHome,
-#buttonPokedex,
-#buttonExtra {
-  display: flex;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 2rem;
-  box-shadow: 3px 4px 0px 0px #899599;
-  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-  background-color: #ededed;
-  border-radius: 15px;
-  border: 1px solid #d6bcd6;
-  display: inline-block;
-  cursor: pointer;
-  color: #121db6;
-  font-size: 90%;
-  padding: 7px 25px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #e1e2ed;
-  width: 12%;
-  text-align: center;
-  margin-left: 5%;
-}
-
-#buttonHome:hover,
-#buttonPokedex:hover,
-#buttonExtra:hover {
-  background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-  background-color: #bab1ba;
-}
-
-#buttonHome:active,
-#buttonPokedex:active,
-#buttonExtra:active {
-  position: relative;
-  top: 5px;
-}
-
-.flexWelcome {
-  display: flex;
-  flex-direction: wrap;
-}
-
-#welcome {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  width: auto;
-  height: auto;
+.cartillaSeccDno{
+  width: 39%;
+  background-color: rgb(147 147 164 / 87%);
   border-radius: 25px;
-  justify-content: center;
-  border-style: double;
-  border-color: #ffaa22;
-  border-width: 10px;
-  margin-left: 10%;
-  margin-top: 5%;
-  margin-right: auto;
-  background-color: #f3ebdede;
+  height: 565px;
+  display: grid;
+  gap: 2px;
+  margin: 0.5%;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+#pokewebSeccDos{
+  width: 169px;
+}
+.contenedorSec{
+  grid-template: max-content;
 }
 
-#oak {
-  margin: auto;
-  width: 70%;
-  padding: auto;
-  margin-right: auto;
-}
-
-xxxxxxxxxxxxxxxxxxxxxx
-
-
-
-
-#order-select {
-  display: inline-block;
-  width: 15%;
-  cursor: pointer;
-  padding: 7px 15px;
-  height: 30%;
-  outline: 0;
-  border: 0;
-  border-radius: 0;
-  margin-left: 45%;
-  background: #f0f0f0c4;
-  color: #080808;
-  font-size: 1em;
-  color: rgb(0, 0, 0);
-  font-family: "Quicksand", sans-serif;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+.contenedor1{
+  background-color: white;
   border-radius: 12px;
-  position: center;
-  transition: all 0.25s ease;
+  margin: 13px;
 }
-
-#filterType{
-  display: flex;
-  flex-wrap: wrap;
+.contenedor2{
+  background-color: white;
+  border-radius: 12px;
+  margin: 13px;
 }
-
-
-#typeNormal,
-#typeFighting,
-#typeFlying,
-#typePoison,
-#typeGround,
-#typeRock,
-#typeBug,
-#typeGhost,
-#typeSteel,
-#typeFire,
-#typeWater,
-#typeGrass,
-#typeElectric,
-#typePsychic,
-#typeIce,
-#typeDragon,
-#typeDark,
-#typeFairy {
-  display: flex;
-  width: 4%;
-  background-color: rgba(200, 196, 196, 0.871);
-  border-radius: 10px;
-  margin: 0.5%;
-  margin-bottom: 1%;
+.contenedor3{
+  background-color: white;
+  border-radius: 12px;
+  margin: 13px;
 }
-
-#typeNormal:active,
-#typeFighting:active,
-#typeFlying:active,
-#typePoison:active,
-#typeGround:active,
-#typeRock:active,
-#typeBug:active,
-#typeGhost:active,
-#typeSteel:active,
-#typeFire:active,
-#typeWater:active,
-#typeGrass:active,
-#typeElectric:active,
-#typePsychic:active,
-#typeIce:active,
-#typeDragon:active,
-#typeDark:active,
-#typeFairy:active,
-#allTypes:active {
-  position: relative;
-  top: 5px;
-  transform: scale(2)
-
+.contenedor4{
+  background-color: white;
+  border-radius: 12px;
+  margin: 13px;
 }
-
-
-#allTypes {
-  width: 4.6%;
-  background-color: rgba(200, 196, 196, 0.871);
-  border-radius: 10px;
-  margin: 0.5%;
-  margin-bottom: 1%;
+.contenedor5{
+  background-color: white;
+  border-radius: 12px;
+  margin: 13px;
 }
 
 footer {
-  position: static;
-  bottom: 0;
-  text-align: center;
-  font-size: large;
-  background-color: rgba(200, 196, 196, 0.69);
-  padding: 0.5%;
-  width: 100%;
-  height: 40px;
-  left: 0;
-}
-
-#pokedexSecction,
-#extraSecction {
-  display: none;
-}
-
-#pokePeso{
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  padding: 5%;
-  display: flex;
-  display: inline-block;
-  width: 16%;
-  margin-right: 2%;
-  margin-left: 40%;
-  margin-top: 2%;
-  background-color: rgba(200, 196, 196, 0.871);
-  border-radius: 25px;
-  
-}
-
-main {
-  box-sizing: border-box;
-  height: 100%;
-  margin-bottom: 5%;
-}
-
-/*Media Query achicar pantalla*/
-
-
-/*@media screen and (max-width: 768px) {
-  .pokemon-container {
-    width: 30%;
-    margin-right: 2%;
-    margin-top: 2%;
-  }
-  #filterType{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  #typeNormal,
-  #typeFighting,
-  #typeFlying,
-  #typePoison,
-  #typeGround,
-  #typeRock,
-  #typeBug,
-  #typeGhost,
-  #typeSteel,
-  #typeFire,
-  #typeWater,
-  #typeGrass,
-  #typeElectric,
-  #typePsychic,
-  #typeIce,
-  #typeDragon,
-  #typeDark,
-  #typeFairy {
-    display: flex;
-    width: 9%;
-    border-radius: 10px;
-    margin: 0.5%;
-    margin-bottom: 1%;
-  }
-  #allTypes {
-    width: 10%;
-    border-radius: 10px;
-    margin: 0.5%;
-    margin-bottom: 1%;
-  }
-  #buttonHome,
-  #buttonPokedex,
-  #buttonExtra {
-    display: flex;
-    display: inline-block;
-    font-size: 2rem;
+    
+    background-color: antiquewhite;
+    padding: 1em 0;
     text-align: center;
-    margin-left: 3%;
-    width: 26%;
-  }
-  #order-select {
-    display: inline-block;
-    width: 30%;
-    padding: 7px 15px;
-    height: 40%;
-    outline: 0;
-    border: 0;
-    border-radius: 0;
-    margin-left: 33%;
-    margin-top: 3%;
-    font-size: 2em;
-    border-radius: 12px;
-    position: center;
-  }
+    position: absolute;
+    width: 100%;
+}
+
+
+.regreso{
+  background-color: #ebcf0c;
+  color: black;
 }
 
 /*Media Query Celular*/
-
-/*@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-  .pokemon-container {
-    width: 30%;
-    margin-right: 2%;
-    margin-top: 2%;
-    padding: 5%;
-    font-size: 2rem;
+@media only screen  and (max-width: 600px){
+  #seccionUno {
+      width: 100%;
+    }
+    .cartillaSeccUno{
+    width: 99%;
+    height: auto;
+    margin-bottom: 0px;
   }
-  #filterType{
-    display: flex;
-    flex-wrap: wrap;
+  p{
+    font-size: 14px;
+    top:5px;
   }
-  
-  #typeNormal,
-  #typeFighting,
-  #typeFlying,
-  #typePoison,
-  #typeGround,
-  #typeRock,
-  #typeBug,
-  #typeGhost,
-  #typeSteel,
-  #typeFire,
-  #typeWater,
-  #typeGrass,
-  #typeElectric,
-  #typePsychic,
-  #typeIce,
-  #typeDragon,
-  #typeDark,
-  #typeFairy {
-    display: flex;
-    width: 9%;
-    border-radius: 10px;
-    margin: 0.5%;
-    margin-bottom: 1%;
-    margin-right: 5;
-  }
-  #allTypes {
-    width: 10%;
-    border-radius: 10px;
-    margin: 0.5%;
-    margin-bottom: 1%;
-  }
-  #menu {
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 8px;
-    display: inline-block;
-    width: 80%;
-    height: 40%;
-  }
-  #buttonHome,
-  #buttonPokedex,
-  #buttonExtra {
-    display: flex;
-    display: inline-block;
-    font-size: 2rem;
-    text-align: center;
-    margin-left: 3%;
-    width: 26%;
-  }
-  #order-select {
-    display: inline-block;
-    width: 30%;
-    padding: 7px 15px;
-    height: 40%;
-    outline: 0;
-    border: 0;
-    border-radius: 0;
-    margin-left: 33%;
-    margin-top: 3%;
-    font-size: 2em;
-    border-radius: 12px;
-    position: center;
-  }
-
+  .pokecart {
+    width: 135px;
+    left: 40%;
+    top: -96px;
+    height: auto;
+}
+a{
+  font-size: 16px;
+}
+h3{
+font-size: 17px;
+padding: 10px;
+}
+.cartillaSeccDno {
+  width: 80%;
 
 }
-*/
+}
+
+/*Media Query tablets*/
+
+  @media (min-width: 601px) and (max-width: 768px) {
+  #seccionUno{ 
+    width: 100%;
+    margin: 0 auto;
+  }
+  .cartillaSeccUno{
+   height: 474px;
+   width: 43%;
+   gap: 0px;
+  }
+
+  #estadistica {
+    font-size: 12px;
+    padding-top: 12px;
+    margin-left: 16%;
+  }
+
+}

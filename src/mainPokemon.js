@@ -27,33 +27,3 @@ tamañoDelPokemonDos.textContent = pokemon.size.weight;
 resistenciaDelPokemon.textContent = pokemon.resistant;
 tipoDePokemon.textContent = pokemon.type;
 devilidadesDelPokemon.textContent = pokemon.weaknesses;
-
-//pokemon[0].evolution['next-evolution'];
-
-
-//crea lista de pokemon en mi primera seccion importando datos desde pokemon.js
-//y creando etiquetas en mi seccionUno, asignando atributos de mi data a las etiquetas 
-/*
-listaDePokemon.forEach ((item)=>{
-  const pokeCard = document.createElement("article");
-  const poketitulo = document.createElement("h3");
-  const pokeParrafo = document.createElement("p");
-  const pokeImagen = document.createElement("img");
-  const linkVer = document.createElement("a");
-  linkVer.href = "pokemon.html?nombre=" + item.name
-  linkVer.target = "_blank"
-  linkVer.textContent="ver mas"
-
-  poketitulo.textContent = item.name;
-  pokeParrafo.textContent = item.about;
-  pokeImagen.src = item.img;
-
-
-  pokeSectionUno.appendChild(pokeCard);
-  pokeCard.appendChild(poketitulo);
-  pokeCard.appendChild(pokeParrafo);
-  pokeCard.appendChild(pokeImagen);
-  pokeCard.appendChild(linkVer);
-});
-*/
-
