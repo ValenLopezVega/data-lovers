@@ -1,0 +1,521 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:monospace, serif;
+}
+
+body{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+/*Header y navegador */
+.container-title{ 
+    background-image: url(https://tophinhanhdep.com/wp-content/uploads/2021/11/Star-Anime-Wallpapers.jpg);
+    display: flex;
+    height: 100px;
+    width: 100%;
+    max-width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.container-title nav {
+    width: 70%;
+    height: 100%;
+}
+.container-title nav ul{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: right;
+}
+
+.container-title nav li{
+    cursor: pointer;
+    transition: .3s;
+    color: #fff;
+    padding:  30px;
+    font-size: 2em;
+}
+
+.nav-list li:hover{
+    color: #fff;
+    background-color: #1e3780;
+}
+
+.container-logo {
+    height: 100%;
+    width: 20%;
+}
+
+.container-title img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+/*Browser windows functionality js*/
+.index[data-content] {
+    display: block;
+}
+[data-content] {
+    display: none;
+}
+
+.filters{
+    width: 100%;
+}
+/*filter design*/
+
+.container-filter-box{
+    margin: 15px 8%;
+}
+
+.filterr{
+    display: flex;
+    background-color: hsla(278, 30%, 50%, 0.71);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    flex-flow: row ;
+    justify-content: space-between;
+}
+
+.filter__01{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter__01 select{
+    width: 150px;
+    margin: 0px 10px 0px 0px;
+    background-color:#fffafa;
+    border:5px solid #1e3780 ;
+    border-radius: 13px;
+    display: flex;
+    position: relative;
+    font-size: 18px;
+    height: 50px;
+    font-weight: bolder;
+}
+.filter__01 select option{
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    border:1px solid #a6a5a57a ;
+    border-top: #000 solid 1px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.filter__01 select:focus option{
+    position: relative;
+    position: all;
+}
+.filter__01 .filter-label-1{
+    width: 150px;
+    margin: 0px 10px ;
+    background-color:#dcdde1;
+    border:5px solid #dcdde1 ;
+    border-radius: 13px;
+    display: flex;
+    position: relative;
+    font-size: 18px;
+    height: 50px;
+    font-weight: bolder;
+}
+.filter__02{
+    background-color: red;
+    text-align: center;
+    width: 150px;
+    margin: 0px 0px;
+    background-color:#fff;
+    border:5px solid #1e3780 ;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 50px;
+    font-size: 18px;
+font-weight: bold;
+}
+.filter__01 select option{
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    border:1px solid #8a59a6 ;
+    border-top: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+    order:2;
+    z-index: 1;
+    transition: background 0.5s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+/*box data of the pokemon*/
+.box-pokedex{
+    margin: 15px 8%;    
+    background-color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    min-height: calc(100vh - 1000px);
+    border:5px solid #1e3780;
+    border-radius: 13px;
+}
+.card{
+    text-align: center;
+    border: 2px solid grey;
+    box-shadow:2px 2px 4px black ;
+    height: 14em;
+    width: 12em;
+    margin: 10px 5px;
+    background-color: #fff;;
+    padding:10px;
+}
+.card:hover {
+    color: #fff;
+    border: 2px solid #000;
+    background-color: hsla(278, 30%, 50%, 0.71);   
+    transition: .5s;
+    color: #000;
+}
+
+.card .p-1{
+    text-align: center;
+    text-transform: capitalize;
+    width: 150px;
+    display: inline-block;
+    background-color:hsl(225, 90%, 60%);
+}
+.card .p-2{
+    text-transform: capitalize;
+    text-align: center;
+    width: 150px;
+    display: inline-block;
+    background-color:hsl(225, 90%, 70%);
+}
+.card .p-3{
+    text-transform: capitalize;
+    text-align: center;
+    width:150px;
+    background-color:hsl(225, 90%, 80%);
+    display: inline-block;
+    padding-bottom:5px ;
+}
+.pokemon-img img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    background-image: url('https://i.pinimg.com/736x/33/ac/6a/33ac6af8e90054568ab47ad0ef2d02a2.jpg');
+    background-size: 450px;
+    border-radius: 10px;
+}
+
+
+
+/*stats*/
+.stats-contain {
+    background-color:#fff;
+    width: 85%;
+    margin: 15px 8%;
+    border:5px solid #1e3780 ;
+    border-radius: 13px;
+}
+.main-table {
+    background-color:#fff ;/*#f8dbd556*/
+    width: 100%;
+    height: 100%;
+}
+.main-table thead {
+    padding: 20px;
+    font-size: 1.2em;
+    background-color: #8a59a6;
+    color: #ffffff;
+}
+.title-table{
+    background-color: #27408d;
+    padding: 5px;
+    font-size: 1.5em;
+}
+.element-datatr {
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: capitalize;
+}
+.element-datatr td {
+   text-align: center;
+    margin: 10px;
+    padding: 6px;
+}
+.element-datatr td img{
+    width:100%;
+    height:100%;
+}   
+@media screen and (min-width: 200px) and (max-width: 480px) {
+    table{
+        display: block;
+        overflow-x: auto;
+    }
+    .stats-contain {
+        margin: 15px 7%;
+    }
+
+    .main-table thead {
+        font-size: 22px;
+    }
+    .element-datatr {
+        font-size: 20px;
+       
+    }
+    .element-datatr td img{
+        width:70px;
+        height:70px;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 889px) {
+    table{
+        display: block;
+        overflow-x: auto;
+    }
+    .stats-contain {
+        margin: 15px 7%;
+    }
+
+    .main-table thead {
+        font-size: 22px;
+    }
+    .element-datatr {
+        font-size: 20px;
+       
+    }
+    .element-datatr td img{
+        width:70px;
+        height:70px;
+    }}
+/*footer*/
+.cotainer-footer {
+    position: relative;
+    background-color: #1e3780;
+    display: flex;
+    flex-flow: wrap row;
+    height: 40%;
+    justify-content: space-evenly;
+    align-items: center;
+    border-color: #8a59a6;
+    border-style: solid;
+     min-height: calc(30vh - 30px); 
+
+}
+.logo-footer {
+    padding: 0px;
+    flex: 28%;
+    display: flex;
+    justify-content: center;
+}
+
+.box-img-poke {
+    width: 45%;
+}
+
+.logo-footer img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.data-collaborator {
+    flex: 34%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.data-collaborator div {
+    margin: 5px 0px;
+    text-align: center;
+}
+
+.data-collaborator div a {
+    color:#dbd5d5;
+    margin: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.data-collaborator p {
+    margin: 5px 0px;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bold;
+    color:#fff;
+}
+
+
+.icon-info {
+    background-color: ;
+    padding: 10px;
+    flex: 28%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-info ion-icon {
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    margin: 5px;
+    cursor: pointer;
+
+}
+
+
+@media screen and  (max-width:800px){/*laptap nav*/
+    
+    
+    .container-title{ 
+        height: 75px;
+        width: 100%;
+    }
+    
+    .container-title nav {
+        width: 80%;
+        height: 100%;
+    }
+    .container-title nav li{
+        padding:  23px 15px;
+        font-size: 1.5em;
+    }
+    .container-logo {
+        height: 100%;
+        width: 20%;
+    } 
+}
+@media screen and  (max-width:840px){/*laptap filt*/
+
+    .filterr{
+        display: flex;
+        background-color: hsla(278, 30%, 50%, 0.71);
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        flex-flow: row ;
+        justify-content: space-between;
+    }
+    
+    .filter__01{
+        display: flex;
+        flex-flow: row ;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .filter__01 select{
+        margin: 0px 10px 0px 0px;
+        width: 8.5em;
+        height: 3em;
+        font-size: 0.8em;
+    }
+    .filter__01 .filter-label-1{
+        width: 7em;
+        margin: 0px 10px ;
+        height: 35px;
+        font-size: 12px;
+    }
+    .filter__02{
+        background-color: #fff;
+        width: 5em;
+        margin: 0px 0px;
+        height: 35px;
+        font-size: 15px;
+    }
+}
+@media screen and  (max-width: 540px){
+    .container-filter-box{
+        margin: 15px 4%;
+    }
+    
+    .filterr{
+        background-color: hsla(278, 30%, 50%, 0.71);
+    }
+    
+    .filter__01{    
+    }
+    .filter__01 select{
+        text-align: center;
+        margin: 0px 5px;
+        font-size: 10px;
+        width: 6.5em;
+        height: 3em;
+    }
+    
+    .filter__01 .filter-label-1{
+        text-align: center;
+        width: 65px;
+        margin: 0px 0px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .filter__02{
+        text-align: center;
+        margin: 0px 0px;
+        font-size: 10px;
+        width: 6.5em;
+        height: 3em;
+    }
+
+    .box-pokedex{
+        margin: 15px 4%;
+    }
+    .card{
+        height:10em;
+        width: 8em;
+        padding: 0px;
+
+    }
+     .card .p-1{
+        display: inline-block;
+        width: 100%;
+    } 
+    .card .p-2{
+        display: inline-block;
+        width: 100%;
+    }
+    .card .p-3{
+        display: inline-block;
+        width: 100%;
+    }
+    .cotainer-footer {
+        display: flex;
+        flex-flow: wrap column;
+    }
+    .pokemon-img img{
+        width: 80px;
+        height: 60px;
+    } 
+}

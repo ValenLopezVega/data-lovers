@@ -4,9 +4,114 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   </head>
-  <body>
-    <div id="root"></div>
+    <body>
+      <!--Cabeza y navegador de la pagina-->
+      <header class="container-title">
+        <div class="container-logo">
+          <a href="index.html"><img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon-720x450.png" alt="Logo titulo pokemon"></a>
+        </div>
+        <nav>
+         <ul class="nav-list">
+            <li data-target="#filters">Home</li>
+            <li data-target="#stats">Stats Pokemon</li>
+          </ul>
+        </nav> 
+      </header>
+
+      <!--main menu box one-->
+      <main  data-content="content" id="filters" class="index">
+        <div class="container-filter-box">
+          <div class="filterr">
+            <div class="filter__01">
+              <label class="filter-label-1">Filter by:</label>
+              
+                <select id="type-pokemon" name="type-pokemon" class="type-pokemon">
+                  <option selected value="Type">Type</option>
+                  <option value="bug">Bug</option>
+                  <option value="dark">Dark</option>
+                  <option value="dragon">Dragon</option>
+                  <option value="electric">Electric</option>
+                  <option value="fairy">Fairy</option>
+                  <option value="fighting">Fighting</option>
+                  <option value="fire">Fire</option>
+                  <option value="flying">Flying</option>
+                  <option value="ghost">Ghost</option>
+                  <option value="grass">Grass</option>
+                  <option value="ground">Ground</option>
+                  <option value="ice">Ice</option>
+                  <option value="normal">Normal</option>
+                  <option value="poison">Poison</option>
+                  <option value="psychic">Psychic</option>
+                  <option value="rock">Rock</option>
+                  <option value="steel">Steel</option>
+                  <option value="water">Water</option>
+                </select>
+                <select id="type-generation" name="type-generation" class="type-generation">
+                  <option selected value="Gen">Generation</option>
+                  <option value="kanto">Kanto</option>
+                  <option value="johto">Johto</option>
+                </select>
+              
+            </div>
+            <select id="type-order" class="filter__02"> <!--order filtering-->
+              <option selected value="1">Order</option>
+              <option value="Ascending">Ascending</option>
+              <option value="Descending">Descending</option>
+              <option value="Major-Minor">Major-Minor</option>
+              <option value="Minor-Major">Minor-Major</option>
+            </select>
+          </div>
+        </div>
+        <div class="box-pokedex" id="content-pokedexs"></div>
+      </main>
+      
+      <!-- percentage box number two-->
+      <section data-content="content" id="stats" class="stats-contain">
+          <table border="1" class="main-table" >
+            <thead>
+              <th colspan="9" class="title-table">Pokemon Stats</th>
+              <tr>
+                <th>#</th>
+                <th>Pokemon</th>
+                <th>Name</th>
+                <th>Base Attack</th>
+                <th>Base Defense</th>
+                <th>Base Stamina</th>
+                <th>Max-CP</th>
+                <th>Max-HP</th>
+                <th>Encounter Percentage</th>
+               </tr>
+            </thead>
+            <tbody id="pokedex-stats"></tbody>
+          </table>
+      </section>
+
+      <!--Footer-->
+      <footer id="" class="cotainer-footer">
+        <div class="logo-footer">
+          <div class="box-img-poke">
+            <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon-720x450.png" alt="Logo footer pokemon">
+          </div>
+        </div>
+        <div class="data-collaborator">  
+          <div>
+            <a href="mailto:angiemorarosas@gmai.com? subject=angie & body=correo">@angiemorarosas</a>
+            <a href="mailto:fiorella.dm2002@gmai.com? subject=fiorella & body=correo">@fiorella.dm2002</a>
+          </div>
+          <p>Project collaborators: Diana Fiorella Diaz Mayta and Angie Lorena Mora Rosas </p>
+        </div>
+        <div class="icon-info">
+         <a href=""><ion-icon name="logo-github"></ion-icon></a>
+         <a href=""><ion-icon name="logo-figma"></ion-icon></a>
+         <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+      </footer>
+
+     
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="main.js" type="module"></script>
   </body>
 </html>
