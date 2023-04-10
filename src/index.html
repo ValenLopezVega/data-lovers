@@ -1,67 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html> 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Poke web (Data Lover)</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <figure>
-        <a href="https://fonttmeme.com/es/fuente-pokemon/">
-        <img src="https://fontmeme.com/permalink/230321/687d67403dbb62892116f1b85225b722.png"
-         alt="fuente-pokemon" borde="0">
-         </a>
+        <img id="pokeweb" src="https://fontmeme.com/permalink/230321/687d67403dbb62892116f1b85225b722.png" 
+        alt="Imagen de la palabra pokeweb">
         </figure>
-    </header>
-       
-      <section id="Encabezado"> 
-        <div class="buscar" id="input-buscar">
-        <label for="name"> Busqueda </label>
-        <input type="text" id="inputBuscar" placeholder="nombre">
-         <button>Buscar</button>
-        </div>
-
-         <label for="region">Region</label>
-         <select name="region" id="Region">
-            <option value=""></option>
-            <option value="reg-uno">Johto</option>
-            <option value="reg-dos">Canto</option>
-            </select> 
-
-        <label for="tipo">Tipo</label>
-        <select name="tipo" id="Tipo">
-             <option value=""></option>
-             <option value="tipo uno">Agua</option>
-             <option value="tipo dos">Fuego</option>
-             <option value="tipo tres">Tierra</option>
-             <option value="tipo cuatro">Veneno</option>
-             <option value="tipo cinco">Electrico</option>
-             <option value="tipo seis">Aire</option>
-        </select> 
         
-        <label for="orden">Orden</label>
+      <section id="encabezado"> 
+        <div class="buscar" id="input-buscar">
+        <label for="name"> </label>
+        <input type="text" id="inputBuscar" maxlength="15" placeholder="nombre">
+        </div>
+        
+        <label id="ordenado" for="orden">Order</label>
         <select name="orden" id="orden">
               <option value=""></option>
-              <option value="az">Agua</option>
-              <option value="za">Fuego</option>
-             <option value="menosp">Mayor a Menor Poder</option>
-              <option value="masp">Menor a Mayor poder</option>
+             <option value="ascendente">A - Z</option>
+              <option value="descendente">Z - A</option>
         </select>
+      
       </section>
+    </header>  
+    <main>
+      <div id="estadistica">
+        <table>
+          <tr>
+            <th>Region</th>
+            <th>Procentage%</th>
+          </tr>
+          <tr>
+            <td>kanto</td>
+            <td id="kantoRow">0</td>
+          </tr>
+          <tr>
+            <td>johto</td>
+            <td id="johtoRow">0</td>
+          </tr>
+        </table>
+       </div>
       <section id="seccionUno">
-      </section>   
-    
-      <button name="button">Retroceder</button>
-      <button name="button">Siguiente</button>
-     
-   <div id="root"></div>
-  <script src="main.js" type="module"></script>
-
+      </section>
+      <script src="main.js" type="module"></script>
+    </main>
 <footer>
-  <span>Proyecto creado por Maria & Brina</span>
+  <span> Proyecto creado por Maria Y Brina Telf 4556-8765 </span>
 </footer>
- </body>
+
+</body>
+
 </html>
 
