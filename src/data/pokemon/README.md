@@ -6,33 +6,31 @@ Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch
 (tomado de Google Play). Los usuarios del juego se convierten en "Maestros/
 entrenadores de Pokémon" y pueden:
 
-- **Descubrir el mundo Pokémon:** explorar y descubrir nuevos Pokémon allá
+- *Descubrir el mundo Pokémon:* explorar y descubrir nuevos Pokémon allá
   donde vayan.
-- **Atrapar** distintos Pokémon para completar su Pokédex.
-- **Pelear** contra Pokémon de otros entrenadores y conquistar un gimnasio.
-- **Competir** en épicos combates contra otros entrenadores.
-- **Hacer equipo** con otros entrenadores para atrapar poderosos Pokémon
+- *Atrapar* distintos Pokémon para completar su Pokédex.
+- *Pelear* contra Pokémon de otros entrenadores y conquistar un gimnasio.
+- *Competir* en épicos combates contra otros entrenadores.
+- *Hacer equipo* con otros entrenadores para atrapar poderosos Pokémon
   durante las incursiones.
 
-## Hallazgos
-
-Para entender mejor qué necesidades complementarias a la app tienen los
-usuarios, hicimos una rápida investigación (research) y estos son algunos
-de los hallazgos.
-
-- Los Pokémon tienen características únicas que determinan las decisiones que
-  toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
-- Un maestro Pokémon antes de salir a casar los Pokémon tienen que:
-  saber el top 10 de frecuencia de aparición de los Pokémon.
-- Los Pokémon tienen distintos tipos y debilidades de combate. Estas
-  características son importantes cuando un maestro Pokémon elige al Pokémon
-  más adecuado para su batalla. Hay veces que tiene que elegir a los que
-  tienen menos cantidad de debilidades y saber de que tipo son. Por ello, es
-  importante para un maestro Pokémon poder ordenarlos por estas 2
-  características.
-- Los Pokémon evolucionan y es importante para un
-  maestro Pokémon saber cuántas y cuáles son las evoluciones que tienen antes y
-  después.
-- Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber
-  cuántos caramelos necesita un Pokémon para evolucionar.
-hola
+## Resumen
+Pokeweb esta diseñado en base a  3 historias de usuarios quienes necesitaban conocer informacion detallada.
+La primera historia de usuario es sobre el fan del anime POKEMON :Necesita conocer
+Sin conocimiento previo del juego que deseen navegar en una web confiable y agradable para aprender caracteristicas de los pokemones para convertirse en un  maestro pokemon. 
+La segunda historia de usuario es sobre fan de juego, necesita saber la informacion del tipo, debilidad y resistencia. de cada pokemon y sus evoluciones
+La tercera historia de usuario  es sobre una perona X que desea conocer los tipos de pokemon que tiene las ciudades de kanto y Jhoto , y sus porcentajes en cada ciudad.
+Para cumplir con estas necesidades hemos desarrollado el sitio web en donde se visualizara la informacion requerida de nuestros usuarios.
+## Objetivos del proyecto 
+* Que los usuarios puedan tener una herramienta donde consultar informacion de pokemons.
+* Reconocer a los pokemones Nombre y tipo .
+* Puedan tener una navegación fácil e interactiva
+* Mostrar 251 pokemons en la pagina principal cada uno con sus características.
+* Se presentara una esatdistica con los tipos de cada pokemon.
+* Filtrar por Tipo 
+* Ordenar pokemons alfabéticamente de A-Z
+* Ordenar pokemons alfabéticamente de Z-A
+* Buscar por nombre a un pokemon
+## Conclusion
+A medida que agregamos cada historia de usuario, modificamos el prototipo, ajustando y modificando la interfaz gráfica para que coincidiera con los requisitos necesarios. Esto nos permitió garantizar que la interfaz gráfica cumpliera con los criterios de aceptación definidos y ofreciera la mejor experiencia al usuario.
+Realizamos  test de usabilidad, donde pudimos identificar áreas de mejora y realizar ajustes  para lograr una mejor navegacion por parte de los usuarios.
