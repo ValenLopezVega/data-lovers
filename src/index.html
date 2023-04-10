@@ -1,12 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html> 
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Poke web (Data Lover)</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <header>
+      <figure>
+        <img id="pokeweb" src="https://fontmeme.com/permalink/230321/687d67403dbb62892116f1b85225b722.png" 
+        alt="Imagen de la palabra pokeweb">
+        </figure>
+        
+      <section id="encabezado"> 
+        <div class="buscar" id="input-buscar">
+        <label for="name"> </label>
+        <input type="text" id="inputBuscar" maxlength="15" placeholder="nombre">
+        </div>
+        
+        <label id="ordenado" for="orden">Order</label>
+        <select name="orden" id="orden">
+              <option value=""></option>
+             <option value="ascendente">A - Z</option>
+              <option value="descendente">Z - A</option>
+        </select>
+      
+      </section>
+    </header>  
+    <main>
+      <div id="estadistica">
+        <table>
+          <tr>
+            <th>Region</th>
+            <th>Procentage%</th>
+          </tr>
+          <tr>
+            <td>kanto</td>
+            <td id="kantoRow">0</td>
+          </tr>
+          <tr>
+            <td>johto</td>
+            <td id="johtoRow">0</td>
+          </tr>
+        </table>
+       </div>
+      <section id="seccionUno">
+      </section>
+      <script src="main.js" type="module"></script>
+    </main>
+<footer>
+  <span> Proyecto creado por Maria Y Brina Telf 4556-8765 </span>
+</footer>
+
+</body>
+
 </html>
+

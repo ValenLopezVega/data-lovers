@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%;
+  position: relative;
+}
+
+main{
+  padding: 0 25px;
+
+}
+
+body {
+  background-image: url(./img/seccionUno3.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+#encabezado {
+    border-radius: 8px;
+    color: #1b1c37;
+    font-size: 100%;
+    width: 100%;
+    text-align: center;
+    top: 13px;
+}
+
+#seccionUno{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 13px;
+}
+
+
+.cartillaSeccUno{
+  
+  width: 24%;
+  background-color: rgb(147 147 164 / 87%);
+  border-radius: 25px;
+  height: 499px;
+  display: grid;
+  gap: 10px;
+  margin: 0.5%;
+}
+  
+  h3 {
+    margin-top: 20px;
+    display: block;
+    height: 3px;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+
+  
+   
+p {
+  padding: 0px 20px;
+}
+
+a{
+  text-align: center;
+  padding: 10px;
+  width: 120px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #514a8b;
+  color: white;
+  height: 42px;
+  text-decoration: none;
+}
+
+ select{
+  left: -163px;
+  margin-top: 16px;
+  width: 106px;
+  padding: 12px;
+  color: rgb(25 37 37);
+  display: inline-block;
+  top: 25px;
+  border-radius: 8px;
+}
+ 
+
+  #inputBuscar{
+    width: 58%;
+    height: 30%;
+    color: rgb(25 37 37);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 10px 14px -7px #393a45;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+  figure{
+    margin: 10px;
+  }
+  #estadistica {
+    text-transform: uppercase;
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-left: 0.5%;
+  }
+
+#ordenado{
+  left: -197px;
+  color: rgb(25 37 37);
+  top: 24px;
+  margin-right: 12px;
+  font-weight: bolder;
+}
+#orden{
+  margin-top: 16px;
+  width: 149px;
+  padding: 12px;
+  color: rgb(25 37 37);
+  display: inline-block;
+  top: 25px;
+
+
+
+
+  border-radius: 8px;
+}
+
+
+#pokeweb{
+  width: 169px;
+}
+
+
+.pokecart{
+  margin: 0 auto;
+}
+
+
+
+.buscar{
+  color: rgb(7 24 24)
+}
+
+label{
+  color: rgb(25 37 37);
+}
+
+th {
+  background: #cfcfdb;
+  padding: 12px;
+  border-radius: 5px;
+  width: 230px;
+}
+
+td {
+  padding: 6px;
+  font-style: italic;
+  background: #fbf1e3bf;
+  border-radius: 5px;
+}
+
+#seccionDos{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 13px;
+}
+
+.cartillaSeccDno{
+  width: 39%;
+  background-color: rgb(147 147 164 / 87%);
+  border-radius: 25px;
+  height: 565px;
+  display: grid;
+  gap: 2px;
+  margin: 0.5%;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+#pokewebSeccDos{
+  width: 169px;
+}
+.contenedorSec{
+  grid-template: max-content;
+}
+
+.contenedor1{
+  background-color: white;
+  border-radius: 12px;
+  margin: 13px;
+}
+.contenedor2{
+  background-color: white;
+  border-radius: 12px;
+  margin: 13px;
+}
+.contenedor3{
+  background-color: white;
+  border-radius: 12px;
+  margin: 13px;
+}
+.contenedor4{
+  background-color: white;
+  border-radius: 12px;
+  margin: 13px;
+}
+.contenedor5{
+  background-color: white;
+  border-radius: 12px;
+  margin: 13px;
+}
+
+footer {
+    
+    background-color: antiquewhite;
+    padding: 1em 0;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+
+.regreso{
+  background-color: #ebcf0c;
+  color: black;
+}
+
+/*Media Query Celular*/
+@media only screen  and (max-width: 600px){
+  #seccionUno {
+      width: 100%;
+    }
+    .cartillaSeccUno{
+    width: 99%;
+    height: auto;
+    margin-bottom: 0px;
+  }
+  p{
+    font-size: 14px;
+    top:5px;
+  }
+  .pokecart {
+    width: 135px;
+    left: 40%;
+    top: -96px;
+    height: auto;
+}
+a{
+  font-size: 16px;
+}
+h3{
+font-size: 17px;
+padding: 10px;
+}
+.cartillaSeccDno {
+  width: 80%;
+
+}
+}
+
+/*Media Query tablets*/
+
+  @media (min-width: 601px) and (max-width: 768px) {
+  #seccionUno{ 
+    width: 100%;
+    margin: 0 auto;
+  }
+  .cartillaSeccUno{
+   height: 474px;
+   width: 43%;
+   gap: 0px;
+  }
+
+  #estadistica {
+    font-size: 12px;
+    padding-top: 12px;
+    margin-left: 16%;
+  }
+
+}
