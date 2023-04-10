@@ -52,7 +52,7 @@ export const cartillasHtml = (listaPokemons) => {
       <h3>${pokemon.name}</h3>
       <p>${pokemon.about}</p>
       <img class= "pokecart" src=${pokemon.img}>
-      <a href="pokemon.html?nombre=${pokemon.name}" target="_blank" >ver mas</a>
+      <a href="pokemon.html?nombre=${pokemon.name}" target="_blank" >see more</a>
     </article>`;
   });
   return cartillaString;
