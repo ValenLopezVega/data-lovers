@@ -234,6 +234,7 @@ footer {
 .regreso{
   background-color: #514a8b;
   color: white;
+  display: block;
 }
 
 /*Media Query Celular*/
