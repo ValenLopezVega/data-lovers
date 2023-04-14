@@ -2,8 +2,8 @@ import data from './data/pokemon/pokemon.js';
 import { filtro} from "./data.js";
 
 //extraer de la URL el nombre del pokemon que se va mostrar su informacion
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
+const urlString = window.location.search;
+const urlParams = new URLSearchParams(urlString);
 const nombrePokemon = urlParams.get('nombre');
 
 

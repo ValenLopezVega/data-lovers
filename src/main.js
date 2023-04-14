@@ -1,6 +1,7 @@
 import data from './data/pokemon/pokemon.js';
 import { filtro, cartillasHtml, ordenar} from "./data.js";
 
+// se usar .pokemon por que necesito acceder a atributo del array (lista de pokemones)
 const listaDePokemon = data.pokemon;
  
 // importando datos desde pokemon.js a main.js
