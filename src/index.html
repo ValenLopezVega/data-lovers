@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+
+ 
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <header>
+  <!--Control de audio-->
+  <audio controls>
+    <source src="Extras/Professor (Main Theme) - Pokémon GO OST (Extended).mp3">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <!--Titulo -->
+  <center> <img src="extra/poGoLogo2.png" width="25%" /></center>
+
+</header>
+<!--Barra de menú-->
+  <main class="boxtwo">
+    <div id="menu">
+      <button id="buttonHome">Home</button>
+      <button id="buttonPokedex"> Pokedex</button>
+      <button id="buttonExtra"> Curiosidades</button>
+    </div>
+  
+<!--Seccion de home-->
+  <section id="homeSecction"> 
+
+  <div class="flexWelcome">
+  <div id= "welcome">
+    <h1> Hola entrenador Pokemon </h1> 
+    <h2>  Te damos la bienvenida al emocionante mundo de Pokemon Go!</h2>
+
+   <p> Este juego te invita a salir de casa e ir en la búsqueda de pokemons!!
+    completa tu Pokedex y combate con otros jugadores en la liga de combates Go!</p>
+
+    <p> Nosotras te ayudaremos mostrándote las características de cada pokemon de Kanto y Johto,
+       ademas en la seccion de curiosidades puedes encontrar el peso de algunos pokemons</p>
+  </div>
+    <div id="oak">
+    <img  src="./extra/profesorOak.webp">
+  </div>
+</div>
+
+
+  </section>
+
+<!--Sección de pokedex-->
+  <section id="pokedexSecction"> 
+  <h3> Selecciona el tipo de Pokémon que necesitas, si quieres verlos todos oprime la pokebola</h3>
+    <div id = "filterType">
+      <img id ="allTypes" src="./extra/allTypes.png" alt="logo todos los tipos de pokemon" /> 
+      <img id = "typeNormal" src="./extra/type_normal.png" alt="logo tipo normal" /> 
+      <img id = "typeFighting" src="./extra/Type_Lucha.webp" alt="logo tipo lucha" /> 
+      <img id = "typeFlying" src="./extra/type_volador.png" alt="logo tipo volador" /> 
+      <img id = "typePoison" src="./extra/type_veneno.png" alt="logo tipo veneno" /> 
+      <img id = "typeGround" src="./extra/Type_Tierra.webp" alt="logo tipo tierra" /> 
+      <img id = "typeRock" src="./extra/type_roca.png" alt="logo tipo roca" /> 
+      <img id = "typeBug" src="./extra/type_bicho.png" alt="logo tipo bicho" /> 
+      <img id = "typeGhost" src="./extra/Type_Fantasma.webp" alt="logo tipo fantasma" /> 
+      <img id = "typeSteel" src="./extra/style_acero.webp" alt="logo tipo acero" /> 
+      <img id = "typeFire" src="./extra/Type_Fuego.webp" alt="logo tipo fuego" /> 
+      <img id = "typeWater" src="./extra/Type_Agua.webp" alt="logo tipo agua" /> 
+      <img id = "typeGrass" src="./extra/type_planta.png" alt="logo tipo planta" /> 
+      <img id = "typeElectric" src="./extra/Type_Electric.webp" alt="logo tipo electrico" /> 
+      <img id = "typePsychic" src="./extra/Type_Psquico.webp" alt="logo tipo psiquico" /> 
+      <img id = "typeIce" src="./extra/type_hielo.png" alt="logo tipo hielo" /> 
+      <img id = "typeDragon" src="./extra/type_dragon.webp" alt="logo tipo dragon" />
+      <img id = "typeDark" src="./extra/Type_Siniestro.webp" alt="logo tipo siniestro"/> 
+      <img id = "typeFairy" src="./extra/Type_Hada.webp" alt="logo tipo hada" /> 
+    </div>   
+  
+<select id="order-select">
+  <option disabled selected>Ordenar por:</option>
+  <option id="btnAsc" value="asc">Ascendente A-Z </option>
+  <option id="btnDesc" value="desc">Descendente Z-A </option>
+</select>
+    <!--Lista de pokemon-->
+    <div id = "pokemons">
+    </div>
+
+  </section>
+
+  <section   id="extraSecction">
+  
+    
+    
+
+  <div id = "mostrarPokePeso"> </div>
+ 
+  </section>
+
+</main>
+<footer> Web creada por Gisselle y Carolina <img src="./extra/pokeball-pokemon.gif" style = "width: 10%" /> </footer>
+  <script src="main.js" type="module"></script>
+
+</body>
+
 </html>
