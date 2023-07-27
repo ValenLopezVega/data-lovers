@@ -6,7 +6,6 @@ import { searchByName,
   calculate
 } from '../src/data.js';
 
-
 // FILTER BY NAME
 
 describe('searchByName', () => {
@@ -24,8 +23,6 @@ describe('searchByName', () => {
     expect (results).toEqual([]);
   });
 
-  // --------------------------------------------------------------------------------------------
-
   it ('debería devolver el personaje que el usuario está buscando', () => {
     const characters = [
       { name: 'Rick Sanchez', species: 'Human'},
@@ -35,8 +32,6 @@ describe('searchByName', () => {
     const results = searchByName(characters,'rick');
     expect (results).toEqual([{ name: 'Rick Sanchez', species: 'Human' }]);
   });
-
-  // ---------------------------------------------------------------------------------------------
 
   it ('debería poder buscar sin importar si el usuario ingresa mayúsculas o minúsculas', () => {
     const characters = [
@@ -64,13 +59,12 @@ describe('filterGeneral', () => {
       {name: 'Conroy', species: "Robot"},
     ];
 
-    const results = filterGeneral(characters, 'species','Robot');//robot es lo que el usuario ingresa
+    const results = filterGeneral(characters, 'species','Robot');
     expect (results).toEqual([{name: 'Conroy', species: "Robot"}]);
   });
 });
 
-
-//FILTER BY GENDER
+// FILTER BY GENDER
 
 describe('filterByGender', () => {
   it('Debería ser una función', () => {
@@ -89,7 +83,6 @@ describe('filterByGender', () => {
     expect (results).toEqual([ {name: 'Creepy Little Girl', gender: 'Female'},{name: 'Cynthia', gender: 'Female'}]);
   });
 });
-
 
 // ORDER ASCENDING
 
@@ -111,8 +104,6 @@ describe('filterByOrderAZ', () => {
   });
 });
 
-
-
 // ORDER DESCENDING
 
 describe('filterByOrderZA', () => {
@@ -133,8 +124,6 @@ describe('filterByOrderZA', () => {
   });
 });
 
-
-
 // CALCULATE
 
 describe('calculate', () => {
@@ -142,8 +131,7 @@ describe('calculate', () => {
     expect(typeof calculate).toBe('function');
   });
   it ('debería calcular el porcentaje de mujeres con respecto a la data', () => {
-    const charactersFemale = [
-      { name: 'Creepy Little Girl', gender: 'Female'},
+    const charactersFemale =   [{ name: 'Creepy Little Girl', gender: 'Female'},
       { name: 'Cynthia', gender: 'Female'}
     ];
 
