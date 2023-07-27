@@ -29,14 +29,14 @@
 
       </div>
 
-      <img src="./images/rym.png " alt="logoRickAndMorty" class="logo">
+      <img src="./images/rym.png " alt="logo Rick AndMorty" class="logo">
     
       <div class="content-select-all container ">
 
         <div class="group-select">
           <label class="label" for="">Filter by</label>
           <select name="filter" class="select" id="select-species">
-            <option disabled selected value="-SPECIES-">-SPECIES-</option>
+            <option disabled selected value="SPECIES">SPECIES</option>
             <option value="Humanoid">Humanoid</option>
             <option value="Robot">Robot</option>
             <option value="Human">Human</option>
@@ -52,7 +52,7 @@
         <div class="group-select">
           <label class="label" for="">Filter by</label>
           <select name="filter" class="select" id="select-gender">
-            <option disabled selected value="-GENDER-">-GENDER-</option>
+            <option disabled selected value="GENDER">GENDER</option>
             <option value="Female">Female</option>
             <option value="Male">Male</option>
             <option value="unknown">unknown</option>
@@ -63,7 +63,7 @@
         <div class="group-select">
           <label class="label" for="">Order by</label>
           <select name="order" class="select" id="select-order">
-            <option disabled selected>-ALPHABET-</option>
+            <option disabled selected value="ALPHABET">ALPHABET</option>
             <option value="Ascending">Ascending</option>
             <option value="Descending">Descending</option>
           </select>
@@ -79,17 +79,12 @@
         <div class="container-cards" id="container-cards"></div> 
       </section>
 
-      <section>
-        <div class="characters" id="characters"></div>
-      </section>
-
       <section class="modal">
 
         <div class="modal_container">
           <h2 class="modal_title"> Character stats by gender </h2>
 
-          <div id="box-statistics">
-          </div>
+          <div id="box-statistics"></div>
 
           <button type="button" class="modal_close">Close</button>
         </div>

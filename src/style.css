@@ -139,15 +139,6 @@ option{
     padding: 10px; 
 }
 
-.characters{
-    display: flex;
-    /* display: none; */
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 35px;
-    padding: 10px;
-}
 
 /* CREATED FROM JS */
 .content-front-reverse{
@@ -192,7 +183,8 @@ option{
     background-color: #000;
 }
 
-.content-front-reverse.active{
+.content-front-reverse.active{ 
+    /*creamos una clase.active para identificarlo en js*/
     transform: rotateY(180deg);
 }
 
@@ -224,12 +216,15 @@ option{
     background-color: #111111bd;
     display: flex;
     opacity: 0;
+    /*no se ve el modal*/
     pointer-events: none;
+    /*desactiva evento en el mouse */
     transition: opacity .6s;
     max-width: 390px;
 }
 
-.modal--show {
+.modal--show {  
+    /* Al presionar el link,agrega esta clase desde js */
     opacity: 1;
     pointer-events: unset;
     transition: opacity .3s;
@@ -264,7 +259,6 @@ option{
     place-items: center;
 }
 
-
 .text-box{
     font-size: 1.5rem;
     text-align: center;
@@ -274,6 +268,7 @@ option{
 }
 
 .modal_close{
+    /* Al presionar btn,remueva modal--show desde js*/
     text-decoration: none;
     color: #fff;
     background-color: #3ab54aae;
@@ -289,7 +284,6 @@ option{
     color: black;
     background-color:white;
 }
-
 
 /* --------------------- footer------------------------------- */
 
