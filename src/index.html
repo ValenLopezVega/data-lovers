@@ -13,7 +13,6 @@
     <header class="header">
 
       <div class="content-nav" >
-
         <nav class="nav container">
           <ul class="link" >
             <li><a class="items" href="">Home</a></li>
@@ -26,17 +25,15 @@
             <img  src="./images/search.png" class="icon" alt="search">
           </div>
         </nav>
-
       </div>
 
       <img src="./images/rym.png " alt="logoRickAndMorty" class="logo">
     
       <div class="content-select-all container ">
-
         <div class="group-select">
-          <label class="label" for="">Filter by</label>
+          <label class="label" for="select-species">Filter by</label>
           <select name="filter" class="select" id="select-species">
-            <option disabled selected value="-SPECIES-">-SPECIES-</option>
+            <option disabled selected value="SPECIES">SPECIES</option>
             <option value="Humanoid">Humanoid</option>
             <option value="Robot">Robot</option>
             <option value="Human">Human</option>
@@ -50,9 +47,9 @@
         </div>
               
         <div class="group-select">
-          <label class="label" for="">Filter by</label>
+          <label class="label" for="select-gender">Filter by</label>
           <select name="filter" class="select" id="select-gender">
-            <option disabled selected value="-GENDER-">-GENDER-</option>
+            <option disabled selected value="GENDER">GENDER</option>
             <option value="Female">Female</option>
             <option value="Male">Male</option>
             <option value="unknown">unknown</option>
@@ -61,14 +58,13 @@
         </div>
 
         <div class="group-select">
-          <label class="label" for="">Order by</label>
+          <label class="label" for="select-order">Order by</label>
           <select name="order" class="select" id="select-order">
-            <option disabled selected>-ALPHABET-</option>
+            <option disabled selected>ALPHABET</option>
             <option value="Ascending">Ascending</option>
             <option value="Descending">Descending</option>
           </select>
-        </div>
-        
+        </div> 
       </div>   
       
     </header>
@@ -84,16 +80,11 @@
       </section>
 
       <section class="modal">
-
         <div class="modal_container">
-          <h2 class="modal_title"> Character stats by gender </h2>
-
           <div id="box-statistics">
           </div>
-
-          <button type="button" class="modal_close">Close</button>
-        </div>
-          
+          <button type="button" class="modal_close"><img src="./images/close.png" alt="close"></button> 
+        </div>       
       </section>
         
     </main>
@@ -101,7 +92,6 @@
     <footer class="footer">
         
       <div class="content-footer container">
-
         <div class="sofy">
           <img src="./images/github.png" class="logoGitHub" alt="logoGitHub">
           <span>
@@ -115,7 +105,6 @@
             <a href="https://github.com/andrenavas/" target="_blank" class="link-github"> Andre Navas </a>
           </span>
         </div>
-
       </div>
 
     </footer>

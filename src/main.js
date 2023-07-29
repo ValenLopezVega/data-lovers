@@ -97,8 +97,6 @@ function show(characters) {
 
 
 // FILTERING CHARACTERS
-
-
 let searchValue = '';
 let specieValue = '';
 let genderValue = '';
@@ -142,7 +140,7 @@ function notFound() {
   contentMain.innerHTML = '';
   const messageError = document.createElement('h3');
   messageError.classList.add('messageError');
-  messageError.textContent =`No se encontro resultado para...'${searchInput.value}'`;
+  messageError.textContent =`No result found for...'${searchInput.value}'`;
   contentMain.appendChild(messageError);
 }
 
@@ -163,7 +161,6 @@ selectOrder.addEventListener('change',() => {
 });
 
 // PERCENTAGE event and function
-
 openModal.addEventListener('click', (e)=> {
   e.preventDefault();
   modal.classList.add('modal--show');
@@ -177,14 +174,22 @@ closeModal.addEventListener('click', (e)=> {
 });
 
 
-
 function showStat () { 
-  
+  // Crear el subtítulo,clase y contenido
+  const subtitle = document.createElement('h2');
+  subtitle.classList.add('modal-subtitle');
+  subtitle.textContent = 'Character stats by gender';
+
   boxStatictics.innerHTML = '';
+  // Agregarlo al div "box-statistics"
+  boxStatictics.appendChild(subtitle);
+
   const percenFemale = calculate(filterByGender(characters,'Female'),characters);
   const percenMale = calculate(filterByGender(characters,'Male'),characters);
   const percenUnknown = calculate(filterByGender(characters,'unknown'),characters);
   const percenGenderless = calculate(filterByGender(characters,'Genderless'),characters);
+
+  // const subtitleStatics = document.createElement('p')
 
   const textStatictics1 = document.createElement('p');
   const textStatictics2 = document.createElement('p');
@@ -194,6 +199,7 @@ function showStat () {
 
   boxStatictics.classList.add('box-statis');
   boxStatictics2.classList.add('contain-text');
+
   textStatictics1.classList.add('text-box');
   textStatictics2.classList.add('text-box');
   textStatictics3.classList.add('text-box');
@@ -210,7 +216,6 @@ function showStat () {
   boxStatictics2.appendChild(textStatictics4);
   boxStatictics.appendChild(boxStatictics2);
 }
-
 
  
 // GETTING DATA FROM JSON
