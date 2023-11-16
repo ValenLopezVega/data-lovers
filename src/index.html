@@ -5,8 +5,69 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="root"></div>
+    <body>
+      <!--Cabeza y navegador de la pagina-->
+      <header class="container-title">
+        <div class="container-logo">
+          <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Pokemon-720x450.png" alt="Logo titulo pokemon">
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li>Home</li>
+            <li>Article</li>
+            <li>Setting</li>
+            <li>Setting</li>
+          </ul>
+        </nav>
+      </header>
+  
+       <!-- Caja 2 -->
+        <section id="pokedex" >
+          <div class="filter">  
+            <label>Filter by:</label>
+
+            <select id="type-pokemon" name="type-pokemon" class="type-pokemon">
+              <option selected value="Type">Type</option>
+              <option value="bug">Bug</option>
+              <option value="dark">Dark</option>
+              <option value="dragon">Dragon</option>
+              <option value="electric">Electric</option>
+              <option value="fairy">Fairy</option>
+              <option value="fighting">Fighting</option>
+              <option value="fire">Fire</option>
+              <option value="flying">Flying</option>
+              <option value="ghost">Ghost</option>
+              <option value="grass">Grass</option>
+              <option value="ground">Ground</option>
+              <option value="ice">Ice</option>
+              <option value="normal">Normal</option>
+              <option value="poison">Poison</option>
+              <option value="psychic">Psychic</option>
+              <option value="rock">Rock</option>
+              <option value="steel">Steel</option>
+              <option value="water">Water</option>
+              
+            </select>
+            
+            <select id="type-generation" name="type-generation" class="type-generation">
+              <option selected value="Gen">Generation</option>
+              <option value="kanto">Kanto</option>
+              <option value="johto">Johto</option>
+              
+            </select>
+
+            <select id="type-order">
+              <option selected value="Order">Order</option>
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
+            </select>
+            
+          </div>
+          <div class="box-pokedex" id="content-pokedexs"></div>
+        </section>
+       
+
+        <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
