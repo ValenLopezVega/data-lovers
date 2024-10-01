@@ -1,7 +1,5 @@
-import { filterData, sortData, computeStats } from './data.js';
+import { filterData, sortData } from './data.js';
 import data from './data/ghibli/ghibli.js';
-
-console.log(data);
 
 const printAllMovies = (movies) => {
   //Limpiar la pantalla de las peliculas
@@ -18,9 +16,24 @@ const searchFilm = () => {
   printAllMovies(filteredData);
 }
 
+const sortFilms = (order) => {
+  const sortedData = sortData(data, 'title', order);
+  printAllMovies(sortedData);
+}
+
 const searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', () => {
   searchFilm();
+})
+
+const ascBtn = document.getElementById('sort-asc');
+ascBtn.addEventListener('click', () => {
+  sortFilms('asc');
+})
+
+const descBtn = document.getElementById('sort-desc');
+descBtn.addEventListener('click', () => {
+  sortFilms('desc');
 })
 
 printAllMovies(data.films);
