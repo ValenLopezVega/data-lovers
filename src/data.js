@@ -5,14 +5,25 @@ export const filterData = (data, condition) => {
 
 export const sortData = (data, sortBy, sortOrder) => {
   const tempArray = Array.from(data['films']);
-  let result = tempArray.sort((a, b) => a.title > b.title ? 1 : -1);
-  if(sortOrder === 'asc'){
-    return result;
-  }else{
-    return result.reverse();
-  }
+  const result = tempArray.sort((a, b) => a.title > b.title ? 1 : -1);
+  return sortOrder === 'asc' ? result : result.reverse();
 };
 
 export const computeStats = (data) => {
-  return `${data}`;
+  if(data === undefined || typeof data !== 'object' || data === 0 || data === null || data.length === 0){
+    throw new TypeError('data is not an object');
+  }
+
+  const ghibliArray = data['ghibli'];
+  const ghibliScores = [];
+  ghibliArray.forEach(element => {
+    ghibliScores.push(element.rt_score);
+  });
+
+  const scores = [];
+  for (let i = 0; i < ghibliScores.length; i++){
+    scores[ghibliScores[i]] = 1 + (scores[ghibliScores[i]] || 0);
+  }
+  return scores;
 };
+
