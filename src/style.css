@@ -12,6 +12,9 @@ header {
   border-bottom: solid black 5px;
   width: fit-content;
 }
+table,th,td {
+  border: 1px solid white;
+}
 
 #actions {
   margin: 3em;
