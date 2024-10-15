@@ -14,16 +14,16 @@ export const computeStats = (data) => {
     throw new TypeError('data is not an object');
   }
 
-  const ghibliArray = data['ghibli'];
-  const ghibliScores = [];
+  const ghibliArray = data['films'];
+  const ghibliProducers = [];
   ghibliArray.forEach(element => {
-    ghibliScores.push(element.rt_score);
+    ghibliProducers.push(element.producer);
   });
 
-  const scores = [];
-  for (let i = 0; i < ghibliScores.length; i++){
-    scores[ghibliScores[i]] = 1 + (scores[ghibliScores[i]] || 0);
+  const producers = [];
+  for (let i = 0; i < ghibliProducers.length; i++){
+    producers[ghibliProducers[i]] = 1 + (producers[ghibliProducers[i]] || 0);
   }
-  return scores;
+  return producers;
 };
 
