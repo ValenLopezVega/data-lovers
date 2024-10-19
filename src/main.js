@@ -31,20 +31,38 @@ const printStats = () => {
 
   cleanScreen();
 
-  // creates a <table> element and a <tbody> element
-  const tbl = document.createElement("table");
-  const tblBody = document.createElement("tbody");
+  const tbl = document.createElement('table');
+  const tblHead = document.createElement('thead');
+
+  const headRow = document.createElement('tr');
+
+  const headerCell1 = document.createElement('th');
+  const headerText1 = document.createTextNode('Producers');
+  headerCell1.appendChild(headerText1);
+  headRow.appendChild(headerCell1);
+
+  const headerCell2 = document.createElement('th');
+  const headerText2 = document.createTextNode('Movies');
+  headerCell2.appendChild(headerText2);
+  headRow.appendChild(headerCell2);
+
+  tblHead.appendChild(headRow);
+  tbl.appendChild(tblHead);
+
+  const tblBody = document.createElement('tbody');
 
   // creating all cells
   for (let i = 0; i < 5; i++) {
     // creates a table row
-    const row = document.createElement("tr");
+    const row = document.createElement('tr');
+    row.setAttribute('class', 'row');
 
     for (let j = 0; j < 2; j++) {
       // Create a <td> element and a text node, make the text
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
-      const cell = document.createElement("td");
+      const cell = document.createElement('td');
+      cell.setAttribute('class', 'cell');
       const cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
       cell.appendChild(cellText);
       row.appendChild(cell);
@@ -57,9 +75,9 @@ const printStats = () => {
   // put the <tbody> in the <table>
   tbl.appendChild(tblBody);
   // appends <table> into <body>
-  document.body.appendChild(tbl);
+  document.getElementById('content').appendChild(tbl);
   // sets the border attribute of tbl to '2'
-  tbl.setAttribute("border", "2");
+  tbl.setAttribute('border', '2');
 
 }
 

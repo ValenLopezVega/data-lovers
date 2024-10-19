@@ -14,6 +14,8 @@ header {
 }
 table,th,td {
   border: 1px solid white;
+  font-size: 2em;
+  color: white;
 }
 
 #actions {
@@ -87,3 +89,4 @@ main {
   height: 539px;
   width: 362px;
 }
+
