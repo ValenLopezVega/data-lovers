@@ -1,5 +1,9 @@
 
 export const filterData = (data, condition) => {
+  if(data === undefined || typeof data !== 'object' || data === 0 || data === null || data.length === 0){
+    throw new TypeError('data is not an object');
+  }
+
   return data.films.filter((film) => film.title.includes(condition));
 };
 

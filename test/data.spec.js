@@ -10,6 +10,11 @@ describe('filterData', () => {
     const result = filterData(data, 'castle');
     expect(result.length).toBe(2);
   });
+
+  it('throw an exception when data is null', () => {
+    expect(() => filterData(null, 'castle')).toThrow(TypeError);
+    expect(() => filterData('', 'castle')).toThrow(TypeError);
+  });
 });
 
 
@@ -26,6 +31,11 @@ describe('sortData', () => {
   it('returns the first movie order descendent', () => {
     const result = sortData(data, 'title', 'desc')
     expect(result[0].title).toBe('whisper of the heart');
+  });
+
+  it('throw an exception when data is null', () => {
+    expect(() => sortData(null, 'title', 'asc')).toThrow(TypeError);
+    expect(() => filterData('', 'title', 'desc')).toThrow(TypeError);
   });
 });
 
@@ -44,4 +54,10 @@ describe('computeStats', () => {
     const result = computeStats(data);
     expect(Object.keys(result).length).toBe(5);
   });
+
+  it('throw an exception when data is null', () => {
+    expect(() => computeStats(null)).toThrow(TypeError);
+    expect(() => computeStats('')).toThrow(TypeError);
+  });
+
 });
