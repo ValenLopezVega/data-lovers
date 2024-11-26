@@ -10,7 +10,7 @@ const printAllMovies = (movies) => {
   cleanScreen();
   //Recorrer las peliculas y agregarlas al div content
   movies.forEach(movie => {
-    document.getElementById('content').innerHTML += `<img src="${movie.poster}" alt="${movie.title}" class="poster" width="30%">`;
+    document.getElementById('content').innerHTML += `<img src="${movie.poster}" alt="${movie.title}" class="poster">`;
   });
 }
 

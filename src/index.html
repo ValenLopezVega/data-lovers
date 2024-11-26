@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Studio Ghibli movies">
   <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="icon" type="image/x-icon" href="img/favico.ico" />
-  <script src="https://kit.fontawesome.com/67082df0e6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div id="root">
     <header>
-      <img src="img/studioGhibli.jpg" alt="">
+      <img src="img/studio-ghibli-mobile.jpg" alt="Descripción de la imagen">
       <div id="actions">
         <div id="search-bar">
           <input type="text" id="film-title">
-          <button id="search-btn"><i id="search-icon" class="fa-solid fa-magnifying-glass"></i></button>
+          <button id="search-btn">🔍</button>
         </div>
         <div id="buttons">
           <button id="stats-btn">Stats</button>
@@ -30,7 +31,7 @@
       </div>
     </main>
   </div>
-  <script src="main.js" type="module"></script>
+  <script defer src="main.js" type="module"></script>
 </body>
 
 </html>

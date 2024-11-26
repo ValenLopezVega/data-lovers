@@ -79,14 +79,19 @@ main {
 }
 
 #content {
-  margin: 25px;
+  margin: 2%;
   display: flex;
   flex-wrap: wrap;
   gap: 30px ;
+  justify-content: center;
 }
 
 .poster {
-  height: 539px;
-  width: 362px;
+  width: 31%;
 }
 
+@media only screen and (min-width: 768px) {
+  .poster{
+    
+  }
+}
