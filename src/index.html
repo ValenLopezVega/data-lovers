@@ -5,9 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Studio Ghibli movies">
+  <meta name="theme-color" content="##901D1D"/>
   <title>Data Lovers</title>
   <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -35,6 +37,16 @@
     <p>Data Lovers - desarrollado por <a href="https://linkedin.com/in/valenlopezvega" target="_blank">Valentina López</a> - <a href="https://github.com/ValenLopezVega/data-lovers" target="_blank">Código fuente</a> </p>
   </footer>
   <script defer src="main.js" type="module"></script>
+  <script defer type="text/javascript">
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker
+        .register("/serviceWorker.js")
+        .then(res => console.log("service worker registered"))
+        .catch(err => console.log("service worker not registered", err))
+      })
+    }
+  </script>
 </body>
 
 </html>
